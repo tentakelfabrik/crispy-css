@@ -25,11 +25,11 @@
 
     .d-list {
         &--horizontal {
-            .d-list__title, .d-list__content {
+            dt, dd {
                 float: left;
             }
 
-            .d-list__content {
+            dd {
                 clear: left;
             }
         }
