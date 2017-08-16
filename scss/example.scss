@@ -3,6 +3,14 @@
 
 @include cripsy-boilerplate-normalize();
 @include cripsy-boilerplate-body();
-@include crispy-boilerplate-heading();
+
+@include crispy-boilerplate-heading() {
+    text-decoration: underline;
+};
+
 @include cripsy-boilerplate-icon();
 @include cripsy-boilerplate-list();
+
+.clearfix {
+    @include crispy-boilerplate-clearfix();
+}

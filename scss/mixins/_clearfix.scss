@@ -6,7 +6,7 @@
  *
  */
 
-@mixin clearfix() {
+@mixin crispy-boilerplate-clearfix() {
     &::before,
     &::after {
         display: table;
