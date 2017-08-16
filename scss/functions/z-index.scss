@@ -1,0 +1,22 @@
+/**
+ *
+ *
+ *
+ *
+ * @author Björn Hase
+ *
+ */
+
+$z-indexes: (
+    'site-header': 100,
+    'modal': 1000
+) !default;
+
+@function z-index($name) {
+    @if index($z-indexes, $name) {
+        @return map($z-indexes, $name);
+    } @else {
+        @warn 'There is no item "#{$name}" in this list; choose one of: #{$z-indexes}';
+        @return null;
+    }
+}

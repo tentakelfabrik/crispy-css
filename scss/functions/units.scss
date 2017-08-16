@@ -1,0 +1,45 @@
+$base__font-size: 16px !default;
+$base__line-height: 1.5 !default;
+
+/**
+ * calculate pixel value to em
+ *
+ * @param  {px} $font-size
+ * @return {em}
+ */
+@function pxToEm($font-size) {
+    @return ($font-size / $base__font-size) * 1em;
+}
+
+/**
+ * calculate px value to rem
+ *
+ * @param  {px} $px
+ * @param  {px} $font-size
+ * @return {em}
+ */
+@function pxToRem($font-size) {
+    @return ($font-size / $base__font-size) * 1rem;
+}
+
+/**
+ * calculate em value to rem
+ *
+ * @param  {em} $value
+ * @param  {px} $font-size
+ * @return {px}
+ */
+@function emToPx($value, $font-size: $base__font-size) {
+    @return ($value * $font-size) * 1px;
+}
+
+/**
+ * calculate line-height with font-size
+ *
+ * @param  {px} $font-size
+ * @param  {unitless} $base-line-height
+ * @return {unitless}
+ */
+@function lineHeight($font-size, $line-height: $base-line-height) {
+    @return unitless(emToPx($line-height * 1em) / $font-size);
+}

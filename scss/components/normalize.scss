@@ -1,0 +1,46 @@
+/**
+ * normalize
+ *
+ *
+ * @author Björn Hase
+ *
+ */
+
+$normalize__margin: 0 0 pxToEm(20px) !default;
+
+@mixin cripsy-boilerplate-normalize {
+    html {
+        font-size: 100%;
+    }
+
+    body,
+    html {
+        height: 100%;
+    }
+
+    html,
+    legend {
+        box-sizing: border-box;
+    }
+
+    *,
+    *::after,
+    *::before {
+        box-sizing: inherit;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    p {
+        margin: $normalize__margin;
+    }
+
+    ul, ol, dl {
+        margin: $normalize__margin;
+    }
+
+    @content;
+}

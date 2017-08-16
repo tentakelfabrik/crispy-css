@@ -1,0 +1,33 @@
+/**
+ * list
+ *
+ * styles and mixins for ul-element
+ *
+ *
+ * @author Björn Hase
+ *
+ */
+
+@mixin cripsy-boilerplate-list {
+    .list {
+        list-style-position: outside;
+
+        &--horizontal {
+            .list__item {
+                float: left;
+            }
+        }
+    }
+
+    .d-list {
+        &--horizontal {
+            .d-list__title, .d-list__content {
+                float: left;
+            }
+
+            .d-list__content {
+                clear: left;
+            }
+        }
+    }
+}

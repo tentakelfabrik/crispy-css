@@ -1,0 +1,14 @@
+{
+  "name": "crispy-boilerplate",
+  "version": "0.1.0",
+  "description": "Flat Sass Framework, to give you a amount of Basic Settings, Mixins and Functions",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:nirgendswo/crispy-boilerplate.git"
+  },
+  "author": "Björn Hase",
+  "license": "MIT",
+  "dependencies": {
+    "normalize.css": "^7.0.0",
+  }
+}

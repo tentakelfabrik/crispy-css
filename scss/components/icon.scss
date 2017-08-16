@@ -1,0 +1,27 @@
+/**
+ * icon
+ *
+ * basic styles for icon
+ *
+ * <svg class="icon">
+ *     <use src="#"></use>
+ * </svg>
+ *
+ *
+ * @author Björn Hase
+ *
+ */
+
+$icon__vertical-align: middle !default;
+$icon__margin: 0 2px !default;
+
+@mixin cripsy-boilerplate-icon() {
+    .icon {
+        display: inline-block;
+        position: relative;
+        vertical-align: $icon__vertical-align;
+        margin: $icon__margin;
+
+        @content;
+    }
+}

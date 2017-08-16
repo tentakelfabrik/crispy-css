@@ -1,0 +1,33 @@
+/**
+ * Buttons
+ *
+ * mixin for basic styles of buttons
+ *
+ * @author Björn Hase
+ *
+ */
+
+@mixin cripsy-boilerplate-button() {
+    .button {
+        position: relative;
+        display: inline-block;
+
+        vertical-align: middle;
+        appearance: none;
+
+        &--wide {
+            width: 100%;
+        }
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        @content;
+    }
+}
