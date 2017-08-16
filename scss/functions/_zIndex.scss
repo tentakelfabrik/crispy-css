@@ -1,6 +1,7 @@
 /**
+ * z-index
  *
- *
+ * handle z-index
  *
  *
  * @author Björn Hase
@@ -12,7 +13,15 @@ $z-indexes: (
     'modal': 1000
 ) !default;
 
-@function z-index($name) {
+/**
+ * z-index
+ *
+ *
+ *
+ * @return
+ *
+ */
+@function zIndex($name) {
     @if index($z-indexes, $name) {
         @return map($z-indexes, $name);
     } @else {

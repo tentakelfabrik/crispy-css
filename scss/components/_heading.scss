@@ -1,11 +1,13 @@
 @import
-    '../mixins/units',
-    '../mixins/fontSize';
+    '../functions/units',
+    '../mixins/font-size';
 
 /**
  * heading
  *
- * basic styles for heading
+ * loop to create for all heading styles
+ * creating css-classes with same naming
+ *
  *
  * @author Björn Hase
  *
@@ -35,7 +37,7 @@ $heading__margin: 0 0 pxToEm(20px) !default;
             margin: $heading__margin;
 
             @include font-size($font-size);
-            
+
             @content;
         }
     }

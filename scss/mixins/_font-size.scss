@@ -1,10 +1,22 @@
+@import
+    '../functions/units';
+
+/**
+ * font-size
+ *
+ *
+ * @author Björn Hase
+ *
+ */
+
+
 /**
  * add font-size with fallback
  *
  * @param {px} $font-size
  *
  */
-@mixin fontSize($font-size) {
+@mixin font-size($font-size) {
     font-size: $font-size;
     font-size: pxToRem($font-size);
 }
