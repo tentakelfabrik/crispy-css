@@ -1,8 +1,10 @@
 # cripsy-boilerplate
 
-A simple mini-framework for basic styling.
+A simple mini-framework for basic styling and few Functions to simplify handling with values.
 
 ## Components
+
+There a few Components that also provide a Closure to adding additional Styles.
 
 ### body
 
@@ -18,15 +20,15 @@ Basic Styles for SVG-Icons.
 
 ### list
 
-Basic Styles for
+Additional Styles for lists, also Modificators for horzizonal lists.
 
 ### heading
 
 Styling h1-h6 and create also CSS-Classes with same name.
 
-### Normalize
+### normalize
 
-Basic Normalizing for a few Elements.
+Basic Normalizing for a few Elements. Also adding to some elements a basic margin.
 
 ## Functions
 
@@ -38,7 +40,7 @@ Function to convert from px to em or rem.
 
 ### clearfix
 
-Adding Clearfix
+Styling for Clearfix with pseudo-classes.
 
 ### fontSite
 

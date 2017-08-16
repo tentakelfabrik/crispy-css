@@ -1,0 +1,23 @@
+/**
+ * classes as modificators for text-color
+ *
+ *
+ * @author Björn Hase
+ *
+ */
+
+$text-colors: (
+    'success': $base-color-success,
+    'warning': $base-color-warning,
+    'danger': $base-color-danger,
+    'white': white,
+    'black': black
+) !default;
+
+@mixin crispy-boilerplate-text-colors() {
+     @each $name, $color in $text-colors {
+        .--text-#{$name} {
+            color: $color;
+        }
+    }
+}

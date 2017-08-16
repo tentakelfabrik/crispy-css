@@ -17,6 +17,10 @@
                 float: left;
             }
         }
+
+        &--no-style {
+            list-style: none;
+        }
     }
 
     .d-list {
