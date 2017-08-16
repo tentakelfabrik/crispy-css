@@ -18,8 +18,8 @@
             }
         }
 
-        &--no-style {
-            list-style: none;
+        &--clear {
+            @include crispy-boilerplate-ist-clear();
         }
     }
 
