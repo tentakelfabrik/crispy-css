@@ -1,15 +1,15 @@
 @import
     'CrispyBoilerplate';
 
-@include cripsy-boilerplate-normalize();
-@include cripsy-boilerplate-body();
+@include crispy-boilerplate-normalize();
+@include crispy-boilerplate-body();
 
 @include crispy-boilerplate-heading() {
     text-decoration: underline;
 };
 
-@include cripsy-boilerplate-icon();
-@include cripsy-boilerplate-list();
+@include crispy-boilerplate-icon();
+@include crispy-boilerplate-list();
 
 .clearfix {
     @include crispy-boilerplate-clearfix();

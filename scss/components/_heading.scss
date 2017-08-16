@@ -26,7 +26,7 @@ $heading__font-family: Arial, Helvetica, Neue Helvetica, sans-serif !default;
 $heading__line-height: 1.5 !default;
 $heading__margin: 0 0 pxToEm(20px) !default;
 
-@mixin cripsy-boilerplate-heading {
+@mixin crispy-boilerplate-heading {
     @each $h, $font-size in $heading__font-sizes {
         #{$h}, .#{$h} {
             font-family: $heading__font-family;

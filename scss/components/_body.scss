@@ -16,7 +16,7 @@ $body__direction: ltr !default;
 $body__color: black !default;
 $body__backgroun-color: white !default;
 
-@mixin cripsy-boilerplate-body {
+@mixin crispy-boilerplate-body {
     body {
         font-family: $body__font-family;
         font-weight: normal;
