@@ -1,9 +1,10 @@
 @import
-    'CrispyBoilerplate';
+    'crispyBoilerplate';
 
 @include crispy-boilerplate-align();
 @include crispy-boilerplate-list();
 @include crispy-boilerplate-text-colors();
+@include crispy-boilerplate-animation();
 
 @include crispy-boilerplate-normalize() {
     // adding styles
