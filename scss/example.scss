@@ -2,7 +2,10 @@
     'CrispyBoilerplate';
 
 @include crispy-boilerplate-normalize();
+
+@include crispy-boilerplate-align();
 @include crispy-boilerplate-body();
+@include crispy-boilerplate-button();
 
 @include crispy-boilerplate-heading() {
     text-decoration: underline;
@@ -10,6 +13,7 @@
 
 @include crispy-boilerplate-icon();
 @include crispy-boilerplate-list();
+@include crispy-boilerplate-text-colors();
 
 .clearfix {
     @include crispy-boilerplate-clearfix();
