@@ -1,19 +1,29 @@
 @import
     'CrispyBoilerplate';
 
-@include crispy-boilerplate-normalize();
-
 @include crispy-boilerplate-align();
-@include crispy-boilerplate-body();
-@include crispy-boilerplate-button();
-
-@include crispy-boilerplate-heading() {
-    text-decoration: underline;
-};
-
-@include crispy-boilerplate-icon();
 @include crispy-boilerplate-list();
 @include crispy-boilerplate-text-colors();
+
+@include crispy-boilerplate-normalize() {
+    // adding styles
+};
+
+@include crispy-boilerplate-body() {
+    // adding styles
+};
+
+@include crispy-boilerplate-button() {
+    // adding styles
+};
+
+@include crispy-boilerplate-heading() {
+    // adding styles
+};
+
+@include crispy-boilerplate-icon() {
+    // adding styles
+};
 
 .clearfix {
     @include crispy-boilerplate-clearfix();

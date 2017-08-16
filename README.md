@@ -1,10 +1,14 @@
 # cripsy-boilerplate
 
-A simple mini-framework for basic styling and few Functions to simplify handling with values.
+Flat Sass Boilerplate to give you a amount of Basic Settings, Mixins and Functions.
+
+```
+npm install crispy-boilerplate --save
+```
 
 ## Components
 
-There a few Components that also provide a Closure to adding additional Styles.
+There a few Components, some are also provide a Closure to adding additional Styles.
 
 ### body
 
@@ -12,15 +16,15 @@ Styles for Body, including Format for Fonts and Colors.
 
 ### button
 
-Styles for Button.
+Styles for Buttons.
 
 ### icon
 
-Basic Styles for SVG-Icons.
+Styles to use SVG as Icons.
 
 ### list
 
-Additional Styles for lists, also Modificators for horzizonal lists.
+Additional Styles for Lists and modificators.
 
 ### heading
 
@@ -28,7 +32,11 @@ Styling h1-h6 and create also CSS-Classes with same name.
 
 ### normalize
 
-Basic Normalizing for a few Elements. Also adding to some elements a basic margin.
+Normalizing for a few Elements.
+
+### text-colors
+
+Creates text-colors modificators from a
 
 ## Functions
 
@@ -40,8 +48,8 @@ Function to convert from px to em or rem.
 
 ### clearfix
 
-Styling for Clearfix with pseudo-classes.
+Styles for clearfix.
 
-### fontSite
+### font-size
 
-Using pxToRem for font-size, also include a fallback to px.
+Add font-size with fallback.
