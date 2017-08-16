@@ -10,6 +10,10 @@ npm install crispy-boilerplate --save
 
 There a few Components, some are also provide a Closure to adding additional Styles.
 
+### align
+
+Additional Styles for modificators for align text, floating and centering elements.
+
 ### body
 
 Styles for Body, including Format for Fonts and Colors.
@@ -17,6 +21,10 @@ Styles for Body, including Format for Fonts and Colors.
 ### button
 
 Styles for Buttons.
+
+### heading
+
+Styling h1-h6 and create also CSS-Classes with same name.
 
 ### icon
 
@@ -26,9 +34,9 @@ Styles to use SVG as Icons.
 
 Additional Styles for Lists and modificators.
 
-### heading
+### margin
 
-Styling h1-h6 and create also CSS-Classes with same name.
+Additional Styles for modificators to margin-top and margin-bottom.
 
 ### normalize
 
