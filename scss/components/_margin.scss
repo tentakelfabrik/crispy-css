@@ -1,6 +1,3 @@
-@import
-    '../mixins/units';
-
 /**
  * margin
  *
@@ -11,8 +8,9 @@
  *
  */
 
-$margin-top: em(5px) !default;
-$margin-bottom: em(20px) !default;
+
+$margin-top: pxToEm(5px) !default;
+$margin-bottom: pxToEm(20px) !default;
 
 @mixin crispy-boilerplate-margin() {
     .--margin-top-y0 {

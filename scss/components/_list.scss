@@ -1,25 +1,26 @@
 /**
  * list
  *
- * styles and mixins for ul-element
+ * styles and mixins for ol and ul-element
  *
  *
  * @author Björn Hase
  *
  */
 
+
 @mixin crispy-boilerplate-list {
     .list {
         list-style-position: outside;
 
         &--horizontal {
-            .list__item {
+            li {
                 float: left;
             }
         }
 
         &--clear {
-            @include crispy-boilerplate-ist-clear();
+            @include crispy-boilerplate-list-clear();
         }
     }
 
