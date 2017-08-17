@@ -1,0 +1,46 @@
+/**
+ * add font-size in px as fallback
+ * and in rem
+ *
+ *
+ * @param {px} $font-size
+ *
+ */
+@mixin font-size($font-size) {
+    font-size: $font-size;
+    font-size: pxToRem($font-size);
+}
+
+/**
+ * clearfix to end floating
+ *
+ *
+ *
+ */
+@mixin clearfix() {
+    &::before,
+    &::after {
+        display: table;
+        content: ' ';
+    }
+
+    &::after {
+        clear: both;
+    }
+}
+
+/**
+ * clear default styles from list
+ *
+ *
+ */
+@mixin crispy-boilerplate-list-clear() {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        margin: 0;
+        padding: 0;
+    }
+}
