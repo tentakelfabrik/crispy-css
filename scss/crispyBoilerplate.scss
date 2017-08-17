@@ -1,5 +1,5 @@
 @import
-    '../../node_modules/normalize.css/normalize.css'
+    '../node_modules/normalize.css/normalize',
 
     'functions/units',
     'functions/zIndex',
@@ -7,7 +7,7 @@
     'mixins',
 
     'components/align',
-    'components/animations',
+    'components/animation',
     'components/body',
     'components/button',
     'components/heading',
