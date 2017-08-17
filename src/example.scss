@@ -2,6 +2,7 @@
     'crispyBoilerplate';
 
 @include crispy-boilerplate-align();
+@include crispy-boilerplate-clearfix();
 @include crispy-boilerplate-list();
 @include crispy-boilerplate-text-colors();
 @include crispy-boilerplate-animation();

@@ -1,0 +1,14 @@
+/**
+ * clearfix
+ *
+ *
+ * @author Björn Hase
+ *
+ */
+
+
+@mixin crispy-boilerplate-clearfix() {
+    .clearfix {
+        @include clearfix();
+    }
+}
