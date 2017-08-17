@@ -12,6 +12,25 @@
 }
 
 /**
+ * add modificators for font-size from a map
+ *
+ *
+ * @param {map} $font-sizes
+ *
+ */
+@mixin font-sizes($font-sizes) {
+    @each $name, $font-size in $font-sizes {
+       @if ($name == 'default') {
+           @include font-size($font-size);
+       } @else {
+           &--#{$name} {
+               @include font-size($font-size);
+           }
+       }
+   }
+}
+
+/**
  * clearfix to end floating
  *
  *

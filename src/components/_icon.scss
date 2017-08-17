@@ -1,0 +1,102 @@
+/**
+ * icon
+ *
+ * use svg as icon
+ *
+ * <svg class="icon">
+ *     <use src="#"></use>
+ * </svg>
+ *
+ *
+ * @author Björn Hase
+ *
+ */
+
+
+$icon__vertical-align: middle !default;
+$icon__margin: 0 2px !default;
+
+// width & height
+$icon__sizes: (
+    'default': 18px,
+    'small': 14px,
+    'large': 28px
+) !default;
+
+// colors
+$icon__colors: (
+    'default' : black,
+    'secondary' : grey,
+) !default;
+
+@mixin crispy-boilerplate-icon() {
+    .icon {
+        display: inline-block;
+        position: relative;
+        vertical-align: $icon__vertical-align;
+        margin: $icon__margin;
+
+        @content;
+    }
+}
+
+/**
+ * add modificators for icons as fill from map
+ *
+ *
+ * @param {map} $colors
+ *
+ */
+@mixin crispy-boilerplate-icon-colors($colors) {
+     @each $name, $color in $colors {
+        @if ($name == 'default') {
+             @include crispy-boilerplate-icon-color($color);
+        } @else {
+            &--#{$name} {
+                @include crispy-boilerplate-icon-color($color);
+            }
+        }
+    }
+}
+
+/**
+ * add color as fill
+ *
+ *
+ * @param {color} $color
+ *
+ */
+@mixin crispy-boilerplate-icon-color($color) {
+    fill: $color;
+}
+
+/**
+ * adding sizes for icons from map
+ *
+ *
+ * @param {map} $sizes
+ *
+ */
+@mixin crispy-boilerplate-icon-sizes($sizes) {
+     @each $name, $size in $sizes {
+        @if ($name == 'default') {
+             @include crispy-boilerplate-icon-size($size);
+        } @else {
+            &--#{$name} {
+                @include crispy-boilerplate-icon-size($size);
+            }
+        }
+    }
+}
+
+/**
+ * add size for icon as width and height
+ *
+ *
+ * @param {px} $size
+ *
+ */
+@mixin crispy-boilerplate-icon-size($size) {
+    width: $size;
+    height: $size;
+}
