@@ -36,6 +36,9 @@ $icon__colors: (
         vertical-align: $icon__vertical-align;
         margin: $icon__margin;
 
+        @include crispy-boilerplate-icon-colors($icon__colors);
+        @include crispy-boilerplate-icon-sizes($icon__sizes);
+
         @content;
     }
 }
