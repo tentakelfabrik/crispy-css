@@ -13,35 +13,35 @@ $margin-top: pxToEm(5px) !default;
 $margin-bottom: pxToEm(20px) !default;
 
 @mixin crispy-boilerplate-margin() {
-    .--margin-top-y0 {
+    .margin-top-y0 {
         margin-top: 0;
     }
 
-    .--margin-top-y1 {
+    .margin-top-y1 {
         margin-top: $margin-top;
     }
 
-    .--margin-top-y2 {
+    .margin-top-y2 {
         margin-top: $margin-top * 2;
     }
 
-    .--margin-top-y3 {
+    .margin-top-y3 {
         margin-top: $margin-top * 3;
     }
 
-    .--margin-bottom-y0 {
+    .margin-bottom-y0 {
         margin-bottom: 0;
     }
 
-    .--margin-bottom-y1 {
+    .margin-bottom-y1 {
         margin-bottom: $margin-bottom;
     }
 
-    .--margin-bottom-y2 {
+    .margin-bottom-y2 {
         margin-bottom: $margin-bottom * 2;
     }
 
-    .--margin-bottom-y3 {
+    .margin-bottom-y3 {
         margin-bottom: $margin-bottom * 3;
     }
 }

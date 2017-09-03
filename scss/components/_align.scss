@@ -11,35 +11,35 @@
 
 
 @mixin crispy-boilerplate-align() {
-    .--text-left {
+    .text-left {
         text-align: left;
     }
 
-    .--text-right {
+    .text-right {
         text-align: right;
     }
 
-    .--text-center {
+    .text-center {
         text-align: center;
     }
 
-    .--text-justify {
+    .text-justify {
         text-align: justify;
     }
 
-    .--float-left {
+    .float-left {
         float: left;
     }
 
-    .--float-right {
+    .float-right {
         float: right;
     }
 
-    .--float-none {
+    .float-none {
         float: none;
     }
 
-    .--centered {
+    .centered {
         margin-left: auto;
         margin-right: auto;
     }

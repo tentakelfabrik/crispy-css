@@ -19,7 +19,7 @@ $text-colors: (
 
 @mixin crispy-boilerplate-text-colors() {
      @each $name, $color in $text-colors {
-        .--text-#{$name} {
+        .text-#{$name} {
             color: $color;
         }
     }
