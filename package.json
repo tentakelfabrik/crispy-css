@@ -1,6 +1,6 @@
 {
   "name": "crispy-boilerplate",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "description": "Flat Sass Boilerplate to give you a amount of Basic Settings, Mixins and Functions",
   "repository": {
     "type": "git",
@@ -9,7 +9,6 @@
   "author": "Björn Hase",
   "license": "MIT",
   "dependencies": {
-    "hover.css": "^2.2.1",
     "normalize.css": "^7.0.0"
   }
 }
