@@ -3,7 +3,7 @@
  *
  * use svg as icon
  *
- * <svg class="icon">
+ * <svg class="icon" viewBox="0 0 100 100">
  *     <use src="#"></use>
  * </svg>
  *
@@ -13,33 +13,29 @@
  */
 
 
-$icon__vertical-align: middle !default;
-$icon__margin: 0 2px !default;
+$crispy__icon__vertical-align: middle !default;
+$crispy__icon__margin: 0 2px !default;
 
-// width & height
-$icon__sizes: (
+$crispy__icon__sizes: (
     'default': 18px,
     'small': 14px,
     'large': 28px
 ) !default;
 
-// colors
-$icon__colors: (
-    'default' : black,
-    'secondary' : grey,
+$crispy__icon__colors: (
+    'default': black,
+    'secondary': grey,
 ) !default;
 
-@mixin crispy-boilerplate-icon() {
+@mixin crispy__icon() {
     .icon {
         display: inline-block;
         position: relative;
-        vertical-align: $icon__vertical-align;
-        margin: $icon__margin;
+        vertical-align: $crispy__icon__vertical-align;
+        margin: $crispy__icon__margin;
 
-        @include crispy-boilerplate-icon-colors($icon__colors);
-        @include crispy-boilerplate-icon-sizes($icon__sizes);
-
-        @content;
+        @include crispy__icon-colors($crispy__icon__colors);
+        @include crispy__icon-sizes($crispy__icon__sizes);
     }
 }
 
@@ -50,13 +46,13 @@ $icon__colors: (
  * @param {map} $colors
  *
  */
-@mixin crispy-boilerplate-icon-colors($colors) {
+@mixin crispy__icon-colors($colors) {
      @each $name, $color in $colors {
         @if ($name == 'default') {
-             @include crispy-boilerplate-icon-color($color);
+             @include crispy__icon-color($color);
         } @else {
             &--#{$name} {
-                @include crispy-boilerplate-icon-color($color);
+                @include crispy__icon-color($color);
             }
         }
     }
@@ -69,7 +65,7 @@ $icon__colors: (
  * @param {color} $color
  *
  */
-@mixin crispy-boilerplate-icon-color($color) {
+@mixin crispy__icon-color($color) {
     fill: $color;
 }
 
@@ -80,13 +76,13 @@ $icon__colors: (
  * @param {map} $sizes
  *
  */
-@mixin crispy-boilerplate-icon-sizes($sizes) {
+@mixin crispy__icon-sizes($sizes) {
      @each $name, $size in $sizes {
         @if ($name == 'default') {
-             @include crispy-boilerplate-icon-size($size);
+             @include crispy__icon-size($size);
         } @else {
             &--#{$name} {
-                @include crispy-boilerplate-icon-size($size);
+                @include crispy__icon-size($size);
             }
         }
     }
@@ -99,7 +95,6 @@ $icon__colors: (
  * @param {px} $size
  *
  */
-@mixin crispy-boilerplate-icon-size($size) {
+@mixin crispy__icon-size($size) {
     width: $size;
-    height: $size;
 }

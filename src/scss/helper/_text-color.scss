@@ -1,0 +1,19 @@
+/**
+ * text-colors
+ *
+ * modificators for text-color
+ *
+ *
+ * @author Björn Hase
+ *
+ */
+
+$crispy__text-colors: $crispy__colors !default;
+
+@mixin crispy-text-colors() {
+     @each $name, $color in $crispy__text-colors {
+        .text-#{$name} {
+            color: $color;
+        }
+    }
+}

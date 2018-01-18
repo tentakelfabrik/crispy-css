@@ -1,0 +1,55 @@
+/**
+ * table
+ *
+ * <table class="table table--striped">
+ *     <thead>
+ *         <tr>
+ *             <th>name</th>
+ *             <th>age</th>
+ *         </tr>
+ *     </thead>
+ *     <tbody>
+ *         <tr>
+ *             <td>The Shawshank Redemption</td>
+ *             <td>12</td>
+ *         </tr>
+ *     </tbody>
+ * </table>
+ *
+ * @author Björn Hase
+ *
+ */
+
+ $crispy__table__padding: pxToEm(10px) pxToEm(8px) !default;
+
+ $crispy__table__color: $crispy__color-text !default;
+ $crispy__table__border-color: lighten($crispy__color-text, 40%) !default;
+ $crispy__table__striped__background-color: lighten($table__border-color, 4%) !default;
+
+ @mixin crispy__table() {
+     .table {
+         width: 100%;
+
+         &--strippd {
+             tr {
+                 &:nth-child(even) {
+                     background-color: $crispy__table__striped__background-color;
+                 }
+             }
+         }
+
+         td {
+             color:  $crispy__table__color;
+         }
+
+         th, td {
+ 			 padding:  $crispy__table__padding;
+ 			 text-align: left;
+ 			 border-bottom: 1px solid  $crispy__table__border-color;
+         }
+
+         th {
+             border-bottom-width: 2px;
+         }
+ 	}
+ }

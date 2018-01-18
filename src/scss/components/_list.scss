@@ -8,11 +8,8 @@
  *
  */
 
-
-@mixin crispy-boilerplate-list {
+@mixin crispy__list {
     .list {
-        list-style-position: outside;
-
         &--horizontal {
             li {
                 float: left;
@@ -20,7 +17,7 @@
         }
 
         &--clear {
-            @include crispy-boilerplate-list-clear();
+            @include crispy__list-clear();
         }
     }
 

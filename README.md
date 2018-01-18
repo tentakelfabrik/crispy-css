@@ -1,7 +1,20 @@
 # cripsy-boilerplate
 
 Flat Sass Boilerplate to give you a amount of Basic Settings, Mixins and Functions.
-This Boilerplate uses hover.css and normalize.css
+This Boilerplate uses  
+
+* normalize.css /
+* reflex-grid /
+
+# media queries
+
+The queries are only 
+
+```
+@include crispy__media-xs() {
+
+}
+```
 
 ```
 npm install crispy-boilerplate --save

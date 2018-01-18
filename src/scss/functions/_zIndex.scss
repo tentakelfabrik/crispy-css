@@ -8,20 +8,6 @@
  *
  */
 
-$z-indexes: (
-    'site-header': 100,
-    'modal': 1000
-) !default;
-
-/**
- * z-index
- *
- * 
- *
- *
- * @return
- *
- */
 @function zIndex($name) {
     @if index($z-indexes, $name) {
         @return map($z-indexes, $name);

@@ -1,0 +1,68 @@
+/**
+ * base
+ *
+ *
+ * @author Björn Hase
+ *
+ */
+
+html {
+    font-size: 100%;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+html,
+legend {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+img {
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+p {
+    margin: 0 0 $crispy__margin 0;
+}
+
+ul, ol, dl {
+    margin: 0 0 $crispy__margin 0;
+}
+
+ul {
+    list-style-position: outside;
+}
+
+a {
+    color: $crispy__color-primary;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+body {
+    font-family: $crispy__body__font-family;
+    font-weight: normal;
+    font-size: 100%;
+    line-height: $crispy__body__line-height;
+    color: $crispy__body__color-text;
+    background-color: $crispy__body__background-color;
+    direction: $crispy__body__direction;
+
+    @include font-size($crispy__body__font-size);
+}

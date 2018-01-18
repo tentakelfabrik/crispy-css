@@ -6,7 +6,6 @@
  *
  */
 
-$base__font-size: 16px !default;
 
 /**
  * calculate pixel value to em
@@ -15,7 +14,7 @@ $base__font-size: 16px !default;
  * @return {em}
  */
 @function pxToEm($font-size) {
-    @return ($font-size / $base__font-size) * 1em;
+    @return ($font-size / $crispy__font-size) * 1em;
 }
 
 /**
@@ -26,5 +25,5 @@ $base__font-size: 16px !default;
  * @return {em}
  */
 @function pxToRem($font-size) {
-    @return ($font-size / $base__font-size) * 1rem;
+    @return ($font-size / $crispy__font-size) * 1rem;
 }

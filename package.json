@@ -9,6 +9,7 @@
   "author": "Björn Hase",
   "license": "MIT",
   "dependencies": {
-    "normalize.css": "^7.0.0"
+    "normalize.css": "^7.0.0",
+    "reflex-grid": "^2.0.1"
   }
 }

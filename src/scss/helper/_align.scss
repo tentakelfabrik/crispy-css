@@ -1,16 +1,13 @@
 /**
  * align
  *
- * - text
- * - floating for elements
- * - centering with margin
+ *
  *
  * @author Björn Hase
  *
  */
 
-
-@mixin crispy-boilerplate-align() {
+@mixin crispy-align() {
     .text-left {
         text-align: left;
     }
@@ -42,5 +39,9 @@
     .centered {
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .clearfix {
+        @include $crispy__clearfix();
     }
 }

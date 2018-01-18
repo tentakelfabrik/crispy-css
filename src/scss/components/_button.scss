@@ -1,0 +1,49 @@
+/**
+ * button
+ *
+ *
+ * @author Björn Hase
+ *
+ */
+
+$crispy__button__up-margin: pxToEm(20px) !default;
+$crispy__button__up-padding: pxToEm(5px) !default;
+
+@mixin crispy__button() {
+    .button {
+        position: relative;
+        display: inline-block;
+
+        vertical-align: middle;
+        appearance: none;
+
+        &--wide {
+            width: 100%;
+        }
+
+        // button for scroll up and down
+        &--up, &--down {
+            position: absolute;
+            bottom: 0;
+            margin: $crispy__button__up-margin;
+            padding: $crispy__button__up-padding;
+        }
+
+        &--down {
+            bottom: 0;
+        }
+
+        &--up {
+            bottom: 0;
+        }
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
