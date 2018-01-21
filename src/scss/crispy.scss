@@ -1,6 +1,12 @@
 @import
+    'functions/functions',
+    'mixins/mixins',
+
+    'config',
+    'base',
+
     'helpers/helpers',
-    
+
     'components/button',
     'components/heading',
     'components/icon',

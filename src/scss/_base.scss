@@ -1,9 +1,6 @@
 @import
     '../../normalize.css/normalize',
-    '../../reflex-grid/scss/reflex',
-    
-    'functions/functions',
-    'mixins/mixins';
+    '../../reflex-grid/scss/reflex';
 
 /**
  * base
@@ -73,7 +70,7 @@ abbr[title] {
 }
 
 kbd {
-    // ?
+    // @TODO do something
 }
 
 mark {
