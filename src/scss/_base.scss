@@ -1,3 +1,10 @@
+@import
+    '../../normalize.css/normalize',
+    '../../reflex-grid/scss/reflex',
+    
+    'functions/functions',
+    'mixins/mixins';
+
 /**
  * base
  *
@@ -35,10 +42,57 @@ table {
     border-spacing: 0;
 }
 
+// paragraphs
 p {
     margin: 0 0 $crispy__margin 0;
 }
 
+// Semantic text elements
+a,
+ins,
+u {
+  text-decoration-skip: ink edges;
+}
+
+a {
+    color: $crispy__color-primary;
+
+    &:hover {
+        color: $crispy__color-text;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+abbr[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+    text-decoration: none;
+}
+
+kbd {
+    // ?
+}
+
+mark {
+    padding: pxToEm(10px);
+
+}
+
+// blockquote
+blockquote {
+    border-left: 1px solid $crispy__color-text;
+    margin-left: 0;
+    padding: pxToEm(10px) pxToEm(20px);
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+// lists
 ul, ol, dl {
     margin: 0 0 $crispy__margin 0;
 }
@@ -47,14 +101,13 @@ ul {
     list-style-position: outside;
 }
 
-a {
-    color: $crispy__color-primary;
-
-    &:focus {
-        outline: none;
-    }
+// divider
+hr {
+    border: 0;
+    border-top: 1px solid $crispy__color-text;
 }
 
+// body
 body {
     font-family: $crispy__body__font-family;
     font-weight: normal;

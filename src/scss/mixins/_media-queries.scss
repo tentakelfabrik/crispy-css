@@ -1,0 +1,69 @@
+/**
+ * media-queries
+ *
+ *
+ * @author Björn Hase
+ *
+ */
+
+
+@mixin crispy__media-xs() {
+    @media only screen and (min-width: $reflex-xs) {
+        $content;
+    }
+}
+
+@mixin crispy__media-sm() {
+    @media only screen and (min-width: $reflex-sm) {
+        $content;
+    }
+}
+
+@mixin crispy__media-md() {
+    @media only screen and (min-width: $reflex-md) {
+        $content;
+    }
+}
+
+@mixin crispy__media-lg() {
+    @media only screen and (min-width: $reflex-lg) {
+        $content;
+    }
+}
+
+@mixin crispy__media-xlg() {
+    @media only screen and (min-width: $reflex-xlg) {
+        $content;
+    }
+}
+
+// only
+@mixin crispy__media-xs-only() {
+    @media only screen and (min-width: $reflex-xs) and (max-width: $reflex-xs - 1) {
+        $content;
+    }
+}
+
+@mixin crispy__media-sm-only() {
+    @media only screen and (min-width: $reflex-sm) and (max-width: $reflex-md - 1) {
+        $content;
+    }
+}
+
+@mixin crispy__media-md-only() {
+    @media only screen and (min-width: $reflex-md) and (max-width: $reflex-md - 1) {
+        $content;
+    }
+}
+
+@mixin crispy__media-lg-only() {
+    @media only screen and (min-width: $reflex-lg) and (max-width: $reflex-lg - 1) {
+        $content;
+    }
+}
+
+@mixin crispy__media-xlg-only() {
+    @media only screen and (min-width: $reflex-xlg) and (max-width: $reflex-xlg - 1) {
+        $content;
+    }
+}

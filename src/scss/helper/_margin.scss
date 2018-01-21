@@ -8,10 +8,10 @@
  *
  */
 
-$margin-top: $crispy__margin !default;
-$margin-bottom: $crispy__margin !default;
+$crispy__margin-top: $crispy__margin !default;
+$crispy__margin-bottom: $crispy__margin !default;
 
-@mixin crispy-boilerplate-margin() {
+@mixin crispy__margin() {
     .margin-top-0x {
         margin-top: 0;
     }

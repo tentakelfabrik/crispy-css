@@ -23,8 +23,10 @@ $crispy__icon__sizes: (
 ) !default;
 
 $crispy__icon__colors: (
-    'default': black,
-    'secondary': grey,
+    'default': $cripsy__color-text,
+    'success': $cripsy__color-success,
+    'warning': $cripsy__color-warning,
+    'danger': $cripsy__color-danger
 ) !default;
 
 @mixin crispy__icon() {

@@ -1,18 +1,7 @@
 @import
-    '../../normalize.css/normalize',
-
-    'functions/units',
-    'functions/zIndex',
-
-    'mixins',
-
-    'components/align',
-    'components/body',
+    'helpers/helpers',
+    
     'components/button',
-    'components/clearfix',
     'components/heading',
     'components/icon',
-    'components/list',
-    'components/margin',
-    'components/normalize',
-    'components/text-colors';
+    'components/table';

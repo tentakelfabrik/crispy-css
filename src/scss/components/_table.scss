@@ -20,36 +20,39 @@
  *
  */
 
- $crispy__table__padding: pxToEm(10px) pxToEm(8px) !default;
+$crispy__table__padding: pxToEm(10px) pxToEm(8px) !default;
 
- $crispy__table__color: $crispy__color-text !default;
- $crispy__table__border-color: lighten($crispy__color-text, 40%) !default;
- $crispy__table__striped__background-color: lighten($table__border-color, 4%) !default;
+$crispy__table__td__border: 1px solid lighten($crispy__color-text, 40%) !default;
+$crispy__table__th__border-width: 2px !default;
 
- @mixin crispy__table() {
-     .table {
-         width: 100%;
+$crispy__table__color: $crispy__color-text !default;
+$crispy__table__striped__background-color: lighten($table__border-color, 4%) !default;
 
-         &--strippd {
-             tr {
-                 &:nth-child(even) {
-                     background-color: $crispy__table__striped__background-color;
-                 }
-             }
-         }
+@mixin crispy__table() {
+    .table {
+        width: 100%;
 
-         td {
-             color:  $crispy__table__color;
-         }
+        &--striped {
+            tr {
+                &:nth-child(even) {
+                    background-color: $crispy__table__striped__background-color;
+                }
+            }
+        }
 
-         th, td {
- 			 padding:  $crispy__table__padding;
- 			 text-align: left;
- 			 border-bottom: 1px solid  $crispy__table__border-color;
-         }
+        td {
+            color: $crispy__table__color;
+        }
 
-         th {
-             border-bottom-width: 2px;
-         }
- 	}
- }
+        td,
+        th {
+            padding: $crispy__table__padding;
+            text-align: left;
+            border-bottom: $crispy__table__td__border;
+        }
+
+        th {
+            border-bottom-width: $crispy__table__th__border-width;
+        }
+    }
+}

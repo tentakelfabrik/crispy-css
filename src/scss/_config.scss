@@ -1,14 +1,19 @@
 /**
- * default
+ * config
  *
+ *
+ * @author Björn Hase
  *
  */
 
+// font
 $crispy__font-size: 16px !default;
 $crispy__golden-ratio: 1.618 !default;
 
+// margin
 $crispy__margin: pxToEm(20px) !default;
 
+// colors
 $cripsy__color-primary: #5ca4a9 !default;
 $cripsy__color-success: #6a8d73 !default;
 $cripsy__color-warning: #f4f1bb !default;
@@ -16,6 +21,7 @@ $cripsy__color-danger: #ed6a5a !default;
 $cripsy__color-text: #969696 !default;
 $crispy__color-background: #e6ebe0 !default;
 
+// body
 $crispy__body__font-family: Arial, Helvetica, Neue Helvetica, sans-serif !default;
 $crispy__body__line-height: $base__golden-ratio !default;
 $crispy__body__direction: ltr !default;

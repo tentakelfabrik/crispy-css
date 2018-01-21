@@ -6,8 +6,35 @@
  *
  */
 
+$crispy__button__padding: pxToEm(5px) pxToEm(10px) !default;
+
 $crispy__button__up-margin: pxToEm(20px) !default;
 $crispy__button__up-padding: pxToEm(5px) !default;
+
+$crispy__button__sizes: (
+    'default': 18px,
+    'small': 14px,
+    'large': 28px
+) !default;
+
+$crispy__button__colors: (
+    'default': (
+        'color': $cripsy__color-text,
+        'background-color': $crispy__color-primary
+    ),
+    'success': (
+        'color': $cripsy__color-text,
+        'background-color': $crispy__color-primary
+    ),
+    'warning': (
+        'color': $cripsy__color-text,
+        'background-color': $crispy__color-primary
+    ),
+    'danger': (
+        'color': $cripsy__color-text,
+        'background-color': $crispy__color-primary
+    )
+) !default;
 
 @mixin crispy__button() {
     .button {
@@ -16,6 +43,8 @@ $crispy__button__up-padding: pxToEm(5px) !default;
 
         vertical-align: middle;
         appearance: none;
+
+        padding: $crispy__button__padding;
 
         &--wide {
             width: 100%;
@@ -36,6 +65,7 @@ $crispy__button__up-padding: pxToEm(5px) !default;
         &--up {
             bottom: 0;
         }
+
 
         &:hover {
             cursor: pointer;
