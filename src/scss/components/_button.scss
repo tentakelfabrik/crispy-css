@@ -75,5 +75,59 @@ $crispy__button__colors: (
         &:focus {
             outline: none;
         }
+
+        // font-sizes & colors
+        @include font-sizes($button__font-sizes);
+        @include crispy__button__colors($button__colors);
+    }
+
+    /**
+     * grouping buttons
+     *
+     *
+     */
+    .button-group {
+        .button {
+            float: left;
+        }
+
+        @include crispy__clearfix();
+    }
+}
+
+@mixin cripsy__button__colors($colors) {
+    @each $name, $color in $colors {
+
+        // default has no modification
+        @if ($name == 'default') {
+            @include crispy__button__color($color);
+        }
+        @else {
+            &--#{$name} {
+                @include crispy__button__color($color);
+            }
+        }
+    }
+}
+
+@mixin cripsy__button__colors($color) {
+    $background-color: false;
+    $text-color: false;
+
+    @if (type-of($color) == 'map') {
+        @if (has-key($color, 'color')) {
+            $text-color: map-get($color, 'color');
+        }
+
+        @if (has-key($color, 'background-color')) {
+            $background-color: map-get($color, 'background-color');
+        }
+
+        color: $text-color;
+        background-color: $background-color;
+
+        &:hover {
+            background-color: darken($background-color, 10%);
+        }
     }
 }
