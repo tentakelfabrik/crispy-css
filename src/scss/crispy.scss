@@ -11,3 +11,9 @@
     'components/heading',
     'components/icon',
     'components/table';
+
+@include crispy__margin();
+
+@include crispy__button();
+@include crispy__heading();
+@include crispy__table();

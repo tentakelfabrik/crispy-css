@@ -10,18 +10,18 @@
  */
 
 $crispy__heading__font-sizes: (
-    'h1': 36px,
-    'h2': 30px,
-    'h3': 24px,
-    'h4': 18px,
-    'h5': 14px,
-    'h6': 12px
+    'h1': 40px,
+    'h2': 36px,
+    'h3': 32px,
+    'h4': 28px,
+    'h5': 24px,
+    'h6': 20px
 ) !default;
 
 $crispy__heading__font-weight: bold !default;
 $crispy__heading__font-family: Arial, Helvetica, Neue Helvetica, sans-serif !default;
 $crispy__heading__line-height: $crispy__golden-ratio !default;
-$crispy__heading__margin: 0 0 pxToEm(20px) !default;
+$crispy__heading__margin: 0 0 pxToEm(5px) !default;
 
 @mixin crispy__heading {
     h1, .h1,
@@ -30,13 +30,13 @@ $crispy__heading__margin: 0 0 pxToEm(20px) !default;
     h4, .h4,
     h5, .h5,
     h6, .h6 {
-        font-family: $heading__font-family;
-        font-weight: $heading__font-weight;
-        line-height: $heading__line-height;
-        margin: $heading__margin;
+        font-family: $crispy__heading__font-family;
+        font-weight: $crispy__heading__font-weight;
+        line-height: $crispy__heading__line-height;
+        margin: $crispy__heading__margin;
     }
 
-    @each $h, $font-size in $heading__font-sizes {
+    @each $h, $font-size in $crispy__heading__font-sizes {
         #{$h}, .#{$h} {
             @include font-size($font-size);
         }

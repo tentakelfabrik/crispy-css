@@ -17,15 +17,15 @@ $crispy__margin-bottom: $crispy__margin !default;
     }
 
     .margin-top-1x {
-        margin-top: $margin-top;
+        margin-top: $crispy__margin-top;
     }
 
     .margin-top-2x {
-        margin-top: $margin-top * 2;
+        margin-top: $crispy__margin-top * 2;
     }
 
     .margin-top-3x {
-        margin-top: $margin-top * 3;
+        margin-top: $crispy__margin-top * 3;
     }
 
     .margin-bottom-0x {
@@ -33,14 +33,14 @@ $crispy__margin-bottom: $crispy__margin !default;
     }
 
     .margin-bottom-1x {
-        margin-bottom: $margin-bottom;
+        margin-bottom: $crispy__margin-bottom;
     }
 
     .margin-bottom-2x {
-        margin-bottom: $margin-bottom * 2;
+        margin-bottom: $crispy__margin-bottom * 2;
     }
 
     .margin-bottom-3x {
-        margin-bottom: $margin-bottom * 3;
+        margin-bottom: $crispy__margin-bottom * 3;
     }
 }

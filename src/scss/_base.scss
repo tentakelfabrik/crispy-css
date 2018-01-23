@@ -1,6 +1,6 @@
 @import
-    '../../normalize.css/normalize',
-    '../../reflex-grid/scss/reflex';
+    '../../node_modules/normalize.css/normalize',
+    '../../node_modules/reflex-grid/scss/reflex';
 
 /**
  * base
@@ -110,7 +110,7 @@ body {
     font-weight: normal;
     font-size: 100%;
     line-height: $crispy__body__line-height;
-    color: $crispy__body__color-text;
+    color: $crispy__body__color;
     background-color: $crispy__body__background-color;
     direction: $crispy__body__direction;
 

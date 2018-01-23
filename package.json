@@ -12,17 +12,23 @@
     "normalize.css": "^7.0.0",
     "reflex-grid": "^2.0.1"
   },
+  "devDependencies": {
+    "autoprefixer": "^7.2.5",
+    "clean-css-cli": "^4.1.10",
+    "node-sass": "^4.7.2",
+    "postcss-cli": "^4.1.1",
+    "rimraf": "^2.6.1"
+  },
   "config": {
     "dest_dir": "dest/",
     "src_dir": "src/"
   },
   "scripts": {
-    "preinstall": "npm install -g node-sass clean-css-cli postcss-cli autoprefixer",
     "build": "npm run css:build",
     "css:build": "npm run css:clean && npm run css:scss && npm run css:postcss && npm run css:minify",
     "css:clean": "rimraf $npm_package_config_dist_dir/css/*",
     "css:scss": "node-sass $npm_package_config_src_dir/scss/crispy.scss $npm_package_config_dest_dir/css/crispy.css",
     "css:postcss": "postcss $npm_package_config_dest_dir/css/*.css --use autoprefixer -d $npm_package_config_dest_dir/css/",
-    "css:minify": "cleancss $npm_package_config_dest_dir/css/landingPage.css > $npm_package_config_dest_dir/css/landingPage.min.css"
+    "css:minify": "cleancss $npm_package_config_dest_dir/css/crispy.css > $npm_package_config_dest_dir/css/crispy.min.css"
   }
 }

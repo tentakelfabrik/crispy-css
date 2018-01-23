@@ -7,7 +7,7 @@
  *
  */
 
-@mixin crispy-align() {
+@mixin crispy__align() {
     .text-left {
         text-align: left;
     }
@@ -42,6 +42,6 @@
     }
 
     .clearfix {
-        @include $crispy__clearfix();
+        @include crispy__clearfix();
     }
 }
