@@ -11,7 +11,7 @@
 $crispy__background-colors: $crispy__colors !default;
 
 @mixin crispy__background-color() {
-     @each $name, $color in $crispy__background-color {
+     @each $name, $color in $crispy__background-colors {
         .background-#{$name} {
             background-color: $color;
         }

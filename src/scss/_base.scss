@@ -91,11 +91,24 @@ blockquote {
 
 // lists
 ul, ol, dl {
-    margin: 0 0 $crispy__margin 0;
+    padding: 0;
+    margin: pxToEm(10px) 0 $crispy__margin pxToEm(10px);
+}
+
+ol {
+    list-style: decimal inside;
 }
 
 ul {
-    list-style-position: outside;
+    list-style: disc inside;
+}
+
+dd, dt {
+    margin: 0;
+}
+
+dt {
+    font-weight: bold;
 }
 
 // divider
