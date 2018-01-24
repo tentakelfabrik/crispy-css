@@ -5,18 +5,19 @@
     'config',
     'base',
 
-    'helpers/helpers',
-
     'components/button',
+    'components/typography',
     'components/heading',
     'components/icon',
-    'components/table';
+    'components/table',
 
-@include crispy__align();
-@include crispy__margin();
-@include crispy__background-color();
+    'helpers/helpers';
 
 @include crispy__button();
 @include crispy__heading();
 @include crispy__table();
 @include crispy__typography();
+
+@include crispy__align();
+@include crispy__margin();
+@include crispy__background-color();

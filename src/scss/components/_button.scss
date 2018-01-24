@@ -6,33 +6,42 @@
  *
  */
 
-$crispy__button__padding: pxToEm(5px) pxToEm(10px) !default;
+$crispy__button__padding: pxToEm(10px) pxToEm(25px) !default;
+$crispy__button__border: 0 !default;
 
 $crispy__button__up-margin: pxToEm(20px) !default;
 $crispy__button__up-padding: pxToEm(5px) !default;
 
 $crispy__button__font-sizes: (
-    'default': 18px,
+    'default': $crispy__body__font-size,
     'small': 14px,
     'large': 28px
 ) !default;
 
 $crispy__button__colors: (
     'default': (
-        'color': $crispy__color-text,
+        'color': #ffffff,
         'background-color': $crispy__color-primary
     ),
+    'secondary': (
+        'color': #ffffff,
+        'background-color': $crispy__color-secondary
+    ),
     'success': (
-        'color': $crispy__color-text,
+        'color': #ffffff,
         'background-color': $crispy__color-success
     ),
     'warning': (
-        'color': $crispy__color-text,
+        'color': #ffffff,
         'background-color': $crispy__color-warning
     ),
     'danger': (
-        'color': $crispy__color-text,
+        'color': #ffffff,
         'background-color': $crispy__color-danger
+    ),
+    'info': (
+        'color': #ffffff,
+        'background-color': $crispy__color-info
     )
 ) !default;
 
@@ -43,8 +52,9 @@ $crispy__button__colors: (
 
         vertical-align: middle;
         appearance: none;
-
         padding: $crispy__button__padding;
+
+        border: $crispy__button__border;
 
         &--wide {
             width: 100%;
@@ -52,7 +62,7 @@ $crispy__button__colors: (
 
         // button for scroll up and down
         &--up, &--down {
-            position: absolute;
+            position:fixed;
             bottom: 0;
             margin: $crispy__button__up-margin;
             padding: $crispy__button__up-padding;

@@ -20,6 +20,28 @@
                 background-color: #efefef;
                 border: 1px dotted #cecece;
             }
+
+            .header {
+                padding: 8px 0 0;
+                background-color: #e9e9e9;
+                border-bottom: 1px dotted #959595;
+                margin: 0 0 50px;
+            }
+
+            .header__logo {
+                width: 50px;
+                line-height: 0;
+                position: relative;
+                top: 3px;
+                margin: 0 10px;
+            }
+
+            .footer {
+                padding: 8px 0 0;
+                background-color: #e9e9e9;
+                border-top: 1px dotted #959595;
+                margin: 50px 0 0 0;
+            }
         </style>
     </head>
     <body>
@@ -27,16 +49,29 @@
             <div class="container">
                 <div class="grid">
                     <div class="col-12">
-                        <h1 class="text-center">Crispy Boilerplate - pure CSS</h1>
+                        <div class="text-center">
+                            <h1 class="header__title">
+                                <img class="header__logo" src="../dest/svg/chip.svg" alt="chip" /> Crispy Boilerplate - small, simple, pure CSS
+                            </h1>
+                        </div>
                     </div>
                 </div>
             </div>
         </header>
+        <button class="button button--up">b</button>
         <div class="container">
             <div class="grid">
                 <div class="col-2">
                     <nav>
-                        <a href="#heading">Heading</a>
+                        <ul class="margin-top-0x">
+                            <li><a href="#typography">Typography</a></li>
+                            <li><a href="#icon">Icon</a></li>
+                            <li><a href="#buttons">Buttons</a></li>
+                            <li><a href="#table">Table</a></li>
+                            <li><a href="#helpers">Helpers</a></li>
+                            <li><a href="#functions">Functions</a></li>
+                            <li><a href="#reflex-grid">Reflex Grid</a></li>
+                        </ul>
                     </nav>
                 </div>
                 <div class="col-10">
@@ -61,72 +96,175 @@
                     </p>
 
                     <h2 id="typography">Typography</h2>
-                    <div class="panel">
-                        <h1>Heading h1</h1>
-                        <h2>Heading h1</h2>
-                        <h3>Heading h1</h3>
-                        <h4>Heading h1</h4>
-                        <h5>Heading h1</h5>
-                        <h6>Heading h1</h6>
-                    </div>
-                    <p>
-                    <code class="code">&lt;h2&gt;&lt;/h2&gt;
+
+                    <!-- blockquote -->
+                    <h3 class="h4 margin-top-1x">Heading</h3>
+                    <h4 class="h6">Html:</h4>
+                    <code>&lt;h2&gt;&lt;/h2&gt;
 &lt;h2 class="h3"&gt;&lt;/h2&gt;</code>
+                    <h4 class="h6">Sass:</h4>
+                    <code>$crispy__heading__font-sizes: (
+    'h1': 40px,
+    'h2': 36px,
+    'h3': 32px,
+    'h4': 28px,
+    'h5': 24px,
+    'h6': 20px
+) !default;</code>
+
+                    <h1>Heading h1</h1>
+                    <h2>Heading h1</h2>
+                    <h3>Heading h1</h3>
+                    <h4>Heading h1</h4>
+                    <h5>Heading h1</h5>
+                    <h6>Heading h1</h6>
+
+                    <strong>Strong</strong>
+
+                    <!-- blockquote -->
+                    <h3 class="h4 margin-top-1x">blockquote</h3>
+                    <h4 class="h6">Html:</h4>
+                    <code class="code">&lt;blockquote&gt;&lt;/blockquote&gt;</code>
+                    <blockquote>
+                        Hoodie kickstarter four loko, pinterest hashtag chambray glossier. Pug before they sold out etsy listicle. Deep v bespoke tacos polaroid, squid flexitarian crucifix messenger bag.
+                    </blockquote>
+
+                    <!-- abbr -->
+                    <h3 class="h4 margin-top-1x">abbr</h3>
+                    <p>
+                        Glossier viral occupy mixtape pok pok cornhole, <abbr title="vape affogato hella">vape affogato hella</abbr> knausgaard thundercats
                     </p>
-                    <div class="panel">
-                        <strong>Strong</strong> <span class="background-warning">&lt;strong&gt;</span>
-                        <code></code>
-                        <blockquote>
-                            Hoodie kickstarter four loko, pinterest hashtag chambray glossier. Pug before they sold out etsy listicle. Deep v bespoke tacos polaroid, squid flexitarian crucifix messenger bag.
-                        </blockquote>
-                    </div>
-                    <div class="panel">
-                        <ul>
-                            <li>item 1</li>
-                            <li>item 2</li>
-                        </ul>
-                        <ol>
-                            <li>item 1</li>
-                            <li>item 2</li>
-                        </ol>
-                        <dl>
-                            <dt>defined title 1</dt><dd>defined item 1</dd>
-                        </dl>
-                    </div>
+                    <code class="code">&lt;abbr title=&quot;&quot;&gt;&lt;/abbr&gt;</code>
 
+                    <ul>
+                        <li>item 1</li>
+                        <li>item 2</li>
+                    </ul>
+                    <ol>
+                        <li>item 1</li>
+                        <li>item 2</li>
+                    </ol>
+                    <dl>
+                        <dt>defined title 1</dt><dd>defined item 1</dd>
+                    </dl>
+
+                    <hr>
                     <h2 id="buttons" class="margin-top-1x">Buttons</h2>
-                    <div class="panel">
-                        <button class="button">Button</button>
-                        <button class="button button--danger">Button</button>
-                    </div>
 
+                    <button class="button">Default</button>
+                    <button class="button button--secondary">Default</button>
+                    <button class="button button--success">Success</button>
+                    <button class="button button--warning">Warning</button>
+                    <button class="button button--danger">Danger</button>
+                    <button class="button button--info">Info</button>
+                    <button class="button button--info button--wide margin-top-1x">Info</button>
+                    <code class="margin-top-1x margin-bottom-1x">&lt;button class=&quot;button button--danger&quot;&gt;&lt;/button&gt;
+&lt;button class=&quot;button button--success&quot;&gt;&lt;/button&gt;
+&lt;button class=&quot;button button--warning&quot;&gt;&lt;/button&gt;
+&lt;button class=&quot;button button--danger&quot;&gt;&lt;/button&gt;
+&lt;button class=&quot;button button--up&quot;&gt;&lt;/button&gt;
+&lt;button class=&quot;button button--down&quot;&gt;&lt;/button&gt;</code>
+
+                    <hr>
                     <h2 id="table" class="margin-top-1x">Table</h2>
-                    <div class="panel">
-                        <table class="table table--striped">
-                            <thead>
-                                <tr>
-                                    <th>name</th>
-                                    <th>age</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>The Shawshank Redemption</td>
-                                    <td>12</td>
-                                </tr>
-                                <tr>
-                                    <td>The Shawshank Redemption</td>
-                                    <td>12</td>
-                                </tr>
-                                <tr>
-                                    <td>The Shawshank Redemption</td>
-                                    <td>12</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <code>&lt;table class=&quot;table table--striped&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;/td&gt;
+         &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code>
+
+                    <table class="table table--striped margin-bottom-2x">
+                        <thead>
+                            <tr>
+                                <th>name</th>
+                                <th>age</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mr. Brown</td>
+                                <td>43</td>
+                            </tr>
+                            <tr>
+                                <td>Mr. Magenta</td>
+                                <td>32</td>
+                            </tr>
+                            <tr>
+                                <td>Mr. White</td>
+                                <td>45</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Reflex Grid -->
+                    <hr />
+                    <h2 id="reflex-grid" class="margin-top-1x">
+                        Reflex Grid
+                    </h2>
+                    <p>
+                        The <strong>Reflex Grid</strong> is from <a target="_blank" href="http://lendmeyourear.net">Lee Jordan</a>. I have
+                        build a few helper for media-queries. <strong>Reflex Grid </strong> is lightweight, simple and uses a flexbox grid with
+                        cross browser support, an inline-block fallback.
+                    </p>
+                    <p>
+                        Documentation: <a target="_blank"  href="http://reflexgrid.com/docs/">http://reflexgrid.com/docs/</a><br />
+                        Github: <a target="_blank"  href="https://github.com/leejordan/reflex">https://github.com/leejordan/reflex</a>
+                    </p>
+
+                    <!-- Reflex Grid / media queries -->
+                    <h3 class="h4 margin-top-1x">
+                        Media Queries
+                    </h3>
+                    <p>
+                        For Media Queries uses the Breakpoints from the <strong>Reflex Grid</strong>.
+                    </p>
+                    <ul>
+                        <li>xs: 576px</li>
+                        <li>sm: 768px</li>
+                        <li>md: 992px</li>
+                        <li>lg: 1200px</li>
+                        <li>xlg: 1600px</li>
+                    </ul>
+                    <p>
+                        You can uses a Mixin to add styles to an Breakpoint.If you want
+                        that a style only belong to one Breakpoints "-only", otherwise it is
+                        Mobile First.
+                    </p>
+
+                    <h4 class="h6">
+                        Sass:
+                    </h4>
+                    <code class="margin-bottom-1x">@include crispy__media-md() {
+    &lt;!-- your code --&gt;
+}
+
+@include crispy__media-md-only() {
+    &lt;!-- your code --&gt;
+}</code>
+
                 </div>
             </div>
         </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="grid">
+                    <div class="col-12">
+                        <div class="text-center">
+                            <p>
+                                <a target="_blank" href="https://thenounproject.com/wxchee/">W. X. Chee</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

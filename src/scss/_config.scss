@@ -14,18 +14,22 @@ $crispy__golden-ratio: 1.618 !default;
 $crispy__margin: pxToEm(20px) !default;
 
 // colors
-$crispy__color-primary: #5ca4a9 !default;
-$crispy__color-success: #6a8d73 !default;
-$crispy__color-warning: #f4f1bb !default;
-$crispy__color-danger: #ed6a5a !default;
+$crispy__color-primary: #f0c209 !default;
+$crispy__color-secondary: #b3b2af !default;
+$crispy__color-success: #5cb85c !default;
+$crispy__color-warning: #f0ad4e !default;
+$crispy__color-danger: #d9534f !default;
+$crispy__color-info: #0090d4 !default;
 $crispy__color-text: #363636 !default;
 $crispy__color-background: #ffffff !default;
 
 $crispy__colors: (
     'primary': $crispy__color-primary,
+    'secondary': $crispy__color-secondary,
     'success': $crispy__color-success,
     'warning': $crispy__color-warning,
-    'danger': $crispy__color-danger
+    'danger': $crispy__color-danger,
+    'info': $crispy__color-info
 ) !default;
 
 // body

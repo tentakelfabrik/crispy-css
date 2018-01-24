@@ -1,13 +1,13 @@
 /**
  *
  *
- * @author Björn Hase 
+ * @author Björn Hase
  *
  */
 
 
 @mixin crispy__typography() {
-    .code {
+    code {
         font-family: monospace, monospace;
         font-size: 1em;
         white-space: pre;
@@ -18,5 +18,7 @@
         padding: 10px 20px;
         border: 1px solid #d4d4d4;
         background-color: #f9f9f9;
+
+        margin: 0 0 $crispy__margin;
     }
 }
