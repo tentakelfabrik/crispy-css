@@ -10,7 +10,7 @@ $crispy__button__padding: pxToEm(10px) pxToEm(25px) !default;
 $crispy__button__border: 0 !default;
 
 $crispy__button__up-margin: pxToEm(20px) !default;
-$crispy__button__up-padding: pxToEm(5px) !default;
+$crispy__button__up-padding: pxToEm(8px) pxToEm(13px) !default;
 
 $crispy__button__font-sizes: (
     'default': $crispy__body__font-size,
@@ -49,6 +49,7 @@ $crispy__button__colors: (
     .button {
         position: relative;
         display: inline-block;
+        text-decoration: none;
 
         vertical-align: middle;
         appearance: none;
@@ -137,6 +138,7 @@ $crispy__button__colors: (
         background-color: $background-color;
 
         &:hover {
+            color: $text-color;
             background-color: darken($background-color, 10%);
         }
     }
