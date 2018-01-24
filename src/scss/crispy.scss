@@ -12,9 +12,11 @@
     'components/icon',
     'components/table';
 
+@include crispy__align();
 @include crispy__margin();
 @include crispy__background-color();
 
 @include crispy__button();
 @include crispy__heading();
 @include crispy__table();
+@include crispy__typography();
