@@ -30,10 +30,6 @@ legend {
     box-sizing: inherit;
 }
 
-img {
-    width: 100%;
-}
-
 table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -41,7 +37,7 @@ table {
 
 // paragraphs
 p {
-    margin: 0 0 $crispy__margin 0;
+    margin: 0 0 pxToEm($crispy__margin) 0;
 }
 
 // Semantic text elements
@@ -92,7 +88,11 @@ blockquote {
 // lists
 ul, ol, dl {
     padding: 0;
-    margin: pxToEm(10px) 0 $crispy__margin pxToEm(10px);
+    margin: 0 0 pxToEm($crispy__margin) pxToEm($crispy__margin);
+}
+
+ul ul, ol ol {
+    margin-top: pxToEm($crispy__margin / 2);
 }
 
 ol {
@@ -111,10 +111,20 @@ dt {
     font-weight: bold;
 }
 
+// media
+figure  {
+    margin: 0 0 pxToEm($crispy__margin);
+}
+
+figcaption {
+    margin: pxToEm($crispy__margin) 0 0;
+}
+
 // divider
 hr {
     border: 0;
     border-top: 1px solid $crispy__color-text;
+    margin: pxToEm($crispy__margin) 0
 }
 
 // body

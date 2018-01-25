@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="../dest/css/crispy.css">
+        <link rel="stylesheet" href="/css/crispy.css">
         <style>
             .container {
                 max-width: 992px;
@@ -29,11 +29,7 @@
             }
 
             .header__logo {
-                width: 50px;
-                line-height: 0;
-                position: relative;
-                top: 3px;
-                margin: 0 10px;
+                width: 45px;
             }
 
             .footer {
@@ -51,14 +47,21 @@
                     <div class="col-12">
                         <div class="text-center">
                             <h1 class="header__title">
-                                <img class="header__logo" src="../dest/svg/chip.svg" alt="chip" /> Crispy Boilerplate - small, simple, pure CSS
+                                <svg class="icon header__logo" alt="chip" viewBox="0 0 100 100">
+                                    <use xlink:href="/svg/icons.svg#chip" />
+                                </svg>
+                                Crispy Boilerplate - small, simple, pure CSS
                             </h1>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
-        <a class="button button--up" href="#header">b</a>
+        <a class="button button--up" href="#header">
+            <svg class="icon" alt="up" viewBox="0 0 100 100">
+                <use xlink:href="/svg/icons.svg#triangle-up" />
+            </svg>
+        </a>
         <div class="container">
             <div class="grid">
                 <div class="col-2">
@@ -100,17 +103,17 @@
                     <!-- blockquote -->
                     <h3 class="h4 margin-top-1x">Heading</h3>
                     <h4 class="h6">Html:</h4>
-                    <code>&lt;h2&gt;&lt;/h2&gt;
-&lt;h2 class="h3"&gt;&lt;/h2&gt;</code>
+                    <pre class="code"><code>&lt;h2&gt;&lt;/h2&gt;
+&lt;h2 class="h3"&gt;&lt;/h2&gt;</code></pre>
                     <h4 class="h6">Sass:</h4>
-                    <code>$crispy__heading__font-sizes: (
+                    <pre class="code"><code>$crispy__heading__font-sizes: (
     'h1': 40px,
     'h2': 36px,
     'h3': 32px,
     'h4': 28px,
     'h5': 24px,
     'h6': 20px
-) !default;</code>
+) !default;</code></pre>
 
                     <h1>Heading h1</h1>
                     <h2>Heading h1</h2>
@@ -124,21 +127,49 @@
                     <!-- blockquote -->
                     <h3 class="h4 margin-top-1x">blockquote</h3>
                     <h4 class="h6">Html:</h4>
-                    <code class="code">&lt;blockquote&gt;&lt;/blockquote&gt;</code>
+                    <pre class="code"><code>&lt;blockquote&gt;&lt;/blockquote&gt;</code></pre>
                     <blockquote>
                         Hoodie kickstarter four loko, pinterest hashtag chambray glossier. Pug before they sold out etsy listicle. Deep v bespoke tacos polaroid, squid flexitarian crucifix messenger bag.
                     </blockquote>
 
                     <!-- abbr -->
                     <h3 class="h4 margin-top-1x">abbr</h3>
+                    <h4 class="h6">Html:</h4>
+                    <pre class="code"><code>&lt;abbr title=&quot;&quot;&gt;&lt;/abbr&gt;</code></pre>
                     <p>
                         Glossier viral occupy mixtape pok pok cornhole, <abbr title="vape affogato hella">vape affogato hella</abbr> knausgaard thundercats
                     </p>
-                    <code class="code">&lt;abbr title=&quot;&quot;&gt;&lt;/abbr&gt;</code>
 
+                    <!-- list -->
+                    <h3 class="h4 margin-top-1x">Lists</h3>
+                    <h4 class="h6">Html:</h4>
+                    <pre class="code"><code>&lt;ul&gt;
+    &lt;li&gt;item 1&lt;/li&gt;
+    &lt;li&gt;
+        item 2
+        &lt;ul&gt;
+            &lt;li&gt;child item 1&lt;/li&gt;
+            &lt;li&gt;child item 2&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+    &lt;li&gt;item 1&lt;/li&gt;
+    &lt;li&gt;item 2&lt;/li&gt;
+&lt;/ol&gt;
+&lt;dl&gt;
+    &lt;dt&gt;defined title 1&lt;/dt&gt;
+    &lt;dd&gt;defined item 1&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
                     <ul>
                         <li>item 1</li>
-                        <li>item 2</li>
+                        <li>
+                            item 2
+                            <ul>
+                                <li>child item 1</li>
+                                <li>child item 2</li>
+                            </ul>
+                        </li>
                     </ul>
                     <ol>
                         <li>item 1</li>
@@ -158,16 +189,16 @@
                     <button class="button button--danger">Danger</button>
                     <button class="button button--info">Info</button>
                     <button class="button button--info button--wide margin-top-1x">Info</button>
-                    <code class="margin-top-1x margin-bottom-1x">&lt;button class=&quot;button button--danger&quot;&gt;&lt;/button&gt;
+                    <pre class="code"><code class="margin-top-1x margin-bottom-1x">&lt;button class=&quot;button button--danger&quot;&gt;&lt;/button&gt;
 &lt;button class=&quot;button button--success&quot;&gt;&lt;/button&gt;
 &lt;button class=&quot;button button--warning&quot;&gt;&lt;/button&gt;
 &lt;button class=&quot;button button--danger&quot;&gt;&lt;/button&gt;
 &lt;button class=&quot;button button--up&quot;&gt;&lt;/button&gt;
-&lt;button class=&quot;button button--down&quot;&gt;&lt;/button&gt;</code>
+&lt;button class=&quot;button button--down&quot;&gt;&lt;/button&gt;</code></pre>
 
                     <hr>
                     <h2 id="table" class="margin-top-1x">Table</h2>
-                    <code>&lt;table class=&quot;table table--striped&quot;&gt;
+                    <pre class="code"><code>&lt;table class=&quot;table table--striped&quot;&gt;
     &lt;thead&gt;
         &lt;tr&gt;
             &lt;th&gt;&lt;/th&gt;
@@ -178,7 +209,7 @@
             &lt;td&gt;&lt;/td&gt;
          &lt;/tr&gt;
     &lt;/tbody&gt;
-&lt;/table&gt;</code>
+&lt;/table&gt;</code></pre>
 
                     <table class="table table--striped margin-bottom-2x">
                         <thead>
@@ -202,6 +233,43 @@
                             </tr>
                         </tbody>
                     </table>
+                    <hr />
+                    <!-- helpers -->
+                    <h2 id="helpers" class="margin-top-1x">
+                        Helpers
+                    </h2>
+
+                    <!-- -->
+                    <h3 class="h4 margin-top-1x">
+                        Media
+                    </h3>
+                    <pre class="code"><code>&lt;img class=&quot;img-responsive&quot; src=&quot;https://picsum.photos/400&quot; /&gt;
+&lt;img class=&quot;img-fit-cover&quot; style=&quot;width: 100%; height: 200px;&quot; src=&quot;https://picsum.photos/400&quot;/&gt;
+&lt;img class=&quot;img-fit-contain&quot; style=&quot;width: 100%; height: 200px;&quot; src=&quot;https://picsum.photos/400&quot;/&gt;</code></pre>
+                    <div class="grid">
+                        <div class="col-6">
+                            <img class="img-responsive" src="https://picsum.photos/400" />
+                        </div>
+                        <div class="col-6">
+                            <img class="img-fit-cover" style="width: 100%; height: 200px;" src="https://picsum.photos/400" />
+                        </div>
+                        <div class="col-6">
+                            <img class="img-fit-contain" style="width: 100%; height: 200px;" src="https://picsum.photos/400" />
+                        </div>
+                    </div>
+                    <pre class="code"><code>&lt;figure&gt;
+    &lt;img class=&quot;img-responsive&quot; src=&quot;https://picsum.photos/400&quot; /&gt;
+    &lt;figcaption class=&quot;text-center&quot;&gt;Lorem Ipsum&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+                    <div class="grid">
+                        <div class="col-6">
+                            <figure>
+                                <img class="img-responsive" src="https://picsum.photos/400" />
+                                <figcaption class="text-center">Lorem Ipsum</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
 
                     <!-- Reflex Grid -->
                     <hr />
@@ -241,13 +309,13 @@
                     <h4 class="h6">
                         Sass:
                     </h4>
-                    <code class="margin-bottom-1x">@include crispy__media-md() {
+                    <pre class="code"><code class="margin-bottom-1x">@include crispy__media-md() {
     &lt;!-- your code --&gt;
 }
 
 @include crispy__media-md-only() {
     &lt;!-- your code --&gt;
-}</code>
+}</code></pre>
 
                 </div>
             </div>

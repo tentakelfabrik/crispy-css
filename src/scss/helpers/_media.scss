@@ -8,7 +8,9 @@
 
 @mixin crispy__media() {
     .img-responsive {
-
+        display: block;
+        max-width: 100%;
+        height: auto;
     }
 
     .img-fit-contain {
@@ -17,6 +19,29 @@
 
     .img-fit-cover {
         object-fit: cover;
+    }
+
+    .img-rounded {
+        border-radius: 50%;
+    }
+
+    /**
+     *
+     *
+     */
+    .img-hero {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+
+        &--top {
+            background-position: top center;
+        }
+
+        &--bottom {
+            background-position: bottom center;
+        }
     }
 
     .video-responsive {

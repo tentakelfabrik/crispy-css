@@ -1,0 +1,20 @@
+/**
+ *
+ *
+ *
+ */
+
+@mixin $crispy__nav {
+    .nav {
+
+        &__list {
+            @include crispy__clearlist();
+        }
+
+        &--horizontal {
+            .nav__item {
+                display: inline-block;
+            }
+        }
+    }
+}

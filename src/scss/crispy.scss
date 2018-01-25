@@ -6,10 +6,10 @@
     'base',
 
     'components/button',
-    'components/typography',
     'components/heading',
     'components/icon',
     'components/table',
+    'components/code',
 
     'helpers/helpers';
 
@@ -17,7 +17,8 @@
 @include crispy__button();
 @include crispy__heading();
 @include crispy__table();
-@include crispy__typography();
+@include crispy__icon();
+@include crispy__code();
 
 // font-sizes & colors
 .button {
@@ -28,4 +29,5 @@
 // helpers
 @include crispy__align();
 @include crispy__margin();
-@include crispy__background-color();
+@include crispy__text();
+@include crispy__media();
