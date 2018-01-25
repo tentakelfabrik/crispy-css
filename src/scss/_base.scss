@@ -127,5 +127,5 @@ body {
     background-color: $crispy__body__background-color;
     direction: $crispy__body__direction;
 
-    @include font-size($crispy__body__font-size);
+    @include crispy__font-size($crispy__body__font-size);
 }

@@ -38,7 +38,7 @@ $crispy__heading__margin: 0 0 pxToEm(5px) !default;
 
     @each $h, $font-size in $crispy__heading__font-sizes {
         #{$h}, .#{$h} {
-            @include font-size($font-size);
+            @include crispy__font-size($font-size);
         }
     }
 }
