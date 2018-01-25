@@ -11,7 +11,7 @@ $crispy__font-size: 16px !default;
 $crispy__golden-ratio: 1.618 !default;
 
 // margin
-$crispy__margin: pxToEm(20px) !default;
+$crispy__margin: 5px !default;
 
 // colors
 $crispy__color-primary: #f0c209 !default;
@@ -23,6 +23,7 @@ $crispy__color-info: #0090d4 !default;
 $crispy__color-text: #363636 !default;
 $crispy__color-background: #ffffff !default;
 
+// colors as map
 $crispy__colors: (
     'primary': $crispy__color-primary,
     'secondary': $crispy__color-secondary,
@@ -39,3 +40,38 @@ $crispy__body__line-height: $crispy__golden-ratio !default;
 $crispy__body__direction: ltr !default;
 $crispy__body__color: $crispy__color-text !default;
 $crispy__body__background-color: $crispy__color-background !default;
+
+// font-sizes as map
+$crispy__font-sizes: (
+    'default': $crispy__body__font-size,
+    'small': 16px,
+    'large': 20px
+) !default;
+
+// buttons colors
+$crispy__button__colors: (
+    'default': (
+        'color': #ffffff,
+        'background-color': $crispy__color-primary
+    ),
+    'secondary': (
+        'color': #ffffff,
+        'background-color': $crispy__color-secondary
+    ),
+    'success': (
+        'color': #ffffff,
+        'background-color': $crispy__color-success
+    ),
+    'warning': (
+        'color': #ffffff,
+        'background-color': $crispy__color-warning
+    ),
+    'danger': (
+        'color': #ffffff,
+        'background-color': $crispy__color-danger
+    ),
+    'info': (
+        'color': #ffffff,
+        'background-color': $crispy__color-info
+    )
+) !default;

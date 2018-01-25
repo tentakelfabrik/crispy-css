@@ -13,11 +13,20 @@
 
     'helpers/helpers';
 
+// button
 @include crispy__button();
+
+// font-sizes & colors
+.button {
+    @include crispy__font-sizes($crispy__button__font-sizes);
+    @include crispy__button__colors($crispy__button__colors);
+}
+
 @include crispy__heading();
 @include crispy__table();
 @include crispy__typography();
 
+// helpers
 @include crispy__align();
 @include crispy__margin();
 @include crispy__background-color();

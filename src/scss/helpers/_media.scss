@@ -1,0 +1,40 @@
+/**
+ * helpers for media elements
+ *
+ *
+ * @author Björn Hase
+ *
+ */
+
+@mixin crispy__media() {
+    .img-responsive {
+
+    }
+
+    .img-fit-contain {
+        object-fit: contain;
+    }
+
+    .img-fit-cover {
+        object-fit: cover;
+    }
+
+    .video-responsive {
+        display: block;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+        width: 100%;
+
+        iframe, object, embed {
+            border: 0;
+            bottom: 0;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100%;
+        }
+    }
+}

@@ -40,6 +40,10 @@ $crispy__table__striped__background-color: lighten($crispy__color-text, 75%) !de
             }
         }
 
+        &--scroll {
+            overflow-x: auto;
+        }
+
         td {
             color: $crispy__table__color;
         }

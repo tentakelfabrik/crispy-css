@@ -1,0 +1,29 @@
+/**
+ * code
+ *
+ *
+ * @author Björn Hase
+ *
+ */
+
+$crispy__code__font-family: monospace, monospace !default;
+$crispy__code__padding: pxToEm(10px) pxToEm(20px) !default;
+$crispy__code__margin: 0 0 pxToEm($crispy__margin) !default;
+$crispy__code__border: 1px solid #d4d4d4 !default;
+$crispy__code__background-color: #f9f9f9 !default;
+
+@mixin crispy__code() {
+    .code {
+        font-family: $crispy__code__font-family;
+        white-space: pre;
+        display: block;
+
+        overflow-y: hidden;
+        overflow-x: auto;
+        padding: $crispy__code__padding;
+        border: $crispy__code__border;
+        background-color: $crispy__code__background-color;
+
+        margin: $crispy__code__margin;
+    }
+}

@@ -1,0 +1,33 @@
+/**
+ * helpers for text
+ *
+ * - font-sizes
+ * - color
+ * - background-color
+ *
+ *
+ * @author Björn Hase
+ *
+ */
+
+$crispy__text-colors: $crispy__colors !default;
+
+@mixin crispy__text() {
+    @each $name, $color in $crispy__font-sizes {
+        .text-#{$name} {
+            @include font-size($font-size);
+        }
+    }
+
+    @each $name, $color in $crispy__text-colors {
+		.text-#{$name} {
+			color: $color;
+		}
+	}
+
+    @each $name, $color in $crispy__text-colors {
+        .background-#{$name} {
+            background-color: $color;
+        }
+    }
+}

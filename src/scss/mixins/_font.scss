@@ -1,4 +1,5 @@
 /**
+ * fonts
  *
  *
  *
@@ -13,26 +14,7 @@
  * @param {px} $font-size
  *
  */
-@mixin font-size($font-size) {
+@mixin crispy__font-size($font-size) {
     font-size: $font-size;
     font-size: pxToRem($font-size);
-}
-
-/**
- * add modificators for font-size from a map
- *
- *
- * @param {map} $font-sizes
- *
- */
-@mixin font-sizes($font-sizes) {
-    @each $name, $font-size in $font-sizes {
-        @if ($name == 'default') {
-            @include font-size($font-size);
-        } @else {
-            &--#{$name} {
-                @include font-size($font-size);
-            }
-        }
-    }
 }

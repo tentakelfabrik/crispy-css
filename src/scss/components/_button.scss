@@ -12,39 +12,6 @@ $crispy__button__border: 0 !default;
 $crispy__button__up-margin: pxToEm(20px) !default;
 $crispy__button__up-padding: pxToEm(8px) pxToEm(13px) !default;
 
-$crispy__button__font-sizes: (
-    'default': $crispy__body__font-size,
-    'small': 14px,
-    'large': 28px
-) !default;
-
-$crispy__button__colors: (
-    'default': (
-        'color': #ffffff,
-        'background-color': $crispy__color-primary
-    ),
-    'secondary': (
-        'color': #ffffff,
-        'background-color': $crispy__color-secondary
-    ),
-    'success': (
-        'color': #ffffff,
-        'background-color': $crispy__color-success
-    ),
-    'warning': (
-        'color': #ffffff,
-        'background-color': $crispy__color-warning
-    ),
-    'danger': (
-        'color': #ffffff,
-        'background-color': $crispy__color-danger
-    ),
-    'info': (
-        'color': #ffffff,
-        'background-color': $crispy__color-info
-    )
-) !default;
-
 @mixin crispy__button() {
     .button {
         position: relative;
@@ -86,10 +53,6 @@ $crispy__button__colors: (
         &:focus {
             outline: none;
         }
-
-        // font-sizes & colors
-        @include font-sizes($crispy__button__font-sizes);
-        @include crispy__button__colors($crispy__button__colors);
     }
 
     /**
@@ -106,6 +69,10 @@ $crispy__button__colors: (
     }
 }
 
+/**
+ *
+ *
+ */
 @mixin crispy__button__colors($colors) {
     @each $name, $color in $colors {
 
@@ -121,6 +88,10 @@ $crispy__button__colors: (
     }
 }
 
+/**
+ *
+ *
+ */
 @mixin crispy__button__color($color) {
     $background-color: false;
     $text-color: false;
