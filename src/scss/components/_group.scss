@@ -8,28 +8,35 @@
  * </nav>
  *
  * @author Björn Hase
- * 
+ *
  */
 
 $crispy__group__character: '/' !default;
+$crispy__group__character__margin: toEm(0 $crispy__margin 0) !default;
 
-@mixin $crispy__group {
+@mixin crispy__group() {
     .group {
-
-        &__section {
-            @include crispy__clearlist();
-        }
-
         &--horizontal {
-            .group__item {
+            .group__item, .group__section {
                 display: inline-block;
             }
         }
 
-        &--divider {
-            .group__item {
-                &:after {
-                    content: $crispy__group__character;
+        &__section {
+            @include crispy__clearlist();
+
+            &--separate {
+                .group__item {
+                    &:after {
+                        margin: $crispy__group__character__margin;
+                        content: $crispy__group__character;
+                    }
+
+                    &:last-child {
+                        &:after {
+                            display: none;
+                        }
+                    }
                 }
             }
         }

@@ -1,0 +1,47 @@
+/**
+ * panel
+ *
+ * <div class="modal">
+ *
+ * </div>
+ *
+ * @author Björn Hase
+ *
+ */
+
+
+$crispy__modal__margin: toEm($crispy__margin * 2) !default;
+
+@mixin crispy__modal {
+    .modal {
+        position: absolute;
+
+        &--fixed {
+            position: fixed;
+        }
+
+        &--left {
+            left: 0;
+        }
+
+        &--top-center {
+            left: 50%;
+        }
+
+        &--top {
+            top: 0;
+        }
+
+        &--right {
+            right: 0;
+        }
+
+        &--bottom {
+            bottom: 0;
+        }
+
+        .panel {
+            margin: $crispy__modal__margin;
+        }
+    }
+}

@@ -76,7 +76,7 @@ mark {
 
 // blockquote
 blockquote {
-    border-left: 1px solid $crispy__color-text;
+    border-left: 1px solid $crispy__color-secondary;
     margin-left: 0;
     padding: toEm(10px 20px);
 
@@ -123,7 +123,7 @@ figcaption {
 // divider
 hr {
     border: 0;
-    border-top: 1px solid $crispy__color-text;
+    border-top: 1px solid $crispy__color-secondary;
     margin: toEm($crispy__margin 0)
 }
 

@@ -1,112 +1,194 @@
 <!doctype html>
 <html class="no-js" lang="en_EN">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="/css/crispy.css">
-        <style>
-            .container {
-                max-width: 992px;
-                width: 100%;
-                margin: 0 auto;
-            }
+		<link rel="stylesheet" href="/css/styles.min.css">
+		<style>
+			.container {
+				max-width: 992px;
+				width: 100%;
+				margin: 0 auto;
+			}
 
-            .panel {
-                padding: 10px;
-                background-color: #efefef;
-                border: 1px dotted #cecece;
-            }
+			.panel {
+				padding: 10px;
+				background-color: #efefef;
+				border: 1px dotted #cecece;
+			}
 
-            .header {
-                padding: 8px 0 0;
-                background-color: #e9e9e9;
-                border-bottom: 1px dotted #959595;
-                margin: 0 0 50px;
-            }
+			.header {
+				padding: 8px 0 0;
+				background-color: #e9e9e9;
+				border-bottom: 1px dotted #959595;
+				margin: 0 0 50px;
+			}
 
-            .header__logo {
-                width: 45px;
-            }
+			.header__logo {
+				width: 45px;
+			}
 
-            .footer {
-                padding: 8px 0 0;
-                background-color: #e9e9e9;
-                border-top: 1px dotted #959595;
-                margin: 50px 0 0 0;
-            }
-        </style>
-    </head>
-    <body>
-        <header id="header" class="header">
-            <div class="container">
-                <div class="grid">
-                    <div class="col-12">
-                        <div class="text-center">
-                            <h1 class="header__title">
-                                <svg class="icon header__logo" alt="chip" viewBox="0 0 100 100">
-                                    <use xlink:href="/svg/icons.svg#chip" />
-                                </svg>
-                                Crispy Boilerplate - small, simple, pure CSS
-                            </h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <a class="button button--up" href="#header">
-            <svg class="icon" alt="up" viewBox="0 0 100 100">
-                <use xlink:href="/svg/icons.svg#triangle-up" />
-            </svg>
-        </a>
-        <div class="container">
-            <div class="grid">
-                <div class="col-2">
-                    <nav>
-                        <ul class="margin-top-0x">
-                            <li><a href="#typography">Typography</a></li>
-                            <li><a href="#icon">Icon</a></li>
-                            <li><a href="#buttons">Buttons</a></li>
-                            <li><a href="#table">Table</a></li>
-                            <li><a href="#helpers">Helpers</a></li>
+			.footer {
+				padding: 8px 0 0;
+				background-color: #e9e9e9;
+				border-top: 1px dotted #959595;
+				margin: 50px 0 0 0;
+			}
+		</style>
+	</head>
+	<body>
+		<header id="header" class="header">
+			<div class="container">
+				<div class="grid">
+					<div class="col-12">
+						<div class="text-center">
+							<hgroup>
+								<h1 class="header__title">
+									<svg class="icon header__logo" alt="Crisp" viewBox="0 0 100 100">
+										<use xlink:href="/svg/icons.svg#chip" />
+									</svg>
+									Crispy Boilerplate - Flat Sass Boilerplate
+								</h1>
+							</hgroup>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<a class="button button--up" href="#header">
+			<svg class="icon" alt="up" viewBox="0 0 100 100">
+				<use xlink:href="/svg/icons.svg#triangle-up" />
+			</svg>
+		</a>
+		<div class="container">
+			<div class="grid">
+				<div class="col-2">
+					<nav>
+						<ul class="margin-top-0x">
+							<li><a href="#components">Components</a></li>
                             <li><a href="#functions">Functions</a></li>
-                            <li><a href="#reflex-grid">Reflex Grid</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-10">
-                    <p>
-                        A few Years a have always created Styles to use in other Frameworks, crispy boilerplate is a
-                        a small toolkit from this helpers, styles that can be used to create. This is not beatiful or fancy
-                        it is a simple and basic toolkit to get a default style.
+							<li><a href="#helpers">Helpers</a></li>
+                            <li><a href="#mixins">Mixins</a></li>
+							<li><a href="#reflex-grid">Reflex Grid</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="col-10">
+					<p>
+                        Why? There are so many! Yes, of Course, but this is not
+                        a Framework, it is a Boilerplate, more simple. I have tried
+                        to build a minimalistic sass.
                     </p>
                     <p>
-                       For me it was important to use no js, not that i hate js, no, the Problem of bigger Frameworks was
-                       but for the most webapps, it was always diffult to build a few things and not getting a conflict. So i desided
-                       it is simpler to get a good stable basis and build smaller parts
-                    </p>
+
+
+
+						A few Years a have always created Styles to use in other Frameworks, crispy boilerplate is a
+						a small toolkit from this helpers, styles that can be used to create. This is not beatiful or fancy
+						it is a simple and basic toolkit to get a default style.
+					</p>
+					<p>
+					   For me it was important to use no js, not that i hate js, no, the Problem of bigger Frameworks was
+					   but for the most webapps, it was always diffult to build a few things and not getting a conflict. So i desided
+					   it is simpler to get a good stable basis and build smaller parts
+					</p>
+					<p>
+						So this is a smaller approch, most projects i have then that
+						big Frameworks were used, but i often felt that there
+						was a Problem, often the fight against the framework, that
+						result often in bigger and longer code.
+
+						This is also a try to code get a smaller base to create more effecit
+						No, it is a try, i can not promise you it will be done,
+					</p>
+
+                    <!-- npm -->
+                    <hr>
+                    <h2>
+                        npm
+                    </h2>
                     <p>
-                        So this is a smaller approch, most projects i have then that
-                        big Frameworks were used, but i often felt that there
-                        was a Problem, often the fight against the framework, that
-                        result often in bigger and longer code.
 
-                        This is also a try to code get a smaller base to create more effecit
-                        No, it is a try, i can not promise you it will be done,
                     </p>
 
-                    <h2 id="typography">Typography</h2>
+                    <!-- how to use -->
+                    <hr>
+                    <h2>
+                        How to use
+                    </h2>
 
-                    <!-- blockquote -->
-                    <h3 class="h4 margin-top-1x">Heading</h3>
-                    <h4 class="h6">Html:</h4>
-                    <pre class="code"><code>&lt;h2&gt;&lt;/h2&gt;
+<!-- components -->
+<hr>
+<h2 id="typography" class="margin-top-1x">
+    Typography
+</h2>
+
+<!-- components -->
+<hr>
+<h2 id="components" class="margin-top-1x">
+    Components
+</h2>
+
+<!-- components / button -->
+<h3 class="h4 margin-top-2x margin-bottom-0x">
+    Button
+</h3>
+<h4 class="h6">Html:</h4>
+<pre class="code margin-top-1x"><code>&lt;button class=&quot;button&quot;&gt;&lt;/button&gt;
+&lt;button class=&quot;button button--wide&quot;&gt;&lt;/button&gt;</code></pre>
+<button class="button">Default</button>
+<button class="button button--wide margin-top-1x">Info</button>
+
+<!-- components / group -->
+<h3 class="h4 margin-top-2x margin-bottom-0x">
+    Group
+</h3>
+<h4 class="h6">Html:</h4>
+<pre class="code"><code>&lt;nav class=&quot;group&quot;&gt;
+    &lt;ul class=&quot;group__section&quot;&gt;
+        &lt;li class=&quot;group__item&quot;&gt;first item&lt;/li&gt;
+        &lt;li class=&quot;group__item&quot;&gt;second item&lt;/li&gt;
+        &lt;li class=&quot;group__item&quot;&gt;third item&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+<div class="panel margin-bottom-1x">
+    <nav class="group">
+        <ul class="group__section">
+            <li class="group__item">first item</li>
+            <li class="group__item">second item</li>
+            <li class="group__item">third item</li>
+        </ul>
+    </nav>
+</div>
+<h4 class="h6">Html:</h4>
+<pre class="code"><code>&lt;nav class=&quot;group group--horizontal&quot;&gt;
+    &lt;ul class=&quot;group__section group__section--separate&quot;&gt;
+        &lt;li class=&quot;group__item&quot;&gt;first item&lt;/li&gt;
+        &lt;li class=&quot;group__item&quot;&gt;second item&lt;/li&gt;
+        &lt;li class=&quot;group__item&quot;&gt;third item&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+<div class="panel">
+    <nav class="group group--horizontal">
+        <ul class="group__section group__section--separate">
+            <li class="group__item">first item</li><li class="group__item">second item</li><li class="group__item">third item</li>
+        </ul>
+    </nav>
+</div>
+
+<!-- components / heading -->
+<h3 class="h4 margin-top-2x margin-bottom-0x">
+    Heading
+</h3>
+<h4 class="h6">Html:</h4>
+<pre class="code"><code>&lt;h2&gt;&lt;/h2&gt;
 &lt;h2 class="h3"&gt;&lt;/h2&gt;</code></pre>
-                    <h4 class="h6">Sass:</h4>
-                    <pre class="code"><code>$crispy__heading__font-sizes: (
+<h4 class="h6">Sass:</h4>
+<pre class="code"><code>$crispy__heading__font-sizes: (
     'h1': 40px,
     'h2': 36px,
     'h3': 32px,
@@ -115,81 +197,97 @@
     'h6': 20px
 ) !default;</code></pre>
 
-                    <h1>Heading h1</h1>
-                    <h2>Heading h1</h2>
-                    <h3>Heading h1</h3>
-                    <h4>Heading h1</h4>
-                    <h5>Heading h1</h5>
-                    <h6>Heading h1</h6>
+<h1>Heading h1</h1>
+<h2>Heading h1</h2>
+<h3>Heading h1</h3>
+<h4>Heading h1</h4>
+<h5>Heading h1</h5>
+<h6>Heading h1</h6>
 
-                    <strong>Strong</strong>
+<!-- components / hero -->
+<h3 class="h4 margin-top-2x margin-bottom-0x">
+    Hero
+</h3>
+<h4 class="h6">Html:</h4>
+<pre class="code"><code>&lt;div class=&quot;hero hero--bottom&quot; style=&quot;height: 300px; background-image: url('https://picsum.photos/1024')&quot;&gt;&lt;/div&gt;</code></pre>
+<div class="hero hero--bottom" style="height: 300px; background-image: url('https://picsum.photos/1024')"></div>
 
-                    <!-- blockquote -->
-                    <h3 class="h4 margin-top-1x">blockquote</h3>
-                    <h4 class="h6">Html:</h4>
-                    <pre class="code"><code>&lt;blockquote&gt;&lt;/blockquote&gt;</code></pre>
-                    <blockquote>
-                        Hoodie kickstarter four loko, pinterest hashtag chambray glossier. Pug before they sold out etsy listicle. Deep v bespoke tacos polaroid, squid flexitarian crucifix messenger bag.
-                    </blockquote>
+<!-- components / icon -->
+<h3 class="h4 margin-top-2x margin-bottom-0x">
+    Icon
+</h3>
+<h4 class="h6">Html:</h4>
+<pre class="code"><code>&lt;svg class=&quot;icon icon--small&quot; alt=&quot;beaker&quot; viewBox=&quot;0 0 100 100&quot;&gt;
+    &lt;use xlink:href=&quot;/svg/icons.svg#beaker&quot; /&gt;
+&lt;/svg&gt;
+&lt;svg class=&quot;icon&quot; alt=&quot;beaker&quot; viewBox=&quot;0 0 100 100&quot;&gt;
+    &lt;use xlink:href=&quot;/svg/icons.svg#beaker&quot; /&gt;
+&lt;/svg&gt;
+&lt;svg class=&quot;icon icon--large&quot; alt=&quot;beaker&quot; viewBox=&quot;0 0 100 100&quot;&gt;
+    &lt;use xlink:href=&quot;/svg/icons.svg#beaker&quot; /&gt;
+&lt;/svg&gt;
+&lt;svg class=&quot;icon icon--danger&quot; alt=&quot;alert&quot; viewBox=&quot;0 0 100 100&quot;&gt;
+    &lt;use xlink:href=&quot;/svg/icons.svg#alert&quot; /&gt;
+&lt;/svg&gt;
+</code></pre>
+<svg class="icon icon--small" alt="beaker" viewBox="0 0 100 100">
+    <use xlink:href="/svg/icons.svg#beaker" />
+</svg>
+<svg class="icon" alt="beaker" viewBox="0 0 100 100">
+    <use xlink:href="/svg/icons.svg#beaker" />
+</svg>
+<svg class="icon icon--large" alt="beaker" viewBox="0 0 100 100">
+    <use xlink:href="/svg/icons.svg#beaker" />
+</svg>
+<svg class="icon icon--danger" alt="alert" viewBox="0 0 100 100">
+    <use xlink:href="/svg/icons.svg#alert" />
+</svg>
 
-                    <!-- abbr -->
-                    <h3 class="h4 margin-top-1x">abbr</h3>
-                    <h4 class="h6">Html:</h4>
-                    <pre class="code"><code>&lt;abbr title=&quot;&quot;&gt;&lt;/abbr&gt;</code></pre>
-                    <p>
-                        Glossier viral occupy mixtape pok pok cornhole, <abbr title="vape affogato hella">vape affogato hella</abbr> knausgaard thundercats
-                    </p>
+<!-- components / modal -->
+<h3 class="h4 margin-top-2x margin-bottom-0x">
+    Modal
+</h3>
+<h4 class="h6">Html:</h4>
+<pre class="code"><code>&lt;div class=&quot;modal modal--bottom width-100&quot;&gt;
+     &lt;div class=&quot;panel&quot;&gt;
+        &lt;div class=&quot;panel__inner&quot;&gt;
+            Lorem Ipsum
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<div style="position: relative; width: 100%; height: 200px; border: 1px dotted black;">
+    <div class="modal modal--bottom width-100">
+        <div class="panel">
+            <div class="panel__inner">
+                Lorem Ipsum
+            </div>
+        </div>
+    </div>
+</div>
 
-                    <!-- list -->
-                    <h3 class="h4 margin-top-1x">Lists</h3>
-                    <h4 class="h6">Html:</h4>
-                    <pre class="code"><code>&lt;ul&gt;
-    &lt;li&gt;item 1&lt;/li&gt;
-    &lt;li&gt;
-        item 2
-        &lt;ul&gt;
-            &lt;li&gt;child item 1&lt;/li&gt;
-            &lt;li&gt;child item 2&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-    &lt;li&gt;item 1&lt;/li&gt;
-    &lt;li&gt;item 2&lt;/li&gt;
-&lt;/ol&gt;
-&lt;dl&gt;
-    &lt;dt&gt;defined title 1&lt;/dt&gt;
-    &lt;dd&gt;defined item 1&lt;/dd&gt;
-&lt;/dl&gt;</code></pre>
-                    <ul>
-                        <li>item 1</li>
-                        <li>
-                            item 2
-                            <ul>
-                                <li>child item 1</li>
-                                <li>child item 2</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ol>
-                        <li>item 1</li>
-                        <li>item 2</li>
-                    </ol>
-                    <dl>
-                        <dt>defined title 1</dt><dd>defined item 1</dd>
-                    </dl>
+<!-- components / panel -->
+<h3 class="h4 margin-top-2x margin-bottom-0x">
+    Panel
+</h3>
+<h4 class="h6">Html:</h4>
+<pre class="code"><code>&lt;div class=&quot;panel&quot;&gt;
+    &lt;div class=&quot;panel__inner&quot;&gt;
+        Lorem Ipsum
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<div class="panel">
+    <div class="panel__inner">
+        Lorem Ipsum
+    </div>
+</div>
 
-                    <hr>
-                    <h2 id="buttons" class="margin-top-1x">Buttons</h2>
-
-                    <button class="button">Default</button>
-                    <button class="button button--wide margin-top-1x">Info</button>
-                    <pre class="code margin-top-1x"><code>&lt;button class=&quot;button&quot;&gt;&lt;/button&gt;
-&lt;button class=&quot;button button--wide&quot;&gt;&lt;/button&gt;</code></pre>
-
-                    <hr>
-                    <h2 id="table" class="margin-top-1x">Table</h2>
-                    <pre class="code"><code>&lt;table class=&quot;table table--striped&quot;&gt;
+<!-- components / table -->
+<h3 id="table" class="h4 margin-top-2x margin-bottom-0x">
+    Table
+</h3>
+<span class="background-warning">/components</span>
+<h4 class="h6 margin-top-1x">Html:</h4>
+<pre class="code"><code>&lt;table class=&quot;table table--striped&quot;&gt;
     &lt;thead&gt;
         &lt;tr&gt;
             &lt;th&gt;&lt;/th&gt;
@@ -198,121 +296,311 @@
     &lt;tbody&gt;
         &lt;tr&gt;
             &lt;td&gt;&lt;/td&gt;
-         &lt;/tr&gt;
+        &lt;/tr&gt;
     &lt;/tbody&gt;
 &lt;/table&gt;</code></pre>
 
-                    <table class="table table--striped margin-bottom-2x">
-                        <thead>
-                            <tr>
-                                <th>name</th>
-                                <th>age</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Mr. Brown</td>
-                                <td>43</td>
-                            </tr>
-                            <tr>
-                                <td>Mr. Magenta</td>
-                                <td>32</td>
-                            </tr>
-                            <tr>
-                                <td>Mr. White</td>
-                                <td>45</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <hr />
-                    <!-- helpers -->
-                    <h2 id="helpers" class="margin-top-1x">
-                        Helpers
-                    </h2>
+<table class="table table--striped margin-bottom-2x">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Mr. Brown</td>
+            <td>43</td>
+        </tr>
+        <tr>
+            <td>Mr. Magenta</td>
+            <td>32</td>
+        </tr>
+        <tr>
+            <td>Mr. White</td>
+            <td>45</td>
+        </tr>
+    </tbody>
+</table>
 
-                    <!-- -->
-                    <h3 class="h4 margin-top-1x">
-                        Media
-                    </h3>
-                    <pre class="code"><code>&lt;img class=&quot;img-responsive&quot; src=&quot;https://picsum.photos/400&quot; /&gt;
+<!-- functions -->
+<hr>
+<h2 id="functions" class="margin-top-1x">
+    Functions
+</h2>
+
+<!-- functions / toEm / toRem -->
+<h3 class="h4 margin-top-0x margin-bottom-0x">
+    toEm()<br>
+    toRem()
+</h3>
+<span class="background-warning">/functions</span>
+<h4 class="h6 margin-top-1x">Sass:</h4>
+<pre class="code"><code>toEm(5px);
+toEm(10px 10px 0 0);
+toRem(10px 10px 0 0);
+</code></pre>
+<p>
+    Returns <strong>em</strong> and <strong>rem</strong>, accepts px and unitless values.
+</p>
+
+<!-- functions / stripUnit -->
+<h3 class="h4 margin-top-0x margin-bottom-0x">
+    stripUnit()
+</h3>
+<span class="background-warning">/functions</span>
+<h4 class="h6 margin-top-1x">Sass:</h4>
+<pre class="code"><code>toEm(10px);</code></pre>
+<p>
+    Returns value without unit.
+</p>
+
+<!-- helpers -->
+<hr class="margin-top-3x">
+<h2 id="helpers" class="margin-top-1x">
+    Helpers
+</h2>
+<p>
+
+</p>
+
+<!-- helpers / align -->
+<h3 class="h4 margin-top-1x">
+    Align
+</h3>
+<pre class="code">&lt;div class=&quot;text-left&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;text-center&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;text-right&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;text-justify&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;float-left&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;float-center&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;float-none&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;center&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;</code></pre>
+
+<!-- helpers / margin -->
+<h3 class="h4 margin-top-1x">
+    Margin
+</h3>
+<p>
+    margin-top and -bottom from <strong>$crispy__margin</strong> as px.
+</p>
+<pre class="code">&lt;div class=&quot;panel margin-bottom-0x&quot;&gt;margin-bottom-0x&lt;/div&gt;
+&lt;div class=&quot;panel margin-bottom-1x&quot;&gt;margin-bottom-1x&lt;/div&gt;
+&lt;div class=&quot;panel margin-bottom-2x&quot;&gt;margin-bottom-2x&lt;/div&gt;
+&lt;div class=&quot;panel margin-bottom-3x&quot;&gt;margin-bottom-3x&lt;/div&gt;</code></pre>
+<div class="panel margin-bottom-0x">margin-bottom-0x</div>
+<div class="panel margin-bottom-1x">margin-bottom-1x</div>
+<div class="panel margin-bottom-2x">margin-bottom-2x</div>
+<div class="panel margin-bottom-3x">margin-bottom-3x</div>
+
+<!-- helpers / media -->
+<h3 class="h4 margin-top-1x">
+    Media
+</h3>
+<pre class="code"><code>&lt;img class=&quot;img-responsive&quot; src=&quot;https://picsum.photos/400&quot; /&gt;
 &lt;figure&gt;
     &lt;img class=&quot;img-responsive&quot; src=&quot;https://picsum.photos/400&quot; /&gt;
     &lt;figcaption class=&quot;text-center&quot;&gt;Lorem Ipsum&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;div class=&quot;video-responsive&quot; style=&quot;height: 280px;&quot;&gt;
+    &lt;iframe src=&quot;https://giphy.com/embed/13XW2MJE0XCoM0&quot; width=&quot;480&quot; height=&quot;361&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</code></pre>
+<div class="grid">
+    <div class="col-6">
+        <img class="img-responsive" src="https://picsum.photos/400" />
+    </div>
+    <div class="col-6">
+        <figure>
+            <img class="img-responsive" src="https://picsum.photos/400" />
+            <figcaption class="text-center">Lorem Ipsum</figcaption>
+        </figure>
+    </div>
+</div>
+<div class="grid">
+    <div class="col-6">
+        <div class="video-responsive" style="height: 280px;">
+            <iframe src="https://giphy.com/embed/13XW2MJE0XCoM0" width="480" height="361" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        </div>
+    </div>
+</div>
+
+<!-- helpers / media -->
+<h3 class="h4 margin-top-1x">
+    Width
+</h3>
+<pre class="code"><code>&lt;div class=&quot;panel width-25&quot;&gt;width-25&lt;/div&gt;
+&lt;div class=&quot;panel width-50&quot;&gt;width-50&lt;/div&gt;
+&lt;div class=&quot;panel width-75&quot;&gt;width-75&lt;/div&gt;
+&lt;div class=&quot;panel width-100&quot;&gt;width-100&lt;/div&gt;</code></pre>
+<div class="panel width-25 margin-bottom-1x">width-25</div>
+<div class="panel width-50 margin-bottom-1x">width-50</div>
+<div class="panel width-75 margin-bottom-1x">width-75</div>
+<div class="panel width-100 margin-bottom-1x">width-100</div>
+
+					<!-- blockquote -->
+					<h3 class="h4 margin-top-2x margin-bottom-0x">blockquote</h3>
+					<h4 class="h6">Html:</h4>
+					<pre class="code"><code>&lt;blockquote&gt;&lt;/blockquote&gt;</code></pre>
+					<blockquote>
+						Hoodie kickstarter four loko, pinterest hashtag chambray glossier. Pug before they sold out etsy listicle. Deep v bespoke tacos polaroid, squid flexitarian crucifix messenger bag.
+					</blockquote>
+
+					<!-- abbr -->
+					<h3 class="h4 margin-top-2x margin-bottom-0x">>abbr</h3>
+					<h4 class="h6">Html:</h4>
+					<pre class="code"><code>&lt;abbr title=&quot;&quot;&gt;&lt;/abbr&gt;</code></pre>
+					<p>
+						Glossier viral occupy mixtape pok pok cornhole, <abbr title="vape affogato hella">vape affogato hella</abbr> knausgaard thundercats
+					</p>
+
+					<!-- list -->
+					<h3 class="h4 margin-top-2x margin-bottom-0x">>Lists</h3>
+					<h4 class="h6">Html:</h4>
+					<pre class="code"><code>&lt;ul&gt;
+	&lt;li&gt;item 1&lt;/li&gt;
+	&lt;li&gt;
+		item 2
+		&lt;ul&gt;
+			&lt;li&gt;child item 1&lt;/li&gt;
+			&lt;li&gt;child item 2&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+	&lt;li&gt;item 1&lt;/li&gt;
+	&lt;li&gt;item 2&lt;/li&gt;
+&lt;/ol&gt;
+&lt;dl&gt;
+	&lt;dt&gt;defined title 1&lt;/dt&gt;
+	&lt;dd&gt;defined item 1&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+					<ul>
+						<li>item 1</li>
+						<li>
+							item 2
+							<ul>
+								<li>child item 1</li>
+								<li>child item 2</li>
+							</ul>
+						</li>
+					</ul>
+					<ol>
+						<li>item 1</li>
+						<li>item 2</li>
+					</ol>
+					<dl>
+						<dt>defined title 1</dt><dd>defined item 1</dd>
+					</dl>
+
+					<!-- Typography -->
+					<hr />
+					<h2 id="base" class="margin-top-1x">
+
+					</h2>
+
+
+					<!-- helpers -->
+					<hr />
+					<h2 id="helpers" class="margin-top-1x">
+						Helpers
+					</h2>
+
+					<!-- helpers / align -->
+					<h3 class="h4 margin-top-2x margin-bottom-0x">>
+						align
+					</h3>
+					<pre class="code"><code>&lt;img class=&quot;img-responsive&quot; src=&quot;https://picsum.photos/400&quot; /&gt;
+&lt;figure&gt;
+	&lt;img class=&quot;img-responsive&quot; src=&quot;https://picsum.photos/400&quot; /&gt;
+	&lt;figcaption class=&quot;text-center&quot;&gt;Lorem Ipsum&lt;/figcaption&gt;
 &lt;/figure&gt;</code></pre>
-                    <div class="grid">
-                        <div class="col-6">
-                            <img class="img-responsive" src="https://picsum.photos/400" />
-                        </div>
-                        <div class="col-6">
-                            <figure>
-                                <img class="img-responsive" src="https://picsum.photos/400" />
-                                <figcaption class="text-center">Lorem Ipsum</figcaption>
-                            </figure>
-                        </div>
-                    </div>
+					<div class="grid">
+						<div class="col-4">
+							<div class="text-left panel">
+								Left
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="text-center panel">
+								Center
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="text-right panel">
+								Right
+							</div>
+						</div>
+					</div>
 
-                    <!-- Reflex Grid -->
-                    <hr />
-                    <h2 id="reflex-grid" class="margin-top-1x">
-                        Reflex Grid
-                    </h2>
-                    <p>
-                        The <strong>Reflex Grid</strong> is from <a target="_blank" href="http://lendmeyourear.net">Lee Jordan</a>. I have
-                        build a few helper for media-queries. <strong>Reflex Grid </strong> is lightweight, simple and uses a flexbox grid with
-                        cross browser support, an inline-block fallback.
-                    </p>
-                    <p>
-                        Documentation: <a target="_blank"  href="http://reflexgrid.com/docs/">http://reflexgrid.com/docs/</a><br />
-                        Github: <a target="_blank"  href="https://github.com/leejordan/reflex">https://github.com/leejordan/reflex</a>
-                    </p>
+					<!-- helpers / Media -->
+					<h3 class="h4 margin-top-2x margin-bottom-0x">>
+						Media
+					</h3>
 
-                    <!-- Reflex Grid / media queries -->
-                    <h3 class="h4 margin-top-1x">
-                        Media Queries
-                    </h3>
-                    <p>
-                        For Media Queries uses the Breakpoints from the <strong>Reflex Grid</strong>.
-                    </p>
-                    <ul>
-                        <li>xs: 576px</li>
-                        <li>sm: 768px</li>
-                        <li>md: 992px</li>
-                        <li>lg: 1200px</li>
-                        <li>xlg: 1600px</li>
-                    </ul>
-                    <p>
-                        You can uses a Mixin to add styles to an Breakpoint.If you want
-                        that a style only belong to one Breakpoints "-only", otherwise it is
-                        Mobile First.
-                    </p>
 
-                    <h4 class="h6">
-                        Sass:
-                    </h4>
-                    <pre class="code"><code class="margin-bottom-1x">@include crispy__media-md() {
-    &lt;!-- your code --&gt;
+					<!-- Reflex Grid -->
+					<hr />
+					<h2 id="reflex-grid" class="margin-top-1x">
+						Reflex Grid
+					</h2>
+					<p>
+						The <strong>Reflex Grid</strong> is from <a target="_blank" href="http://lendmeyourear.net">Lee Jordan</a>. I have
+						build a few helper for media-queries. <strong>Reflex Grid </strong> is lightweight, simple and uses a flexbox grid with
+						cross browser support, an inline-block fallback.
+					</p>
+					<p>
+						Documentation: <a target="_blank"  href="http://reflexgrid.com/docs/">http://reflexgrid.com/docs/</a><br />
+						Github: <a target="_blank"  href="https://github.com/leejordan/reflex">https://github.com/leejordan/reflex</a>
+					</p>
+
+					<!-- Reflex Grid / media queries -->
+					<h3 class="h4 margin-top-2x margin-bottom-0x">>
+						Media Queries
+					</h3>
+					<p>
+						For Media Queries uses the Breakpoints from the <strong>Reflex Grid</strong>.
+					</p>
+					<ul>
+						<li>xs: 576px</li>
+						<li>sm: 768px</li>
+						<li>md: 992px</li>
+						<li>lg: 1200px</li>
+						<li>xlg: 1600px</li>
+					</ul>
+					<p>
+						You can uses a Mixin to add styles to an Breakpoint.If you want
+						that a style only belong to one Breakpoints "-only", otherwise it is
+						Mobile First.
+					</p>
+
+					<h4 class="h6">
+						Sass:
+					</h4>
+					<pre class="code"><code class="margin-bottom-1x">@include crispy__media-md() {
+	&lt;!-- your code --&gt;
 }
 
 @include crispy__media-md-only() {
-    &lt;!-- your code --&gt;
+	&lt;!-- your code --&gt;
 }</code></pre>
 
-                </div>
-            </div>
-        </div>
+				</div>
+			</div>
+		</div>
 
-        <footer class="footer">
-            <div class="container">
-                <div class="grid">
-                    <div class="col-12">
-                        <div class="text-center">
-                            <p>
-                                <a target="_blank" href="https://thenounproject.com/wxchee/">W. X. Chee</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </body>
+		<footer class="footer">
+			<div class="container">
+				<div class="grid">
+					<div class="col-12">
+						<div class="text-center">
+							<p>
+								<a target="_blank" href="https://thenounproject.com/wxchee/">W. X. Chee</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
 </html>
