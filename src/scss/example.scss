@@ -27,6 +27,35 @@
     background-color: lighten($crispy__color-secondary, 25%);
 }
 
+
+.sm, .md, .md-only, .lg-only {
+    display: none;
+}
+
+.sm {
+    @include crispy__media-sm() {
+        display: block;
+    }
+}
+
+.md {
+    @include crispy__media-md() {
+        display: block;
+    }
+}
+
+.md-only {
+    @include crispy__media-md-only() {
+        display: block;
+    }
+}
+
+.lg-only {
+    @include crispy__media-lg-only() {
+        display: block;
+    }
+}
+
 // helpers
 @include crispy__align();
 @include crispy__margin();

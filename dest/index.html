@@ -78,9 +78,6 @@
                         to build a minimalistic sass.
                     </p>
                     <p>
-
-
-
 						A few Years a have always created Styles to use in other Frameworks, crispy boilerplate is a
 						a small toolkit from this helpers, styles that can be used to create. This is not beatiful or fancy
 						it is a simple and basic toolkit to get a default style.
@@ -141,11 +138,10 @@
 <h3 class="h4 margin-top-2x margin-bottom-0x">>Lists</h3>
 <h4 class="h6">Html:</h4>
 <pre class="code"><code>&lt;ul&gt;
-&lt;li&gt;item 1&lt;/li&gt;
-&lt;li&gt;
-item 2
-&lt;ul&gt;
-&lt;li&gt;child item 1&lt;/li&gt;
+    &lt;li&gt;item 1&lt;/li&gt;
+    &lt;li&gt;item 2
+        &lt;ul&gt;
+       &lt;li&gt;child item 1&lt;/li&gt;
 &lt;li&gt;child item 2&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -175,7 +171,6 @@ item 2
 <dl>
     <dt>defined title 1</dt><dd>defined item 1</dd>
 </dl>
-
 
 <!-- components -->
 <hr>
@@ -335,7 +330,6 @@ item 2
 <h3 id="table" class="h4 margin-top-2x margin-bottom-0x">
     Table
 </h3>
-<span class="background-warning">/components</span>
 <h4 class="h6 margin-top-1x">Html:</h4>
 <pre class="code"><code>&lt;table class=&quot;table table--striped&quot;&gt;
     &lt;thead&gt;
@@ -410,9 +404,6 @@ toRem(10px 10px 0 0);
 <h2 id="helpers" class="margin-top-1x">
     Helpers
 </h2>
-<p>
-
-</p>
 
 <!-- helpers / align -->
 <h3 class="h4 margin-top-1x">
@@ -487,6 +478,64 @@ toRem(10px 10px 0 0);
 <div class="panel panel__inner width-50 margin-bottom-1x">width-50</div>
 <div class="panel panel__inner width-75 margin-bottom-1x">width-75</div>
 <div class="panel panel__inner width-100 margin-bottom-1x">width-100</div>
+
+<!-- mixins -->
+<hr class="margin-top-3x">
+<h2 id="mixins" class="margin-top-1x">
+    Mixins
+</h2>
+
+<!-- mixins / media-queries -->
+<h3 class="h4 margin-top-1x">
+    Media Queries
+</h3>
+<h4 class="h6 margin-top-1x">Html:</h4>
+<pre class="code"><code>&lt;div class=&quot;sm&quot;&gt;sm&lt;/div&gt;
+&lt;div class=&quot;md&quot;&gt;md&lt;/div&gt;
+&lt;div class=&quot;md-only&quot;&gt;md-only&lt;/div&gt;
+&lt;div class=&quot;lg-only&quot;&gt;lg-only&lt;/div&gt;</pre></code>
+<h4 class="h6 margin-top-1x">Sass:</h4>
+<pre class="code"><code>.sm, .md, .md-only, .lg-only {
+    display: none;
+}
+
+.sm {
+    @include crispy__media-sm() {
+        display: block;
+    }
+}
+
+.md {
+    @include crispy__media-md() {
+        display: block;
+    }
+}
+
+.md-only {
+    @include crispy__media-md-only() {
+        display: block;
+    }
+}
+
+.lg-only {
+    @include crispy__media-lg-only() {
+        display: block;
+    }
+}</code></pre>
+<div class="grid">
+    <div class="col-3">
+        <div class="panel panel__inner sm margin-bottom-1x">sm</div>
+    </div>
+    <div class="col-3">
+        <div class="panel panel__inner md margin-bottom-1x">md</div>
+    </div>
+    <div class="col-3">
+        <div class="panel panel__inner md-only margin-bottom-1x">md-only</div>
+    </div>
+    <div class="col-3">
+        <div class="panel panel__inner lg-only margin-bottom-1x">lg-only</div>
+    </div>
+</div>
 
 					<!-- Reflex Grid -->
 					<hr class="margin-top-3x">
