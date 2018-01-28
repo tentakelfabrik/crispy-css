@@ -63,6 +63,9 @@
 				<div class="col-2">
 					<nav>
 						<ul class="margin-top-0x">
+                            <li><a href="#npm">npm</a></li>
+                            <li><a href="#get-started">Get Started</a></li>
+                            <li><a href="#typography">Typography</a></li>
 							<li><a href="#components">Components</a></li>
                             <li><a href="#functions">Functions</a></li>
 							<li><a href="#helpers">Helpers</a></li>
@@ -98,8 +101,8 @@
 					</p>
 
                     <!-- npm -->
-                    <hr>
-                    <h2>
+                    <hr class="margin-top-3x">
+                    <h2 id="npm" class="margin-top-1x">
                         npm
                     </h2>
                     <p>
@@ -107,13 +110,16 @@
                     </p>
 
                     <!-- how to use -->
-                    <hr>
-                    <h2>
-                        How to use
+                    <hr class="margin-top-3x">
+                    <h2 id="get-started" class="margin-top-1x">
+                        Get Started
                     </h2>
+                    <p>
 
-<!-- components -->
-<hr>
+                    </p>
+
+<!-- typography -->
+<hr class="margin-top-3x">
 <h2 id="typography" class="margin-top-1x">
     Typography
 </h2>
@@ -173,7 +179,7 @@
 </dl>
 
 <!-- components -->
-<hr>
+<hr class="margin-top-3x">
 <h2 id="components" class="margin-top-1x">
     Components
 </h2>
@@ -489,6 +495,16 @@ toRem(10px 10px 0 0);
 <h3 class="h4 margin-top-1x">
     Media Queries
 </h3>
+<p>
+    These <strong>@mixins</strong> were used with the Breakpoints from the <a href="#reflex-grid">Reflex Grid</a>.
+</p>
+<ul>
+    <li><strong>xs</strong> 576px</li>
+    <li><strong>sm</strong> 768px</li>
+    <li><strong>md</strong> 992px</li>
+    <li><strong>lg</strong> 1200px</li>
+    <li><strong>xlg</strong> 1600px</li>
+</ul>
 <h4 class="h6 margin-top-1x">Html:</h4>
 <pre class="code"><code>&lt;div class=&quot;sm&quot;&gt;sm&lt;/div&gt;
 &lt;div class=&quot;md&quot;&gt;md&lt;/div&gt;
@@ -551,37 +567,6 @@ toRem(10px 10px 0 0);
 						Documentation: <a target="_blank"  href="http://reflexgrid.com/docs/">http://reflexgrid.com/docs/</a><br />
 						Github: <a target="_blank"  href="https://github.com/leejordan/reflex">https://github.com/leejordan/reflex</a>
 					</p>
-
-					<!-- Reflex Grid / media queries -->
-					<h3 class="h4 margin-top-2x margin-bottom-0x">
-						Media Queries
-					</h3>
-					<p>
-						For Media Queries uses the Breakpoints from the <strong>Reflex Grid</strong>.
-					</p>
-					<ul>
-						<li><strong>xs</strong> 576px</li>
-						<li><strong>sm</strong> 768px</li>
-						<li><strong>md</strong> 992px</li>
-						<li><strong>lg</strong> 1200px</li>
-						<li><strong>xlg</strong> 1600px</li>
-					</ul>
-					<p>
-						You can uses a Mixin to add styles to an Breakpoint.If you want
-						that a style only belong to one Breakpoints "-only", otherwise it is
-						Mobile First.
-					</p>
-
-					<h4 class="h6">
-						Sass:
-					</h4>
-					<pre class="code"><code class="margin-bottom-1x">@include crispy__media-md() {
-    &lt;!-- your code --&gt;
-}
-
-@include crispy__media-md-only() {
-    &lt;!-- your code --&gt;
-}</code></pre>
 				</div>
 			</div>
 		</div>
