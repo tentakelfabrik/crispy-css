@@ -12,6 +12,8 @@
 @include crispy__panel();
 @include crispy__table();
 
+@include crispy__form__text();
+
 .button {
     border: 1px solid $crispy__color-primary;
     background-color: $crispy__color-primary;
@@ -26,7 +28,6 @@
     border: 1px solid lighten($crispy__color-secondary, 10%);
     background-color: lighten($crispy__color-secondary, 25%);
 }
-
 
 .sm, .md, .md-only, .lg-only {
     display: none;
