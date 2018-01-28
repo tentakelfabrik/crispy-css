@@ -7,23 +7,72 @@
  */
 
 
-/**
- * calculate pixel value to em
- *
- * @param  {px} $fontSize
- * @return {em}
- */
-@function pxToEm($font-size) {
-    @return ($font-size / $crispy__font-size) * 1em;
+ /**
+  * to em, wrapper of toRelatives
+  *
+  * @param  {mixed} $values
+  * @param  {mixed} $base
+  * @return {rem}
+  */
+@function toEm($values, $base: $crispy__font-size) {
+    @return toRelatives($values, 1em, $base);
 }
 
 /**
- * calculate px value to rem
+ * to rem, wrapper of toRelatives
  *
- * @param  {px} $fonz-size
- * @param  {px} $font-size
- * @return {em}
+ * @param  {mixed} $values
+ * @param  {mixed} $base
+ * @return {rem}
  */
-@function pxToRem($font-size) {
-    @return ($font-size / $crispy__font-size) * 1rem;
+@function toRem($values, $base: $crispy__font-size) {
+    @return toRelatives($values, 1rem, $base);
+}
+
+/**
+ * values to relative
+ *
+ * @param  {mixed} $values
+ * @param  {mixed} $unit
+ * @param  {mixed} $base
+ * @return {number}
+ */
+@function toRelatives($values, $unit, $base: $crispy__font-size) {
+    @if type-of($values) == 'number' {
+		$results: toRelative($values, $base: $crispy__font-size);
+    } else {
+        $results: ();
+
+        @each $value in $values {
+			@if $value == 0 {
+				$results: append($results, $value);
+			}
+			@else {
+				$results: append($results, toRelative($value, $base) * $unit);
+			}
+        }
+    }
+
+    @return $results;
+}
+
+/**
+ * to relative
+ *
+ * @param  {mixed} $value
+ * @param  {mixed} $base
+ * @return {number}
+ */
+@function toRelative($value, $base: $crispy__font-size) {
+    @return stripUnit($value) / $base;
+}
+
+/**
+ * strip unit from value
+ *
+ * @param  {mixed} $value
+ * @return {number}
+ */
+@function stripUnit($value) {
+    @return $value / ($value * 0 + 1);
 }

@@ -17,7 +17,7 @@ $crispy__icon__vertical-align: text-bottom !default;
 $crispy__icon__margin: 0 2px !default;
 
 $crispy__icon__sizes: (
-    'default': 18px,
+    'default': $cripsy__font-size,
     'small': 14px,
     'large': 28px
 ) !default;

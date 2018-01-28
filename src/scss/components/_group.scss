@@ -1,0 +1,37 @@
+/**
+ * group
+ *
+ * <nav class="group group--horizontal">
+ *     <ul class="group__section">
+ *         <li class="group__item"></li>
+ *     <ul>
+ * </nav>
+ *
+ * @author Björn Hase
+ * 
+ */
+
+$crispy__group__character: '/' !default;
+
+@mixin $crispy__group {
+    .group {
+
+        &__section {
+            @include crispy__clearlist();
+        }
+
+        &--horizontal {
+            .group__item {
+                display: inline-block;
+            }
+        }
+
+        &--divider {
+            .group__item {
+                &:after {
+                    content: $crispy__group__character;
+                }
+            }
+        }
+    }
+}

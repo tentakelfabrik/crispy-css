@@ -21,7 +21,7 @@ $crispy__heading__font-sizes: (
 $crispy__heading__font-weight: bold !default;
 $crispy__heading__font-family: Arial, Helvetica, Neue Helvetica, sans-serif !default;
 $crispy__heading__line-height: $crispy__golden-ratio !default;
-$crispy__heading__margin: 0 0 pxToEm(5px) !default;
+$crispy__heading__margin: toEm(0 0 5px) !default;
 
 @mixin crispy__heading {
     h1, .h1,

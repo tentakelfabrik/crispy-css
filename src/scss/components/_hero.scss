@@ -1,0 +1,32 @@
+/**
+ * hero
+ *
+ * background-position is as default: cover
+ *
+ * <div class="hero" style="width: value height: value; background-image: url(path)"></div>
+ *
+ *
+ * @author Björn Hase
+ *
+ */
+
+@mixin crispy__hero() {
+    .hero {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+
+        &--top {
+            background-position: top center;
+        }
+
+        &--bottom {
+            background-position: bottom center;
+        }
+
+        &--contain {
+            background-size: contain;
+        }
+    }
+}

@@ -6,11 +6,10 @@
  *
  */
 
-$crispy__button__padding: pxToEm(10px) pxToEm(25px) !default;
-$crispy__button__border: 0 !default;
+$crispy__button__padding: toEm(10px 25px) !default;
 
-$crispy__button__up-margin: pxToEm(20px) !default;
-$crispy__button__up-padding: pxToEm(8px) pxToEm(13px) !default;
+$crispy__button__up-margin: toEm(20px) !default;
+$crispy__button__up-padding: toEm(8px 13px) !default;
 
 @mixin crispy__button() {
     .button {
@@ -21,8 +20,6 @@ $crispy__button__up-padding: pxToEm(8px) pxToEm(13px) !default;
         vertical-align: middle;
         appearance: none;
         padding: $crispy__button__padding;
-
-        border: $crispy__button__border;
 
         &--wide {
             width: 100%;
@@ -44,7 +41,6 @@ $crispy__button__up-padding: pxToEm(8px) pxToEm(13px) !default;
             bottom: 0;
         }
 
-
         &:hover {
             cursor: pointer;
             text-decoration: none;
@@ -52,65 +48,6 @@ $crispy__button__up-padding: pxToEm(8px) pxToEm(13px) !default;
 
         &:focus {
             outline: none;
-        }
-    }
-
-    /**
-     * grouping buttons
-     *
-     *
-     */
-    .button-group {
-        .button {
-            float: left;
-        }
-
-        @include crispy__clearfix();
-    }
-}
-
-/**
- * adding modifications
- *
- */
-@mixin crispy__button__colors($colors) {
-    @each $name, $color in $colors {
-
-        // default has no modification
-        @if ($name == 'default') {
-            @include crispy__button__color($color);
-        }
-        @else {
-            &--#{$name} {
-                @include crispy__button__color($color);
-            }
-        }
-    }
-}
-
-/**
- * adding single modification
- *
- */
-@mixin crispy__button__color($color) {
-    $background-color: false;
-    $text-color: false;
-
-    @if (type-of($color) == 'map') {
-        @if (has-key($color, 'color')) {
-            $text-color: map-get($color, 'color');
-        }
-
-        @if (has-key($color, 'background-color')) {
-            $background-color: map-get($color, 'background-color');
-        }
-
-        color: $text-color;
-        background-color: $background-color;
-
-        &:hover {
-            color: $text-color;
-            background-color: darken($background-color, 10%);
         }
     }
 }
