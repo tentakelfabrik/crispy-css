@@ -5,7 +5,7 @@ Thumbs.db
 .idea
 *.log
 
-build/svg/*
+build/svg/*.svg
 
 !build/.gitkeep
 !build/svg/.gitkeep
