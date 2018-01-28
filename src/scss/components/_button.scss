@@ -8,8 +8,9 @@
 
 $crispy__button__padding: toEm(10px 25px) !default;
 
-$crispy__button__up-margin: toEm(20px) !default;
-$crispy__button__up-padding: toEm(8px 13px) !default;
+$crispy__button__up__margin: toEm(20px) !default;
+$crispy__button__up__padding: toEm(8px 13px) !default;
+$crispy__button__up__z-index: zIndex('modal') !default;
 
 @mixin crispy__button() {
     .button {
@@ -29,8 +30,10 @@ $crispy__button__up-padding: toEm(8px 13px) !default;
         &--up, &--down {
             position:fixed;
             bottom: 0;
-            margin: $crispy__button__up-margin;
-            padding: $crispy__button__up-padding;
+            margin: $crispy__button__up__margin;
+            padding: $crispy__button__up__padding;
+
+            z-index: $crispy__button__up__z-index;
         }
 
         &--down {

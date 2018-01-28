@@ -47,3 +47,8 @@ $crispy__font-sizes: (
     'small': 16px,
     'large': 20px
 ) !default;
+
+// z-index
+$crispy__z-index: (
+    'modal': 100
+) !default;

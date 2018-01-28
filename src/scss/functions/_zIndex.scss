@@ -7,10 +7,10 @@
  */
 
 @function zIndex($name) {
-    @if index($z-indexes, $name) {
-        @return map($z-indexes, $name);
+    @if has-key($crispy__z-index, $name) {
+        @return map-get($crispy__z-index, $name);
     } @else {
-        @warn 'There is no item "#{$name}" in this list; choose one of: #{$z-indexes}';
+        @warn 'There is no item "#{$name}" in this list; choose one of: #{$crispy__z-index}';
         @return null;
     }
 }
