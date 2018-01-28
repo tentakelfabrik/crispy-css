@@ -37,7 +37,7 @@ table {
 
 // paragraphs
 p {
-    margin: 0 0 pxToEm($crispy__margin) 0;
+    margin: toEm(0 0 $crispy__margin 0);
 }
 
 // Semantic text elements
@@ -70,7 +70,7 @@ kbd {
 }
 
 mark {
-    padding: pxToEm(10px);
+    padding: toEm(10px);
 
 }
 
@@ -78,7 +78,7 @@ mark {
 blockquote {
     border-left: 1px solid $crispy__color-text;
     margin-left: 0;
-    padding: pxToEm(10px) pxToEm(20px);
+    padding: toEm(10px 20px);
 
     p:last-child {
         margin-bottom: 0;
@@ -88,11 +88,11 @@ blockquote {
 // lists
 ul, ol, dl {
     padding: 0;
-    margin: 0 0 pxToEm($crispy__margin) pxToEm($crispy__margin);
+    margin: toEm(0 0 $crispy__margin $crispy__margin);
 }
 
 ul ul, ol ol {
-    margin-top: pxToEm($crispy__margin / 2);
+    margin-top: toEm(($crispy__margin / 2));
 }
 
 ol {
@@ -113,18 +113,18 @@ dt {
 
 // media
 figure  {
-    margin: 0 0 pxToEm($crispy__margin);
+    margin: toEm(0 0 $crispy__margin);
 }
 
 figcaption {
-    margin: pxToEm($crispy__margin) 0 0;
+    margin: toEm($crispy__margin 0 0);
 }
 
 // divider
 hr {
     border: 0;
     border-top: 1px solid $crispy__color-text;
-    margin: pxToEm($crispy__margin) 0
+    margin: toEm($crispy__margin 0)
 }
 
 // body

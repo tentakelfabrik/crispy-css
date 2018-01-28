@@ -9,11 +9,15 @@
  *
  */
 
-$crispy__panel__margin: toEm(20px) !default;
+
+$crispy__panel__margin: toEm($cripsy__margin * 2) !default;
+$crispy__panel__padding: toEm($cripsy__margin * 3) !default;
 
 @mixin crispy__panel {
     .panel {
         position: absolute;
+        margin: $crispy__panel__margin;
+        padding: $crispy__panel__padding;
 
         &--fixed {
             position: fixed;

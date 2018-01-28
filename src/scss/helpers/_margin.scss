@@ -1,14 +1,14 @@
 /**
  * helpers for margin
  *
- * 
+ *
  *
  * @author Björn Hase
  *
  */
 
-$crispy__margin-top: pxToEm($crispy__margin) !default;
-$crispy__margin-bottom: pxToEm($crispy__margin) !default;
+$crispy__margin-top: toEm($crispy__margin) !default;
+$crispy__margin-bottom: toEm($crispy__margin) !default;
 
 @mixin crispy__margin() {
     .margin-top-0x {

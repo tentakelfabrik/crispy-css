@@ -38,9 +38,11 @@
  * @return {number}
  */
 @function toRelatives($values, $unit, $base: $crispy__font-size) {
+    $results: 0;
+
     @if type-of($values) == 'number' {
-		$results: toRelative($values, $base: $crispy__font-size);
-    } else {
+		$results: toRelative($values, $base) * $unit;
+    } @else {
         $results: ();
 
         @each $value in $values {
@@ -64,7 +66,7 @@
  * @return {number}
  */
 @function toRelative($value, $base: $crispy__font-size) {
-    @return stripUnit($value) / $base;
+    @return stripUnit($value) / stripUnit($base);
 }
 
 /**

@@ -6,10 +6,10 @@
     'base',
 
     'components/button',
+    'components/code',
     'components/heading',
     'components/icon',
     'components/table',
-    'components/code',
 
     'helpers/helpers';
 
@@ -20,14 +20,9 @@
 @include crispy__icon();
 @include crispy__code();
 
-// font-sizes & colors
-.button {
-    //@include crispy__font-sizes($crispy__button__font-sizes);
-    @include crispy__button__colors($crispy__button__colors);
-}
-
 // helpers
 @include crispy__align();
 @include crispy__margin();
-@include crispy__text();
 @include crispy__media();
+@include crispy__text();
+@include crispy__width();

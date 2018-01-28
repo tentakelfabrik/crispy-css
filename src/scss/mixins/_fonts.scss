@@ -2,13 +2,13 @@
  * fonts
  *
  *
- *
+ * @author Björn Hase
  *
  */
 
+
 /**
- * add font-size in px as fallback
- * and in rem
+ * add font-size in px as fallback and in rem
  *
  *
  * @param {px} $font-size
@@ -16,5 +16,24 @@
  */
 @mixin crispy__font-size($font-size) {
     font-size: $font-size;
-    font-size: pxToRem($font-size);
+    font-size: toRem($font-size);
+}
+
+/**
+ * add font-sizes as modifactors
+ *
+ *
+ * @param {map} $font-sizes
+ *
+ */
+@mixin crispy__font-sizes($font-sizes) {
+    @each $name, $font-size in $font-sizes {
+        @if ($name == 'default') {
+            @include font-size($font-size);
+        } @else {
+            &--#{$name} {
+                @include font-size($font-size);
+            }
+        }
+    }
 }
