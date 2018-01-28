@@ -6,4 +6,6 @@ Thumbs.db
 *.log
 
 build/svg/*
+
+!build/.gitkeep
 !build/svg/.gitkeep
