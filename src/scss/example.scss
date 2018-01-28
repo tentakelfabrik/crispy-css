@@ -23,7 +23,7 @@
 }
 
 .panel {
-    border: 1px solid $crispy__color-secondary;
+    border: 1px solid lighten($crispy__color-secondary, 10%);
     background-color: lighten($crispy__color-secondary, 25%);
 }
 
