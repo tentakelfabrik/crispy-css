@@ -47,31 +47,3 @@ $crispy__font-sizes: (
     'small': 16px,
     'large': 20px
 ) !default;
-
-// buttons colors
-$crispy__button__colors: (
-    'default': (
-        'color': #ffffff,
-        'background-color': $crispy__color-primary
-    ),
-    'secondary': (
-        'color': #ffffff,
-        'background-color': $crispy__color-secondary
-    ),
-    'success': (
-        'color': #ffffff,
-        'background-color': $crispy__color-success
-    ),
-    'warning': (
-        'color': #ffffff,
-        'background-color': $crispy__color-warning
-    ),
-    'danger': (
-        'color': #ffffff,
-        'background-color': $crispy__color-danger
-    ),
-    'info': (
-        'color': #ffffff,
-        'background-color': $crispy__color-info
-    )
-) !default;

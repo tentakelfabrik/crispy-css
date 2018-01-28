@@ -10,7 +10,7 @@
  */
 
 
-$crispy__panel__padding: toEm($crispy__margin * 3) !default;
+$crispy__panel__padding: toEm($crispy__margin) !default;
 
 @mixin crispy__panel {
     .panel {
