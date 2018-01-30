@@ -20,10 +20,15 @@
     margin: 0 auto;
 }
 
+.lead {
+    margin-top: -(toEm(5px));
+}
+
 .header {
     padding: 8px 0 0;
     margin: 0 0 20px;
     background-color: $crispy__color-primary;
+    border-bottom: 1px solid darken($crispy__color-primary, 10%);
 
     @include crispy__media-sm() {
         margin: 0 0 30px;
@@ -49,7 +54,7 @@
 
 // button
 .button {
-    border: 1px solid $crispy__color-primary;
+    border: 1px solid darken($crispy__color-primary, 10%);
     background-color: $crispy__color-primary;
     color: white;
 
