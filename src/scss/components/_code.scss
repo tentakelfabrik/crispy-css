@@ -1,11 +1,11 @@
 /**
  * code
  *
- * <div class="code">
+ * <pre class="code">
  *     <code>
  *     //
  *     </code>
- * </div>
+ * </pre>
  *
  * @author Björn Hase
  *
@@ -15,7 +15,7 @@ $crispy__code__font-size: $crispy__body__font-size !default;
 $crispy__code__font-family: monospace, monospace !default;
 $crispy__code__padding: toEm(10px 20px) !default;
 $crispy__code__margin: toEm(0 0 $crispy__margin) !default;
-$crispy__code__border: 1px solid #d4d4d4 !default;
+$crispy__code__border: 1px solid $crispy__color-border !default;
 $crispy__code__background-color: #f9f9f9 !default;
 
 @mixin crispy__code() {
