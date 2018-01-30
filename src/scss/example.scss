@@ -66,6 +66,11 @@
 .nav {
     position: relative;
 
+    a {
+        font-style: italic;
+        @include crispy__font-size(18px);
+    }
+
     @include crispy__media-sm() {
         position: fixed;
     }
