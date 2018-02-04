@@ -1,6 +1,6 @@
 {
   "name": "crispy-boilerplate",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "description": "Flat Sass Boilerplate to give you a amount of Basic Settings, Mixins and Functions",
   "repository": {
     "type": "git",
@@ -25,13 +25,15 @@
   "config": {
     "dest_dir": "dest/",
     "src_dir": "src/",
-    "build_dir": "build/"
+    "build_dir": "build/",
+    "normalize": "node_modules/normalize.css",
+    "reflex_grid": "node_modules/reflex-grid/scss"
   },
   "scripts": {
     "build": "npm run css:build && npm run svg:build",
     "css:build": "npm run css:clean && npm run css:scss && npm run css:postcss && npm run css:minify",
     "css:clean": "rimraf $npm_package_config_dist_dir/css/*",
-    "css:scss": "node-sass $npm_package_config_src_dir/scss/example.scss $npm_package_config_dest_dir/css/styles.css",
+    "css:scss": "node-sass --include-path $npm_package_config_normalize --include-path $npm_package_config_reflex_grid $npm_package_config_src_dir/scss/example.scss $npm_package_config_dest_dir/css/styles.css",
     "css:postcss": "postcss $npm_package_config_dest_dir/css/*.css --use autoprefixer -d $npm_package_config_dest_dir/css/",
     "css:minify": "cleancss $npm_package_config_dest_dir/css/styles.css > $npm_package_config_dest_dir/css/styles.min.css",
     "svg:build": "npm run svg:clean && npm run svg:copy && npm run svg:optimize && npm run svg:minify",
