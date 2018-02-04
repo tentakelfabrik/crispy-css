@@ -1,0 +1,55 @@
+/**
+ * <div class="field">
+ *     <label class="field__label">
+ *         input
+ *         <input type="text" class="field__text" />
+ *     </label>
+ *     <div class="field__panel">
+ *         <ul>
+ *           <li>item 1<li>
+ *         </ul>
+ *     </div>
+ * </div>
+ *
+ * @author Björn Hase
+ *
+ */
+
+$crispy__field__text__font-size: $crispy__body__font-size !default;
+
+$crispy__field__text__padding: toEm(6px 8px) !default;
+$crispy__field__text__color: $crispy__color-text !default;
+
+$crispy__field__text__border: 1px solid $crispy__color-secondary !default;
+
+$crispy__field__text__border-color--focus: $crispy__color-primary !default;
+$crispy__field__text__border-color--valid: $crispy__color-success !default;
+$crispy__field__text__border-color--error: $crispy__color-danger !default;
+
+@mixin crispy__field__text() {
+    .field__text {
+        display: block;
+        width: 100%;
+
+        line-height: $crispy__golden-ratio;
+        padding: $crispy__field__padding;
+        color: $crispy__field__text__color;
+
+        border: $crispy__field__border;
+        appearance: none;
+
+        @include crispy__font-size($crispy__field__font-size);
+
+        &--valid {
+            border-color: $crispy__field__border-color--valid;
+        }
+
+        &--error {
+            border-color: $crispy__field__border-color--error;
+        }
+
+        &:focus {
+            border-color: $crispy__field__border-color--focus;
+        }
+    }
+}

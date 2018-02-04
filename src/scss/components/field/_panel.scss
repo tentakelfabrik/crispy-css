@@ -1,0 +1,18 @@
+/**
+ * <div class="field">
+ *     <div class="field__panel">
+ *         <ul>
+ *           <li>item 1<li>
+ *         </ul>
+ *     </div>
+ * </div>
+ *
+ * @author Björn Hase
+ *
+ */
+
+@mixin crispy__field__panel() {
+    .field__panel {
+        @extend .panel;
+    }
+}
