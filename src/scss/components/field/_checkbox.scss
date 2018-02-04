@@ -1,6 +1,17 @@
 /**
- * input, textarea
+ * checkbox
  *
+ * <div class="field">
+ *     <input id="" type="text" class="field__checkbox" />
+ *     <label for="" class="field__label">
+ *         <svg class="icon field__checkbox__icon field__checkbox__checked" viewBox="0 0 100 100">
+ *             <use src="#"></use>
+ *         </svg>
+ *         <svg class="icon field__checkbox__icon field__checkbox__checked" viewBox="0 0 100 100">
+ *             <use src="#"></use>
+ *         </svg>
+ *    </label>
+ * </div>
  *
  * @author Björn Hase
  *
@@ -10,62 +21,44 @@ $crispy__field__checkbox: !default;
 
 @mixin crispy__field__checkbox() {
     .field__checkbox {
+        position: relative;
+        display: none;
+        appearance: none;
 
-        label {
+        + label {
             &:hover {
                 cursor: pointer;
             }
-
-            .field__checkbox__icon {
-                fill: $checkbox__icon-color-unchecked;
-                transition: $checkbox__transition-color;
-            }
-
-            .field__checkbox__checked {
-                fill: $checkbox__icon-color-checked;
-                display: none;
-            }
-
-            .field__checkbox__unchecked {
-                fill: $checkbox__icon-color-unchecked;
-            }
         }
 
-        input[type="checkbox"] {
-            position: relative;
+        &:checked + label .field__checkbox__checked {
+            display: inline-block;
+        }
+
+        &:checked + label .field__checkbox__unchecked {
             display: none;
-
-            &:checked + label .field__checkbox__checked {
-                display: inline-block;
-            }
-
-            &:checked + label .field__checkbox__unchecked {
-                display: none;
-            }
-
-            &:disabled + label .field__checkbox__icon {
-                fill: $checkbox__icon-color--disabled;
-            }
-
-            &:disabled + label:hover {
-                cursor: not-allowed;
-            }
-
-            appearance: none;
         }
 
-        &--valid {
-            border-color: $crispy__field__border-color--valid;
+        &:disabled + label .field__checkbox__icon {
+            fill: $checkbox__icon-color--disabled;
         }
 
-        &--error {
-            border-color: $crispy__field__border-color--error;
+        &:disabled + label:hover {
+            cursor: not-allowed;
         }
 
-        &:focus {
-            border-color: $crispy__field__border-color--focus;
+        &__checkbox__icon {
+            fill: $checkbox__icon-color-unchecked;
+            transition: $checkbox__transition-color;
         }
 
-        @include crispy__font-size($crispy__field__font-size);
+        &__checkbox__checked {
+            fill: $checkbox__icon-color-checked;
+            display: none;
+        }
+
+        &__checkbox__unchecked {
+            fill: $checkbox__icon-color-unchecked;
+        }
     }
 }
