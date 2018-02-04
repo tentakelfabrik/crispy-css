@@ -13,8 +13,9 @@
  *
  */
 
-$crispy__field__select__background-color: white !default;
+$crispy__field__select__padding: toEm(8px) !default;
 
+$crispy__field__select__background-color: white !default;
 $crispy__field__select__border: 1px solid $crispy__color-secondary !default;
 
 $crispy__field__select__border-color--focus: $crispy__color-primary !default;
@@ -28,8 +29,9 @@ $crispy__field__select__border-color--error: $crispy__color-danger !default;
 
         display: block;
         width: 100%;
-        border: $crispy__field__select__border;
+        padding: $crispy__field__select__padding;
 
+        border: $crispy__field__select__border;
         background-color: $crispy__field__select__background-color;
 
         &--valid {
