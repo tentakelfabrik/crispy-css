@@ -17,7 +17,9 @@
  *
  */
 
-$crispy__field__checkbox: !default;
+$crispy__field__checkbox___disabled__color: !default;
+$crispy__field__checkbox___checked__color: !default;
+$crispy__field__checkbox___unchecked__color: !default;
 
 @mixin crispy__field__checkbox() {
     .field__checkbox {
@@ -40,7 +42,7 @@ $crispy__field__checkbox: !default;
         }
 
         &:disabled + label .field__checkbox__icon {
-            fill: $checkbox__icon-color--disabled;
+            fill: $crispy__field__checkbox___disabled__color;
         }
 
         &:disabled + label:hover {
@@ -48,8 +50,8 @@ $crispy__field__checkbox: !default;
         }
 
         &__checkbox__icon {
-            fill: $checkbox__icon-color-unchecked;
-            transition: $checkbox__transition-color;
+            fill: $crispy__field__checkbox__color;
+            transition: $crispy__field__checkbox__transition;
         }
 
         &__checkbox__checked {
