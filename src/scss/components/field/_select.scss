@@ -1,0 +1,48 @@
+/**
+ * select
+ *
+ * <div class="field">
+ *     <label class="field__label">
+ *         <select class="field__select">
+ *
+ *         </select>
+ *    </label>
+ * </div>
+ *
+ * @author Björn Hase
+ *
+ */
+
+$crispy__field__select__background-color: white !default;
+
+$crispy__field__select__border: 1px solid $crispy__color-secondary !default;
+
+$crispy__field__select__border-color--focus: $crispy__color-primary !default;
+$crispy__field__select__border-color--valid: $crispy__color-success !default;
+$crispy__field__select__border-color--error: $crispy__color-danger !default;
+
+@mixin crispy__field__select()
+{
+    .field__select {
+        @extend .field__;
+
+        display: block;
+        width: 100%;
+        border: $crispy__field__select__border;
+
+        background-color: $crispy__field__select__background-color;
+
+        &--valid {
+            border-color: $crispy__field__select__border-color--valid;
+        }
+
+        &--error {
+            border-color: $crispy__field__select__border-color--error;
+        }
+
+        &:focus {
+            outline: 0;
+            border-color: $crispy__field__select__border-color--focus;
+        }
+    }
+}

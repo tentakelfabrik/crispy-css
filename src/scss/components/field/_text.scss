@@ -20,22 +20,22 @@ $crispy__field__text__border-color--error: $crispy__color-danger !default;
 
 @mixin crispy__field__text() {
     .field__text {
-        @extend %field__;
+        @extend .field__;
 
         display: block;
         width: 100%;
-        border: $crispy__field__border;
+        border: $crispy__field__text__border;
 
         &--valid {
-            border-color: $crispy__field__border-color--valid;
+            border-color: $crispy__field__text__border-color--valid;
         }
 
         &--error {
-            border-color: $crispy__field__border-color--error;
+            border-color: $crispy__field__text__border-color--error;
         }
 
         &:focus {
-            border-color: $crispy__field__border-color--focus;
+            border-color: $crispy__field__text__border-color--focus;
         }
     }
 }

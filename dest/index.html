@@ -127,18 +127,18 @@
     &lt;li&gt;item 1&lt;/li&gt;
     &lt;li&gt;item 2
         &lt;ul&gt;
-       &lt;li&gt;child item 1&lt;/li&gt;
-&lt;li&gt;child item 2&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+            &lt;li&gt;child item 1&lt;/li&gt;
+            &lt;li&gt;child item 2&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol&gt;
-&lt;li&gt;item 1&lt;/li&gt;
-&lt;li&gt;item 2&lt;/li&gt;
+    &lt;li&gt;item 1&lt;/li&gt;
+    &lt;li&gt;item 2&lt;/li&gt;
 &lt;/ol&gt;
 &lt;dl&gt;
-&lt;dt&gt;defined title 1&lt;/dt&gt;
-&lt;dd&gt;defined item 1&lt;/dd&gt;
+    &lt;dt&gt;defined title 1&lt;/dt&gt;
+    &lt;dd&gt;defined item 1&lt;/dd&gt;
 &lt;/dl&gt;</code></pre>
 				<ul>
 					<li>item 1</li>
@@ -356,39 +356,91 @@
 					</tbody>
 				</table>
 
-                <!-- form -->
+                <!-- field -->
                 <hr class="margin-top-3x">
 				<h2 id="functions" class="margin-top-1x">
-                    Form
+                    Fields
                 </h2>
 
-                <!-- form / input -->
+                <!-- field / input -->
 				<h3 class="h4 margin-top-0x margin-bottom-0x">
                     Input
                 </h3>
-                <input type="text" />
+                <div class="field">
+                    <input class="field__text" type="text" />
+                </div>
+                <div class="field">
+                    <input type="text" class="field__text field__text--error" />
+                    <div class="field__panel field__panel--error">
+                        error item 1
+                    </div>
+                </div>
 
-                <!-- form / textarea -->
+                <!-- field / textarea -->
 				<h3 class="h4 margin-top-0x margin-bottom-0x">
                     Textarea
                 </h3>
-                <textarea></textarea>
-
-                <!-- form / textarea -->
-				<h3 class="h4 margin-top-0x margin-bottom-0x">
-                    Field
-                </h3>
-                <div class="field field--valid">
-                    <input type="text" />
-                    <span class="field__panel">
-                        Error!
-                    </span>
+                <div class="field">
+                    <textarea class="field__text"></textarea>
                 </div>
-                <div class="field field--error">
-                    <input type="text" />
-                    <span class="field__panel">
-                        Error!
-                    </span>
+
+                <!-- field / checkbox -->
+				<h3 class="h4 margin-top-0x margin-bottom-0x">
+                    Checkbox
+                </h3>
+                <div class="field">
+                    <input id="field__checkbox__1" class="field__checkbox" type="checkbox" name="field__checkbox__1" value="true" />
+                    <label for="field__checkbox__1" class="field__label">
+                        <svg class="icon field__checkbox__unchecked" alt="beaker" viewBox="0 0 100 100">
+                            <use xlink:href="/svg/icons.svg#x" />
+                        </svg>
+                        <svg class="icon field__checkbox__checked" alt="beaker" viewBox="0 0 100 100">
+                            <use xlink:href="/svg/icons.svg#check" />
+                        </svg>
+                        checkbox 1
+                    </label>
+                </div>
+
+                <!-- field / radio -->
+				<h3 class="h4 margin-top-0x margin-bottom-0x">
+                    Radio
+                </h3>
+                <div class="field">
+                    <input id="field__radio__1" class="field__radio" type="radio" name="field__radio__1[]" value="true" />
+                    <label for="field__radio__1" class="field__label">
+                        <svg class="icon field__radio__unchecked" alt="beaker" viewBox="0 0 100 100">
+                            <use xlink:href="/svg/icons.svg#x" />
+                        </svg>
+                        <svg class="icon field__radio__checked" alt="beaker" viewBox="0 0 100 100">
+                            <use xlink:href="/svg/icons.svg#check" />
+                        </svg>
+                        radio item 1
+                    </label><br />
+                    <input id="field__radio__2" class="field__radio" type="radio" name="field__radio__1[]" value="true" />
+                    <label for="field__radio__2" class="field__label">
+                        <svg class="icon field__radio__unchecked" alt="beaker" viewBox="0 0 100 100">
+                            <use xlink:href="/svg/icons.svg#x" />
+                        </svg>
+                        <svg class="icon field__radio__checked" alt="beaker" viewBox="0 0 100 100">
+                            <use xlink:href="/svg/icons.svg#check" />
+                        </svg>
+                        radio item 2
+                    </label>
+                </div>
+
+                <!-- field / radio -->
+				<h3 class="h4 margin-top-0x margin-bottom-0x">
+                    Select
+                </h3>
+                <div class="field">
+                    <label class="field__label">
+                        Select Item
+                        <select class="field__select">
+                            <option>select item 1</option>
+                            <option>select item 2</option>
+                            <option>select item 3</option>
+                        </select>
+                    </label>
                 </div>
 
 				<!-- functions -->

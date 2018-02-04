@@ -11,8 +11,17 @@
  *
  */
 
+$crispy__field__panel__padding: toEm($crispy__margin) !default;
+$crispy__field__panel__color: white !default;
+$crispy__field__panel__background-color: $crispy__color-danger !default;
+
 @mixin crispy__field__panel() {
     .field__panel {
-        @extend .panel;
+        padding: $crispy__field__panel__padding;
+
+        &--error {
+            color: white;
+            background-color: $crispy__field__panel__background-color;
+        }
     }
 }
