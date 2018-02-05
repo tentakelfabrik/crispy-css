@@ -6,135 +6,133 @@
  *
  */
 
-@mixin crispy__base() {
-	html {
-		font-size: 100%;
+html {
+	font-size: 100%;
+}
+
+body,
+html {
+	height: 100%;
+}
+
+html,
+legend {
+	box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+// paragraphs
+p {
+	margin: toEm(0 0 $crispy__margin 0);
+}
+
+// Semantic text elements
+a,
+ins,
+u {
+	text-decoration-skip: ink edges;
+}
+
+a {
+	color: $crispy__color-primary;
+
+	&:hover {
+		color: $crispy__color-text;
 	}
 
-	body,
-	html {
-		height: 100%;
+	&:focus {
+		outline: none;
 	}
+}
 
-	html,
-	legend {
-		box-sizing: border-box;
+abbr[title] {
+	border-bottom: 1px dotted;
+	cursor: help;
+	text-decoration: none;
+}
+
+kbd {
+	// @TODO do something
+}
+
+mark {
+	padding: toEm(10px);
+}
+
+// blockquote
+blockquote {
+	border-left: 1px solid $crispy__color-secondary;
+	margin-left: 0;
+	padding: toEm(10px 20px);
+
+	p:last-child {
+		margin-bottom: 0;
 	}
+}
 
-	*,
-	*::after,
-	*::before {
-		box-sizing: inherit;
-	}
+// lists
+dl,
+ol,
+ul {
+	padding: 0;
+	margin: toEm(0 0 $crispy__margin $crispy__margin);
+}
 
-	table {
-		border-collapse: collapse;
-		border-spacing: 0;
-	}
+ol ol,
+ul ul {
+	margin-top: toEm(($crispy__margin / 2));
+}
 
-	// paragraphs
-	p {
-    	margin: toEm(0 0 $crispy__margin 0);
-	}
+ol {
+	list-style: decimal inside;
+}
 
-	// Semantic text elements
-	a,
-	ins,
-	u {
-		text-decoration-skip: ink edges;
-	}
+ul {
+	list-style: disc inside;
+}
 
-	a {
-		color: $crispy__color-primary;
+dd,
+dt {
+	margin: 0;
+}
 
-		&:hover {
-			color: $crispy__color-text;
-		}
+dt {
+	font-weight: bold;
+}
 
-		&:focus {
-			outline: none;
-		}
-	}
+// media
+figure {
+	margin: toEm(0 0 $crispy__margin);
+}
 
-	abbr[title] {
-		border-bottom: 1px dotted;
-		cursor: help;
-		text-decoration: none;
-	}
+figcaption {
+	margin: toEm($crispy__margin 0 0);
+}
 
-	kbd {
-		// @TODO do something
-	}
+// divider
+hr {
+	border: 0;
+	border-top: 1px solid $crispy__color-secondary;
+	margin: toEm($crispy__margin 0);
+}
 
-	mark {
-		padding: toEm(10px);
-	}
-
-	// blockquote
-	blockquote {
-		border-left: 1px solid $crispy__color-secondary;
-		margin-left: 0;
-		padding: toEm(10px 20px);
-
-		p:last-child {
-			margin-bottom: 0;
-		}
-	}
-
-	// lists
-	dl,
-	ol,
-	ul {
-		padding: 0;
-		margin: toEm(0 0 $crispy__margin $crispy__margin);
-	}
-
-	ol ol,
-	ul ul {
-		margin-top: toEm(($crispy__margin / 2));
-	}
-
-	ol {
-		list-style: decimal inside;
-	}
-
-	ul {
-		list-style: disc inside;
-	}
-
-	dd,
-	dt {
-		margin: 0;
-	}
-
-	dt {
-		font-weight: bold;
-	}
-
-	// media
-	figure {
-		margin: toEm(0 0 $crispy__margin);
-	}
-
-	figcaption {
-		margin: toEm($crispy__margin 0 0);
-	}
-
-	// divider
-	hr {
-		border: 0;
-		border-top: 1px solid $crispy__color-secondary;
-		margin: toEm($crispy__margin 0);
-	}
-
-	// body
-	body {
-		font-family: $crispy__body__font-family;
-		font-weight: normal;
-		line-height: $crispy__body__line-height;
-		color: $crispy__body__color;
-		background-color: $crispy__body__background-color;
-		direction: $crispy__body__direction;
-		@include crispy__font-size($crispy__body__font-size);
-	}
+// body
+body {
+	font-family: $crispy__font-family;
+	font-weight: normal;
+	line-height: $crispy__golden-ratio;
+	color: $crispy__color-text;
+	background-color: $crispy__color-background;
+	direction: $crispy__direction;
+	@include crispy__font-size($crispy__font-size);
 }

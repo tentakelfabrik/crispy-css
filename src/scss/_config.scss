@@ -9,6 +9,8 @@
 // font
 $crispy__font-size: 16px !default;
 $crispy__golden-ratio: 1.618 !default;
+$crispy__font-family: Arial, Helvetica, Neue Helvetica, sans-serif !default;
+$crispy__direction: ltr !default;
 
 // margin
 $crispy__margin: 10px !default;
@@ -34,17 +36,9 @@ $crispy__colors: (
     'info': $crispy__color-info
 ) !default;
 
-// body
-$crispy__body__font-size: 16px !default;
-$crispy__body__font-family: Arial, Helvetica, Neue Helvetica, sans-serif !default;
-$crispy__body__line-height: $crispy__golden-ratio !default;
-$crispy__body__direction: ltr !default;
-$crispy__body__color: $crispy__color-text !default;
-$crispy__body__background-color: $crispy__color-background !default;
-
 // font-sizes as map
 $crispy__font-sizes: (
-    'default': $crispy__body__font-size,
+    'default': $crispy__font-size,
     'small': 16px,
     'large': 20px
 ) !default;
