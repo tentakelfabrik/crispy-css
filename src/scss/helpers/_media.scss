@@ -1,5 +1,5 @@
 /**
- * helpers for media elements
+ * helpers for img & video
  *
  *
  * @author Björn Hase
@@ -16,7 +16,7 @@
     .img-rounded {
         border-radius: 50%;
     }
-    
+
     .video-responsive {
         display: block;
         overflow: hidden;

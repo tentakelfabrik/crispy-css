@@ -27,6 +27,14 @@ $crispy__margin-bottom: toEm($crispy__margin) !default;
         margin-top: $crispy__margin-top * 3;
     }
 
+    .margin-top-4x {
+        margin-top: $crispy__margin-top * 4;
+    }
+
+    .margin-top-5x {
+        margin-top: $crispy__margin-top * 5;
+    }
+
     .margin-bottom-0x {
         margin-bottom: 0;
     }
@@ -41,5 +49,13 @@ $crispy__margin-bottom: toEm($crispy__margin) !default;
 
     .margin-bottom-3x {
         margin-bottom: $crispy__margin-bottom * 3;
+    }
+
+    .margin-bottom-4x {
+        margin-bottom: $crispy__margin-bottom * 4;
+    }
+
+    .margin-bottom-5x {
+        margin-bottom: $crispy__margin-bottom * 5;
     }
 }

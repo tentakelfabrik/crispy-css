@@ -48,6 +48,20 @@
         top: 3px;
         width: 50px;
     }
+
+    &__feature-text, &__feature-title {
+        text-align: center;
+        padding: toEm(0 20px);
+    }
+
+    &__feature-title {
+        @include crispy__font-size(23px);
+    }
+
+    &__feature-text {
+        margin: toEm(0 0 30px);
+        @include crispy__font-size(18px);
+    }
 }
 
 .footer {
@@ -115,7 +129,7 @@
 }
 
 // helpers
-@include crispy__align();
+@include crispy__float();
 @include crispy__margin();
 @include crispy__media();
 @include crispy__text();

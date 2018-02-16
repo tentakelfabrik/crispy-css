@@ -1,5 +1,5 @@
 /**
- * helpers for align
+ * helpers for float & centering
  *
  *
  *
@@ -7,23 +7,7 @@
  *
  */
 
-@mixin crispy__align() {
-    .text-left {
-        text-align: left;
-    }
-
-    .text-right {
-        text-align: right;
-    }
-
-    .text-center {
-        text-align: center;
-    }
-
-    .text-justify {
-        text-align: justify;
-    }
-
+@mixin crispy__float() {
     .float-left {
         float: left;
     }
