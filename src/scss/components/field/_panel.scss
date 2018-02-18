@@ -15,7 +15,8 @@
 
 $crispy__field__panel__padding: toEm($crispy__margin) !default;
 $crispy__field__panel__color: white !default;
-$crispy__field__panel__background-color: $crispy__color-danger !default;
+$crispy__field__panel__background-color--valid: $crispy__color-success !default;
+$crispy__field__panel__background-color--error: $crispy__color-danger !default;
 
 @mixin crispy__field__panel() {
     .field__panel {
@@ -23,7 +24,12 @@ $crispy__field__panel__background-color: $crispy__color-danger !default;
 
         &--error {
             color: white;
-            background-color: $crispy__field__panel__background-color;
+            background-color: $crispy__field__panel__background-color--error;
+        }
+
+        &--valid {
+            color: white;
+            background-color: $crispy__field__panel__background-color--valid;
         }
     }
 }
