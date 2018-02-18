@@ -8,7 +8,7 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" href="/css/styles.min.css">
+	<link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
@@ -61,6 +61,7 @@
 				<nav class="nav">
 					<ul class="margin-top-0x">
                         <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#example">Example</a></li>
 						<li><a href="#get-started">Get Started</a></li>
 						<li><a href="#typography">Typography</a></li>
 						<li><a href="#components">Components</a></li>
@@ -77,19 +78,46 @@
                     Introduction
                 </h2>
 				<p>
-					Why? There are so many! Yes, of Course, but this is not a Framework, it is a Boilerplate, more simple. I have tried to build a minimalistic sass.
-				</p>
-				<p>
-					A few Years a have always created Styles to use in other Frameworks, crispy boilerplate is a a small toolkit from this helpers, styles that can be used to create. This is not beatiful or fancy it is a simple and basic toolkit to get a default style.
-				</p>
-				<p>
-					For me it was important to use no js, not that i hate js, no, the Problem of bigger Frameworks was but for the most webapps, it was always diffult to build a few things and not getting a conflict. So i desided it is simpler to get a good stable basis
-					and build smaller parts
-				</p>
-				<p>
-					So this is a smaller approch, most projects i have then that big Frameworks were used, but i often felt that there was a Problem, often the fight against the framework, that result often in bigger and longer code. This is also a try to code get a smaller
-					base to create more effecit No, it is a try, i can not promise you it will be done,
-				</p>
+                    This Boilerplate has more simpler approach, it can be used
+                    as a base for Websites, Webapps and also Frameworks. Of Course there a
+                    so many Framework and Boilerplates.
+                </p>
+                <p>
+                    But the most are trying to hard adding styles
+                    that are most time will be overwritten to make it work for you. This causes a loss
+                    in Performance and more Fighting with the Framework and the Documentation.
+                </p>
+                <p>
+                    The <strong>Components</strong> are quite simple and not fancy, the have all
+                    fundamental styles to so the can be used.
+                </p>
+                <p>
+                    The <strong>Helpers</strong> have Styles for single Elements and spend it saving
+                    for each element to invent a single class.
+                </p>
+                <p>
+                    The Coding Style of this Framework is <strong>BEM</strong>, but
+                    also here a more simpler idea of it. <strong>BEM</strong> is a good and helpfull Coding Style,
+                    if you not overthinking it. It helps to create smaller compontents that you can reuse.
+                    Important for that, make them really small. More Information about <a href="http://getbem.com/" target="_blank">BEM</a>.
+                </p>
+
+                <!-- example -->
+				<hr class="margin-top-3x">
+                <h2 id="example" class="margin-top-1x">
+                    Example
+                </h2>
+                <p>
+                    This Site is also a Example to use the Boilerplate. You can find all
+                    Styles for this site in "/src/scss/example". You see also that there
+                    is a "templates" Directory. The Idea in <strong>BEM</strong> was always
+                    create all in Components. That is not always Practical.
+                </p>
+                <p>
+                    Sometimes, the more Bigger Picture, on a Single Site or in App the
+                    Stylings that are so special that the belong only there, and are to big
+                    for a templates. For this use the "templates" Directory.
+                </p>
 
 				<!-- how to use -->
 				<hr class="margin-top-3x">
@@ -488,7 +516,7 @@ toRem(10px 10px 0 0);
 
 				<!-- helpers / align -->
 				<h3 class="h4 margin-top-1x">
-                    Align
+                    Float
                 </h3>
 				<pre class="code">&lt;div class=&quot;text-left&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;text-center&quot;&gt;&lt;/div&gt;
@@ -559,6 +587,31 @@ toRem(10px 10px 0 0);
 				<div class="panel panel__inner width-50 margin-bottom-1x">width-50</div>
 				<div class="panel panel__inner width-75 margin-bottom-1x">width-75</div>
 				<div class="panel panel__inner width-100 margin-bottom-1x">width-100</div>
+
+                <!-- helpers / text -->
+                <h3 class="h4 margin-top-1x">
+                    Text
+                </h3>
+                <pre class="code">&lt;div class=&quot;text-left&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;text-center&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;text-right&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;text-justify&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;text-italic&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;text-normal&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;text-bold&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;text-uppercase&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;text-lowercase&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;text-small&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;text-crossed&quot;&gt;&lt;/div&gt;</code></pre>
+
+                <p>
+                    Also it will be create classes $crispy__font-sizes
+                </p>
+                <ul>
+                    <li>text-* with $crispy__font-sizes for "font-size"</li>
+                    <li>text-* with $crispy__colors for "color"</li>
+                    <li>background- with $crispy__font-sizes for "background-color"</li>
+                </ul>
 
 				<!-- mixins -->
 				<hr class="margin-top-3x">
@@ -657,6 +710,8 @@ toRem(10px 10px 0 0);
 			</div>
 		</div>
 	</footer>
+
+    <script type="text/javascript" src="/js/app.js"></script>
 </body>
 
 </html>

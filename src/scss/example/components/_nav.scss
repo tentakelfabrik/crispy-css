@@ -1,0 +1,30 @@
+/**
+ * component: nav
+ *
+ *
+ * @author Björn Hase
+ * 
+ */
+
+@mixin example__nav()
+{
+    .nav {
+        position: relative;
+
+        a {
+            font-style: italic;
+            @include crispy__font-size(18px);
+        }
+
+        @include crispy__media-sm() {
+            position: fixed;
+            transition: top 0.3s;
+        }
+
+        &--fixed {
+            @include crispy__media-sm() {
+                top: 50px !important;
+            }
+        }
+    }
+}

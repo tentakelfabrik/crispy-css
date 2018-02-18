@@ -6,7 +6,9 @@
     'select';
 
 /**
- * field
+ * component: field
+ *
+ * field is a wrapper for form elements
  *
  *
  * @author Björn Hase
@@ -24,7 +26,10 @@ $crispy__field__input__color: $crispy__color-text !default;
         margin: $crispy__field__margin;
     }
 
-    .field__ {
+    // basic style for input elements, will be used to @extend
+    .field__input {
+        display: block;
+        width: 100%;
         line-height: $crispy__golden-ratio;
         padding: $crispy__field__input__padding;
         color: $crispy__field__input__color;

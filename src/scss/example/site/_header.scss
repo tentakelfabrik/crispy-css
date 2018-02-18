@@ -1,0 +1,44 @@
+/**
+ * component: header
+ *
+ *
+ * @author Björn Hase
+ *
+ */
+
+@mixin example__header() {
+    .header {
+        padding: 8px 0 0;
+        margin: 0 0 20px;
+        background-color: $crispy__color-primary;
+        border-bottom: 1px solid darken($crispy__color-primary, 10%);
+
+        @include crispy__media-sm() {
+            margin: 0 0 30px;
+        }
+
+        &__title {
+            color: white;
+            margin: toEm(0 0 3px);
+        }
+
+        &__logo {
+            top: 3px;
+            width: 50px;
+        }
+
+        &__feature-text, &__feature-title {
+            text-align: center;
+            padding: toEm(0 20px);
+        }
+
+        &__feature-title {
+            @include crispy__font-size(23px);
+        }
+
+        &__feature-text {
+            margin: toEm(0 0 30px);
+            @include crispy__font-size(18px);
+        }
+    }
+}

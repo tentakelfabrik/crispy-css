@@ -9,6 +9,7 @@
   "author": "Björn Hase",
   "license": "MIT",
   "dependencies": {
+    "cash-dom": "^1.3.7",
     "normalize.css": "^7.0.0",
     "reflex-grid": "^2.0.1"
   },
@@ -20,7 +21,9 @@
     "postcss-cli": "^4.1.1",
     "rimraf": "^2.6.1",
     "svg-sprite": "^1.3.7",
-    "svgo": "^1.0.3"
+    "svgo": "^1.0.3",
+    "uglifyjs-webpack-plugin": "^1.2.0",
+    "webpack": "^3.11.0"
   },
   "config": {
     "dest_dir": "dest/",
@@ -33,13 +36,16 @@
     "build": "npm run css:build && npm run svg:build",
     "css:build": "npm run css:clean && npm run css:scss && npm run css:postcss && npm run css:minify",
     "css:clean": "rimraf $npm_package_config_dist_dir/css/*",
-    "css:scss": "node-sass --include-path $npm_package_config_normalize --include-path $npm_package_config_reflex_grid $npm_package_config_src_dir/scss/example.scss $npm_package_config_dest_dir/css/styles.css",
+    "css:scss": "node-sass --include-path $npm_package_config_normalize --include-path $npm_package_config_reflex_grid $npm_package_config_src_dir/scss/example.scss $npm_package_config_build_dir/css/styles.css",
     "css:postcss": "postcss $npm_package_config_dest_dir/css/*.css --use autoprefixer -d $npm_package_config_dest_dir/css/",
-    "css:minify": "cleancss $npm_package_config_dest_dir/css/styles.css > $npm_package_config_dest_dir/css/styles.min.css",
+    "css:minify": "cleancss $npm_package_config_build_dir/css/styles.css > $npm_package_config_dest_dir/css/styles.css",
     "svg:build": "npm run svg:clean && npm run svg:copy && npm run svg:optimize && npm run svg:minify",
     "svg:clean": "rimraf $npm_package_config_dest_dir/svg/* && rimraf $npm_package_config_build_dir/svg/*",
     "svg:copy": "copyfiles -f $npm_package_config_src_dir/icons/**/*.svg $npm_package_config_build_dir/svg",
     "svg:optimize": "svgo -f $npm_package_config_build_dir/svg -o $npm_package_config_build_dir/svg",
-    "svg:minify": "svg-sprite -s --symbol-sprite=$npm_package_config_dest_dir/svg/icons.svg --symbol-dest= $npm_package_config_build_dir/svg/*.svg"
+    "svg:minify": "svg-sprite -s --symbol-sprite=$npm_package_config_dest_dir/svg/icons.svg --symbol-dest= $npm_package_config_build_dir/svg/*.svg",
+    "js:build": "npm run js:clean && npm run js:webpack",
+    "js:clean": "rimraf $npm_package_config_dist_dir/js/*",
+    "js:webpack": "npx webpack --config webpack.config.js"
   }
 }

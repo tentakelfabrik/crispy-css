@@ -1,5 +1,5 @@
 /**
- * select
+ * component: select
  *
  * <div class="field">
  *     <label class="field__label">
@@ -25,12 +25,9 @@ $crispy__field__select__border-color--error: $crispy__color-danger !default;
 @mixin crispy__field__select()
 {
     .field__select {
-        @extend .field__;
+        @extend .field__input;
 
-        display: block;
-        width: 100%;
         padding: $crispy__field__select__padding;
-
         border: $crispy__field__select__border;
         background-color: $crispy__field__select__background-color;
 
