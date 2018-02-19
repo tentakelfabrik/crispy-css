@@ -30,22 +30,28 @@
 			</div>
             <div class="grid">
 				<div class="col-sm-4">
-                    <h2 class="header__feature-title">Less is more</h2>
-                    <p class="header__feature-text">
-                        Simple basic Components to extends in your own art
-                    </p>
+                    <div class="header__feature">
+                        <h2 class="header__feature-title">Less is more</h2>
+                        <p class="header__feature-text">
+                            Simple basic Components to extends in your own art
+                        </p>
+                    </div>
                 </div>
                 <div class="col-sm-4">
-                    <h2 class="header__feature-title">Structure</h2>
-                    <p class="header__feature-text">
-                        Crispy gives you a Structure to orientate
-                    </p>
+                    <div class="header__feature">
+                        <h2 class="header__feature-title">Structure</h2>
+                        <p class="header__feature-text">
+                            Crispy gives you a Structure to orientate
+                        </p>
+                    </div>
                 </div>
                 <div class="col-sm-4">
-                    <h2 class="header__feature-title">Helper</h2>
-                    <p class="header__feature-text">
-                        Use helper to save up time and coding less
-                    </p>
+                    <div class="header__feature header__feature--last">
+                        <h2 class="header__feature-title">Helper</h2>
+                        <p class="header__feature-text">
+                            Use helper to save up time and coding less
+                        </p>
+                    </div>
                 </div>
             </div>
 		</div>
@@ -109,13 +115,16 @@
                 <p>
                     This Site is also a Example to use the Boilerplate. You can find all
                     Styles for this site in "/src/scss/example". You see also that there
-                    is a "templates" Directory. The Idea in <strong>BEM</strong> was always
+                    is a <strong>"templates" Directory</strong>. The Idea in <strong>BEM</strong> was always
                     create all in Components. That is not always Practical.
                 </p>
                 <p>
                     Sometimes, the more Bigger Picture, on a Single Site or in App the
-                    Stylings that are so special that the belong only there, and are to big
-                    for a templates. For this use the "templates" Directory.
+                    Stylings that are so special that the belong only there and are to complex
+                    for a component. For this use the <strong>"templates" Directory</strong>.
+                </p>
+                <p>
+                    Sites also have partials like header and footer, they can put into the <strong>directory "site"</strong>.
                 </p>
 
 				<!-- how to use -->
@@ -131,8 +140,18 @@
                     Typography
                 </h2>
 
+                <!-- abbr -->
+				<h3 class="h4 margin-top-2x margin-bottom-0x">a</h3>
+				<h4 class="h6">Html:</h4>
+				<pre class="code"><code>&lt;a href=&quot;&quot;&gt;&lt;/a&gt;</code></pre>
+				<p>
+					a-tag color is set by <strong>$crispy__color-primary</strong>. :hover is set by
+                    <strong>$crispy__color-text</strong>
+				</p>
+
+
 				<!-- abbr -->
-				<h3 class="h4 margin-top-2x margin-bottom-0x">Abbr</h3>
+				<h3 class="h4 margin-top-2x margin-bottom-0x">abbr</h3>
 				<h4 class="h6">Html:</h4>
 				<pre class="code"><code>&lt;abbr title=&quot;&quot;&gt;&lt;/abbr&gt;</code></pre>
 				<p>
@@ -140,23 +159,39 @@
 				</p>
 
 				<!-- blockquote -->
-				<h3 class="h4 margin-top-2x margin-bottom-0x">Blockquote</h3>
+				<h3 class="h4 margin-top-2x margin-bottom-0x">blockquote</h3>
 				<h4 class="h6">Html:</h4>
 				<pre class="code"><code>&lt;blockquote&gt;&lt;/blockquote&gt;</code></pre>
 				<blockquote>
 					Hoodie kickstarter four loko, pinterest hashtag chambray glossier. Pug before they sold out etsy listicle. Deep v bespoke tacos polaroid, squid flexitarian crucifix messenger bag.
 				</blockquote>
 
+                <!-- hr -->
+				<h3 class="h4 margin-top-2x margin-bottom-0x">hr</h3>
+				<h4 class="h6">Html:</h4>
+				<pre class="code"><code>&lt;hr&gt;</code></pre>
+                <p>
+                    <hr>
+                </p>
+
 				<!-- paragraph -->
-				<h3 class="h4 margin-top-2x margin-bottom-0x">Paragraph</h3>
+				<h3 class="h4 margin-top-2x margin-bottom-0x">paragraph</h3>
 				<h4 class="h6">Html:</h4>
 				<pre class="code"><code>&lt;p&gt;&lt;/p&gt;</code></pre>
 				<p>
 					Glossier viral occupy mixtape pok pok.
 				</p>
 
+                <!-- mark -->
+				<h3 class="h4 margin-top-2x margin-bottom-0x">mark</h3>
+				<h4 class="h6">Html:</h4>
+				<pre class="code"><code>&lt;mark&gt;&lt;/mark&gt;</code></pre>
+                <p>
+                    Pug before they <mark>four loko</mark> Deep v bespoke
+                </p>
+
 				<!-- list -->
-				<h3 class="h4 margin-top-2x margin-bottom-0x">List</h3>
+				<h3 class="h4 margin-top-2x margin-bottom-0x">list</h3>
 				<h4 class="h6">Html:</h4>
 				<pre class="code"><code>&lt;ul&gt;
     &lt;li&gt;item 1&lt;/li&gt;
@@ -202,7 +237,7 @@
 
 				<!-- components / button -->
 				<h3 class="h4 margin-top-2x margin-bottom-0x">
-                    Button
+                    button
                 </h3>
 				<h4 class="h6">Html:</h4>
 				<pre class="code margin-top-1x"><code>&lt;button class=&quot;button&quot;&gt;&lt;/button&gt;
@@ -210,9 +245,16 @@
 				<button class="button">Default</button>
 				<button class="button button--wide margin-top-1x">Info</button>
 
+                <!-- components / code -->
+				<h3 class="h4 margin-top-2x margin-bottom-0x">
+                    code
+                </h3>
+				<h4 class="h6">Html:</h4>
+				<pre class="code margin-top-1x"><code>&lt;pre class=&quot;code&quot;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</code></pre>
+
 				<!-- components / group -->
 				<h3 class="h4 margin-top-2x margin-bottom-0x">
-                    Group
+                    group
                 </h3>
 				<h4 class="h6">Html:</h4>
 				<pre class="code"><code>&lt;nav class=&quot;group&quot;&gt;
@@ -249,7 +291,7 @@
 
 				<!-- components / heading -->
 				<h3 class="h4 margin-top-2x margin-bottom-0x">
-                    Heading
+                    heading
                 </h3>
 				<h4 class="h6">Html:</h4>
 				<pre class="code"><code>&lt;h2&gt;&lt;/h2&gt;
@@ -273,7 +315,7 @@
 
 				<!-- components / hero -->
 				<h3 class="h4 margin-top-2x margin-bottom-0x">
-                    Hero
+                    hero
                 </h3>
 				<h4 class="h6">Html:</h4>
 				<pre class="code"><code>&lt;div class=&quot;hero hero--bottom&quot; style=&quot;height: 300px; background-image: url('https://picsum.photos/1024')&quot;&gt;&lt;/div&gt;</code></pre>
@@ -281,7 +323,7 @@
 
 				<!-- components / icon -->
 				<h3 class="h4 margin-top-2x margin-bottom-0x">
-                    Icon
+                    icon
                 </h3>
 				<h4 class="h6">Html:</h4>
 				<pre class="code"><code>&lt;svg class=&quot;icon icon--small&quot; alt=&quot;beaker&quot; viewBox=&quot;0 0 100 100&quot;&gt;
@@ -312,7 +354,7 @@
 
 				<!-- components / modal -->
 				<h3 class="h4 margin-top-2x margin-bottom-0x">
-                    Modal
+                    modal
                 </h3>
 				<h4 class="h6">Html:</h4>
 				<pre class="code"><code>&lt;div class=&quot;modal modal--bottom width-100&quot;&gt;
@@ -334,7 +376,7 @@
 
 				<!-- components / panel -->
 				<h3 class="h4 margin-top-2x margin-bottom-0x">
-                    Panel
+                    panel
                 </h3>
 				<h4 class="h6">Html:</h4>
 				<pre class="code"><code>&lt;div class=&quot;panel&quot;&gt;
@@ -349,10 +391,10 @@
 				</div>
 
 				<!-- components / table -->
-				<h3 id="table" class="h4 margin-top-2x margin-bottom-0x">
-                    Table
+				<h3 class="h4 margin-top-2x margin-bottom-0x">
+                    table
                 </h3>
-				<h4 class="h6 margin-top-1x">Html:</h4>
+				<h4 class="h6">Html:</h4>
 				<pre class="code"><code>&lt;table class=&quot;table table--striped&quot;&gt;
     &lt;thead&gt;
         &lt;tr&gt;
@@ -405,7 +447,7 @@
                         checkbox 1
                     </label>
                 </div>
-                <div class="field">
+                <div class="field field--error">
                     <input id="field__checkbox__2" class="field__checkbox" type="checkbox" name="field__checkbox__2" value="true" />
                     <label for="field__checkbox__2" class="field__label">
                         <svg class="icon field__checkbox__unchecked" alt="beaker" viewBox="0 0 100 100">
@@ -416,7 +458,7 @@
                         </svg>
                         checkbox 1
                     </label>
-                    <div class="field__panel field__panel--error">
+                    <div class="field__panel">
                         error item 1
                     </div>
                 </div>
@@ -449,9 +491,9 @@
                 </div>
 
                 <!-- radio / error -->
-                <div class="field">
+                <div class="field field--error">
                     <input id="field__radio__3" class="field__radio" type="radio" name="field__radio__2[]" value="true" />
-                    <label for="field__radio__3" class="field__label field__label--error">
+                    <label for="field__radio__3" class="field__label">
                         <svg class="icon field__radio__unchecked" alt="beaker" viewBox="0 0 100 100">
                             <use xlink:href="/svg/icons.svg#x" />
                         </svg>
@@ -461,7 +503,7 @@
                         radio item 1
                     </label><br />
                     <input id="field__radio__4" class="field__radio" type="radio" name="field__radio__2[]" value="true" />
-                    <label for="field__radio__4" class="field__label field__label--error">
+                    <label for="field__radio__4" class="field__label">
                         <svg class="icon field__radio__unchecked" alt="beaker" viewBox="0 0 100 100">
                             <use xlink:href="/svg/icons.svg#x" />
                         </svg>
@@ -470,7 +512,7 @@
                         </svg>
                         radio item 2
                     </label>
-                    <div class="field__panel field__panel--error">
+                    <div class="field__panel">
                         error item 1
                     </div>
                 </div>
@@ -489,15 +531,15 @@
                         </select>
                     </label>
                 </div>
-                <div class="field">
+                <div class="field field--error">
                     <label class="field__label">
                         Select Item
-                        <select class="field__select field__select--error">
+                        <select class="field__select">
                             <option>select item 1</option>
                             <option>select item 2</option>
                             <option>select item 3</option>
                         </select>
-                        <div class="field__panel field__panel--error">
+                        <div class="field__panel">
                             error item 1
                         </div>
                     </label>
@@ -510,27 +552,36 @@
                 <div class="field">
                     <input class="field__text" type="text" />
                 </div>
-                <div class="field">
-                    <label class="field__label field__label--error">
+                <div class="field field--valid">
+                    <label class="field__label">
                         Text
-                        <input type="text" class="field__text field__text--valid" />
+                        <input type="text" class="field__text" />
                     </label>
-                    <div class="field__panel field__panel--valid">
+                    <div class="field__panel">
+                        error item 1
+                    </div>
+                </div>
+                <div class="field field--error">
+                    <label class="field__label">
+                        Text
+                        <input type="text" class="field__text" />
+                    </label>
+                    <div class="field__panel">
                         error item 1
                     </div>
                 </div>
                 <div class="field">
-                    <input type="text" class="field__text field__text--error" />
-                    <div class="field__panel field__panel--error">
-                        error item 1
-                    </div>
+                    <label class="field__label">
+                        Textarea
+                        <textarea class="field__text"></textarea>
+                    </label>
                 </div>
-                <div class="field">
-                    <textarea class="field__text"></textarea>
-                </div>
-                <div class="field">
-                    <textarea class="field__text"></textarea>
-                    <div class="field__panel field__panel--error">
+                <div class="field field--error">
+                    <label class="field__label">
+                        Textarea
+                        <textarea class="field__text"></textarea>
+                    </label>
+                    <div class="field__panel">
                         error item 1
                     </div>
                 </div>

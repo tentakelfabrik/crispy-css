@@ -21,19 +21,22 @@ $crispy__field__text__border-color--error: $crispy__color-danger !default;
 @mixin crispy__field__text() {
     .field__text {
         @extend .field__input;
-
         border: $crispy__field__text__border;
-
-        &--valid {
-            border-color: $crispy__field__text__border-color--valid;
-        }
-
-        &--error {
-            border-color: $crispy__field__text__border-color--error;
-        }
 
         &:focus {
             border-color: $crispy__field__text__border-color--focus;
+        }
+    }
+
+    .field--valid {
+        .field__text {
+            border-color: $crispy__field__text__border-color--valid;
+        }
+    }
+
+    .field--error {
+        .field__text {
+            border-color: $crispy__field__text__border-color--error;
         }
     }
 }

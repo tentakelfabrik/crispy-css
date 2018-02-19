@@ -10,22 +10,30 @@ import $ from 'cash-dom';
  * @param  string destinationSelector
  */
 
-export default function scrollThenFix(sourceSelector, destinationSelector, addClass, offset) {
+export default function scrollThenFix(sourceSelector, destinationSelector, addClass) {
     let destination = $(destinationSelector);
     let source = $(sourceSelector);
+    let pageY = document.documentElement.scrollTop;
 
-    if (offset === undefined) {
-        offset = 0;
-    }
+    // set position
+    scrollTo(pageY);
 
-    // adding fixed position
-    destination.css('top', (source.outerHeight() + offset) + 'px');
-
+    // adding event for scrolling
     window.addEventListener('scroll', function(event) {
-        if (event.pageY > source.outerHeight()) {
+        scrollTo(event.pageY);
+    });
+
+    /**
+     * scroll to if source Height is smaller then pageY
+     *
+     * @param integer pageY
+     */
+    function scrollTo(pageY)
+    {
+        if (pageY > source.outerHeight()) {
             destination.addClass(addClass);
         } else {
             destination.removeClass(addClass);
         }
-    });
+    }
 }

@@ -2,4 +2,4 @@
 
 import scrollThenFix from './_scrollThenFix.js';
 
-scrollThenFix('.header', '.nav', 'nav--fixed', 48);
+scrollThenFix('.header', '.nav', 'nav--fixed');

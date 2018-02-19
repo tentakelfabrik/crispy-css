@@ -21,6 +21,9 @@ $crispy__field__checkbox__disabled__color: $crispy__color-secondary !default;
 $crispy__field__checkbox__checked__color: $crispy__color-success !default;
 $crispy__field__checkbox__unchecked__color: $crispy__color-text !default;
 
+$crispy__field__checkbox__color--valid: $crispy__color-success !default;
+$crispy__field__checkbox__color--error: $crispy__color-danger !default;
+
 @mixin crispy__field__checkbox() {
     .field__checkbox {
         position: relative;
@@ -50,6 +53,18 @@ $crispy__field__checkbox__unchecked__color: $crispy__color-text !default;
 
         &__unchecked {
             fill: $crispy__field__checkbox__unchecked__color;
+        }
+    }
+
+    .field--valid {
+        .field__checkbox__checked, .field__checkbox__unchecked {
+            fill: $crispy__field__checkbox__color--valid;
+        }
+    }
+
+    .field--error {
+        .field__checkbox__checked, .field__checkbox__unchecked {
+            fill: $crispy__field__checkbox__color--error;
         }
     }
 }

@@ -1,0 +1,32 @@
+/**
+ * component: label
+ *
+ * <label class="field">
+ *
+ * </label>
+ *
+ * @author Björn Hase
+ *
+ */
+
+$crispy__field__label__color--valid: $crispy__color-success !default;
+$crispy__field__label__color--error: $crispy__color-danger !default;
+
+@mixin crispy__field__label() {
+    .field__label {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .field--valid {
+        .field__label {
+            color: $crispy__field__label__color--valid;
+        }
+    }
+
+    .field--error {
+        .field__label {
+            color: $crispy__field__label__color--error;
+        }
+    }
+}

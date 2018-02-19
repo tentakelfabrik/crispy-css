@@ -3,7 +3,7 @@
  *
  *
  * @author Björn Hase
- * 
+ *
  */
 
 @mixin example__nav()
@@ -12,18 +12,21 @@
         position: relative;
 
         a {
-            font-style: italic;
             @include crispy__font-size(18px);
         }
 
+        ul {
+            margin-left: 0;
+        }
+
         @include crispy__media-sm() {
-            position: fixed;
-            transition: top 0.3s;
+            position: absolute;
         }
 
         &--fixed {
             @include crispy__media-sm() {
-                top: 50px !important;
+                position: fixed;
+                top: 40px !important;
             }
         }
     }

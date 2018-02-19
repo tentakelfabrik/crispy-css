@@ -30,18 +30,22 @@ $crispy__field__select__border-color--error: $crispy__color-danger !default;
         padding: $crispy__field__select__padding;
         border: $crispy__field__select__border;
         background-color: $crispy__field__select__background-color;
-
-        &--valid {
-            border-color: $crispy__field__select__border-color--valid;
-        }
-
-        &--error {
-            border-color: $crispy__field__select__border-color--error;
-        }
-
+        
         &:focus {
             outline: 0;
             border-color: $crispy__field__select__border-color--focus;
+        }
+    }
+
+    .field--valid {
+        .field__select {
+            border-color: $crispy__field__select__border-color--valid;
+        }
+    }
+
+    .field--error {
+        .field__select {
+            border-color: $crispy__field__select__border-color--error;
         }
     }
 }

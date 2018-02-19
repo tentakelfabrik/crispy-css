@@ -27,6 +27,21 @@
             width: 50px;
         }
 
+        &__feature {
+            padding: toEm(15px 10px);
+            border: 1px solid #929292;
+            background-color: #fff;
+            border-radius: 5px;
+
+            &--last {
+                margin: toEm(0 0 30px);
+            }
+
+            @include crispy__media-sm() {
+                margin: toEm(0 0 30px);
+            }
+        }
+
         &__feature-text, &__feature-title {
             text-align: center;
             padding: toEm(0 20px);
@@ -37,7 +52,7 @@
         }
 
         &__feature-text {
-            margin: toEm(0 0 30px);
+            margin: 0;
             @include crispy__font-size(18px);
         }
     }

@@ -19,6 +19,7 @@
 @include crispy__field__radio();
 @include crispy__field__select();
 @include crispy__field__panel();
+@include crispy__field__label();
 
 // helpers
 @include crispy__float();

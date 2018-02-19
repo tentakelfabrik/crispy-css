@@ -21,15 +21,19 @@ $crispy__field__panel__background-color--error: $crispy__color-danger !default;
 @mixin crispy__field__panel() {
     .field__panel {
         padding: $crispy__field__panel__padding;
+    }
 
-        &--error {
-            color: white;
-            background-color: $crispy__field__panel__background-color--error;
-        }
-
-        &--valid {
+    .field--valid {
+        .field__panel {
             color: white;
             background-color: $crispy__field__panel__background-color--valid;
+        }
+    }
+
+    .field--error {
+        .field__panel {
+            color: white;
+            background-color: $crispy__field__panel__background-color--error;
         }
     }
 }
