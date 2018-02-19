@@ -20,6 +20,11 @@
         &__title {
             color: white;
             margin: toEm(0 0 3px);
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
         }
 
         &__logo {
