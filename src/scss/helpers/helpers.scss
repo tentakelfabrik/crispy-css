@@ -4,3 +4,17 @@
     'media',
     'text',
     'width';
+
+/**
+ * shortcut to include all helpers
+ * 
+ *
+ */
+@mixin crispy__helpers()
+{
+    @include crispy__float();
+    @include crispy__margin();
+    @include crispy__media();
+    @include crispy__text();
+    @include crispy__width();
+}

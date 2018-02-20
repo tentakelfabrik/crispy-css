@@ -1,6 +1,14 @@
 @import
-    'crispy',
-    'example/example';
+    '../scss/crispy',
+
+    'site/container',
+    'site/footer',
+    'site/header',
+
+    'components/button',
+    'components/nav',
+
+    'templates/home';
 
 // components
 @include crispy__button();
@@ -12,7 +20,6 @@
 @include crispy__modal();
 @include crispy__panel();
 @include crispy__table();
-
 @include crispy__field();
 @include crispy__field__text();
 @include crispy__field__checkbox();
