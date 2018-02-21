@@ -8,53 +8,38 @@
 
 @mixin example__header() {
     .header {
-        padding: 8px 0 0;
-        margin: 0 0 20px;
+        padding: toEm(8px 0 0);
+        margin: toEm(0 0 20px);
 
         @include crispy__media-sm() {
-            margin: 0 0 60px;
+            margin: toEm(0 0 60px);
+        }
+
+        a {
+            text-decoration: none;
+
+            &:hover {
+                color: $crispy__color-primary;
+            }
         }
 
         &__title {
-            margin: toEm(10px 0 0);
+            margin: 0;
+        }
 
-            a {
-                text-decoration: none;
-            }
+        &__subtitle {
+            margin: toEm(15px 0 0);
+            color: $crispy__color-text;
         }
 
         &__logo {
-            top: 3px;
             width: 50px;
+            margin: toEm(20px 0 0);
         }
 
-        &__feature {
-            padding: toEm(15px 10px);
-            border: 1px solid #929292;
-            background-color: #fff;
-            border-radius: 5px;
-
-            &--last {
-                margin: toEm(0 0 30px);
-            }
-
-            @include crispy__media-sm() {
-                margin: toEm(0 0 30px);
-            }
-        }
-
-        &__feature-text, &__feature-title {
-            text-align: center;
-            padding: toEm(0 20px);
-        }
-
-        &__feature-title {
-            @include crispy__font-size(23px);
-        }
-
-        &__feature-text {
-            margin: 0;
-            @include crispy__font-size(18px);
+        &__small {
+            display: block;
+            margin: -10px;
         }
     }
 }

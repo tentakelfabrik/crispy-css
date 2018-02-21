@@ -1,15 +1,17 @@
-# Cripsy-Boilerplate
+# Cripsy-Boilerplate - Less is more
 
 Flat Sass Boilerplate give you a amount of Basic Settings, Components, Helpers,
 Mixins and Functions. It uses also the following Libraries,
 
 * normalize.css / [https://necolas.github.io/normalize.css/](https://necolas.github.io/normalize.css/)
 * reflex-grid / [http://reflexgrid.com/docs/](http://reflexgrid.com/docs/)
-* opt / [https://octicons.github.com"](https://octicons.github.com)
+* opt / [https://octicons.github.com](https://octicons.github.com)
 
 Many Boilerplates and also Frameworks, are trying to hard adding styles that
 are most time will be overwritten to make it work for you. This causes a loss in
 Performance and more Fighting with the Framework and the Documentation.
+
+[Documentation](https://crispy-boilerplate.org)
 
 ## Coding Style
 
@@ -56,11 +58,6 @@ To overwrite defaults simple adding your own config-file before import crispy:
     "config",
     "crispy";
 ```
-
-### npm
-
-There are a few npm scripts in the package.json that you can you use them to build
-your scss. Copy them and change the path. 
 
 ### Example
 
