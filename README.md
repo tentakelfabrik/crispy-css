@@ -1,11 +1,11 @@
 # Cripsy-Boilerplate
 
-Flat Sass Boilerplate to give you a amount of Basic Settings, Components, Helpers,
+Flat Sass Boilerplate give you a amount of Basic Settings, Components, Helpers,
 Mixins and Functions. It uses also the following Libraries,
 
 * normalize.css / [https://necolas.github.io/normalize.css/](https://necolas.github.io/normalize.css/)
 * reflex-grid / [http://reflexgrid.com/docs/](http://reflexgrid.com/docs/)
-* opt / [https://octicons.github.com"](https://octicons.github.com")
+* opt / [https://octicons.github.com"](https://octicons.github.com)
 
 Many Boilerplates and also Frameworks, are trying to hard adding styles that
 are most time will be overwritten to make it work for you. This causes a loss in
@@ -21,16 +21,13 @@ can reuse them. But one the other hand it can be really Strange if you overthink
 
 Components are created to give you a Structure and a Basic set of Styles and
 not that they look fancy. The Idea is to extend each Compontent and save up
-a Bunch of CSS Code, and so get more Performance and less Errors.
+a Bunch of CSS Code and so get more Performance and less Errors.
 Of Course is really Fancy to get more Performance and less Errors.
 
 ## Only Include if you need it
 
 Components and Helpers are organizes as Mixins, that makes it a little easier to
-add. Also it can be used to create multiples css files for each single site you
-need on a site oder  
-
-You can order them and structure the output of the CSS-files.
+to add Styles you need.
 
 ## Getting Started
 ### Installation
@@ -62,8 +59,8 @@ To overwrite defaults simple adding your own config-file before import crispy:
 
 ### npm
 
-There are a few npm scripts in the package.json that you can you use to build
-your styles. Copy them and change the path. There is nothing special about them.
+There are a few npm scripts in the package.json that you can you use them to build
+your scss. Copy them and change the path. 
 
 ### Example
 

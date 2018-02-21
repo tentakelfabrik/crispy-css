@@ -10,19 +10,15 @@
     .header {
         padding: 8px 0 0;
         margin: 0 0 20px;
-        background-color: $crispy__color-primary;
-        border-bottom: 1px solid darken($crispy__color-primary, 10%);
 
         @include crispy__media-sm() {
-            margin: 0 0 30px;
+            margin: 0 0 60px;
         }
 
         &__title {
-            color: white;
-            margin: toEm(0 0 3px);
+            margin: toEm(10px 0 0);
 
             a {
-                color: white;
                 text-decoration: none;
             }
         }
