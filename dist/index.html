@@ -24,7 +24,7 @@
                                 </svg>
                                 <div class="header__title h1">
 								    Crispy Boilerplate<br />
-                                    <span class="text-small header__small">0.9.7</span>
+                                    <span class="text-small header__small">0.9.8</span>
                                 </div>
                             </a>
                             <div class="header__subtitle h5">
@@ -46,9 +46,7 @@
 			<div class="col-12 col-sm-3">
 				<nav class="nav">
 					<ul class="margin-top-0x">
-                        <li><a href="#introduction">Introduction</a></li>
-                        <li><a href="#example">Example</a></li>
-						<li><a href="#get-started">Get Started</a></li>
+						<li><a href="#getting-started">Getting Started</a></li>
 						<li><a href="#typography">Typography</a></li>
 						<li><a href="#components">Components</a></li>
 						<li><a href="#functions">Functions</a></li>
@@ -59,72 +57,63 @@
 				</nav>
 			</div>
 			<div class="col-12 col-sm-9">
-                <h2 id="introduction" class="lead">
-                    Introduction
-                </h2>
 				<p>
-                    This Boilerplate has more simpler approach, it can be used
-                    as a base for Websites, Webapps and also Frameworks. Of Course there a
-                    so many Framework and Boilerplates.
+                    Flat Sass Boilerplate gives you an amount of basic settings, components, helpers, mixins and functions.
                 </p>
                 <p>
-                    But the most are trying to hard adding styles
-                    that are most time will be overwritten to make it work for you. This causes a loss
-                    in Performance and more Fighting with the Framework and the Documentation.
+                    The problem of most frameworks is they trying to hard adding a lot of styles,
+                    which has to be customized and documented. Often these changes cause a loss of
+                    performance and raise the propability of errors.
                 </p>
                 <p>
-                    The <strong>Components</strong> are quite simple and not fancy, the have all
-                    fundamental styles to so the can be used.
+                    It uses also the following libraries:
                 </p>
+                <ul>
+                    <li><a href="https://necolas.github.io/normalize.css/" target="_blank">normalize.css</a></li>
+                    <li><a href="http://reflexgrid.com/docs/" target="_blank">reflex-grid</a></li>
+                    <li><a href="https://octicons.github.com" target="_blank">octicons</a></li>
+                </ul>
+
+                <h3>Coding Style</h3>
                 <p>
-                    The <strong>Helpers</strong> have Styles for single Elements and spend it saving
-                    for each element to invent a single class.
+                    The boilerplate uses as coding style <a href="http://getbem.com/" target="_blank">BEM</a>,
+                    but as a more simpler idea of it. One of the benefits of BEM is that you create components and can reuse them.
+                    But one the other hand it can be really strange if you overthinking it.
                 </p>
+                <h3>Not Fancy but Small</h3>
                 <p>
-                    The Coding Style of this Framework is <strong>BEM</strong>, but
-                    also here a more simpler idea of it. <strong>BEM</strong> is a good and helpfull Coding Style,
-                    if you not overthinking it. It helps to create smaller compontents that you can reuse.
-                    Important for that, make them really small. More Information about <a href="http://getbem.com/" target="_blank">BEM</a>.
+                    Components are created to give you a structure and a basic set of styles and not to look fancy.
+                    The idea is to extend each component and save time to write a bunch of extra CSS code and
+                    therefore get more performance while minimize the causes of errors. Of Course is really Fancy to get more Performance and less Errors.
                 </p>
 
-                <!-- example -->
+                <!-- getting started -->
 				<hr class="margin-top-3x">
-                <h2 id="example" class="margin-top-1x">
-                    Example
-                </h2>
-                <p>
-                    This Site is also a Example to use the Boilerplate. You can find all
-                    Styles for this site in "/src/scss/example". You see also that there
-                    is a <strong>"templates" Directory</strong>. The Idea in <strong>BEM</strong> was always
-                    create all in Components. That is not always Practical.
-                </p>
-                <p>
-                    Sometimes, the more Bigger Picture, on a Single Site or in App the
-                    Stylings that are so special that the belong only there and are to complex
-                    for a component. For this use the <strong>"templates" Directory</strong>.
-                </p>
-                <p>
-                    Sites also have partials like header and footer, they can put into the <strong>directory "site"</strong>.
-                </p>
-
-                <h2></h2>
-
-                <p>
-                    To Include the Framework simple import "cripsy", each component or helper is a mixin
-
-                    There are shortcuts for components and helpers to include all at once.
-
-                    Import Simple "crispy.scss",
-                </p>
-
-				<!-- how to use -->
-				<hr class="margin-top-3x">
-				<h2 id="get-started" class="margin-top-1x">
-                    Get Started
-                </h2>
+                <h2 id="getting-started">Getting Started</h2>
+                <h3>Installation</h3>
+                <p>Main SCSS-file:</p>
                 <pre class="code"><code>npm install crispy-boilerplate</code></pre>
+                <p>After this include mixins you need:</p>
+                <pre class="code"><code>@import
+    "crispy";</code></pre>
+                <p>After this include mixins you need:</p>
+                <pre class="code"><code>@include crispy__*()</code></pre>
+                <p>To overwrite defaults simple add your own config-file before importing crispy:</p>
+                <pre class="code"><code>@import
+    "config",
+    "crispy";</code></pre>
+
+                <h3>Example</h3>
                 <p>
-                    Import "crispy.scss"
+                    You find an example in "/src/example". The documentation is also there. In the given example there are additional directories. These ones are part of a structure which might be helpful for you.
+                </p>
+                <h3>Site</h3>
+                <p>
+                    Contains header, footer, partials that are used on a site or webapp. Header and footer are not classical components, there often more complex and have a special brand.
+                </p>
+                <h3>Templates</h3>
+                <p>
+                    Templates are for a single site or a group of sites, they are complex and there is no benefit so reuse them as components.
                 </p>
 
 				<!-- typography -->
@@ -141,7 +130,6 @@
 					a-tag color is set by <strong>$crispy__color-primary</strong>. :hover is set by
                     <strong>$crispy__color-text</strong>
 				</p>
-
 
 				<!-- abbr -->
 				<h3 class="h4 margin-top-2x margin-bottom-0x">abbr</h3>
