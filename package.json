@@ -1,6 +1,6 @@
 {
   "name": "crispy-boilerplate",
-  "version": "0.9.8",
+  "version": "0.9.9",
   "description": "Flat Sass Boilerplate to give you a amount of Basic Settings, Mixins and Functions",
   "repository": {
     "type": "git",
@@ -37,7 +37,7 @@
     "css:build": "npm run css:clean && npm run css:scss && npm run css:postcss && npm run css:minify",
     "css:clean": "rimraf $npm_package_config_dist_dir/css/*",
     "css:scss": "node-sass --include-path $npm_package_config_normalize --include-path $npm_package_config_reflex_grid $npm_package_config_src_dir/example/example.scss $npm_package_config_build_dir/css/styles.css",
-    "css:postcss": "postcss $npm_package_config_dist_dir/css/*.css --use autoprefixer -d $npm_package_config_dist_dir/css/",
+    "css:postcss": "postcss $npm_package_config_build_dir/css/*.css --use autoprefixer -d $npm_package_config_dist_dir/css/",
     "css:minify": "cleancss $npm_package_config_build_dir/css/styles.css > $npm_package_config_dist_dir/css/styles.css",
     "svg:build": "npm run svg:clean && npm run svg:copy && npm run svg:optimize && npm run svg:minify",
     "svg:clean": "rimraf $npm_package_config_dist_dir/svg/* && rimraf $npm_package_config_build_dir/svg/*",

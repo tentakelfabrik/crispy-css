@@ -1,0 +1,15 @@
+/**
+ * site: base
+ *
+ *
+ * @author Björn Hase
+ *
+ */
+
+@mixin example__base() {
+    h2 {
+        @include crispy__media-md() {
+            padding-top: toEm(14px);
+        }
+    }
+}

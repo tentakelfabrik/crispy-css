@@ -3,10 +3,10 @@
 Flat Sass Boilerplate gives you an amount of basic settings, components, helpers, mixins and functions.
 
 The problem of most frameworks is they trying to hard adding a lot of styles,
-which has to be customized and documented. Often these changes cause a loss of
+which has to be customized and documented if you used it for a Project. Often these changes cause a loss of
 performance and raise the propability of errors.
 
-It uses also the following libraries:
+Crispy Boilerplate uses also the following libraries:
 
 * normalize.css / [https://necolas.github.io/normalize.css/](https://necolas.github.io/normalize.css/)
 * reflex-grid / [http://reflexgrid.com/docs/](http://reflexgrid.com/docs/)
@@ -57,7 +57,7 @@ To overwrite defaults simple add your own config-file before importing crispy:
 
 ### Example
 
-You find an example in "/src/example". The documentation is also there. In the given example there are additional directories. These ones are part of a structure which might be helpful for you.
+You find an example in "/src/example", this is this documentation. In the given example there are additional directories. These ones are part of a structure which might be helpful for you. 
 
 #### Site
 

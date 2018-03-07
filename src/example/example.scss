@@ -1,6 +1,7 @@
 @import
     '../scss/crispy',
 
+    'site/base',
     'site/container',
     'site/footer',
     'site/header',
@@ -36,6 +37,7 @@
 @include crispy__width();
 
 // example
+@include example__base();
 @include example__container();
 @include example__header();
 @include example__footer();
