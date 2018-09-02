@@ -9,7 +9,6 @@ performance and raise the propability of errors.
 Crispy Boilerplate uses also the following libraries:
 
 * normalize.css / [https://necolas.github.io/normalize.css/](https://necolas.github.io/normalize.css/)
-* reflex-grid / [http://reflexgrid.com/docs/](http://reflexgrid.com/docs/)
 * opt / [https://octicons.github.com](https://octicons.github.com)
 
 [Documentation](https://crispy-boilerplate.org)
@@ -57,7 +56,7 @@ To overwrite defaults simple add your own config-file before importing crispy:
 
 ### Example
 
-You find an example in "/src/example", this is this documentation. In the given example there are additional directories. These ones are part of a structure which might be helpful for you. 
+You find an example in "/src/example", this is this documentation. In the given example there are additional directories. These ones are part of a structure which might be helpful for you.
 
 #### Site
 
