@@ -26,6 +26,13 @@ $crispy__color-text: #363636 !default;
 $crispy__color-border: #d0d0d0 !default;
 $crispy__color-background: #ffffff !default;
 
+// breakpoints
+$crispy__xs: 576px !default;
+$crispy__sm: 768px !default;
+$crispy__md: 992px !default;
+$crispy__lg: 1200px !default;
+$crispy__xlg: 1600px !default;
+
 // colors as map
 $crispy__colors: (
     'primary': $crispy__color-primary,
