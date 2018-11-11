@@ -6,7 +6,6 @@
  *
  */
 
-
 $crispy__button__padding: toEm(10px 25px) !default;
 
 $crispy__button__up__margin: toEm(20px) !default;
@@ -30,15 +29,13 @@ $crispy__button__up__z-index: zIndex('modal') !default;
         // button for scroll up and down
         &--up, &--down {
             position:fixed;
-            bottom: 0;
+            z-index: $crispy__button__up__z-index;
             margin: $crispy__button__up__margin;
             padding: $crispy__button__up__padding;
-
-            z-index: $crispy__button__up__z-index;
         }
 
         &--down {
-            bottom: 0;
+            top: 0;
         }
 
         &--up {

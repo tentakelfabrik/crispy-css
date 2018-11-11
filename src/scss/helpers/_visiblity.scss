@@ -1,0 +1,21 @@
+/**
+ * helper: visibility
+ *
+ *
+ * @author Björn Hase
+ *
+ */
+
+@mixin crispy__visibility() {
+    .hide {
+        display: none;
+    }
+
+    .show {
+        display: block;
+
+        &--inline {
+            display: inline;
+        }
+    }
+}
