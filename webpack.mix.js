@@ -11,7 +11,10 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js.sass('src/app.scss', 'dist/')
+mix.sass([
+        'src/sass/crispy.scss',
+        'src/example/example.scss',
+    ], 'dist/')
     .options({
         postCss: [
             require('postcss-css-variables')()

@@ -9,26 +9,10 @@
 @mixin example__nav()
 {
     .nav {
-        position: relative;
+        position: fixed;
 
         a {
             @include crispy__font-size(18px);
-        }
-
-        ul {
-            margin-left: 0;
-            list-style: none;
-        }
-
-        @include crispy__media-sm() {
-            position: absolute;
-        }
-
-        &--fixed {
-            @include crispy__media-sm() {
-                position: fixed;
-                top: 40px !important;
-            }
         }
     }
 }
