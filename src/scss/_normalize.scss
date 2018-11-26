@@ -1,10 +1,13 @@
 /**
- * base
+ * normalize
  *
  *
  * @author Björn Hase
  *
  */
+
+@import
+    'normalize';
 
 html {
 	font-size: 100%;
@@ -12,6 +15,7 @@ html {
 
 body,
 html {
+    margin: 0;
 	height: 100%;
 }
 
@@ -47,7 +51,7 @@ a {
 	color: $crispy__color-primary;
 
 	&:hover {
-		color: $crispy__color-text;
+		color: $crispy__color-hover;
 	}
 
 	&:focus {
@@ -90,11 +94,11 @@ ul ul {
 }
 
 ol {
-	list-style: decimal inside;
+	list-style: decimal outside;
 }
 
 ul {
-	list-style: disc inside;
+	list-style: disc outside;
 }
 
 dd,
@@ -130,5 +134,6 @@ body {
 	color: $crispy__color-text;
 	background-color: $crispy__color-background;
 	direction: $crispy__direction;
+
 	@include crispy__font-size($crispy__font-size);
 }

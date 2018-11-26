@@ -1,22 +1,13 @@
 @import
     '../scss/crispy',
 
-    'site/base',
     'site/container',
-    'site/footer',
-    'site/header',
-
     'components/button',
-    'components/nav',
-
     'templates/home';
 
 // components
 @include crispy__button();
-@include crispy__code();
-@include crispy__group();
 @include crispy__heading();
-@include crispy__hero();
 @include crispy__icon();
 @include crispy__modal();
 @include crispy__panel();

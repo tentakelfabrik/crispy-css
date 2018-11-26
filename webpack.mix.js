@@ -13,7 +13,6 @@ let mix = require('laravel-mix');
 
 mix.sass([
         'src/sass/crispy.scss',
-        'src/example/example.scss',
     ], 'dist/')
     .options({
         postCss: [
