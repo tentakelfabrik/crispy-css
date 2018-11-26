@@ -1,0 +1,20 @@
+/**
+ * component: header
+ *
+ *
+ * @author Björn Hase
+ *
+ */
+
+
+@mixin example__header() {
+    .header {
+        &__title {
+            
+        }
+
+        &__logo {
+
+        }
+    }
+}

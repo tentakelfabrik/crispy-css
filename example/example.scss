@@ -8,17 +8,7 @@
 // components
 @include crispy__button();
 @include crispy__heading();
-@include crispy__icon();
-@include crispy__modal();
-@include crispy__panel();
 @include crispy__table();
-@include crispy__field();
-@include crispy__field__text();
-@include crispy__field__checkbox();
-@include crispy__field__radio();
-@include crispy__field__select();
-@include crispy__field__panel();
-@include crispy__field__label();
 
 // helpers
 @include crispy__float();
@@ -28,7 +18,6 @@
 @include crispy__width();
 
 // example
-@include example__base();
 @include example__container();
 @include example__header();
 @include example__footer();
