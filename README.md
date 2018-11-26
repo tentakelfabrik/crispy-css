@@ -50,8 +50,8 @@ To overwrite defaults simple add your own config-file before importing crispy:
 
 ```
 @import
-    "config",
-    "crispy";
+    "crispy",
+    "config";
 ```
 
 ### Example
