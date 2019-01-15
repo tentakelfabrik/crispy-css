@@ -6,16 +6,15 @@
  *
  */
 
-// @TODO adding colors for link and hover
-
 // font
 $crispy__font-size: 16px !default;
 $crispy__golden-ratio: 1.618 !default;
 $crispy__font-family: Arial, Helvetica, Neue Helvetica, sans-serif !default;
 $crispy__direction: ltr !default;
 
-// margin
-$crispy__margin: 10px !default;
+// spacing
+$crispy__spacing: toEm(10px) !default;
+$crispy__spacing__steps: 5 !default;
 
 // colors
 $crispy__color-primary: #f0c209 !default;
@@ -27,6 +26,7 @@ $crispy__color-info: #0090d4 !default;
 $crispy__color-text: #363636 !default;
 $crispy__color-border: #d0d0d0 !default;
 $crispy__color-background: #ffffff !default;
+$crispy__color-hover: #ffffff !default;
 
 // breakpoints
 $crispy__xs: 576px !default;

@@ -1,0 +1,43 @@
+/**
+ * helper: spacing
+ *
+ *
+ * @author Björn Hase
+ *
+ */
+
+@mixin crispy__spacing() {
+    @for $i from 0 through $crispy__spacing__steps {
+        .margin-top-#{($i + 1)}x {
+            margin-top: ($crispy__spacing * $i);
+        }
+
+        .margin-left-#{($i + 1)}x {
+            margin-left: ($crispy__spacing * $i);
+        }
+
+        .margin-bottom-#{($i + 1)}x {
+            margin-bottom: ($crispy__spacing * $i);
+        }
+
+        .margin-right-#{($i + 1)}x {
+            margin-right: ($crispy__spacing * ($i));
+        }
+
+        .padding-top-#{($i + 1)}x {
+            padding-top: ($crispy__spacing * $i);
+        }
+
+        .padding-left-#{($i + 1)}x {
+            padding-left: ($crispy__spacing * $i);
+        }
+
+        .padding-bottom-#{($i + 1)}x {
+            padding-bottom: ($crispy__spacing * $i);
+        }
+
+        .padding-right-#{($i + 1)}x {
+            padding-right: ($crispy__spacing * $i);
+        }
+    }
+}

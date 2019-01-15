@@ -1,0 +1,140 @@
+/**
+ * normalize
+ *
+ *
+ * @author Björn Hase
+ *
+ */
+
+@import 'normalize';
+
+@mixin crispy__core() {
+    html {
+        font-size: 100%;
+    }
+
+    body,
+    html {
+        margin: 0;
+        height: 100%;
+    }
+
+    html,
+    legend {
+        box-sizing: border-box;
+    }
+
+    *,
+    *::after,
+    *::before {
+        box-sizing: inherit;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    // paragraphs
+    p {
+        margin: toEm(0 0 $crispy__spacing 0);
+    }
+
+    // Semantic text elements
+    a,
+    ins,
+    u {
+        text-decoration-skip: ink edges;
+    }
+
+    a {
+        color: $crispy__color-primary;
+
+        &:hover {
+            color: $crispy__color-hover;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    abbr[title] {
+        border-bottom: 1px dotted;
+        cursor: help;
+        text-decoration: none;
+    }
+
+    mark {
+        padding: toEm(5px);
+    }
+
+    // blockquote
+    blockquote {
+        border-left: 1px solid $crispy__color-secondary;
+        margin-left: 0;
+        padding: toEm(10px 20px);
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    // lists
+    dl,
+    ol,
+    ul {
+        padding: 0;
+        margin: toEm(0 0 $crispy__spacing $crispy__spacing);
+    }
+
+    ol ol,
+    ul ul {
+        margin-top: toEm(($crispy__spacing / 2));
+    }
+
+    ol {
+        list-style: decimal outside;
+    }
+
+    ul {
+        list-style: disc outside;
+    }
+
+    dd,
+    dt {
+        margin: 0;
+    }
+
+    dt {
+        font-weight: bold;
+    }
+
+    // media
+    figure {
+        margin: toEm(0 0 $crispy__spacing);
+    }
+
+    figcaption {
+        margin: toEm($crispy__spacing 0 0);
+    }
+
+    // divider
+    hr {
+        border: 0;
+        border-top: 1px solid $crispy__color-secondary;
+        margin: toEm($crispy__spacing 0);
+    }
+
+    // body
+    body {
+        font-family: $crispy__font-family;
+        font-weight: normal;
+        line-height: $crispy__golden-ratio;
+        color: $crispy__color-text;
+        background-color: $crispy__color-background;
+        direction: $crispy__direction;
+
+        @include crispy__font-size($crispy__font-size);
+    }
+}

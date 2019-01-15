@@ -3,7 +3,7 @@
 Flat Sass Boilerplate gives you an amount of basic settings, components, helpers, mixins and functions.
 
 The problem of most frameworks is they trying to hard adding a lot of styles, which has to be customized and documented
-if you used it for a Project. Often these changes cause a loss of performance and raise the propability of errors.
+if you used it for a Project. Often these changes cause a loss of performance and raise the probability of errors.
 
 [Documentation](https://crispy-boilerplate.readthedocs.io/en/latest/)
 

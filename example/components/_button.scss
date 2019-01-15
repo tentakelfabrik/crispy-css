@@ -6,12 +6,9 @@
  *
  */
 
-
-@mixin example__button()
+@mixin components__button()
 {
     .button {
-        border: 1px solid darken($crispy__color-primary, 10%);
-        background-color: $crispy__color-primary;
-        color: white;
+
     }
 }

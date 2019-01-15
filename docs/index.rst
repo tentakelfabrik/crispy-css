@@ -41,5 +41,3 @@ To overwrite defaults simple add your own config-file after importing crispy:
     "crispy",
     "config";
 ```
-
-## Typography
