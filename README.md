@@ -5,8 +5,6 @@ Flat Sass Boilerplate gives you an amount of basic settings, components, helpers
 The problem of most frameworks is they trying to hard adding a lot of styles, which has to be customized and documented
 if you used it for a Project. Often these changes cause a loss of performance and raise the probability of errors.
 
-[Documentation](https://crispy-boilerplate.readthedocs.io/en/latest/)
-
 ## Coding Style
 
 The boilerplate uses as coding style [http://getbem.com/](BEM), but as a more simpler idea of it. One of the benefits of BEM is that you create components and can reuse them. But one the other hand it can be really strange if you overthinking it.
