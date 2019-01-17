@@ -5,22 +5,3 @@
     'core',
     'components',
     'helpers';
-
-// components
-@include crispy__core();
-@include crispy__button();
-@include crispy__field();
-@include crispy__group();
-@include crispy__heading();
-@include crispy__hero();
-@include crispy__modal();
-@include crispy__panel();
-@include crispy__table();
-
-// helpers
-@include crispy__float();
-@include crispy__media();
-@include crispy__spacing();
-@include crispy__text();
-@include crispy__visibility();
-@include crispy__width();
