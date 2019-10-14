@@ -7,19 +7,19 @@
  */
 
 @mixin crispy__width() {
-    .width-25 {
+    .has-width-25 {
         width: 25%;
     }
 
-    .width-50 {
+    .has-width-50 {
         width: 50%;
     }
 
-    .width-75 {
+    .has-width-75 {
         width: 75%;
     }
 
-    .width-100 {
+    .has-width-100 {
         width: 100%;
     }
 }

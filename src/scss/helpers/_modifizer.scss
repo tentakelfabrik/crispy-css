@@ -1,0 +1,34 @@
+/**
+ * helper: visibility
+ *
+ *
+ * @author Björn Hase
+ *
+ */
+
+@mixin crispy__modifiers() {
+
+    .is-absolute {
+        position: absolute !important;
+    }
+
+    .is-fixed {
+        position: fixed !important;
+    }
+
+    .is-relative {
+        position: relative !important;
+    }
+
+    .is-hidden {
+        display: none !important;
+    }
+
+    .is-visible {
+        display: block !important;
+
+        &--inline {
+            display: inline;
+        }
+    }
+}

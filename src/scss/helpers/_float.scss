@@ -10,24 +10,24 @@
  */
 
 @mixin crispy__float() {
-    .float-left {
+    .is-float-left {
         float: left;
     }
 
-    .float-right {
+    .is-float-right {
         float: right;
     }
 
-    .float-none {
+    .has-float-none {
         float: none;
     }
 
-    .center {
+    .is-centered {
         margin-left: auto;
         margin-right: auto;
     }
 
-    .clearfix {
+    .is-clearfixed {
         @include crispy__clearfix();
     }
 }

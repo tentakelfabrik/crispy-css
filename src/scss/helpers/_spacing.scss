@@ -8,36 +8,36 @@
 
 @mixin crispy__spacing() {
     @for $i from 0 through $crispy__spacing__steps {
-        .margin-top-#{($i + 1)}x {
-            margin-top: ($crispy__spacing * $i);
+        .has-margin-top-#{($i + 1)}x {
+            margin-top: ($crispy__spacing * $i) !important;
         }
 
-        .margin-left-#{($i + 1)}x {
-            margin-left: ($crispy__spacing * $i);
+        .has-margin-left-#{($i + 1)}x {
+            margin-left: ($crispy__spacing * $i) !important;
         }
 
-        .margin-bottom-#{($i + 1)}x {
-            margin-bottom: ($crispy__spacing * $i);
+        .has-margin-bottom-#{($i + 1)}x {
+            margin-bottom: ($crispy__spacing * $i) !important;
         }
 
-        .margin-right-#{($i + 1)}x {
-            margin-right: ($crispy__spacing * ($i));
+        .has-margin-right-#{($i + 1)}x {
+            margin-right: ($crispy__spacing * ($i)) !important;
         }
 
-        .padding-top-#{($i + 1)}x {
-            padding-top: ($crispy__spacing * $i);
+        .has-padding-top-#{($i + 1)}x {
+            padding-top: ($crispy__spacing * $i) !important;
         }
 
-        .padding-left-#{($i + 1)}x {
-            padding-left: ($crispy__spacing * $i);
+        .has-padding-left-#{($i + 1)}x {
+            padding-left: ($crispy__spacing * $i) !important;
         }
 
-        .padding-bottom-#{($i + 1)}x {
-            padding-bottom: ($crispy__spacing * $i);
+        .has-padding-bottom-#{($i + 1)}x {
+            padding-bottom: ($crispy__spacing * $i) !important;
         }
 
-        .padding-right-#{($i + 1)}x {
-            padding-right: ($crispy__spacing * $i);
+        .has-padding-right-#{($i + 1)}x {
+            padding-right: ($crispy__spacing * $i) !important;
         }
     }
 }

@@ -1,0 +1,89 @@
+/**
+ * helper: typography
+ *
+ * align, font-sizes, color, background-color
+ *
+ *
+ * @author Björn Hase
+ *
+ */
+
+$crispy__typography-colors: $crispy__colors !default;
+$crispy__typography-font-sizes: $crispy__font-sizes !default;
+
+@mixin crispy__typography() {
+    .has-text-left {
+        text-align: left !important;
+    }
+
+    .has-text-right {
+        text-align: right !important;
+    }
+
+    .has-text-center {
+        text-align: center !important;
+    }
+
+    .has-text-justify {
+        text-align: justify !important;
+    }
+
+    .has-text-italic {
+        font-style: italic !important;
+    }
+
+    .has-text-uppercase {
+        text-transform: uppercase !important;
+    }
+
+    .has-text-lowercase {
+        text-transform: lowercase !important;
+    }
+
+    .has-text-crossed {
+    	text-decoration: line-through !important;
+    }
+
+    .is-capitalized {
+        text-transform: capitalize !important;
+    }
+
+    // text weight
+    .is-text-weight-light {
+        font-weight: light !important;
+    }
+
+    .is-text-weight-normal {
+        font-weight: normal !important;
+    }
+
+    .is-text-weight-bold {
+        font-weight: bold !important;
+    }
+
+    .has-text-weight-medium {
+
+    }
+
+    .has-text-weight-semibold {
+
+    }
+
+    @each $name, $font-size in $crispy__typography-font-sizes {
+        .has-font-size-#{$name} {
+            font-size: $font-size !important;
+        }
+    }
+
+    @each $name, $color in $crispy__typography-colors {
+		.has-text-#{$name} {
+			color: $color !important;
+		}
+	}
+
+    @each $name, $color in $crispy__typography-colors {
+        .has-background-#{$name} {
+            background-color: $color !important;
+        }
+    }
+}

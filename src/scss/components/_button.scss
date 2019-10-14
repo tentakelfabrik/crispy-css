@@ -8,10 +8,6 @@
 
 $crispy__button__padding: toEm(10px 25px) !default;
 
-$crispy__button__up__margin: toEm(20px) !default;
-$crispy__button__up__padding: toEm(8px 13px) !default;
-$crispy__button__up__z-index: zIndex('modal') !default;
-
 @mixin crispy__button() {
     .button {
         position: relative;
@@ -24,22 +20,6 @@ $crispy__button__up__z-index: zIndex('modal') !default;
 
         &--wide {
             width: 100%;
-        }
-
-        // button for scroll up and down
-        &--up, &--down {
-            position:fixed;
-            z-index: $crispy__button__up__z-index;
-            margin: $crispy__button__up__margin;
-            padding: $crispy__button__up__padding;
-        }
-
-        &--down {
-            top: 0;
-        }
-
-        &--up {
-            bottom: 0;
         }
 
         &:hover {
