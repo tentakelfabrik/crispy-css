@@ -28,7 +28,15 @@
         display: block !important;
 
         &--inline {
-            display: inline;
+            display: inline !important;
         }
+
+        &--inline-block {
+            display: inline !important;
+        }
+    }
+
+    .is-radiusless
+      border-radius: 0 !important
     }
 }

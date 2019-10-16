@@ -1,3 +1,101 @@
-@import
-    'functions/units',
-    'functions/zIndex';
+/**
+ * functions
+ *
+ *
+ *
+ *
+ * @author Björn Hase
+ * @license http://opensource.org/licenses/MIT The MIT License
+ * @link https://gitlab.tentakelfabrik.de/tentakelfabrik/crispy
+ *
+ */
+
+ /**
+  * px to em, wrapper of toRelatives
+  *
+  * @param  {mixed} $values
+  * @param  {mixed} $base
+  * @return {rem}
+  */
+@function toEm($values, $base: $crispy__font-size) {
+    @return toRelatives($values, 1em, $base);
+}
+
+/**
+ * px to rem, wrapper of toRelatives
+ *
+ * @param  {mixed} $values
+ * @param  {mixed} $base
+ * @return {rem}
+ */
+@function toRem($values, $base: $crispy__font-size) {
+    @return toRelatives($values, 1rem, $base);
+}
+
+/**
+ * values to relative
+ *
+ * @param  {mixed} $values
+ * @param  {mixed} $unit
+ * @param  {mixed} $base
+ * @return {number}
+ */
+@function toRelatives($values, $unit, $base: $crispy__font-size) {
+    $results: 0;
+
+    @if type-of($values) == 'number' {
+		$results: toRelative($values, $base) * $unit;
+    } @else {
+        $results: ();
+
+        @each $value in $values {
+			@if $value == 0 {
+				$results: append($results, $value);
+			}
+			@else {
+				$results: append($results, toRelative($value, $base) * $unit);
+			}
+        }
+    }
+
+    @return $results;
+}
+
+/**
+ * to relative
+ *
+ * @param  {mixed} $value
+ * @param  {mixed} $base
+ * @return {number}
+ */
+@function toRelative($value, $base: $crispy__font-size) {
+    @return stripUnit($value) / stripUnit($base);
+}
+
+/**
+ * strip unit from value
+ *
+ * @param  {mixed} $value
+ * @return {number}
+ */
+@function stripUnit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+/**
+ * function: z-index
+ *
+ * uses map $crispy__z-index to get value by key
+ *
+ * @author Björn Hase
+ *
+ */
+
+@function zIndex($name) {
+    @if map-has-key($crispy__z-index, $name) {
+        @return map-get($crispy__z-index, $name);
+    } @else {
+        @warn 'There is no item "#{$name}" in this list; choose one of: #{$crispy__z-index}';
+        @return null;
+    }
+}

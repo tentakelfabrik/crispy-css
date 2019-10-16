@@ -10,11 +10,11 @@
  */
 
 @mixin crispy__float() {
-    .is-float-left {
+    .has-float-left {
         float: left;
     }
 
-    .is-float-right {
+    .has-float-right {
         float: right;
     }
 

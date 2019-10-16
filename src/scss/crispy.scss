@@ -1,7 +1,16 @@
 @import
-    'functions',
+
+    'variables',
+
+    'components/button',
+
+
+    'helpers/float',
+    'helpers/spacing',
+    'helpers/media',
+    'helpers/text',
+    'helpers/visibility',
+    'helpers/width',
+
     'mixins',
-    'config',
-    'core',
-    'components',
-    'helpers';
+    'mixins/media-queries';

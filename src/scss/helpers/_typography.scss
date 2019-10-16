@@ -12,6 +12,8 @@ $crispy__typography-colors: $crispy__colors !default;
 $crispy__typography-font-sizes: $crispy__font-sizes !default;
 
 @mixin crispy__typography() {
+
+    // text align
     .has-text-left {
         text-align: left !important;
     }
@@ -28,24 +30,25 @@ $crispy__typography-font-sizes: $crispy__font-sizes !default;
         text-align: justify !important;
     }
 
-    .has-text-italic {
-        font-style: italic !important;
-    }
-
-    .has-text-uppercase {
+    //
+    .is-text-uppercase {
         text-transform: uppercase !important;
     }
 
-    .has-text-lowercase {
+    .is-text-lowercase {
         text-transform: lowercase !important;
     }
 
-    .has-text-crossed {
+    .is-text-crossed {
     	text-decoration: line-through !important;
     }
 
     .is-capitalized {
         text-transform: capitalize !important;
+    }
+
+    .is-text-italic {
+        font-style: italic !important;
     }
 
     // text weight
@@ -61,28 +64,28 @@ $crispy__typography-font-sizes: $crispy__font-sizes !default;
         font-weight: bold !important;
     }
 
-    .has-text-weight-medium {
-
+    .is-text-weight-medium {
+        font-weight: medium !important;
     }
 
-    .has-text-weight-semibold {
-
+    .ist-text-weight-semibold {
+        font-weight: semibold !important;
     }
 
     @each $name, $font-size in $crispy__typography-font-sizes {
-        .has-font-size-#{$name} {
+        .has-text-size-#{$name} {
             font-size: $font-size !important;
         }
     }
 
     @each $name, $color in $crispy__typography-colors {
-		.has-text-#{$name} {
+		.has-text-color-#{$name} {
 			color: $color !important;
 		}
 	}
 
     @each $name, $color in $crispy__typography-colors {
-        .has-background-#{$name} {
+        .has-background-color-#{$name} {
             background-color: $color !important;
         }
     }
