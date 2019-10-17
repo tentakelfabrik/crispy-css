@@ -6,9 +6,10 @@
  * </div>
  *
  * @author Björn Hase
+ * @license http://opensource.org/licenses/MIT The MIT License
+ * @link https://gitlab.tentakelfabrik.de/tentakelfabrik/crispy
  *
  */
-
 
 $crispy__modal__margin: toEm($crispy__spacing * 2) !default;
 $crispy__modal__z-index: zIndex('modal') !default;
@@ -40,6 +41,12 @@ $crispy__modal__z-index: zIndex('modal') !default;
 
         &--bottom {
             bottom: 0;
+        }
+
+        &--center {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
         .panel {

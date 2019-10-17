@@ -28,6 +28,7 @@
     }
 }
 
+
 /**
  * clear styles from list
  *
@@ -44,12 +45,13 @@
     }
 }
 
+
 /**
  * media-queries
  *
  *
  *
- * @author Björn Hase
+ *
  *
  */
 @mixin crispy__media-xs() {
@@ -82,7 +84,6 @@
     }
 }
 
-// only
 @mixin crispy__media-xs-only() {
     @media only screen and (min-width: $crispy__xs) and (max-width: $crispy__sm - 1) {
         @content;
@@ -110,5 +111,37 @@
 @mixin crispy__media-xlg-only() {
     @media only screen and (min-width: $crispy__xlg) {
         @content;
+    }
+}
+
+
+/**
+ *  triangle
+ *
+ *
+ *  @param {Direction} $direction - Triangle direction, either 'top', 'right', 'bottom' or 'left'
+ *  @param {Color} $color [currentcolor] - Triangle color
+ *  @param {Length} $size [1em] - Triangle size
+ *
+ */
+@mixin triangle($direction, $color: currentcolor, $size: 1em) {
+    @if not index(top right bottom left, $direction) {
+        @error "Direction must be either `top`, `right`, `bottom` or `left`.";
+    }
+
+    width: 0;
+    height: 0;
+    content: '';
+    z-index: 2;
+    border-#{opposite-position($direction)}: ($size * 1.5) solid $color;
+
+    $perpendicular-borders: $size solid transparent;
+
+    @if $direction == top or $direction == bottom {
+        border-left: $perpendicular-borders;
+        border-right: $perpendicular-borders;
+    } @else if $direction == right or $direction == left {
+        border-bottom: $perpendicular-borders;
+        border-top: $perpendicular-borders;
     }
 }

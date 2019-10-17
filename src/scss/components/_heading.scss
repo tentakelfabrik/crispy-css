@@ -6,6 +6,8 @@
  *
  *
  * @author Björn Hase
+ * @license http://opensource.org/licenses/MIT The MIT License
+ * @link https://gitlab.tentakelfabrik.de/tentakelfabrik/crispy
  *
  */
 
@@ -38,7 +40,7 @@ $crispy__heading__margin: toEm(0 0 5px) !default;
 
     @each $h, $font-size in $crispy__heading__font-sizes {
         #{$h}, .#{$h} {
-            @include crispy__font-size($font-size);
+            font-size: toRem($font-size);
         }
     }
 }

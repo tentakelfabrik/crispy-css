@@ -1,8 +1,12 @@
 /**
- * normalize
+ * core
+ *
+ * import normalize
  *
  *
  * @author Björn Hase
+ * @license http://opensource.org/licenses/MIT The MIT License
+ * @link https://gitlab.tentakelfabrik.de/tentakelfabrik/crispy
  *
  */
 
@@ -48,10 +52,10 @@
     }
 
     a {
-        color: $crispy__color-primary;
+        color: $crispy__color-link;
 
         &:hover {
-            color: $crispy__color-hover;
+            color: $crispy__color-link-hover;
         }
 
         &:focus {
@@ -135,6 +139,6 @@
         background-color: $crispy__color-background;
         direction: $crispy__direction;
 
-        @include crispy__font-size($crispy__font-size);
+        font-size: toRem($crispy__font-size);
     }
 }

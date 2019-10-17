@@ -8,6 +8,8 @@
  * </pre>
  *
  * @author Björn Hase
+ * @license http://opensource.org/licenses/MIT The MIT License
+ * @link https://gitlab.tentakelfabrik.de/tentakelfabrik/crispy
  *
  */
 
@@ -31,7 +33,6 @@ $crispy__code__background-color: #f9f9f9 !default;
         background-color: $crispy__code__background-color;
 
         margin: $crispy__code__margin;
-
-        @include crispy__font-size($crispy__code__font-size);
+        font-size: $crispy__code__font-size;
     }
 }

@@ -1,16 +1,18 @@
 @import
 
+    'functions',
     'variables',
+    'core',
 
     'components/button',
+    'components/code',
+    'components/group',
+    'components/heading',
+    'components/hero',
+    'components/modal',
+    'components/panel',
+    'components/table',
+    'components/field',
 
-
-    'helpers/float',
-    'helpers/spacing',
-    'helpers/media',
-    'helpers/text',
-    'helpers/visibility',
-    'helpers/width',
-
-    'mixins',
-    'mixins/media-queries';
+    'modifiers',
+    'mixins';
