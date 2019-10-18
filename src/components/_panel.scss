@@ -1,0 +1,26 @@
+/**
+ * componente: panel
+ *
+ * <div class="panel">
+ *     <div class="panel__inner">
+ *
+ *     </div>
+ * </div>
+ *
+ * @author Björn Hase
+ * @license http://opensource.org/licenses/MIT The MIT License
+ * @link https://gitlab.tentakelfabrik.de/tentakelfabrik/crispy
+ *
+ */
+
+$crispy__panel__padding: toEm($crispy__spacing) !default;
+
+@mixin crispy__panel {
+    .panel {
+        background-color: $crispy__color-panel;
+
+        &__inner {
+            padding: $crispy__panel__padding;
+        }
+    }
+}

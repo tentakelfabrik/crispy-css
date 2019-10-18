@@ -1,0 +1,85 @@
+@import
+    'functions';
+
+/**
+ * Variables
+ *
+ *
+ *
+ * @author Björn Hase
+ * @license http://opensource.org/licenses/MIT The MIT License
+ * @link https://gitlab.tentakelfabrik.de/tentakelfabrik/crispy
+ *
+ */
+
+// font
+$crispy__font-size: 16px !default;
+$crispy__golden-ratio: 1.618 !default;
+
+$crispy__font-family-primary: Arial, Helvetica, Neue Helvetica, sans-serif !default;
+$crispy__font-family-monospace: Arial, Helvetica, Neue Helvetica, sans-serif !default;
+$crispy__direction: ltr !default;
+
+// spacing
+$crispy__spacing: 10px !default;
+$crispy__spacing__steps: 5 !default;
+
+// colors
+$crispy__color-primary: #f0c209 !default;
+$crispy__color-secondary: #b3b2af !default;
+$crispy__color-success: #5cb85c !default;
+$crispy__color-warning: #f0ad4e !default;
+$crispy__color-danger: #d9534f !default;
+$crispy__color-info: #0090d4 !default;
+
+$crispy__color-text: #363636 !default;
+$crispy__color-border: #d0d0d0 !default;
+$crispy__color-background: #ffffff !default;
+
+$crispy__color-panel: #d0d0d0 !default;
+
+$crispy__color-link: #ffffff !default;
+$crispy__color-link-hover: #ffffff !default;
+$crispy__color-link-visited: #ffffff !default;
+$crispy__color-link-focus: #ffffff !default;
+$crispy__color-link-active: #ffffff !default;
+
+// borders
+$crispy__border-radius: 0 !default;
+$crispy__border: 1px solid $crispy__color-border !default;
+
+// breakpoints
+$crispy__xs: 576px !default;
+$crispy__sm: 768px !default;
+$crispy__md: 992px !default;
+$crispy__lg: 1200px !default;
+$crispy__xlg: 1600px !default;
+
+// colors as map
+$crispy__colors: (
+    'primary': $crispy__color-primary,
+    'secondary': $crispy__color-secondary,
+    'success': $crispy__color-success,
+    'warning': $crispy__color-warning,
+    'danger': $crispy__color-danger,
+    'info': $crispy__color-info
+) !default;
+
+// font-sizes as map
+$crispy__font-sizes: (
+    'default': $crispy__font-size,
+    'small': 16px,
+    'large': 20px
+) !default;
+
+// z-index
+$crispy__z-index: (
+    'modal': 100
+) !default;
+
+$crispy__width: (
+    '25' : 25%,
+    '50' : 50%,
+    '75' : 75%,
+    '100': 100%
+) !default;

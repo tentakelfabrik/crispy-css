@@ -1,0 +1,44 @@
+/**
+ * component: group
+ *
+ * <nav>
+ *     <ul class="group group--horizontal">
+ *         <li class="group__item"></li>
+ *     <ul>
+ * </nav>
+ *
+ * @author Björn Hase
+ * @license http://opensource.org/licenses/MIT The MIT License
+ * @link https://gitlab.tentakelfabrik.de/tentakelfabrik/crispy
+ *
+ */
+
+$crispy__group__character: '/' !default;
+$crispy__group__character__margin: toEm(0 $crispy__spacing 0) !default;
+
+@mixin crispy__group() {
+    .group {
+        @include crispy__clear_list();
+
+        &--horizontal {
+            .group__item {
+                display: inline-block;
+            }
+        }
+
+        &--separate {
+            .group__item {
+                &:after {
+                    margin: $crispy__group__character__margin;
+                    content: $crispy__group__character;
+                }
+
+                &:last-child {
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

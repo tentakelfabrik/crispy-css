@@ -1,3 +1,5 @@
 {
-    "/dist/crispy.min.css": "/dist/crispy.min.css"
+    "/dist/crispy.css": "/dist/crispy.css",
+    "/dist/example/styles.css": "/dist/example/styles.css",
+    "/dist/example/symbol-defs.svg": "/dist/example/symbol-defs.svg"
 }

@@ -11,9 +11,22 @@ let mix = require('laravel-mix');
  |
  */
 
- mix.sass('src/scss/example.scss', 'dist/crispy.min.css', {
-         includePaths: ["node_modules/normalize-scss/sass"]
-     })
+mix.sass('src/all.scss', 'dist/crispy.css', {
+        sassOptions: {
+            includePaths: [
+                'node_modules/normalize-scss/sass'
+            ]
+        }
+    })
+    .sass('src/example/styles.scss', 'dist/example/styles.css', {
+        sassOptions: {
+            includePaths: [
+                'node_modules/normalize-scss/sass',
+                'node_modules/reflex-grid/scss'
+            ]
+        }
+    })
+    .copy('assets/iconmoon/symbol-defs.svg', 'dist/example')
     .options({
         postCss: [
             require('postcss-css-variables')()

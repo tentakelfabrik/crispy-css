@@ -1,0 +1,21 @@
+/**
+ * component: icon
+ *
+ *
+ *
+ * @author Björn Hase
+ * @license http://opensource.org/licenses/MIT The MIT License
+ * @link https://gitlab.tentakelfabrik.de/tentakelfabrik/crispy
+ *
+ */
+
+$crispy__icon__width: 1.5em !default;
+
+@mixin crispy__icon {
+    .icon {
+        width: $crispy__icon__width;
+        height: $crispy__icon__width;
+        vertical-align: middle;
+        overflow: hidden;
+    }
+}
