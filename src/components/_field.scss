@@ -1,11 +1,3 @@
-@import
-    'field/checkbox',
-    'field/label',
-    'field/panel',
-    'field/text',
-    'field/radio',
-    'field/select';
-
 /**
  * component: field
  *
@@ -23,9 +15,26 @@
 
 $crispy__field__margin: toEm(0 0 $crispy__spacing 0) !default;
 
+$crispy__field__border: 1px solid $crispy__color-secondary !default;
+
+$crispy__field__color--valid: $crispy__color-success !default;
+$crispy__field__color--error: $crispy__color-danger !default;
+
+$crispy__field__border-color--focus: $crispy__color-primary !default;
+$crispy__field__border-color--valid: $crispy__color-success !default;
+$crispy__field__border-color--error: $crispy__color-danger !default;
+
+$crispy__field__checked: $crispy__color-success !default;
+$crispy__field__unchecked: $crispy__color-danger !default;
+
 $crispy__field__input__font-size: $crispy__font-size !default;
 $crispy__field__input__padding: toEm(6px 8px) !default;
 $crispy__field__input__color: $crispy__color-text !default;
+
+$crispy__field__select__padding: toEm(8px) !default;
+
+$crispy__field__select__background-color: white !default;
+$crispy__field__select__border: $crispy_border !default;
 
 @mixin crispy__field() {
     .field {
@@ -46,5 +55,194 @@ $crispy__field__input__color: $crispy__color-text !default;
         appearance: none;
 
         font-size: $crispy__field__input__font-size;
+    }
+
+    /**
+     * label
+     *
+     *
+     */
+
+    .field__label {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .field--valid {
+        .field__label {
+            color: $crispy__field__color--valid;
+        }
+    }
+
+    .field--error {
+        .field__label {
+            color: $crispy__field__color--error;
+        }
+    }
+
+    /**
+     * input & textarea
+     *
+     *
+     */
+
+    .field__text {
+        margin: 0;
+        border: $crispy__field__border;
+
+        &:focus {
+            border-color: $crispy__field__border-color--focus;
+        }
+    }
+
+    .field--valid {
+        .field__text, .field__select {
+            border-color: $crispy__field__border-color--valid;
+        }
+    }
+
+    .field--error {
+        .field__text, .field__select {
+            border-color: $crispy__field__border-color--error;
+        }
+    }
+
+    /**
+     * select
+     *
+     *
+     */
+
+    .field__select {
+        padding: $crispy__field__select__padding;
+        border: $crispy__field__select__border;
+        background-color: $crispy__field__select__background-color;
+
+        &:focus {
+            outline: 0;
+            border-color: $crispy__field__border-color--focus;
+        }
+    }
+
+    /**
+     * radio
+     *
+     *
+     */
+
+    .field__radio {
+        position: relative;
+        display: none;
+
+        + .field__label {
+            .field__radio__checked {
+                display: none;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &:checked + .field__label &__checked {
+            display: inline-block;
+        }
+
+        &:checked + .field__label &__unchecked {
+            display: none;
+        }
+
+        &__checked {
+            fill: $crispy__field__checked__color;
+        }
+
+        &__unchecked {
+            fill: $crispy__field__unchecked__color;
+        }
+    }
+
+    .field--valid {
+        .field__radio__checked, .field__radio__unchecked {
+            fill: $crispy__field__radio__color--valid;
+        }
+    }
+
+    .field--error {
+        .field__radio__checked, .field__radio__unchecked {
+            fill: $crispy__field__radio__color--error;
+        }
+    }
+
+    /**
+     *  checkbox
+     *
+     *
+     */
+
+    .field__checkbox {
+        position: relative;
+        display: none;
+
+        + .field__label {
+            .field__checkbox__checked {
+                display: none;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &:checked + .field__label &__checked {
+            display: inline-block;
+        }
+
+        &:checked + .field__label &__unchecked {
+            display: none;
+        }
+
+        &__checked {
+            fill: $crispy__field__checked__color;
+        }
+
+        &__unchecked {
+            fill: $crispy__field__unchecked__color;
+        }
+    }
+
+    .field--valid {
+        .field__checkbox__checked, .field__checkbox__unchecked {
+            fill: $crispy__field__color--valid;
+        }
+    }
+
+    .field--error {
+        .field__checkbox__checked, .field__checkbox__unchecked {
+            fill: $crispy__field__color--error;
+        }
+    }
+
+    /**
+     *
+     *
+     *
+     */
+
+    .field__panel {
+        padding: $crispy__field__panel__padding;
+    }
+
+    .field--valid {
+        .field__panel {
+            color: white;
+            background-color: $crispy__field__background-color--valid;
+        }
+    }
+
+    .field--error {
+        .field__panel {
+            color: white;
+            background-color: $crispy__field__background-color--error;
+        }
     }
 }
