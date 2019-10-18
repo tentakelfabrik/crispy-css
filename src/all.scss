@@ -15,12 +15,6 @@
 @include crispy__modal();
 
 @include crispy__field();
-@include crispy__field__label();
-@include crispy__field__checkbox();
-@include crispy__field__radio();
-@include crispy__field__select();
-@include crispy__field__text();
-@include crispy__field__panel();
 
 @include crispy__panel();
 @include crispy__table();
