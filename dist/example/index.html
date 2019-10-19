@@ -32,48 +32,38 @@
 		</div>
 	</header>
 	<div class="container">
-			<div class="col-12">
-				<p>
-                    Flat Sass Boilerplate gives you an amount of basic settings, components, helpers, mixins and functions.
-                </p>
-                <p>
-                    The problem of most frameworks is they trying to hard adding a lot of styles
-                    which has to be customized and documented if you used it for a Project.
-                    Often these changes cause a loss of performance and raise the propability of errors.
-                </p>
-                <p>
-                    Crispy Boilerplate uses also the following libraries:
-                </p>
-                <ul>
-                    <li><a href="https://necolas.github.io/normalize.css/" target="_blank">normalize.css</a></li>
-                    <li><a href="http://reflexgrid.com" target="_blank">reflex-grid</a></li>
-                </ul>
+		<div class="col-12">
+			<p>
+                This is a small CSS / SASS Framework that gives you an amount of varaibles, components, modifiziers, mixins and functions.
+            </p>
+            <p>
+                The problem of most frameworks is they trying to hard adding a lot of styles
+                which has to be customized and documented if you used it for a Project.
+                Often these changes cause a loss of performance and raise the propability of errors.
+            </p>
+            <p>
+                Crispy uses <a href="https://necolas.github.io/normalize.css/" target="_blank">normalize.css</a>
+            </p>
+            <h3 class="h5">Coding Style</h3>
+            <p>
+                The boilerplate uses as coding style <a href="http://getbem.com/" target="_blank">BEM</a>,
+                but as a more simpler idea of it. One of the benefits of BEM is that you create components and can reuse them.
+                But one the other hand it can be really strange if you overthinking it.
+            </p>
+            <h3 class="h5">Not Fancy but Small</h3>
+            <p>
+                Components are created to give you a structure and a basic set of styles and not to look fancy.
+                The idea is to extend each component and save time to write a bunch of extra CSS code and
+                therefore get more performance while minimize the causes of errors. Of Course is really Fancy to get more Performance and less Errors.
+            </p>
 
-                <h3>Coding Style</h3>
-                <p>
-                    The boilerplate uses as coding style <a href="http://getbem.com/" target="_blank">BEM</a>,
-                    but as a more simpler idea of it. One of the benefits of BEM is that you create components and can reuse them.
-                    But one the other hand it can be really strange if you overthinking it.
-                </p>
-                <h3>Not Fancy but Small</h3>
-                <p>
-                    Components are created to give you a structure and a basic set of styles and not to look fancy.
-                    The idea is to extend each component and save time to write a bunch of extra CSS code and
-                    therefore get more performance while minimize the causes of errors. Of Course is really Fancy to get more Performance and less Errors.
-                </p>
-                <h3>Include</h3>
-                <p>
-                    Components and Helpers are organizes as Mixins, that makes it a little easier to
-                    to add Styles you need.
-                </p>
-
-                <!-- getting started -->
-				<hr class="margin-top-3">
-                <h2 id="getting-started">Getting Started</h2>
-                <h3>Installation</h3>
-                <pre class="code"><code>npm install crispy-boilerplate</code></pre>
-                <p>Main SCSS-file:</p>
-                <pre class="code"><code>@import
+            <!-- getting started -->
+			<hr class="margin-top-3">
+            <h2 id="getting-started">Getting Started</h2>
+            <h3>Installation</h3>
+            <pre class="code"><code>npm install crispy-boilerplate</code></pre>
+            <p>Main SCSS-file:</p>
+            <pre class="code"><code>@import
     "crispy";</code></pre>
                 <p>After this include mixins you need:</p>
                 <pre class="code"><code>@include crispy__*()</code></pre>
