@@ -173,6 +173,10 @@ $crispy__field__select__border: $crispy__border !default;
         &__unchecked {
             fill: $crispy__field__choice__unchecked__color;
         }
+
+        + .field__label + .field__panel {
+            margin: $crispy__spacing 0 0 0;
+        }
     }
 
     .field--valid {
