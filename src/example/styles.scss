@@ -11,3 +11,22 @@
     'components/nav',
 
     'templates/home';
+
+.header {
+
+    &__logo {
+        vertical-align: top;
+    }
+
+    a {
+        text-decoration: none;
+
+        &:hover {
+            color: $crispy__color-primary;
+        }
+    }
+}
+
+.container {
+    max-width: $crispy__md;
+}
