@@ -14,3 +14,7 @@ Single-colored icons can be modified like so:
   color: red;
 }
 ========================================== */
+
+.icon-spaceinvaders {
+  width: 1.03125em;
+}

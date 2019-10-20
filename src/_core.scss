@@ -39,7 +39,7 @@
 
     // paragraphs
     p {
-        margin: toEm(0 0 $crispy__spacing 0);
+        margin: toEm(($crispy__spacing / 3) 0 $crispy__spacing 0);
     }
 
     // Semantic text elements

@@ -62,12 +62,12 @@
         font-weight: normal !important;
     }
 
-    .text-weight-bold {
-        font-weight: bolder !important;
-    }
-
     .text-weight-medium {
         font-weight: medium !important;
+    }
+
+    .text-weight-bold {
+        font-weight: bolder !important;
     }
 
     @each $name, $font-size in $crispy__font-sizes {

@@ -3,18 +3,23 @@
  *
  *
  * @author Björn Hase
+ * @license http://opensource.org/licenses/MIT The MIT License
+ * @link https://gitlab.tentakelfabrik.de/tentakelfabrik/crispy
  *
  */
 
-
 @mixin site__header() {
     .header {
-        &__title {
-
+        &__logo {
+            vertical-align: top;
         }
 
-        &__logo {
+        a {
+            text-decoration: none;
 
+            &:hover {
+                color: $crispy__color-primary;
+            }
         }
     }
 }

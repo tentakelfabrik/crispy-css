@@ -12,21 +12,34 @@
 
     'templates/home';
 
-.header {
+.container {
+    max-width: $crispy__md;
+}
 
-    &__logo {
-        vertical-align: top;
-    }
+.sm, .md, .md-only, .lg-only {
+    display: none;
+}
 
-    a {
-        text-decoration: none;
-
-        &:hover {
-            color: $crispy__color-primary;
-        }
+.sm {
+    @include crispy__media-sm() {
+        display: block;
     }
 }
 
-.container {
-    max-width: $crispy__md;
+.md {
+    @include crispy__media-md() {
+        display: block;
+    }
+}
+
+.md-only {
+    @include crispy__media-md-only() {
+        display: block;
+    }
+}
+
+.lg-only {
+    @include crispy__media-lg-only() {
+        display: block;
+    }
 }

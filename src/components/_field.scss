@@ -41,10 +41,6 @@ $crispy__field__select__border: $crispy__border !default;
 @mixin crispy__field() {
     .field {
         margin: $crispy__field__margin;
-
-        .icon {
-            vertical-align: top;
-        }
     }
 
     // basic style for input elements, will be used to @extend

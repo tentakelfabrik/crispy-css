@@ -22,7 +22,7 @@
                                     <svg class="icon header__logo" alt="Crisp">
                                         <use xlink:href="symbol-defs.svg#icon-logo" />
                                     </svg>
-								    Crispy 2.0
+								    Crispy 2.0-BETA
                                 </h1>
                             </a>
                             <h2 class="h6">
@@ -50,13 +50,13 @@
             </div>
             <div class="col-12 col-md-6">
                 <h3 class="h6">
-                    <svg class="icon icon-color-primary" alt="Usefull Helpers">
+                    <svg class="icon icon-color-primary" alt="Usefull modifiers">
                         <use xlink:href="symbol-defs.svg#icon-shipping" />
                     </svg>
                     Modifiziers, Mixins and Functions
                 </h3>
                 <p class="text-size-medium">
-                    A small amount of Usefull Helpers to support your Work. That make it easer to create new Styles.
+                    A small amount of Usefull modifiers to support your Work. That make it easer to create new Styles.
                     Modifiziers are helping to reduce code.
                 </p>
             </div>
@@ -97,6 +97,7 @@
 
                 <h2 class="h3">How it works</h2>
 
+                <h3 class="h4">SCSS</h3>
                 <pre class="code"><code>@import
     "crispy";</code></pre>
                 <p>Now include Mixins you need. Components and Modifiziers only works if you include them,</p>
@@ -121,13 +122,24 @@
     "variables",
     "crispy";</code></pre>
 
+                <p>If you need all, mixins will be included,</p>
+                <pre class="code"><code>@import
+    "all";</code></pre>
+
+                <p>Only need Core and Modifiziers?</p>
+                <pre class="code"><code>@import
+    "minimal";</code></pre>
+
+                <h3 class="h4">CSS</h3>
+                <p>For using CSS you can use <span class="text-weight-bold">crispy.css</span> for all Styles or <span class="text-weight-bold">crispy_mininmal.css</span> without Components.</p>
+
                 <h2 class="h3">Example</h2>
                 <p>
                     You find an example in "/src/example", this is this Documentation. In the given example there are additional directories. These ones are part of a structure which might be helpful for you.
                 </p>
                 <h4>Site</h4>
                 <p>
-                    Contains header, footer, partials that are used on a site or webapp. Header and footer are not classical components, there often more complex and have a special brand.
+                    Contains header, footer, partials that are used on a site or webapp. Header and Footer are not classical components, there often more complex and have a special brand.
                 </p>
                 <h4>Templates</h4>
                 <p>
@@ -306,11 +318,11 @@
 ) !default;</code></pre>
 
 				<h1>Heading h1</h1>
-				<h2>Heading h1</h2>
-				<h3>Heading h1</h3>
-				<h4>Heading h1</h4>
-				<h5>Heading h1</h5>
-				<h6>Heading h1</h6>
+				<h2>Heading h2</h2>
+				<h3>Heading h3</h3>
+				<h4>Heading h4</h4>
+				<h5>Heading h5</h5>
+				<h6>Heading h6</h6>
 
 				<!-- components / hero -->
 				<h3 class="h4 margin-top-2 margin-bottom-0">
@@ -324,6 +336,9 @@
                 <h3 class="h4 margin-top-2 margin-bottom-0">
                     Icon
                 </h3>
+                <p>
+                    To change Size you can use "text-size-*" that you find in the <span class="text-weight-bold">modifiers</span>.
+                </p>
                 <h4 class="h6">Html:</h4>
                 <pre class="code"><code>&lt;svg class=&quot;icon text-size-small&quot;&gt;
     &lt;use xlink:href=&quot;symbol-defs.svg#icon-minus&quot;&gt;&lt;/use&gt;
@@ -331,19 +346,33 @@
                 <div class="panel">
                     <div class="panel__inner">
                         <svg class="icon text-size-small" aria-hidden="true">
-                            <use xlink:href="symbol-defs.svg#icon-minus"></use>
+                            <use xlink:href="symbol-defs.svg#icon-spaceinvaders"></use>
                         </svg>
                         <svg class="icon" aria-hidden="true">
-                            <use xlink:href="symbol-defs.svg#icon-minus"></use>
+                            <use xlink:href="symbol-defs.svg#icon-spaceinvaders"></use>
                         </svg>
                         <svg class="icon text-size-large" aria-hidden="true">
-                            <use xlink:href="symbol-defs.svg#icon-minus"></use>
+                            <use xlink:href="symbol-defs.svg#icon-spaceinvaders"></use>
                         </svg>
                         <svg class="icon text-size-big" aria-hidden="true">
-                            <use xlink:href="symbol-defs.svg#icon-minus"></use>
+                            <use xlink:href="symbol-defs.svg#icon-spaceinvaders"></use>
                         </svg>
                         <svg class="icon text-size-mega" aria-hidden="true">
-                            <use xlink:href="symbol-defs.svg#icon-minus"></use>
+                            <use xlink:href="symbol-defs.svg#icon-spaceinvaders"></use>
+                        </svg>
+                    </div>
+                </div>
+                <p class="margin-top-2">
+                    To change Color you can use "icon-color-*".
+                </p>
+                <h4 class="h6">Html:</h4>
+                <pre class="code"><code>&lt;svg class=&quot;icon text-size-small&quot;&gt;
+    &lt;use xlink:href=&quot;symbol-defs.svg#icon-minus&quot;&gt;&lt;/use&gt;
+&lt;/svg&gt;</code></pre>
+                <div class="panel">
+                    <div class="panel__inner">
+                        <svg class="icon icon-color-danger" aria-hidden="true">
+                            <use xlink:href="symbol-defs.svg#icon-spaceinvaders"></use>
                         </svg>
                     </div>
                 </div>
@@ -482,8 +511,8 @@
                     </label>
                 </div>
                 <div class="field field--error">
-                    <input id="field__checkbox__2" class="field__choice" type="checkbox" name="field__checkbox__2" value="true" />
-                    <label for="field__checkbox__2" class="field__label">
+                    <input id="field__checkbox__3" class="field__choice" type="checkbox" name="field__checkbox__3" value="true" />
+                    <label for="field__checkbox__3" class="field__label">
                         <svg class="icon field__choice__unchecked" aria-hidden="true">
                             <use xlink:href="symbol-defs.svg#icon-minus"></use>
                         </svg>
@@ -645,18 +674,18 @@ toRem(10px 10px 0 0);
                     stripUnit()
                 </h3>
 				<h4 class="h6 margin-top-1x">Sass:</h4>
-				<pre class="code"><code>toEm(10px);</code></pre>
+				<pre class="code"><code>stripUnit(10px);</code></pre>
 				<p>
 					Returns value without unit.
 				</p>
 
-				<!-- helpers -->
+				<!-- modifiers -->
 				<hr class="margin-top-3x">
-				<h2 id="helpers" class="margin-top-1x">
-                    Helpers
+				<h2 id="modifiers" class="margin-top-1x">
+                    Modifiziers
                 </h2>
 
-				<!-- helpers / align -->
+				<!-- modifiers / align -->
 				<h3 class="h4 margin-top-1x">
                     Float
                 </h3>
@@ -670,13 +699,20 @@ toRem(10px 10px 0 0);
 &lt;div class=&quot;center&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;</code></pre>
 
-				<!-- helpers / margin -->
+				<!-- modifiers / margin & padding -->
 				<h3 class="h4 margin-top-1x">
-                    Margin
+                    Margin & Padding
                 </h3>
 				<p>
-					margin-top and -bottom from <strong>$crispy__margin</strong> as px.
+					Adding margin-top, -left, -bottom and -right and the same for padding.
 				</p>
+                <h4 class="h6 margin-top-1x">Sass:</h4>
+                <pre class="code">
+$crispy__spacing: 15px;
+$crispy__spacing__steps: 5;
+</pre></code>
+
+                <h4 class="h6 margin-top-1x">Html:</h4>
 				<pre class="code">&lt;div class=&quot;panel margin-bottom-0&quot;&gt;margin-bottom-0&lt;/div&gt;
 &lt;div class=&quot;margin-bottom-1&quot;&gt;margin-bottom-1&lt;/div&gt;
 &lt;div class=&quot;margin-bottom-2&quot;&gt;margin-bottom-2&lt;/div&gt;
@@ -690,7 +726,7 @@ toRem(10px 10px 0 0);
                 <div class="panel panel__inner margin-bottom-4">margin-bottom-4</div>
                 <div class="panel panel__inner margin-bottom-5">margin-bottom-5</div>
 
-				<!-- helpers / media -->
+				<!-- modifiers / media -->
 				<h3 class="h4 margin-top-1">
                     Media
                 </h3>
@@ -721,7 +757,7 @@ toRem(10px 10px 0 0);
 					</div>
 				</div>
 
-                <!-- helpers / text -->
+                <!-- modifiers / text -->
                 <h3 class="h4 margin-top-1x">
                     Text
                 </h3>
@@ -730,7 +766,9 @@ toRem(10px 10px 0 0);
 &lt;div class=&quot;text-right&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;text-justify&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;text-italic&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;text-light&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;text-normal&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;text-medium&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;text-bold&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;text-uppercase&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;text-lowercase&quot;&gt;&lt;/div&gt;
@@ -741,12 +779,21 @@ toRem(10px 10px 0 0);
                     Also there are classes for,
                 </p>
                 <ul>
-                    <li>text-* with $crispy__font-sizes for "font-size"</li>
-                    <li>text-* with $crispy__colors for "color"</li>
-                    <li>background-* with $crispy__font-sizes for "background-color"</li>
+                    <li>text-size-* with $crispy__font-sizes for "font-size"</li>
+                    <li>text-color-* with $crispy__colors for "color"</li>
+                    <li>background-color-* with $crispy__font-sizes for "background-color"</li>
                 </ul>
 
-				<!-- helpers / media -->
+                <!-- visibility -->
+                <h3 class="h4 margin-top-1x">
+                    Visibility
+                </h3>
+                <pre class="code">&lt;div class=&quot;hidden&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;visible&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;visible visible--inline&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;visible visible--inline-block&quot;&gt;&lt;/div&gt;</code></pre>
+
+				<!-- modifiers / media -->
 				<h3 class="h4 margin-top-1x">
                     Width
                 </h3>
@@ -770,7 +817,8 @@ toRem(10px 10px 0 0);
                     Media Queries
                 </h3>
 				<p>
-					These <strong>@mixins</strong> were used with the Breakpoints from the <a href="#reflex-grid">Reflex Grid</a>.
+					These <strong>@mixins</strong> were used with the Breakpoints from <a target="_blank" href="http://reflexgrid.com/docs/">http://reflexgrid.com/docs/</a>.
+                    Reflex-Grid is also used as grid for this Site.
 				</p>
 				<ul>
 					<li><strong>xs</strong> 576px</li>
@@ -826,19 +874,6 @@ toRem(10px 10px 0 0);
 						<div class="panel panel__inner lg-only margin-bottom-1">lg-only</div>
 					</div>
 				</div>
-
-				<!-- Reflex Grid -->
-				<hr class="margin-top-3x">
-				<h2 id="reflex-grid" class="margin-top-1x">
-						Reflex Grid
-					</h2>
-				<p>
-					The <strong>Reflex Grid</strong> is from <a target="_blank" href="http://lendmeyourear.net">Lee Jordan</a>. I have build a few helper for media-queries. <strong>Reflex Grid </strong> is lightweight, simple and uses a flexbox grid with cross browser
-					support, an inline-block fallback.
-				</p>
-				<p>
-					Documentation: <a target="_blank" href="http://reflexgrid.com/docs/">http://reflexgrid.com/docs/</a><br /> Github: <a target="_blank" href="https://github.com/leejordan/reflex">https://github.com/leejordan/reflex</a>
-				</p>
 			</div>
 		</div>
 	</div>
@@ -848,11 +883,9 @@ toRem(10px 10px 0 0);
 			<div class="grid">
 				<div class="col-12">
 					<div class="text-center">
-						<div class="group group--horizontal">
-                            <ul class="group__section group__section--separate">
-                                <li class="group__item"><a href="/imprint.html">Imprint</a></li><li class="group__item"><a href="/privacy-policy.html">Privacy Policy</a></li>
-                            </ul>
-                        </div>
+                        <ul class="group group--horizontal group--separate">
+                            <li class="group__item"><a href="/imprint.html">Imprint</a></li><li class="group__item"><a href="/privacy-policy.html">Privacy Policy</a></li>
+                        </ul>
 					</div>
 				</div>
 			</div>
