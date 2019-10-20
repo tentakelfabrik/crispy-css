@@ -17,5 +17,12 @@ $crispy__icon__width: 1.5em !default;
         height: $crispy__icon__width;
         vertical-align: middle;
         overflow: hidden;
+        line-height: $crispy__golden-ratio;
+    }
+
+    @each $name, $color in $crispy__colors {
+        .icon-color-#{$name} {
+            fill: $color !important;
+        }
     }
 }

@@ -18,6 +18,13 @@ mix.sass('src/all.scss', 'dist/crispy.css', {
             ]
         }
     })
+    .sass('src/minimal.scss', 'dist/crispy_minimal.css', {
+        sassOptions: {
+            includePaths: [
+                'node_modules/normalize-scss/sass'
+            ]
+        }
+    })
     .sass('src/example/styles.scss', 'dist/example/styles.css', {
         sassOptions: {
             includePaths: [

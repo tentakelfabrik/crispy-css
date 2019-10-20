@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Crispy | a minimal SASS / CSS Framework</title>
+	<title>Crispy | Lightweight SASS / CSS Framework</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="styles.css">
@@ -25,6 +25,9 @@
 								    Crispy 2.0
                                 </h1>
                             </a>
+                            <h2 class="h6">
+                                Lightweight CSS / SASS Framework
+                            </h2>
 						</hgroup>
 					</div>
 				</div>
@@ -32,49 +35,95 @@
 		</div>
 	</header>
 	<div class="container">
-		<div class="col-12">
-			<p>
-                This is a small CSS / SASS Framework that gives you an amount of varaibles, components, modifiziers, mixins and functions.
-            </p>
-            <p>
-                The problem of most frameworks is they trying to hard adding a lot of styles
-                which has to be customized and documented if you used it for a Project.
-                Often these changes cause a loss of performance and raise the propability of errors.
-            </p>
-            <p>
-                Crispy uses <a href="https://necolas.github.io/normalize.css/" target="_blank">normalize.css</a>
-            </p>
-            <h3 class="h5">Coding Style</h3>
-            <p>
-                The boilerplate uses as coding style <a href="http://getbem.com/" target="_blank">BEM</a>,
-                but as a more simpler idea of it. One of the benefits of BEM is that you create components and can reuse them.
-                But one the other hand it can be really strange if you overthinking it.
-            </p>
-            <h3 class="h5">Not Fancy but Small</h3>
-            <p>
-                Components are created to give you a structure and a basic set of styles and not to look fancy.
-                The idea is to extend each component and save time to write a bunch of extra CSS code and
-                therefore get more performance while minimize the causes of errors. Of Course is really Fancy to get more Performance and less Errors.
-            </p>
+        <div class="grid margin-top-5 margin-bottom-5">
+		    <div class="col-12 col-md-6">
+                <h3 class="h6">
+                    <svg class="icon icon-color-primary" alt="Lightweight">
+                        <use xlink:href="symbol-defs.svg#icon-paperplane" />
+                    </svg>
+                    Lightweight
+                </h3>
+                <p class="text-size-medium">
+                    Only what you need! Basic Styles to create UI-Elements,
+                    but without endless overwritting. Less Code, less Size and that means Crispy is <span class="text-weight-bold">simple</span> and <span class="text-weight-bold">fast</span>!
+                </p>
+            </div>
+            <div class="col-12 col-md-6">
+                <h3 class="h6">
+                    <svg class="icon icon-color-primary" alt="Usefull Helpers">
+                        <use xlink:href="symbol-defs.svg#icon-shipping" />
+                    </svg>
+                    Modifiziers, Mixins and Functions
+                </h3>
+                <p class="text-size-medium">
+                    A small amount of Usefull Helpers to support your Work. That make it easer to create new Styles.
+                    Modifiziers are helping to reduce code.
+                </p>
+            </div>
+            <div class="col-12 col-md-6">
+                <h3 class="h6">
+                    <svg class="icon icon-color-primary" alt="Customizeable">
+                        <use xlink:href="symbol-defs.svg#icon-transformers" />
+                    </svg>
+                    Customizable
+                </h3>
+                <p class="text-size-medium">
+                    There are many Frameworks that really great, but if you want customize them,
+                    that can be a lot of work. Crispy is great to build Styles for Layouts that are unusual.
+                </p>
+            </div>
+            <div class="col-12 col-md-6">
+                <h3 class="h6">
+                    <svg class="icon icon-color-primary" alt="Coding Style">
+                        <use xlink:href="symbol-defs.svg#icon-ruler" />
+                    </svg>
+                    Coding Style
+                </h3>
+                <p class="text-size-medium">
+                    Crispy uses <a href="http://getbem.com/" target="_blank">BEM</a> for naming, but
+                    a simpler approach of it. BEM is good to show other Developers what classes
+                    are belong to a Component.
+                </p>
+            </div>
+        </div>
 
-            <!-- getting started -->
-			<hr class="margin-top-3">
-            <h2 id="getting-started">Getting Started</h2>
-            <h3>Installation</h3>
-            <pre class="code"><code>npm install crispy-boilerplate</code></pre>
-            <p>Main SCSS-file:</p>
-            <pre class="code"><code>@import
-    "crispy";</code></pre>
-                <p>After this include mixins you need:</p>
-                <pre class="code"><code>@include crispy__*()</code></pre>
-                <p>To overwrite defaults simple add your own config-file before importing crispy:</p>
+        <div class="grid">
+            <div class="col-12">
+
+                <!-- getting started -->
+			    <hr class="margin-top-3">
+                <h2 class="h3">Installation</h2>
+                <pre class="code"><code>npm install crispy</code></pre>
+
+                <h2 class="h3">How it works</h2>
+
                 <pre class="code"><code>@import
-    "config",
+    "crispy";</code></pre>
+                <p>Now include Mixins you need. Components and Modifiziers only works if you include them,</p>
+                <pre class="code"><code>@include crispy__core();
+@include crispy__modifiers();
+
+// components
+@include crispy__button();
+@include crispy__code();
+@include crispy__field();
+@include crispy__group();
+@include crispy__heading();
+@include crispy__hero();
+@include crispy__icon();
+@include crispy__media();
+@include crispy__modal();
+@include crispy__overlay();
+@include crispy__panel();
+@include crispy__table();</code></pre>
+                <p>For Custom Variables add a File before importing Crispy</p>
+                <pre class="code"><code>@import
+    "variables",
     "crispy";</code></pre>
 
-                <h3>Example</h3>
+                <h2 class="h3">Example</h2>
                 <p>
-                    You find an example in "/src/example", this is this documentation. In the given example there are additional directories. These ones are part of a structure which might be helpful for you.
+                    You find an example in "/src/example", this is this Documentation. In the given example there are additional directories. These ones are part of a structure which might be helpful for you.
                 </p>
                 <h4>Site</h4>
                 <p>
