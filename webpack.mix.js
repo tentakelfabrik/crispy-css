@@ -11,14 +11,14 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.sass('src/all.scss', 'dist/crispy.css', {
+mix.sass('src/crispy_all.scss', 'dist/crispy_all.css', {
         sassOptions: {
             includePaths: [
                 'node_modules/normalize-scss/sass'
             ]
         }
     })
-    .sass('src/minimal.scss', 'dist/crispy_minimal.css', {
+    .sass('src/crispy_minimal.scss', 'dist/crispy_minimal.css', {
         sassOptions: {
             includePaths: [
                 'node_modules/normalize-scss/sass'
