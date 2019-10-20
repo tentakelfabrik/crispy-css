@@ -46,7 +46,7 @@
         text-decoration: underline !important;
     }
 
-    .text-capitalized {
+    .text-capitalize {
         text-transform: capitalize !important;
     }
 
@@ -68,6 +68,10 @@
 
     .text-weight-bold {
         font-weight: bolder !important;
+    }
+
+    .text-smaller {
+        font-size: 80% !important
     }
 
     @each $name, $font-size in $crispy__font-sizes {

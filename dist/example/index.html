@@ -679,25 +679,26 @@ toRem(10px 10px 0 0);
 					Returns value without unit.
 				</p>
 
+                <!-- functions / stripUnit -->
+				<h3 class="h4 margin-top-0x margin-bottom-0x">
+                    zIndex(name)
+                </h3>
+				<h4 class="h6 margin-top-1x">Sass:</h4>
+				<pre class="code"><code>zIndex('modal');</code></pre>
+				<p>
+					Returns value from $crispy__z-index.
+				</p>
+                <h4 class="h6 margin-top-1x">Sass:</h4>
+				<pre class="code"><code>$crispy__z-index: (
+    'overlay': 90,
+    'modal'  : 100
+);</code></pre>
+
 				<!-- modifiers -->
 				<hr class="margin-top-3x">
 				<h2 id="modifiers" class="margin-top-1x">
                     Modifiziers
                 </h2>
-
-				<!-- modifiers / align -->
-				<h3 class="h4 margin-top-1x">
-                    Float
-                </h3>
-				<pre class="code">&lt;div class=&quot;text-left&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;text-center&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;text-right&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;text-justify&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;float-left&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;float-center&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;float-none&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;center&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;</code></pre>
 
 				<!-- modifiers / margin & padding -->
 				<h3 class="h4 margin-top-1x">
@@ -726,6 +727,13 @@ $crispy__spacing__steps: 5;
                 <div class="panel panel__inner margin-bottom-4">margin-bottom-4</div>
                 <div class="panel panel__inner margin-bottom-5">margin-bottom-5</div>
 
+                <p>
+                    Also set padding and margin to 0,
+                </p>
+
+                <pre class="code">&lt;div class=&quot;marginless&quot;&lt;/div&gt;
+&lt;div class=&quot;paddingless&quot;&lt;/div&gt;</code></pre>
+
 				<!-- modifiers / media -->
 				<h3 class="h4 margin-top-1">
                     Media
@@ -749,31 +757,26 @@ $crispy__spacing__steps: 5;
 						</figure>
 					</div>
 				</div>
-				<div class="grid">
-					<div class="col-6">
-						<div class="video-responsive" style="height: 280px;">
-							<iframe src="https://giphy.com/embed/13XW2MJE0XCoM0" width="480" height="361" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-						</div>
-					</div>
-				</div>
 
-                <!-- modifiers / text -->
+                <!-- modifiers / Typography -->
                 <h3 class="h4 margin-top-1x">
-                    Text
+                    Typography
                 </h3>
                 <pre class="code">&lt;div class=&quot;text-left&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;text-center&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;text-right&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;text-justify&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;text-italic&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;text-light&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;text-normal&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;text-medium&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;text-bold&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;text-weight-light&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;text-weight-normal&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;text-weight-medium&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;text-weight-bold&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;text-capitalize&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;text-uppercase&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;text-lowercase&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;text-small&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;text-crossed&quot;&gt;&lt;/div&gt;</code></pre>
+&lt;div class=&quot;text-smaller&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;text-crossed&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;text-underline&quot;&gt;&lt;/div&gt;</code></pre>
 
                 <p>
                     Also there are classes for,
@@ -784,7 +787,34 @@ $crispy__spacing__steps: 5;
                     <li>background-color-* with $crispy__font-sizes for "background-color"</li>
                 </ul>
 
-                <!-- visibility -->
+                <!-- modifiers / float -->
+                <h3 class="h4 margin-top-1x">
+                    Float
+                </h3>
+                <pre class="code">&lt;div class=&quot;float-left&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;float-right&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;float-none&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;centered&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;</code></pre>
+
+                <!-- modifiers / typography -->
+                <h3 class="h4 margin-top-1x">
+                    Position
+                </h3>
+                <pre class="code">&lt;div class=&quot;relative&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;absolute&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;fixed&quot;&gt;&lt;/div&gt;</code></pre>
+
+                <!-- modifiers / border -->
+                <h3 class="h4 margin-top-1x">
+                    Border
+                </h3>
+                <pre class="code">&lt;div class=&quot;bordered&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;rounded&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;borderless&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;radiusless&quot;&gt;&lt;/div&gt;</code></pre>
+
+                <!-- modifiers / visibility -->
                 <h3 class="h4 margin-top-1x">
                     Visibility
                 </h3>
@@ -793,10 +823,19 @@ $crispy__spacing__steps: 5;
 &lt;div class=&quot;visible visible--inline&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;visible visible--inline-block&quot;&gt;&lt;/div&gt;</code></pre>
 
-				<!-- modifiers / media -->
+				<!-- modifiers / width -->
 				<h3 class="h4 margin-top-1x">
                     Width
                 </h3>
+                <h4 class="h6 margin-top-1x">Sass:</h4>
+                <pre class="code"><code>$crispy__width: (
+    '25' : 25%,
+    '50' : 50%,
+    '75' : 75%,
+    '100': 100%
+)</code></pre>
+
+                <h4 class="h6 margin-top-1x">Html:</h4>
 				<pre class="code"><code>&lt;div class=&quot;panel width-25&quot;&gt;width-25&lt;/div&gt;
 &lt;div class=&quot;width-50&quot;&gt;width-50&lt;/div&gt;
 &lt;div class=&quot;width-75&quot;&gt;width-75&lt;/div&gt;
