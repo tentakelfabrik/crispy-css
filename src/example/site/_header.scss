@@ -17,6 +17,10 @@
         a {
             text-decoration: none;
 
+            .icon {
+                vertical-align: top;
+            }
+
             &:hover {
                 color: $crispy__color-primary;
             }

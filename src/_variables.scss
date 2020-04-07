@@ -21,8 +21,8 @@ $crispy__font-family-monospace: Arial, Helvetica, Neue Helvetica, sans-serif !de
 $crispy__direction: ltr !default;
 
 // spacing
-$crispy__spacing: 15px !default;
-$crispy__spacing__steps: 7 !default;
+$crispy__spacing: 18px !default;
+$crispy__spacing__steps: 5 !default;
 
 // colors
 $crispy__color-primary: #f18f01 !default;
@@ -49,30 +49,29 @@ $crispy__border-radius: 0.5em !default;
 $crispy__border: 1px solid $crispy__color-border !default;
 
 // breakpoints
-$crispy__xs: 576px !default;
-$crispy__sm: 768px !default;
-$crispy__md: 992px !default;
-$crispy__lg: 1200px !default;
+$crispy__xs : 576px !default;
+$crispy__sm : 768px !default;
+$crispy__md : 992px !default;
+$crispy__lg : 1200px !default;
 $crispy__xlg: 1600px !default;
 
 // colors as map
 $crispy__colors: (
-    'primary': $crispy__color-primary,
+    'primary'  : $crispy__color-primary,
     'secondary': $crispy__color-secondary,
-    'success': $crispy__color-success,
-    'warning': $crispy__color-warning,
-    'danger': $crispy__color-danger,
-    'info': $crispy__color-info
+    'success'  : $crispy__color-success,
+    'warning'  : $crispy__color-warning,
+    'danger'   : $crispy__color-danger,
+    'info'     : $crispy__color-info
 ) !default;
 
 // font-sizes as map
 $crispy__font-sizes: (
-    'default': $crispy__font-size,
-    'small' : toRem(12px),
-    'medium': toRem(18px),
-    'large' : toRem(20px),
-    'big'   : toRem(24px),
-    'mega'  : toRem(28px)
+    'default': toRem($crispy__font-size),
+    'small'  : toRem(11px),
+    'large'  : toRem(26px),
+    'big'    : toRem(34px),
+    'mega'   : toRem(42px)
 ) !default;
 
 // z-index

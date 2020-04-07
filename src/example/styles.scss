@@ -12,6 +12,8 @@
 
     'templates/home';
 
+@include site__header();
+
 .container {
     max-width: $crispy__md;
 }
