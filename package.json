@@ -26,7 +26,6 @@
     "sass-loader": "^8.0.0"
   },
   "dependencies": {
-    "normalize-scss": "^7.0.1",
     "reflex-grid": "^2.0.4"
   }
 }

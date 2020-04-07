@@ -84,6 +84,12 @@
     }
 }
 
+@mixin crispy__media-xxs-only() {
+    @media only screen and (max-width: $crispy__xs) {
+        @content;
+    }
+}
+
 @mixin crispy__media-xs-only() {
     @media only screen and (min-width: $crispy__xs) and (max-width: $crispy__sm - 1) {
         @content;
