@@ -117,6 +117,7 @@
 @include crispy__modal();
 @include crispy__overlay();
 @include crispy__panel();
+@include crispy__progress();
 @include crispy__table();</code></pre>
                 <p>For Custom Variables add a File before importing Crispy,</p>
                 <pre class="code"><code>@import
@@ -367,7 +368,7 @@
                     To change Color you can use "icon-color-*".
                 </p>
                 <h4 class="h6">Html:</h4>
-                <pre class="code"><code>&lt;svg class=&quot;icon text-size-small&quot;&gt;
+                <pre class="code"><code>&lt;svg class=&quot;icon icon-color-danger&quot;&gt;
     &lt;use xlink:href=&quot;symbol-defs.svg#icon-minus&quot;&gt;&lt;/use&gt;
 &lt;/svg&gt;</code></pre>
                 <div class="panel">
@@ -391,6 +392,20 @@
                 <div class="panel">
                     <div class="panel__inner">
                         Lorem Ipsum
+                    </div>
+                </div>
+
+                <!-- components / progress -->
+                <h3 class="h4 margin-top-2 margin-bottom-0">
+                    Progress
+                </h3>
+                <h4 class="h6">Html:</h4>
+                <pre class="code"><code>&lt;div class=&quot;progress&quot;&gt;
+    &lt;div class=&quot;progress__inner&quot; style=&quot;width: 80%&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <div class="progress">
+                    <div class="progress__inner" style="width: 80%">
                     </div>
                 </div>
 
