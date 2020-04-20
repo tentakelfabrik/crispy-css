@@ -1,7 +1,7 @@
 {
   "name": "crispy-css",
-  "version": "2.1.1",
-  "description": "Flat Sass Boilerplate to give you a amount of Basic Settings, Mixins and Functions",
+  "version": "2.1.2",
+  "description": "Lightweight Framework for building Websites and Apps for Mobile, Tablet and Desktop. Minimal UI-Elements and Helpers.",
   "repository": {
     "type": "git",
     "url": "git@gitlab.tentakelfabrik.de:tentakelfabrik/crispy.git"
