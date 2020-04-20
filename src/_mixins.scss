@@ -135,6 +135,7 @@
  *
  */
 @mixin triangle($direction, $color: currentcolor, $size: 1em) {
+
     @if not index(top right bottom left, $direction) {
         @error "Direction must be either `top`, `right`, `bottom` or `left`.";
     }
@@ -143,7 +144,20 @@
     height: 0;
     content: '';
     z-index: 2;
-    border-#{opposite-position($direction)}: ($size * 1.5) solid $color;
+
+    // adding opposite postion for border
+    $opposite: oppositeDirection($direction);
+
+    // @TODO with #{opposite-position($direction)} it breaks in webpack
+    @if $opposite == top {
+        border-top: ($size * 1.5) solid $color;
+    } @else if $opposite == bottom {
+        border-bottom: ($size * 1.5) solid $color;
+    } @else if $opposite == left {
+        border-left: ($size * 1.5) solid $color;
+    } @else if $opposite == right {
+        border-right: ($size * 1.5) solid $color;
+    }
 
     $perpendicular-borders: $size solid transparent;
 

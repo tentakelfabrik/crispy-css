@@ -45,3 +45,23 @@
         display: block;
     }
 }
+
+.triangle-left, .triangle-right, .triangle-top, .triangle-bottom {
+    display: block;
+}
+
+.triangle-left {
+    @include triangle('left', $crispy__color-primary);
+}
+
+.triangle-right {
+    @include triangle('right', $crispy__color-primary);
+}
+
+.triangle-top {
+    @include triangle('top', $crispy__color-primary);
+}
+
+.triangle-bottom {
+    @include triangle('bottom', $crispy__color-primary);
+}

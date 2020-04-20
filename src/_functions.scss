@@ -106,29 +106,29 @@
  *
  * @param  {[type]} $directions [description]
  * @return {[type]}             [description]
- * 
+ *
  */
-@function opposite-direction($directions) {
-  $opposite-directions: ();
-  $direction-map: (
-    'top':    'bottom',
-    'right':  'left',
-    'bottom': 'top',
-    'left':   'right',
-    'center': 'center',
-    'ltr':    'rtl',
-    'rtl':    'ltr'
-  );
+@function oppositeDirection($direction) {
 
-  @each $direction in $directions {
+    $opposite-direction: 0;
+
+    $direction-map: (
+        'top':    'bottom',
+        'right':  'left',
+        'bottom': 'top',
+        'left':   'right',
+        'center': 'center',
+        'ltr':    'rtl',
+        'rtl':    'ltr'
+    );
+
     $direction: to-lower-case($direction);
 
     @if map-has-key($direction-map, $direction) {
-      $opposite-directions: append($opposite-directions, unquote(map-get($direction-map, $direction)));
+        $opposite-direction: map-get($direction-map, $direction);
     } @else {
-      @warn "No opposite direction can be found for `#{$direction}`. Direction omitted.";
+        @warn "No opposite direction can be found for `#{$direction}`. Direction omitted.";
     }
-  }
 
-  @return $opposite-directions;
+    @return $opposite-direction;
 }
