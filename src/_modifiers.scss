@@ -144,16 +144,46 @@
     }
 
     /**
-     *  visibility
+     *  hide & show
      *
      *
      */
 
-    .hidden {
+    .hide {
         display: none !important;
+
+        &-xs {
+            @include crispy__media-xs() {
+                display: none !important;
+            }
+        }
+
+        &-sm {
+            @include crispy__media-sm() {
+                display: none !important;
+            }
+        }
+
+        &-md {
+            @include crispy__media-md() {
+                display: none !important;
+            }
+        }
+
+        &-lg {
+            @include crispy__media-lg() {
+                display: none !important;
+            }
+        }
+
+        &-xlg {
+            @include crispy__media-xlg() {
+                display: none !important;
+            }
+        }
     }
 
-    .visible {
+    .show {
         display: block !important;
 
         &--inline {
@@ -162,6 +192,75 @@
 
         &--inline-block {
             display: inline-block !important;
+        }
+
+        &-xs {
+            @include crispy__media-xs() {
+                display: block !important;
+
+                &--inline {
+                    display: inline !important;
+                }
+
+                &--inline-block {
+                    display: inline-block !important;
+                }
+            }
+        }
+
+        &-sm {
+            @include crispy__media-sm() {
+                display: block !important;
+
+                &--inline {
+                    display: inline !important;
+                }
+
+                &--inline-block {
+                    display: inline-block !important;
+                }
+            }
+        }
+
+        &-md {
+            @include crispy__media-md() {
+                display: block !important;
+
+                &--inline {
+                    display: inline !important;
+                }
+
+                &--inline-block {
+                    display: inline-block !important;
+                }
+            }
+        }
+
+        &-lg {
+            @include crispy__media-lg() {
+                display: block !important;
+
+                &--inline {
+                    display: inline !important;
+                }
+
+                &--inline-block {
+                    display: inline-block !important;
+                }
+            }
+        }
+
+        &-xlg {
+            @include crispy__media-xlg() {
+                display: block !important;
+                &--inline {
+                    display: inline !important;
+                }
+
+                &--inline-block {
+                    display: inline-block !important;
+                }
+            }
         }
     }
 
