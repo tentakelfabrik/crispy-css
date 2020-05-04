@@ -1,6 +1,6 @@
 {
   "name": "crispy-css",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "description": "Lightweight Framework for building Websites and Apps for Mobile, Tablet and Desktop. Minimal UI-Elements and Helpers.",
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
     "sass-loader": "^8.0.0"
   },
   "dependencies": {
+    "normalize-scss": "^7.0.1",
     "reflex-grid": "^2.0.4"
   }
 }
