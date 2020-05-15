@@ -76,7 +76,15 @@
 
     @each $name, $font-size in $crispy__font-sizes {
         .text-size-#{$name} {
-            font-size: $font-size !important;
+            font-size: $font-size * 0.9;
+
+            @include crispy__media-md() {
+                font-size: $font-size;
+            }
+
+            @include crispy__media-xlg() {
+                font-size: $font-size * 1.1;
+            }
         }
     }
 
@@ -314,35 +322,35 @@
 
     @for $i from 0 through $crispy__spacing__steps {
         .margin-top-#{$i} {
-            margin-top: ($crispy__spacing * $i) !important;
+            margin-top: ($crispy__spacing * $i * 0.5) !important;
         }
 
         .margin-left-#{$i} {
-            margin-left: ($crispy__spacing * $i) !important;
+            margin-left: ($crispy__spacing * $i * 0.5) !important;
         }
 
         .margin-bottom-#{$i} {
-            margin-bottom: ($crispy__spacing * $i) !important;
+            margin-bottom: ($crispy__spacing * $i * 0.5) !important;
         }
 
         .margin-right-#{$i} {
-            margin-right: ($crispy__spacing * $i) !important;
+            margin-right: ($crispy__spacing * $i * 0.5) !important;
         }
 
         .padding-top-#{$i} {
-            padding-top: ($crispy__spacing * $i) !important;
+            padding-top: ($crispy__spacing * $i * 0.5) !important;
         }
 
         .padding-left-#{$i} {
-            padding-left: ($crispy__spacing * $i) !important;
+            padding-left: ($crispy__spacing * $i * 0.5) !important;
         }
 
         .padding-bottom-#{$i} {
-            padding-bottom: ($crispy__spacing * $i) !important;
+            padding-bottom: ($crispy__spacing * $i * 0.5) !important;
         }
 
         .padding-right-#{$i} {
-            padding-right: ($crispy__spacing * $i) !important;
+            padding-right: ($crispy__spacing * $i * 0.5) !important;
         }
     }
 }

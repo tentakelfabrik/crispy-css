@@ -6,7 +6,7 @@
  *
  */
 
-$crispy__button__padding: toEm(10px 25px) !default;
+$crispy__button__padding: ($crispy__spacing * 0.5) $crispy__spacing !default;
 
 @mixin crispy__button() {
     .button {

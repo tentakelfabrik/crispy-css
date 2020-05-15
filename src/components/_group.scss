@@ -14,7 +14,7 @@
  */
 
 $crispy__group__character: '/' !default;
-$crispy__group__character__margin: toEm(0 $crispy__spacing 0) !default;
+$crispy__group__character__margin: 0 $crispy__spacing 0 !default;
 
 @mixin crispy__group() {
     .group {

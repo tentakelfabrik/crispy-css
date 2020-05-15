@@ -10,16 +10,13 @@
 
 @mixin site__header() {
     .header {
-        &__logo {
-            vertical-align: top;
-        }
+        text-align: center;
 
         a {
             text-decoration: none;
 
             .icon {
-                vertical-align: top;
-                font-size: 3.25rem !important;
+                font-size: 4rem;
             }
 
             &:hover {

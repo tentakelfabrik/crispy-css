@@ -13,7 +13,7 @@
  *
  */
 
-$crispy__field__margin: toEm(0 0 $crispy__spacing 0) !default;
+$crispy__field__margin: 0 0 $crispy__spacing 0 !default;
 
 $crispy__field__border: 1px solid $crispy__color-secondary !default;
 
@@ -31,9 +31,9 @@ $crispy__field__input__font-size: $crispy__font-size !default;
 $crispy__field__input__padding: toEm(6px 8px) !default;
 $crispy__field__input__color: $crispy__color-text !default;
 
-$crispy__field__select__padding: toEm(8px) !default;
+$crispy__field__select__padding: 0.25em !default;
 
-$crispy__field__panel__padding: toEm(10px) !default;
+$crispy__field__panel__padding: 0.25em !default;
 
 $crispy__field__select__background-color: white !default;
 $crispy__field__select__border: $crispy__border !default;

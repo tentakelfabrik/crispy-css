@@ -39,7 +39,7 @@
 
     // paragraphs
     p {
-        margin: toEm(($crispy__spacing / 3) 0 $crispy__spacing 0);
+        margin: ($crispy__spacing * 0.3) 0 $crispy__spacing 0;
     }
 
     // Semantic text elements
@@ -68,14 +68,14 @@
     }
 
     mark {
-        padding: toEm(5px);
+        padding: 0.25em;
     }
 
     // blockquote
     blockquote {
         border-left: 1px solid $crispy__color-secondary;
         margin-left: 0;
-        padding: toEm(10px 20px);
+        padding: 0.125em 0.5em;
 
         p:last-child {
             margin-bottom: 0;
@@ -87,12 +87,12 @@
     ol,
     ul {
         padding: 0;
-        margin: toEm(0 0 $crispy__spacing ($crispy__spacing * 2));
+        margin: 0 0 $crispy__spacing ($crispy__spacing * 2);
     }
 
     ol ol,
     ul ul {
-        margin-top: toEm(($crispy__spacing / 2));
+        margin-top: $crispy__spacing * 0.125;
     }
 
     ol {
@@ -114,29 +114,68 @@
 
     // media
     figure {
-        margin: toEm(0 0 $crispy__spacing);
+        margin: 0 0 $crispy__spacing;
     }
 
     figcaption {
-        margin: toEm($crispy__spacing 0 0);
+        margin: $crispy__spacing 0 0;
     }
 
     // divider
     hr {
         border: 0;
         border-top: 1px solid $crispy__color-secondary;
-        margin: toEm($crispy__spacing 0);
+        margin: $crispy__spacing 0;
+    }
+
+    // heading
+    h1, .h1,
+    h2, .h2,
+    h3, .h3,
+    h4, .h4,
+    h5, .h5,
+    h6, .h6 {
+        font-family: $crispy__heading__font-family;
+        font-weight: $crispy__heading__font-weight;
+        line-height: $crispy__heading__line-height;
+        margin: $crispy__heading__margin;
+    }
+
+    @each $h, $font-size in $crispy__heading__font-sizes {
+        #{$h}, .#{$h} {
+            font-size: $font-size * 0.9;
+
+            @include crispy__media-md() {
+                font-size: $font-size;
+            }
+
+            @include crispy__media-xlg() {
+                font-size: $font-size * 1.2;
+            }
+        }
     }
 
     // body
     body {
         font-family: $crispy__font-family-primary;
-        font-weight: normal;
-        line-height: $crispy__golden-ratio;
+        font-weight: $crispy__font-weight;
+
+        font-size: $crispy__font-size-xxs;
+        @include crispy__media-md() {
+            font-size: $crispy__font-size-md;
+        }
+
+        @include crispy__media-xlg() {
+            font-size: $crispy__font-size-xlg;
+        }
+
+        line-height: $crispy__line-height-xxs;
+        @include crispy__media-md() {
+            line-height: $crispy__line-height-md;
+        }
+
         color: $crispy__color-text;
         background-color: $crispy__color-background;
         direction: $crispy__direction;
-
-        font-size: toRem($crispy__font-size);
     }
 }

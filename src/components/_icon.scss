@@ -9,15 +9,30 @@
  *
  */
 
-$crispy__icon__width: 1em !default;
+$crispy__icon__width: 1.125em !default;
 
 @mixin crispy__icon {
     .icon {
         width: $crispy__icon__width;
         height: $crispy__icon__width;
+
+        max-height: 100%;
+        max-width: 100%;
+
         vertical-align: middle;
         overflow: hidden;
-        line-height: $crispy__golden-ratio;
+
+        line-height: $crispy__line-height-xxs;
+
+        @include crispy__media-md() {
+            line-height: $crispy__line-height-md;
+        }
+    }
+
+    @each $name, $color in $crispy__colors {
+        .icon-color-#{$name} {
+            fill: $color !important;
+        }
     }
 
     @each $name, $color in $crispy__colors {

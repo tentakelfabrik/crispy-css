@@ -13,7 +13,7 @@
  *
  */
 
-$crispy__panel__padding: toEm(15px 20px) !default;
+$crispy__panel__padding: ($crispy__spacing * 0.5) $crispy__spacing !default;
 
 @mixin crispy__panel {
     .panel {

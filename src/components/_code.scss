@@ -13,10 +13,9 @@
  *
  */
 
-$crispy__code__font-size: $crispy__font-size !default;
 $crispy__code__font-family: monospace, monospace !default;
-$crispy__code__padding: toEm(10px 20px) !default;
-$crispy__code__margin: toEm(0 0 $crispy__spacing) !default;
+$crispy__code__padding: ($crispy__spacing * 0.5) $crispy__spacing !default;
+$crispy__code__margin: 0 0 $crispy__spacing !default;
 $crispy__code__border: 1px solid $crispy__color-border !default;
 $crispy__code__background-color: #f9f9f9 !default;
 
@@ -33,6 +32,5 @@ $crispy__code__background-color: #f9f9f9 !default;
         background-color: $crispy__code__background-color;
 
         margin: $crispy__code__margin;
-        font-size: $crispy__code__font-size;
     }
 }
