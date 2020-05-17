@@ -13,9 +13,8 @@
  *
  */
 
-$crispy__field__margin: 0 0 $crispy__spacing 0 !default;
-
-$crispy__field__border: 1px solid $crispy__color-secondary !default;
+$crispy__field__margin: $crispy__margin !default;
+$crispy__field__border: $crispy__border !default;
 
 $crispy__field__color--valid: $crispy__color-success !default;
 $crispy__field__color--error: $crispy__color-danger !default;
@@ -28,11 +27,10 @@ $crispy__field__choice__checked__color: $crispy__color-success !default;
 $crispy__field__choice__unchecked__color: $crispy__color-danger !default;
 
 $crispy__field__input__font-size: $crispy__font-size !default;
-$crispy__field__input__padding: toEm(6px 8px) !default;
+$crispy__field__input__padding: 6px 8px !default;
 $crispy__field__input__color: $crispy__color-text !default;
 
 $crispy__field__select__padding: 0.25em !default;
-
 $crispy__field__panel__padding: 0.25em !default;
 
 $crispy__field__select__background-color: white !default;
@@ -172,7 +170,7 @@ $crispy__field__select__border: $crispy__border !default;
         }
 
         + .field__label + .field__panel {
-            margin: $crispy__spacing 0 0 0;
+            margin: 0.3em 0 0 0;
         }
     }
 

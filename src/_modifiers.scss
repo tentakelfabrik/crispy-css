@@ -1,10 +1,22 @@
 /**
- * helper: visibility
+ *  modifiers
  *
  *
- * @author Björn Hase
+ *  @author Björn Hase
  *
  */
+
+// spacing
+$crispy__modifiers__spacing: 0.75em !default;
+$crispy__modifiers__spacing__steps: 6 !default;
+
+// width
+$crispy__modifiers__width: (
+    '25' : 25%,
+    '50' : 50%,
+    '75' : 75%,
+    '100': 100%
+) !default;
 
 @mixin crispy__modifiers() {
 
@@ -54,36 +66,32 @@
         font-style: italic !important;
     }
 
-    .text-weight-light {
+    .text-light {
         font-weight: lighter !important;
     }
 
-    .text-weight-normal {
+    .text-normal {
         font-weight: normal !important;
     }
 
-    .text-weight-medium {
+    .text-medium {
         font-weight: medium !important;
     }
 
-    .text-weight-bold {
+    .text-bold {
         font-weight: bolder !important;
-    }
-
-    .text-smaller {
-        font-size: 80% !important
     }
 
     @each $name, $font-size in $crispy__font-sizes {
         .text-size-#{$name} {
-            font-size: $font-size * 0.9;
+            font-size: ($font-size * $crispy__xxs__multiplicator) !important;
 
             @include crispy__media-md() {
-                font-size: $font-size;
+                font-size: $font-size !important;
             }
 
             @include crispy__media-xlg() {
-                font-size: $font-size * 1.1;
+                font-size: ($font-size * $crispy__xlg__multiplicator) !important;
             }
         }
     }
@@ -300,7 +308,7 @@
      *
      */
 
-    @each $name, $width in $crispy__width {
+    @each $name, $width in $crispy__modifiers__width {
         .width-#{$name} {
             width: $width !important;
         }
@@ -320,37 +328,37 @@
         padding: 0 !important;
     }
 
-    @for $i from 0 through $crispy__spacing__steps {
+    @for $i from 0 through $crispy__modifiers__spacing__steps {
         .margin-top-#{$i} {
-            margin-top: ($crispy__spacing * $i * 0.5) !important;
+            margin-top: ($crispy__modifiers__spacing * $i) !important;
         }
 
         .margin-left-#{$i} {
-            margin-left: ($crispy__spacing * $i * 0.5) !important;
+            margin-left: ($crispy__modifiers__spacing * $i) !important;
         }
 
         .margin-bottom-#{$i} {
-            margin-bottom: ($crispy__spacing * $i * 0.5) !important;
+            margin-bottom: ($crispy__modifiers__spacing * $i) !important;
         }
 
         .margin-right-#{$i} {
-            margin-right: ($crispy__spacing * $i * 0.5) !important;
+            margin-right: ($crispy__modifiers__spacing * $i) !important;
         }
 
         .padding-top-#{$i} {
-            padding-top: ($crispy__spacing * $i * 0.5) !important;
+            padding-top: ($crispy__modifiers__spacing * $i) !important;
         }
 
         .padding-left-#{$i} {
-            padding-left: ($crispy__spacing * $i * 0.5) !important;
+            padding-left: ($crispy__modifiers__spacing * $i) !important;
         }
 
         .padding-bottom-#{$i} {
-            padding-bottom: ($crispy__spacing * $i * 0.5) !important;
+            padding-bottom: ($crispy__modifiers__spacing * $i) !important;
         }
 
         .padding-right-#{$i} {
-            padding-right: ($crispy__spacing * $i * 0.5) !important;
+            padding-right: ($crispy__modifiers__spacing * $i) !important;
         }
     }
 }

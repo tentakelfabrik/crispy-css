@@ -12,21 +12,35 @@
  *
  */
 
-// font
+$crispy__golden-ratio: 1.618 !default;
+
+// fonts
+$crispy__xxs__multiplicator: 0.9;
+$crispy__xlg__multiplicator: 1.1;
+
 $crispy__font-size: 1rem !default;
-$crispy__font-size-xxs: $crispy__font-size * 0.9 !default;
+$crispy__font-size-xxs: $crispy__font-size * $crispy__xxs__multiplicator !default;
 $crispy__font-size-md: $crispy__font-size !default;
-$crispy__font-size-xlg: $crispy__font-size * 1.1 !default;
+$crispy__font-size-xlg: $crispy__font-size * $crispy__xlg__multiplicator !default;
 
 $crispy__font-weight: normal !default;
 
-$crispy__golden-ratio: 1.618 !default;
+$crispy__line-height: $crispy__golden-ratio !default;
 $crispy__line-height-xxs: 1.4 !default;
 $crispy__line-height-md: $crispy__golden-ratio !default;
 
-$crispy__font-family-primary: Arial, Helvetica, Neue Helvetica, sans-serif !default;
-$crispy__font-family-monospace: Arial, Helvetica, Neue Helvetica, sans-serif !default;
+$crispy__font-family-primary: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+$crispy__font-family-monospace: "Lucida Console", Monaco, monospace !default;
 $crispy__direction: ltr !default;
+
+$crispy__font-sizes: (
+    'default' : $crispy__font-size,
+    'small'   : $crispy__font-size * 0.8,
+    'medium'  : $crispy__font-size * 1.1,
+    'large'   : $crispy__font-size * 1.3,
+    'big'     : $crispy__font-size * 1.5,
+    'mega'    : $crispy__font-size * 1.8
+) !default;
 
 // colors
 $crispy__color-primary: #f18f01 !default;
@@ -35,6 +49,11 @@ $crispy__color-success: #5cb85c !default;
 $crispy__color-warning: #f0ad4e !default;
 $crispy__color-danger: #d9534f !default;
 $crispy__color-info: #0090d4 !default;
+
+$crispy__color-grey-light: hsl(0, 0%, 97%) !default;
+$crispy__color-grey: hsl(0, 0%, 48%) !default;
+$crispy__color-grey-dark: hsl(0, 0%, 29%) !default;
+$crispy__color-white: white !default;
 
 $crispy__color-text: #363636 !default;
 $crispy__color-border: #dfdfdf !default;
@@ -50,29 +69,31 @@ $crispy__color-link-active: $crispy__color-primary !default;
 
 // colors as map
 $crispy__colors: (
-    'primary'  : $crispy__color-primary,
-    'secondary': $crispy__color-secondary,
-    'success'  : $crispy__color-success,
-    'warning'  : $crispy__color-warning,
-    'danger'   : $crispy__color-danger,
-    'info'     : $crispy__color-info
+    'primary'    : $crispy__color-primary,
+    'secondary'  : $crispy__color-secondary,
+    'success'    : $crispy__color-success,
+    'warning'    : $crispy__color-warning,
+    'danger'     : $crispy__color-danger,
+    'info'       : $crispy__color-info,
+    'grey'       : $crispy__color-grey,
+    'grey-light' : $crispy__color-grey-light,
+    'grey-dark'  : $crispy__color-grey-dark,
+    'white'      : $crispy__color-white
 ) !default;
 
-// spacing
-$crispy__spacing: 1.25em !default;
-$crispy__spacing__steps: 5 !default;
+/**
+ *  Padding & Margin
+ *
+ */
+$crispy__margin: 0 0 1em !default;
+$crispy__padding: 0.8em 1.2em !default;
 
-// font-sizes as map
-$crispy__font-sizes: (
-    'default' : $crispy__font-size,
-    'small'   : $crispy__font-size * 0.875,
-    'medium'  : $crispy__font-size * 1.25,
-    'large'   : $crispy__font-size * 1.5,
-    'big'     : $crispy__font-size * 1.75,
-    'mega'    : $crispy__font-size * 2
-) !default;
 
-// heading
+/**
+ *  Heading
+ *
+ */
+
 $crispy__heading__font-sizes: (
     'h1': $crispy__font-size * 2.5,
     'h2': $crispy__font-size * 2,
@@ -84,14 +105,23 @@ $crispy__heading__font-sizes: (
 
 $crispy__heading__font-weight: bold !default;
 $crispy__heading__font-family: Arial, Helvetica, Neue Helvetica, sans-serif !default;
-$crispy__heading__line-height: 1.2 !default;
-$crispy__heading__margin: 0 0 0.5em !default;
+$crispy__heading__margin: 0 0 0.3em !default;
 
-// borders
+
+/**
+ *  Borders
+ *
+ */
+
 $crispy__border-radius: 3px !default;
 $crispy__border: 1px solid $crispy__color-border !default;
 
-// breakpoints
+
+/**
+ *  Breakpoints
+ *
+ */
+
 $crispy__xs : 576px !default;
 $crispy__sm : 768px !default;
 $crispy__md : 992px !default;
@@ -102,12 +132,4 @@ $crispy__xlg: 1600px !default;
 $crispy__z-index: (
     'overlay': 90,
     'modal'  : 100
-) !default;
-
-// width
-$crispy__width: (
-    '25' : 25%,
-    '50' : 50%,
-    '75' : 75%,
-    '100': 100%
 ) !default;

@@ -1,20 +1,20 @@
 /**
- * component: group
+ *  component: group
  *
- * <nav>
- *     <ul class="group group--horizontal">
- *         <li class="group__item"></li>
- *     <ul>
- * </nav>
+ *  <nav>
+ *      <ul class="group group--horizontal">
+ *          <li class="group__item"></li>
+ *      <ul>
+ *  </nav>
  *
- * @author Björn Hase
- * @license http://opensource.org/licenses/MIT The MIT License
- * @link https://gitlab.tentakelfabrik.de/tentakelfabrik/crispy
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://github.com/tentakelfabrik/crispy-css
  *
  */
 
 $crispy__group__character: '/' !default;
-$crispy__group__character__margin: 0 $crispy__spacing 0 !default;
+$crispy__group__character__margin: 0 0.3em 0 !default;
 
 @mixin crispy__group() {
     .group {

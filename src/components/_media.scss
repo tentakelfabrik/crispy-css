@@ -1,19 +1,16 @@
 /**
- * helper: media
+ *  components: media
  *
- * for img & video
+ *  for img & video
  *
  *
- * @author Björn Hase
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://github.com/tentakelfabrik/crispy-css
  *
  */
 
 @mixin crispy__media() {
-
-    .img-wide {
-        width: 100%;
-    }
-
     .img-responsive {
         display: block;
         max-width: 100%;

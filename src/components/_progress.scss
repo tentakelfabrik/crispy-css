@@ -1,22 +1,22 @@
 /**
- * componente: progress
+ *  components: progress
  *
- * <div class="progress">
- *     <div class="progress__inner" style="width: 80%">
+ *  <div class="progress">
+ *      <div class="progress__inner" style="width: 80%">
  *
- *     </div>
- * </div>
+ *      </div>
+ *  </div>
  *
- * @author Björn Hase
- * @license http://opensource.org/licenses/MIT The MIT License
- * @link https://gitlab.tentakelfabrik.de/tentakelfabrik/crispy
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://github.com/tentakelfabrik/crispy-css
  *
  */
 
-$crispy__progress__height: 30px;
-$crispy__progress__background-color: $crispy__color-primary;
-$crispy__progress__border__width: 1px;
-$crispy__progress__border__color: $crispy__color-border;
+$crispy__progress__height: 30px !default;
+$crispy__progress__background-color: $crispy__color-primary !default;
+$crispy__progress__border__width: 1px !default;
+$crispy__progress__border__color: $crispy__color-border !default;
 
 @mixin crispy__progress {
     .progress {

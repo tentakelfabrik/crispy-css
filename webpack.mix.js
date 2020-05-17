@@ -11,27 +11,14 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.sass('src/crispy_all.scss', 'dist/crispy_all.css', {
-        sassOptions: {
-            includePaths: [
-                'node_modules/normalize-scss/sass'
-            ]
-        }
-    })
-    .sass('src/crispy_minimal.scss', 'dist/crispy_minimal.css', {
-        sassOptions: {
-            includePaths: [
-                'node_modules/normalize-scss/sass'
-            ]
-        }
-    })
+mix.sass('src/crispy-all.scss', 'dist/crispy-all.css')
+    .sass('src/crispy-minimal.scss', 'dist/crispy-minimal.css')
     .sass('src/example/styles.scss', 'dist/example/styles.css', {
-        sassOptions: {
-            includePaths: [
-                'node_modules/normalize-scss/sass',
-                'node_modules/reflex-grid/scss'
-            ]
-        }
+            sassOptions: {
+                includePaths: [
+                    'node_modules/reflex-grid/scss'
+                ]
+            }
     })
     .copy('assets/iconmoon/symbol-defs.svg', 'dist/example')
     .options({

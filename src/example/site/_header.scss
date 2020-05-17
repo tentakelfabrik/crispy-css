@@ -11,17 +11,31 @@
 @mixin site__header() {
     .header {
         text-align: center;
+        max-width: 100%;
 
         a {
             text-decoration: none;
 
-            .icon {
-                font-size: 4rem;
+            .icon--big {
+                font-size: 6rem;
             }
 
             &:hover {
                 color: $crispy__color-primary;
             }
+        }
+
+        .group__item {
+            margin-right: 10px;
+        }
+
+        &--fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            z-index: 91;
         }
     }
 }

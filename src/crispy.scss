@@ -1,12 +1,7 @@
 @import
 
-    'normalize',
-
-    'functions',
     'variables',
-    'mixins',
     'core',
-
     'modifiers',
 
     'components/button',
@@ -21,3 +16,5 @@
     'components/progress',
     'components/table',
     'components/field';
+
+@include crispy__core();

@@ -1,6 +1,6 @@
 {
   "name": "crispy-css",
-  "version": "2.2.3",
+  "version": "3.0.0-pre",
   "description": "Lightweight Framework for building Websites and Apps for Mobile, Tablet and Desktop. Minimal UI-Elements and Helpers.",
   "repository": {
     "type": "git",
@@ -19,14 +19,13 @@
   "license": "MIT",
   "devDependencies": {
     "cross-env": "^5.2.1",
-    "laravel-mix": "^5.0.0",
+    "laravel-mix": "^5.0.4",
     "postcss-css-variables": "^0.11.0",
-    "resolve-url-loader": "^3.1.0",
-    "sass": "^1.23.0",
-    "sass-loader": "^8.0.0"
+    "resolve-url-loader": "^3.1.1",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2"
   },
   "dependencies": {
-    "normalize-scss": "^7.0.1",
     "reflex-grid": "^2.0.4"
   }
 }

@@ -1,27 +1,25 @@
 /**
- * component: code
+ *  component: code
  *
- * <pre class="code">
- *     <code>
- *     //
- *     </code>
- * </pre>
+ *  <pre class="code">
+ *      <code>
+ *      //
+ *      </code>
+ *  </pre>
  *
- * @author Björn Hase
- * @license http://opensource.org/licenses/MIT The MIT License
- * @link https://gitlab.tentakelfabrik.de/tentakelfabrik/crispy
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://github.com/tentakelfabrik/crispy-css
  *
  */
 
-$crispy__code__font-family: monospace, monospace !default;
-$crispy__code__padding: ($crispy__spacing * 0.5) $crispy__spacing !default;
-$crispy__code__margin: 0 0 $crispy__spacing !default;
-$crispy__code__border: 1px solid $crispy__color-border !default;
-$crispy__code__background-color: #f9f9f9 !default;
+$crispy__code__padding: $crispy__padding !default;
+$crispy__code__margin: $crispy__margin !default;
+$crispy__code__border: $crispy__border !default;
+$crispy__code__background-color: $crispy__color-grey-light !default;
 
 @mixin crispy__code() {
     .code {
-        font-family: $crispy__code__font-family;
         white-space: pre;
         display: block;
 

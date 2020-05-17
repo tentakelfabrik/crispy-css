@@ -1,20 +1,23 @@
 /**
- * component: icon
+ *  component: icon
  *
+ *  <svg class="icon">
+ *      //
+ *  </svg>
  *
- *
- * @author Björn Hase
- * @license http://opensource.org/licenses/MIT The MIT License
- * @link https://gitlab.tentakelfabrik.de/tentakelfabrik/crispy
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://github.com/tentakelfabrik/crispy-css
  *
  */
 
-$crispy__icon__width: 1.125em !default;
+$crispy__icon__size: 1.1em !default;
+$crispy__icon__offset: -0.2em !default;
 
 @mixin crispy__icon {
     .icon {
-        width: $crispy__icon__width;
-        height: $crispy__icon__width;
+        width: $crispy__icon__size;
+        height: $crispy__icon__size;
 
         max-height: 100%;
         max-width: 100%;
@@ -29,9 +32,10 @@ $crispy__icon__width: 1.125em !default;
         }
     }
 
-    @each $name, $color in $crispy__colors {
-        .icon-color-#{$name} {
-            fill: $color !important;
+    // workaround for buttons and a
+    .button, a {
+        .icon {
+            margin: $crispy__icon__offset 0 0;
         }
     }
 

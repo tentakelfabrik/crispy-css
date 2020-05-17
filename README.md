@@ -1,4 +1,4 @@
-# Crispy - Lightweight CSS / SCSS Framework
+# Lightweight CSS Framework for Building Apps and Websites
 
 ## Installation
 
@@ -26,7 +26,6 @@ Now include Mixins you need. Components and Modifiziers only works if you includ
 @include crispy__code();
 @include crispy__field();
 @include crispy__group();
-@include crispy__heading();
 @include crispy__hero();
 @include crispy__icon();
 @include crispy__media();

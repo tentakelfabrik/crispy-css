@@ -1,15 +1,9 @@
 @import
 
     'reflex',
-
-    '../crispy_all',
-
+    '../crispy-all',
     'site/header',
-    'site/footer',
-
-    'components/button',
     'components/nav',
-
     'templates/home';
 
 @include site__header();
@@ -74,6 +68,6 @@
     margin: 0 0 0.5em;
 
     .icon {
-        font-size: 4rem !important;
+        font-size: 3rem !important;
     }
 }

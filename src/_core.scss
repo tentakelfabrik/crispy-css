@@ -1,18 +1,28 @@
 /**
- * core
+ *  core
  *
- * import normalize
+ *  - normalize
+ *  - typograhy
+ *  - links
+ *  - fonts
  *
+ *  Thanks to https://necolas.github.io/normalize.css/, use a lot from them
  *
- * @author Björn Hase
- * @license http://opensource.org/licenses/MIT The MIT License
- * @link https://gitlab.tentakelfabrik.de/tentakelfabrik/crispy
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://github.com/tentakelfabrik/crispy-css
  *
  */
+
+@import
+    'functions',
+    'mixins';
 
 @mixin crispy__core() {
     html {
         font-size: 100%;
+        line-height: 1.15; // Correct the line height in all browsers.
+        -webkit-text-size-adjust: 100%; // Prevent adjustments of font size after orientation changes in iOS.
     }
 
     body,
@@ -24,6 +34,10 @@
     html,
     legend {
         box-sizing: border-box;
+    }
+
+    main {
+        display: block; // Render the `main` element consistently in IE.
     }
 
     *,
@@ -39,7 +53,7 @@
 
     // paragraphs
     p {
-        margin: ($crispy__spacing * 0.3) 0 $crispy__spacing 0;
+        margin: $crispy__margin;
     }
 
     // Semantic text elements
@@ -47,6 +61,38 @@
     ins,
     u {
         text-decoration-skip: ink edges;
+    }
+
+    // Add the correct font weight in Chrome, Edge, and Safari.
+    b,
+    strong {
+        font-weight: bolder;
+    }
+
+    // Add the correct font size in all browsers.
+    small {
+        font-size: 80%;
+    }
+
+    /**
+     *  Prevent `sub` and `sup` elements from affecting the line height in
+     *  all browsers.
+     */
+
+    sub,
+    sup {
+      font-size: 75%;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline;
+    }
+
+    sub {
+      bottom: -0.25em;
+    }
+
+    sup {
+      top: -0.5em;
     }
 
     a {
@@ -73,26 +119,36 @@
 
     // blockquote
     blockquote {
-        border-left: 1px solid $crispy__color-secondary;
+        border-left: $crispy__border;
         margin-left: 0;
-        padding: 0.125em 0.5em;
+        padding: $crispy__padding;
 
         p:last-child {
             margin-bottom: 0;
         }
     }
 
-    // lists
+    /**
+     *  lists
+     *
+     */
+
     dl,
     ol,
     ul {
         padding: 0;
-        margin: 0 0 $crispy__spacing ($crispy__spacing * 2);
+        margin: $crispy__margin;
+    }
+
+    ol,
+    ul {
+        margin-left: 1.5em;
     }
 
     ol ol,
     ul ul {
-        margin-top: $crispy__spacing * 0.125;
+        margin-top: 0;
+        margin-left: 1em;
     }
 
     ol {
@@ -101,6 +157,10 @@
 
     ul {
         list-style: disc outside;
+    }
+
+    dl {
+        margin-left: 0.5em;
     }
 
     dd,
@@ -114,21 +174,95 @@
 
     // media
     figure {
-        margin: 0 0 $crispy__spacing;
+        margin: $crispy__margin;
     }
 
     figcaption {
-        margin: $crispy__spacing 0 0;
+        margin: 0.3em 0 0;
+    }
+
+    /**
+     *  form elements
+     *
+     *
+     */
+
+    // Remove the margin in Firefox and Safari.
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+        margin: 0;
+    }
+
+    // Remove the inheritance of text transform in Firefox
+    button,
+    select {
+      text-transform: none;
+    }
+
+    // Correct the inability to style clickable types in iOS and Safari.
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+        -webkit-appearance: button;
+    }
+
+    // Remove the inner border and padding in Firefox.
+    button::-moz-focus-inner,
+    [type="button"]::-moz-focus-inner,
+    [type="reset"]::-moz-focus-inner,
+    [type="submit"]::-moz-focus-inner {
+        border-style: none;
+        padding: 0;
+    }
+
+    // Restore the focus styles unset by the previous rule.
+    button:-moz-focusring,
+    [type="button"]:-moz-focusring,
+    [type="reset"]:-moz-focusring,
+    [type="submit"]:-moz-focusring {
+        outline: 1px dotted ButtonText;
+    }
+
+    // Correct the padding in Firefox.
+    fieldset {
+        padding: 0.35em 0.75em 0.625em;
     }
 
     // divider
     hr {
+        box-sizing: content-box; // Add the correct box sizing in Firefox.
+        height: 0; // Add the correct box sizing in Firefox.
+        overflow: visible; // Show the overflow in Edge and IE.
+
         border: 0;
         border-top: 1px solid $crispy__color-secondary;
-        margin: $crispy__spacing 0;
+        margin: 0.3em 0;
     }
 
-    // heading
+    code,
+    pre,
+    kbd,
+    samp {
+        font-family: $crispy__font-family-monospace;
+
+        // responsive for font-size
+        font-size: $crispy__font-size-xxs;
+
+        @include crispy__media-md() {
+            font-size: $crispy__font-size-md;
+        }
+    }
+
+    /**
+     *  Heading
+     *
+     *
+     */
+
     h1, .h1,
     h2, .h2,
     h3, .h3,
@@ -137,30 +271,70 @@
     h6, .h6 {
         font-family: $crispy__heading__font-family;
         font-weight: $crispy__heading__font-weight;
-        line-height: $crispy__heading__line-height;
+        line-height: 1.2;
         margin: $crispy__heading__margin;
+    }
+
+    h5 {
+        line-height: 1.4;
+    }
+
+    h6 {
+        line-height: $crispy__line-height;
     }
 
     @each $h, $font-size in $crispy__heading__font-sizes {
         #{$h}, .#{$h} {
-            font-size: $font-size * 0.9;
+            font-size: $font-size * $crispy__xxs__multiplicator;
 
+            // responsive for font-size
             @include crispy__media-md() {
                 font-size: $font-size;
             }
 
             @include crispy__media-xlg() {
-                font-size: $font-size * 1.2;
+                font-size: $font-size * $crispy__xlg__multiplicator;
             }
         }
     }
 
-    // body
-    body {
+    /**
+     *
+     *
+     *
+     */
+
+    body,
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
         font-family: $crispy__font-family-primary;
         font-weight: $crispy__font-weight;
+    }
 
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+        font-size: 0.9em;
+        line-height: 1.4;
+    }
+
+    /**
+     *  body
+     *
+     */
+    body {
+        color: $crispy__color-text;
+        background-color: $crispy__color-background;
+        direction: $crispy__direction;
+
+        // responsive for font-size
         font-size: $crispy__font-size-xxs;
+
         @include crispy__media-md() {
             font-size: $crispy__font-size-md;
         }
@@ -169,13 +343,11 @@
             font-size: $crispy__font-size-xlg;
         }
 
+        // responsive for line-height
         line-height: $crispy__line-height-xxs;
+
         @include crispy__media-md() {
             line-height: $crispy__line-height-md;
         }
-
-        color: $crispy__color-text;
-        background-color: $crispy__color-background;
-        direction: $crispy__direction;
     }
 }
