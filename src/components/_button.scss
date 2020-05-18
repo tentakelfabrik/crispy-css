@@ -11,7 +11,8 @@
  *
  */
 
-$crispy__button__padding: 0.25em 1em 0.3em !default;
+$crispy__button__padding: 0.5em 1.2em 0.6em !default;
+$crispy__button__margin: $crispy__margin !default;
 
 @mixin crispy__button() {
     .button {
@@ -21,6 +22,7 @@ $crispy__button__padding: 0.25em 1em 0.3em !default;
         text-decoration: none;
 
         padding: $crispy__button__padding;
+        margin: $crispy__button__margin;
 
         &:hover {
             cursor: pointer;

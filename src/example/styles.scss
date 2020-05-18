@@ -7,9 +7,10 @@
     'templates/home';
 
 @include site__header();
+@include template__home();
 
 .container {
-    max-width: $crispy__md;
+    max-width: $crispy__lg;
 }
 
 .sm, .md, .md-only, .lg-only {
@@ -60,14 +61,3 @@
     @include triangle('bottom', $crispy__color-primary);
 }
 
-.h3__icon {
-    display: inline-block;
-    border: 3px solid $crispy__color-primary;
-    border-radius: 50%;
-    padding: 0.6em;
-    margin: 0 0 0.5em;
-
-    .icon {
-        font-size: 3rem !important;
-    }
-}

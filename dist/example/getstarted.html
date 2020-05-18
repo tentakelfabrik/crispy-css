@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>Get Started | Crispy CSS</title>
-	<meta name="description" content="Lightweight Framework for building Websites and Apps for Mobile, Tablet and Desktop. Minimal UI-Elements, Functions and Helpers.">
+	<meta name="description" content="Documentation for Crispy CSS, a lightweight CSS Framework for building Apps and Websites">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="styles.css">
 </head>
@@ -26,7 +26,12 @@
                                 </a>
                             </li>
                             <li class="group__item">
-                                <a href="#typography" class="text-color-white margin-left-3">
+                                <a href="#installation" class="text-color-white margin-left-3">
+                                    Installation
+                                </a>
+                            </li>
+                            <li class="group__item">
+                                <a href="#typography" class="text-color-white">
                                     Typography
                                 </a>
                             </li>
@@ -36,13 +41,18 @@
                                 </a>
                             </li>
                             <li class="group__item">
-                                <a href="#components" class="text-color-white">
-                                    Functions
+                                <a href="#modifiers" class="text-color-white">
+                                    Modifiers
                                 </a>
                             </li>
                             <li class="group__item">
-                                <a href="#components" class="text-color-white">
-                                    Modifiziers
+                                <a href="#mixins" class="text-color-white">
+                                    Mixins
+                                </a>
+                            </li>
+                            <li class="group__item">
+                                <a href="#functions" class="text-color-white">
+                                    Functions
                                 </a>
                             </li>
                         </ul>
@@ -55,20 +65,22 @@
         <div class="grid">
             <div class="col-12">
 
-                <h1 class="h2 margin-top-4 margin-bottom-2 text-center">
+                <h1 class="h2 margin-top-6 margin-bottom-2 text-center">
                     Get started!
                 </h1>
 
-                <h2 class="h3">Installation</h2>
-                <pre class="code"><code>npm install crispy-css</code></pre>
+                <h2 id="installation" class="marginless padding-top-6">
+                    Installation
+                </h2>
+                <hr class="margin-bottom-2">
 
-                <h2 class="h3">How it works</h2>
+                <pre class="code"><code>npm install crispy-css</code></pre>
 
                 <h3 class="h4">SCSS</h3>
                 <pre class="code"><code>@import
     "crispy";</code></pre>
-                    <p>Now include Mixins you need. Components and Modifiziers only works if you include them,</p>
-                    <pre class="code"><code>@include crispy__core();
+                <p>Now include Mixins you need. Components and Modifiziers only works if you include them,</p>
+                <pre class="code"><code>@include crispy__core();
 @include crispy__modifiers();
 
 // components
@@ -100,24 +112,26 @@
                     <h3 class="h4">CSS</h3>
                     <p>For using CSS you can use <span class="text-bold">crispy-all.css</span> for all Styles or <span class="text-bold">crispy-mininmal.css</span> without Components.</p>
 
-                    <h2 class="h3">Example</h2>
+                    <h3 class="h3">Example</h3>
                     <p>
                         You find an example in "/src/example", this is this Documentation. In the given example there are additional directories. These ones are part of a structure which might be helpful for you.
                     </p>
-                    <h4>Site</h4>
+
+                    <h3>Site</h3>
                     <p>
                         Contains header, footer, partials that are used on a site or webapp. Header and Footer are not classical components, there often more complex and have a special brand.
                     </p>
-                    <h4>Templates</h4>
+
+                    <h3>Templates</h3>
                     <p>
                         Templates are for a single site or a group of sites, they are complex and there is no benefit so reuse them as components.
                     </p>
 
     				<!-- typography -->
-    				<hr class="margin-top-3">
-    				<h2 id="typography" class="margin-top-1">
+    				<h2 id="typography" class="marginless padding-top-6">
                         Typography
                     </h2>
+                    <hr class="margin-bottom-2">
 
                     <!-- abbr -->
     				<h3 class="h4 margin-top-2">a</h3>
@@ -207,7 +221,7 @@
     					<dd>defined item 1</dd>
     				</dl>
 
-                    <!-- components / heading -->
+                    <!-- typography / heading -->
     				<h3 class="h4 margin-top-2">
                         Heading
                     </h3>
@@ -232,10 +246,10 @@
     				<h6>Heading h6</h6>
 
     				<!-- components -->
-    				<hr class="margin-top-3">
-    				<h2 id="components" class="margin-top-1">
+    				<h2 id="components" class="marginless padding-top-6">
                         Components
                     </h2>
+                    <hr class="margin-bottom-1">
 
     				<!-- components / button -->
     				<h3 class="h4 margin-top-2">
@@ -243,9 +257,32 @@
                     </h3>
     				<h4 class="h6">Html:</h4>
     				<pre class="code margin-top-1"><code>&lt;button class=&quot;button&quot;&gt;&lt;/button&gt;
+&lt;button class=&quot;button text-size-large&quot;&gt;&lt;/button&gt;
 &lt;button class=&quot;button width-100&quot;&gt;&lt;/button&gt;</code></pre>
     				<button class="button">Default</button>
-    				<button class="button width-100 margin-top-1">Info</button>
+
+                    <p>
+                        With <a href="#modifiers">Modifiers</a> you can also change Size and width.
+                    </p>
+
+                    <button class="button text-size-large">Default</button>
+    				<button class="button width-100">Info</button>
+
+                    <p>
+                        Also with the Component Icon you can use SVG.
+                    </p>
+
+                    <button class="button">
+                        <svg class="icon icon-color-danger" aria-hidden="true">
+                            <use xlink:href="symbol-defs.svg#icon-flask"></use>
+                        </svg>
+                    </button>
+                    <button class="button">
+                        <svg class="icon icon-color-danger" aria-hidden="true">
+                            <use xlink:href="symbol-defs.svg#icon-flask"></use>
+                        </svg>
+                        Button
+                    </button>
 
                     <!-- components / code -->
     				<h3 class="h4 margin-top-2">
@@ -308,7 +345,7 @@
                         Icon
                     </h3>
                     <p>
-                        To change Size you can use "text-size-*" that you find in the <span class="text-weight-bold">modifiers</span>.
+                        Change Size of Icons with "text-size-*", you find them in the <a href="#modifiers">modifiers</a>.
                     </p>
                     <h4 class="h6">Html:</h4>
                     <pre class="code"><code>&lt;svg class=&quot;icon text-size-small&quot;&gt;
@@ -317,35 +354,20 @@
                     <div class="panel">
                         <div class="panel__inner">
                             <svg class="icon text-size-small" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-spaceinvaders"></use>
+                                <use xlink:href="symbol-defs.svg#icon-flask"></use>
                             </svg>
                             <svg class="icon" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-spaceinvaders"></use>
+                                <use xlink:href="symbol-defs.svg#icon-flask"></use>
                             </svg>
                             <svg class="icon text-size-large" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-spaceinvaders"></use>
+                                <use xlink:href="symbol-defs.svg#icon-flask"></use>
                             </svg>
                             <svg class="icon text-size-big" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-spaceinvaders"></use>
+                                <use xlink:href="symbol-defs.svg#icon-flask"></use>
                             </svg>
                             <svg class="icon text-size-mega" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-spaceinvaders"></use>
+                                <use xlink:href="symbol-defs.svg#icon-flask"></use>
                             </svg>
-                        </div>
-                    </div>
-                    <div class="panel">
-                        <div class="panel__inner">
-                            <button class="button">
-                                <svg class="icon" aria-hidden="true">
-                                    <use xlink:href="symbol-defs.svg#icon-spaceinvaders"></use>
-                                </svg>
-                            </button>
-                            <button class="button">
-                                <svg class="icon" aria-hidden="true">
-                                    <use xlink:href="symbol-defs.svg#icon-spaceinvaders"></use>
-                                </svg>
-                                Button
-                            </button>
                         </div>
                     </div>
                     <p class="margin-top-2">
@@ -353,12 +375,12 @@
                     </p>
                     <h4 class="h6">Html:</h4>
                     <pre class="code"><code>&lt;svg class=&quot;icon icon-color-danger&quot;&gt;
-    &lt;use xlink:href=&quot;symbol-defs.svg#icon-minus&quot;&gt;&lt;/use&gt;
+    &lt;use xlink:href=&quot;symbol-defs.svg#icon-flask&quot;&gt;&lt;/use&gt;
 &lt;/svg&gt;</code></pre>
                     <div class="panel">
                         <div class="panel__inner">
                             <svg class="icon icon-color-danger" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-spaceinvaders"></use>
+                                <use xlink:href="symbol-defs.svg#icon-flask"></use>
                             </svg>
                         </div>
                     </div>
@@ -484,28 +506,63 @@
     					</tbody>
     				</table>
 
-                    <!-- components / field / checkbox -->
-    				<h3 class="h4 margin-top-0">
-                        Checkbox
+                    <!-- components / media -->
+                    <h3 class="h4 margin-top-1">
+                        Media
                     </h3>
+    				<pre class="code"><code>&lt;img class=&quot;img-responsive&quot; src=&quot;https://picsum.photos/400&quot; /&gt;
+&lt;figure&gt;
+    &lt;img class=&quot;img-responsive&quot; src=&quot;https://picsum.photos/400&quot; /&gt;
+    &lt;figcaption class=&quot;text-center&quot;&gt;Lorem Ipsum&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;div class=&quot;video-responsive&quot; style=&quot;height: 280px;&quot;&gt;
+    &lt;iframe src=&quot;https://giphy.com/embed/13XW2MJE0XCoM0&quot; width=&quot;480&quot; height=&quot;361&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</code></pre>
+    				<div class="grid">
+    					<div class="col-6">
+    						<img class="img-responsive width-100" src="https://picsum.photos/400" />
+    					</div>
+    					<div class="col-6">
+    						<figure>
+    							<img class="img-responsive width-100" src="https://picsum.photos/400" />
+    							<figcaption class="text-center">Lorem Ipsum</figcaption>
+    						</figure>
+    					</div>
+    				</div>
+
+                    <h3 class="h4 margin-top-0">
+                        Fields
+                    </h3>
+
+                    <p>
+                        Fields are Form-Elements.
+                    </p>
+
+                    <!-- components / field / checkbox -->
+    				<h4 class="h5">
+                        Checkbox
+                    </h4>
+                    <p>
+                        Checkboxes
+                    </p>
                     <div class="field">
                         <input id="field__checkbox__1" class="field__choice" type="checkbox" name="field__checkbox__1" value="true" />
                         <label for="field__checkbox__1" class="field__label">
                             <svg class="icon field__choice__unchecked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-minus"></use>
+                                <use xlink:href="symbol-defs.svg#icon-toggle-left"></use>
                             </svg>
                             <svg class="icon field__choice__checked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-checked"></use>
+                                <use xlink:href="symbol-defs.svg#icon-toggle-right"></use>
                             </svg>
                             checkbox 1
                         </label>
                         <input id="field__checkbox__2" class="field__choice" type="checkbox" name="field__checkbox__2" value="true" />
                         <label for="field__checkbox__2" class="field__label">
                             <svg class="icon field__choice__unchecked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-minus"></use>
+                                <use xlink:href="symbol-defs.svg#icon-toggle-left"></use>
                             </svg>
                             <svg class="icon field__choice__checked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-checked"></use>
+                                <use xlink:href="symbol-defs.svg#icon-toggle-right"></use>
                             </svg>
                             checkbox 2
                         </label>
@@ -514,10 +571,10 @@
                         <input id="field__checkbox__3" class="field__choice" type="checkbox" name="field__checkbox__3" value="true" />
                         <label for="field__checkbox__3" class="field__label">
                             <svg class="icon field__choice__unchecked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-minus"></use>
+                                <use xlink:href="symbol-defs.svg#icon-toggle-left"></use>
                             </svg>
                             <svg class="icon field__choice__checked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-checked"></use>
+                                <use xlink:href="symbol-defs.svg#icon-toggle-right"></use>
                             </svg>
                             checkbox 1
                         </label>
@@ -534,20 +591,20 @@
                         <input id="field__radio__1" class="field__choice" type="radio" name="field__radio__1[]" value="true" />
                         <label for="field__radio__1" class="field__label">
                             <svg class="icon field__choice__unchecked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-minus"></use>
+                                <use xlink:href="symbol-defs.svg#icon-toggle-left"></use>
                             </svg>
                             <svg class="icon field__choice__checked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-checked" />
+                                <use xlink:href="symbol-defs.svg#icon-toggle-right" />
                             </svg>
                             radio item 1
                         </label><br />
                         <input id="field__radio__2" class="field__choice" type="radio" name="field__radio__1[]" value="true" />
                         <label for="field__radio__2" class="field__label">
                             <svg class="icon field__choice__unchecked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-minus"></use>
+                                <use xlink:href="symbol-defs.svg#icon-toggle-left"></use>
                             </svg>
                             <svg class="icon field__choice__checked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-checked" />
+                                <use xlink:href="symbol-defs.svg#icon-toggle-right" />
                             </svg>
                             radio item 2
                         </label>
@@ -558,20 +615,20 @@
                         <input id="field__radio__3" class="field__choice" type="radio" name="field__radio__2[]" value="true" />
                         <label for="field__radio__3" class="field__label">
                             <svg class="icon field__choice__unchecked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-minus"></use>
+                                <use xlink:href="symbol-defs.svg#icon-toggle-left"></use>
                             </svg>
                             <svg class="icon field__choice__checked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-checked" />
+                                <use xlink:href="symbol-defs.svg#icon-toggle-right" />
                             </svg>
                             radio item 1
                         </label><br />
                         <input id="field__radio__4" class="field__choice" type="radio" name="field__radio__2[]" value="true" />
                         <label for="field__radio__4" class="field__label">
                             <svg class="icon field__choice__unchecked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-minus"></use>
+                                <use xlink:href="symbol-defs.svg#icon-toggle-left"></use>
                             </svg>
                             <svg class="icon field__choice__checked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-checked" />
+                                <use xlink:href="symbol-defs.svg#icon-toggle-right" />
                             </svg>
                             radio item 2
                         </label>
@@ -649,69 +706,40 @@
                         </div>
                     </div>
 
-    				<!-- functions -->
-    				<hr class="margin-top-3">
-    				<h2 id="functions" class="margin-top-1">
-                        Functions
-                    </h2>
-
-    				<!-- functions / stripUnit -->
-    				<h3 class="h4 margin-top-0">
-                        stripUnit()
-                    </h3>
-    				<h4 class="h6 margin-top-1">Sass:</h4>
-    				<pre class="code"><code>stripUnit(10px);</code></pre>
-    				<p>
-    					Returns value without unit.
-    				</p>
-
-                    <!-- functions / zIndex -->
-    				<h3 class="h4 margin-top-0">
-                        zIndex(name)
-                    </h3>
-    				<h4 class="h6 margin-top-1">Sass:</h4>
-    				<pre class="code"><code>zIndex('modal');</code></pre>
-    				<p>
-    					Returns value from $crispy__z-index.
-    				</p>
-                    <h4 class="h6 margin-top-1">Sass:</h4>
-    				<pre class="code"><code>$crispy__z-index: (
-    'overlay': 90,
-    'modal'  : 100
-);</code></pre>
-
     				<!-- modifiers -->
-    				<hr class="margin-top-3">
-    				<h2 id="modifiers" class="margin-top-1">
-                        Modifiziers
+    				<h2 id="modifiers" class="padding-top-6">
+                        Modifiers
                     </h2>
+                    <hr class="margin-bottom-1">
 
     				<!-- modifiers / margin & padding -->
     				<h3 class="h4 margin-top-1">
                         Margin & Padding
                     </h3>
     				<p>
-    					Adding margin-top, -left, -bottom and -right and the same for padding.
+    					Adding margin and padding-top, -left, -bottom and -right. For left and right steps and values
+                        are halved.
     				</p>
                     <h4 class="h6 margin-top-1">Sass:</h4>
                     <pre class="code">
-$crispy__modifiers__spacing: 0.75em;
+$crispy__modifiers__spacing__value: 0.75em;
 $crispy__modifiers__spacing__steps: 6;
 </pre></code>
 
                     <h4 class="h6 margin-top-1">Html:</h4>
-    				<pre class="code">&lt;div class=&quot;panel&quot;&gt;margin-bottom-0&lt;/div&gt;
-&lt;div class=&quot;margin-bottom-1&quot;&gt;margin-bottom-1&lt;/div&gt;
-&lt;div class=&quot;margin-bottom-2&quot;&gt;margin-bottom-2&lt;/div&gt;
-&lt;div class=&quot;margin-bottom-3&quot;&gt;margin-bottom-3&lt;/div&gt;
-&lt;div class=&quot;margin-bottom-4&quot;&gt;margin-bottom-4&lt;/div&gt;
-&lt;div class=&quot;margin-bottom-5&quot;&gt;margin-bottom-5&lt;/div&gt;</code></pre>
-    				<div class="panel panel__inner">margin-bottom-0</div>
+    				<pre class="code">&lt;div class=&quot;margin-bottom-1&quot;&gt;margin-bottom-1&lt;/div&gt;</code></pre>
+    				<div class="panel panel__inner margin-bottom-0">margin-bottom-0</div>
     				<div class="panel panel__inner margin-bottom-1">margin-bottom-1</div>
     				<div class="panel panel__inner margin-bottom-2">margin-bottom-2</div>
     				<div class="panel panel__inner margin-bottom-3">margin-bottom-3</div>
                     <div class="panel panel__inner margin-bottom-4">margin-bottom-4</div>
                     <div class="panel panel__inner margin-bottom-5">margin-bottom-5</div>
+                    <div class="panel panel__inner margin-bottom-6">margin-bottom-6</div>
+
+                    <div class="panel panel__inner margin-left-0 margin-bottom-1">margin-left-0</div>
+    				<div class="panel panel__inner margin-left-1 margin-bottom-1">margin-left-1</div>
+    				<div class="panel panel__inner margin-left-2 margin-bottom-1">margin-left-2</div>
+    				<div class="panel panel__inner margin-left-3 margin-bottom-1">margin-left-3</div>
 
                     <p>
                         Also set padding and margin to 0,
@@ -719,30 +747,6 @@ $crispy__modifiers__spacing__steps: 6;
 
                     <pre class="code">&lt;div class=&quot;marginless&quot;&lt;/div&gt;
 &lt;div class=&quot;paddingless&quot;&lt;/div&gt;</code></pre>
-
-    				<!-- modifiers / media -->
-    				<h3 class="h4 margin-top-1">
-                        Media
-                    </h3>
-    				<pre class="code"><code>&lt;img class=&quot;img-responsive&quot; src=&quot;https://picsum.photos/400&quot; /&gt;
-&lt;figure&gt;
-    &lt;img class=&quot;img-responsive&quot; src=&quot;https://picsum.photos/400&quot; /&gt;
-    &lt;figcaption class=&quot;text-center&quot;&gt;Lorem Ipsum&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;div class=&quot;video-responsive&quot; style=&quot;height: 280px;&quot;&gt;
-    &lt;iframe src=&quot;https://giphy.com/embed/13XW2MJE0XCoM0&quot; width=&quot;480&quot; height=&quot;361&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;</code></pre>
-    				<div class="grid">
-    					<div class="col-6">
-    						<img class="img-responsive width-100" src="https://picsum.photos/400" />
-    					</div>
-    					<div class="col-6">
-    						<figure>
-    							<img class="img-responsive width-100" src="https://picsum.photos/400" />
-    							<figcaption class="text-center">Lorem Ipsum</figcaption>
-    						</figure>
-    					</div>
-    				</div>
 
                     <!-- modifiers / Typography -->
                     <h3 class="h4 margin-top-1">
@@ -931,6 +935,37 @@ $crispy__modifiers__spacing__steps: 6;
     						<div class="panel panel__inner lg-only margin-bottom-1">lg-only</div>
     					</div>
     				</div>
+
+                    <!-- functions -->
+    				<h2 id="functions" class="margin-top-6">
+                        Functions
+                    </h2>
+                    <hr class="margin-bottom-1">
+
+    				<!-- functions / stripUnit -->
+    				<h3 class="h4 margin-top-0">
+                        stripUnit()
+                    </h3>
+    				<h4 class="h6 margin-top-1">Sass:</h4>
+    				<pre class="code"><code>stripUnit(10px);</code></pre>
+    				<p>
+    					Returns value without unit.
+    				</p>
+
+                    <!-- functions / zIndex -->
+    				<h3 class="h4 margin-top-0">
+                        zIndex(name)
+                    </h3>
+    				<h4 class="h6 margin-top-1">Sass:</h4>
+    				<pre class="code"><code>zIndex('modal');</code></pre>
+    				<p>
+    					Returns value from $crispy__z-index.
+    				</p>
+                    <h4 class="h6 margin-top-1">Sass:</h4>
+    				<pre class="code"><code>$crispy__z-index: (
+    'overlay': 90,
+    'modal'  : 100
+);</code></pre>
     			</div>
     		</div>
         </div>

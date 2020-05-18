@@ -1,4 +1,6 @@
-let mix = require('laravel-mix');
+const mix = require('laravel-mix');
+
+const SvgSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 
 /*
  |--------------------------------------------------------------------------
@@ -11,6 +13,19 @@ let mix = require('laravel-mix');
  |
  */
 
+mix.webpackConfig({
+    plugins: [
+        new SvgSpritemapPlugin('assets/svg/*.svg', {
+            output: {
+                filename: 'dist/example/symbol-defs.svg'
+            },
+            sprite: {
+                prefix: 'icon-'
+            }
+        })
+    ]
+});
+
 mix.sass('src/crispy-all.scss', 'dist/crispy-all.css')
     .sass('src/crispy-minimal.scss', 'dist/crispy-minimal.css')
     .sass('src/example/styles.scss', 'dist/example/styles.css', {
@@ -20,7 +35,6 @@ mix.sass('src/crispy-all.scss', 'dist/crispy-all.css')
                 ]
             }
     })
-    .copy('assets/iconmoon/symbol-defs.svg', 'dist/example')
     .options({
         postCss: [
             require('postcss-css-variables')()

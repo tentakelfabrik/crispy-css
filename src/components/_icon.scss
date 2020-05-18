@@ -32,8 +32,8 @@ $crispy__icon__offset: -0.2em !default;
         }
     }
 
-    // workaround for buttons and a
-    .button, a {
+    // workaround for buttons
+    .button {
         .icon {
             margin: $crispy__icon__offset 0 0;
         }

@@ -7,7 +7,7 @@
  */
 
 // spacing
-$crispy__modifiers__spacing: 0.75em !default;
+$crispy__modifiers__spacing: 0.75rem !default;
 $crispy__modifiers__spacing__steps: 6 !default;
 
 // width
@@ -328,37 +328,55 @@ $crispy__modifiers__width: (
         padding: 0 !important;
     }
 
-    @for $i from 0 through $crispy__modifiers__spacing__steps {
-        .margin-top-#{$i} {
-            margin-top: ($crispy__modifiers__spacing * $i) !important;
-        }
-
+    @for $i from 0 through ($crispy__modifiers__spacing__steps / 2) {
         .margin-left-#{$i} {
-            margin-left: ($crispy__modifiers__spacing * $i) !important;
-        }
-
-        .margin-bottom-#{$i} {
-            margin-bottom: ($crispy__modifiers__spacing * $i) !important;
+            margin-left: ($crispy__modifiers__spacing * $i * 0.5) !important;
         }
 
         .margin-right-#{$i} {
-            margin-right: ($crispy__modifiers__spacing * $i) !important;
-        }
-
-        .padding-top-#{$i} {
-            padding-top: ($crispy__modifiers__spacing * $i) !important;
+            margin-right: ($crispy__modifiers__spacing * $i * 0.5) !important;
         }
 
         .padding-left-#{$i} {
-            padding-left: ($crispy__modifiers__spacing * $i) !important;
-        }
-
-        .padding-bottom-#{$i} {
-            padding-bottom: ($crispy__modifiers__spacing * $i) !important;
+            padding-left: ($crispy__modifiers__spacing * $i * 0.5) !important;
         }
 
         .padding-right-#{$i} {
-            padding-right: ($crispy__modifiers__spacing * $i) !important;
+            padding-right: ($crispy__modifiers__spacing * $i * 0.5) !important;
+        }
+    }
+
+    @for $i from 0 through $crispy__modifiers__spacing__steps {
+        .margin-top-#{$i} {
+            margin-top: ($crispy__modifiers__spacing * $i * 0.5) !important;
+
+            @include crispy__media-md() {
+                margin-top: ($crispy__modifiers__spacing * $i) !important;
+            }
+        }
+
+        .margin-bottom-#{$i} {
+            margin-bottom: ($crispy__modifiers__spacing * $i * 0.5) !important;
+
+            @include crispy__media-md() {
+                margin-bottom: ($crispy__modifiers__spacing * $i) !important;
+            }
+        }
+
+        .padding-top-#{$i} {
+            padding-top: ($crispy__modifiers__spacing * $i * 0.5) !important;
+
+            @include crispy__media-md() {
+                padding-top: ($crispy__modifiers__spacing * $i) !important;
+            }
+        }
+
+        .padding-bottom-#{$i} {
+            padding-bottom: ($crispy__modifiers__spacing * $i * 0.5) !important;
+
+            @include crispy__media-md() {
+                padding-bottom: ($crispy__modifiers__spacing * $i) !important;
+            }
         }
     }
 }
