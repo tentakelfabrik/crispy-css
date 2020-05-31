@@ -11,7 +11,16 @@
  *
  */
 
-$crispy__button__padding: 0.5em 1.2em 0.6em !default;
+$crispy__button__font-family: $crispy__font-family !default;
+$crispy__button__font-weight: $crispy__font-weight !default;
+$crispy__button__font-size: $crispy__font-size !default;
+$crispy__button__font-size-breakpoints: $crispy__font-size__breakpoints !default;
+
+$crispy__button__padding: 0.3em 0.8em !default;
+$crispy__button__padding-breakpoints: (
+    $crispy__md: 0.4em 1.2em
+) !default;
+
 $crispy__button__margin: $crispy__margin !default;
 
 @mixin crispy__button() {
@@ -21,8 +30,16 @@ $crispy__button__margin: $crispy__margin !default;
         display: inline-block;
         text-decoration: none;
 
-        padding: $crispy__button__padding;
+        font-family: $crispy__button__font-family;
+        font-weight: $crispy__button__font-weight;
+
+        font-size: $crispy__button__font-size;
+        @include crispy__media__breakpoints('font-size', $crispy__button__font-size-breakpoints);
+
         margin: $crispy__button__margin;
+
+        padding: $crispy__button__padding;
+        @include crispy__media__breakpoints('padding', $crispy__button__padding-breakpoints);
 
         &:hover {
             cursor: pointer;

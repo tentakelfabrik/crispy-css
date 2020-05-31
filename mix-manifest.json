@@ -1,7 +1,7 @@
 {
     "/dist/crispy-all.css": "/dist/crispy-all.css",
     "/dist/crispy-minimal.css": "/dist/crispy-minimal.css",
-    "/dist/example/styles.css": "/dist/example/styles.css",
+    "/dist/examples/styles.css": "/dist/examples/styles.css",
     "/spritemap.js": "/spritemap.js",
-    "/dist/example/symbol-defs.svg": "/dist/example/symbol-defs.svg"
+    "/dist/examples/symbol-defs.svg": "/dist/examples/symbol-defs.svg"
 }

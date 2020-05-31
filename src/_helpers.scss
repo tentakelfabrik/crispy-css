@@ -1,24 +1,30 @@
 /**
- *  modifiers
  *
  *
- *  @author Björn Hase
+ *
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://github.com/tentakelfabrik/crispy-css
  *
  */
 
 // spacing
-$crispy__modifiers__spacing: 0.75rem !default;
-$crispy__modifiers__spacing__steps: 6 !default;
+$crispy__helpers__spacing-gap: 8px !default;
+$crispy__helpers__spacing-steps: 6 !default;
+$crispy__helpers__spacing-max-steps: 3 !default;
+$crispy__helpers__spacing-breakpoints: (
+    $crispy__md: 12px
+) !default;
 
 // width
-$crispy__modifiers__width: (
+$crispy__helpers__width: (
     '25' : 25%,
     '50' : 50%,
     '75' : 75%,
     '100': 100%
 ) !default;
 
-@mixin crispy__modifiers() {
+@mixin crispy__helpers() {
 
     /**
      * typography
@@ -82,17 +88,13 @@ $crispy__modifiers__width: (
         font-weight: bolder !important;
     }
 
+    // getting default
+    $defaultFontSize: getDefault($crispy__font-sizes);
+
     @each $name, $font-size in $crispy__font-sizes {
         .text-size-#{$name} {
-            font-size: ($font-size * $crispy__xxs__multiplicator) !important;
-
-            @include crispy__media-md() {
-                font-size: $font-size !important;
-            }
-
-            @include crispy__media-xlg() {
-                font-size: ($font-size * $crispy__xlg__multiplicator) !important;
-            }
+            font-size: $font-size !important;
+            @include crispy__media__breakpoints__diff($crispy__font-size__breakpoints, $font-size, $defaultFontSize);
         }
     }
 
@@ -136,6 +138,12 @@ $crispy__modifiers__width: (
     }
 
     @each $name, $color in $crispy__colors {
+        .border-color-#{$name} {
+            border-color: $color !important;
+        }
+    }
+
+    @each $name, $color in $crispy__colors {
         .background-color-#{$name} {
             background-color: $color !important;
         }
@@ -158,6 +166,7 @@ $crispy__modifiers__width: (
     .relative {
         position: relative !important;
     }
+
 
     /**
      *  hide & show
@@ -291,6 +300,10 @@ $crispy__modifiers__width: (
     }
 
     .rounded {
+        border-radius: $crispy__border-radius !important;
+    }
+
+    .round {
         border-radius: 50% !important;
     }
 
@@ -308,11 +321,12 @@ $crispy__modifiers__width: (
      *
      */
 
-    @each $name, $width in $crispy__modifiers__width {
+    @each $name, $width in $crispy__helpers__width {
         .width-#{$name} {
             width: $width !important;
         }
     }
+
 
     /**
      *  margin & padding
@@ -328,54 +342,71 @@ $crispy__modifiers__width: (
         padding: 0 !important;
     }
 
-    @for $i from 0 through ($crispy__modifiers__spacing__steps / 2) {
-        .margin-left-#{$i} {
-            margin-left: ($crispy__modifiers__spacing * $i * 0.5) !important;
-        }
-
-        .margin-right-#{$i} {
-            margin-right: ($crispy__modifiers__spacing * $i * 0.5) !important;
-        }
-
-        .padding-left-#{$i} {
-            padding-left: ($crispy__modifiers__spacing * $i * 0.5) !important;
-        }
-
-        .padding-right-#{$i} {
-            padding-right: ($crispy__modifiers__spacing * $i * 0.5) !important;
-        }
-    }
-
-    @for $i from 0 through $crispy__modifiers__spacing__steps {
+    @for $i from 0 through $crispy__helpers__spacing-steps {
         .margin-top-#{$i} {
-            margin-top: ($crispy__modifiers__spacing * $i * 0.5) !important;
+            margin-top: ($crispy__helpers__spacing-gap * factor($i)) !important;
 
-            @include crispy__media-md() {
-                margin-top: ($crispy__modifiers__spacing * $i) !important;
+            @if $i > 0 {
+                @include crispy__media__breakpoints_calculate('margin-top', factor($i), $crispy__helpers__spacing-breakpoints);
             }
         }
 
         .margin-bottom-#{$i} {
-            margin-bottom: ($crispy__modifiers__spacing * $i * 0.5) !important;
+            margin-bottom: ($crispy__helpers__spacing-gap * factor($i)) !important;
 
-            @include crispy__media-md() {
-                margin-bottom: ($crispy__modifiers__spacing * $i) !important;
+            @if $i > 0 {
+                @include crispy__media__breakpoints_calculate('margin-bottom', factor($i), $crispy__helpers__spacing-breakpoints);
             }
         }
 
         .padding-top-#{$i} {
-            padding-top: ($crispy__modifiers__spacing * $i * 0.5) !important;
+            padding-top: ($crispy__helpers__spacing-gap * $i) !important;
 
-            @include crispy__media-md() {
-                padding-top: ($crispy__modifiers__spacing * $i) !important;
+            @if $i > 0 {
+                @include crispy__media__breakpoints_calculate('padding-top', factor($i), $crispy__helpers__spacing-breakpoints);
             }
         }
 
         .padding-bottom-#{$i} {
-            padding-bottom: ($crispy__modifiers__spacing * $i * 0.5) !important;
+            padding-bottom: ($crispy__helpers__spacing-gap * $i) !important;
 
-            @include crispy__media-md() {
-                padding-bottom: ($crispy__modifiers__spacing * $i) !important;
+            @if $i > 0 {
+                @include crispy__media__breakpoints_calculate('padding-bottom', factor($i), $crispy__helpers__spacing-breakpoints);
+            }
+        }
+
+        // to reduce size of css only use max steps
+        @if $i < $crispy__helpers__spacing-max-steps {
+            .margin-left-#{$i} {
+                margin-left: ($crispy__helpers__spacing-gap * $i) !important;
+
+                @if $i > 0 {
+                    @include crispy__media__breakpoints_calculate('margin-left', factor($i), $crispy__helpers__spacing-breakpoints);
+                }
+            }
+
+            .margin-right-#{$i} {
+                margin-right: ($crispy__helpers__spacing-gap * $i) !important;
+
+                @if $i > 0 {
+                    @include crispy__media__breakpoints_calculate('margin-right', factor($i), $crispy__helpers__spacing-breakpoints);
+                }
+            }
+
+            .padding-left-#{$i} {
+                padding-left: ($crispy__helpers__spacing-gap * $i) !important;
+
+                @if $i > 0 {
+                    @include crispy__media__breakpoints_calculate('padding-left', factor($i), $crispy__helpers__spacing-breakpoints);
+                }
+            }
+
+            .padding-right-#{$i} {
+                padding-right: ($crispy__helpers__spacing-gap * $i) !important;
+
+                @if $i > 0 {
+                    @include crispy__media__breakpoints_calculate('padding-right', factor($i), $crispy__helpers__spacing-breakpoints);
+                }
             }
         }
     }

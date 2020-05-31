@@ -1,17 +1,17 @@
 <!doctype html>
-<html class="no-js" lang="en_EN">
+<html lang="en_EN">
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Crispy CSS | Lightweight CSS Framework for Building Apps and Websites</title>
-	<meta name="description" content="Lightweight Framework for building fast and clean Websites and Apps for Mobile, Tablet and Desktop. Minimal UI-Elements, Functions and Helpers.">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta name="description" content="<%= htmlWebpackPlugin.options.description %>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-	<header id="header" class="header">
+    <header id="header" class="header">
 		<div class="container">
 			<div class="grid">
 				<div class="col-12">
@@ -36,7 +36,7 @@
 		</div>
 	</header>
 	<div class="container">
-        <div class="grid margin-top-6 margin-bottom-2">
+        <div class="grid margin-top-2 margin-bottom-2">
             <div class="col-12 col-sm-6 col-lg-4 col-align-center">
                 <h3 class="h4 text-center">
                     <span class="h3__icon">
@@ -83,7 +83,7 @@
             </div>
         </div>
 
-        <div class="margin-bottom-6 text-center text-size-medium">
+        <div class="margin-bottom-2 text-center text-size-medium">
             <a class="button background-color-success text-color-white" href="/getstarted.html">
                 Get started!
                 <svg class="icon margin-left-1" alt="proceed">
@@ -98,10 +98,10 @@
             </a>
         </div>
 
-        <div class="margin-bottom-6">
+        <div class="margin-bottom-5 margin-top-4">
             <div class="grid">
                 <div class="col-12">
-                    <h2 class="h3 text-center margin-top-6">Apps and Websites that have been crafted</h2>
+                    <h2 class="h3 text-center">Apps and Websites that have been crafted</h2>
                 </div>
             </div>
             <div class="grid">
@@ -133,27 +133,7 @@
         </div>
     </div>
 
-    <footer class="footer background-color-info margin-top-4 padding-top-5 padding-bottom-2">
-		<div class="container">
-			<div class="grid">
-				<div class="col-12">
-					<div class="text-center">
-                        <ul class="group group--horizontal group--separate">
-                            <li class="group__item">
-                                <a class="text-color-white" href="/imprint.html">Imprint</a>
-                            </li>
-                            <li class="group__item">
-                                <a class="text-color-white" href="/privacy-policy.html">Privacy Policy</a>
-                            </li>
-                        </ul>
-                        <p class="margin-top-1">
-                            Made with Euphorie by Björn Hase, <a class="text-color-white" href="https://tententakelfabrik.de" target="_blank">Tentakelfabrik</a>
-                        </p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
+    <%= htmlWebpackPlugin.options.footer %>
 
 </body>
 </html>

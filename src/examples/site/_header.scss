@@ -10,7 +10,6 @@
 
 @mixin site__header() {
     .header {
-        text-align: center;
         max-width: 100%;
 
         a {
@@ -35,7 +34,7 @@
             left: 0;
             width: 100%;
 
-            z-index: 91;
+            z-index: 101;
         }
     }
 }

@@ -13,7 +13,8 @@
  *
  */
 
-$crispy__panel__padding: $crispy__padding !default;
+$crispy__panel__inner-padding: $crispy__padding !default;
+$crispy__panel__inner-padding-breakpoints: $crispy__padding-breakpoints !default;
 $crispy__panel__background-color: $crispy__color-grey-light !default;
 
 @mixin crispy__panel {
@@ -21,7 +22,8 @@ $crispy__panel__background-color: $crispy__color-grey-light !default;
         background-color: $crispy__panel__background-color;
 
         &__inner {
-            padding: $crispy__panel__padding;
+            padding: $crispy__panel__inner-padding;
+            @include crispy__media__breakpoints('padding', $crispy__panel__inner-padding-breakpoints);
         }
     }
 }

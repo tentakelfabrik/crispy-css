@@ -26,7 +26,6 @@ $crispy__field__border-color--error: $crispy__color-danger !default;
 $crispy__field__choice__checked__color: $crispy__color-success !default;
 $crispy__field__choice__unchecked__color: $crispy__color-danger !default;
 
-$crispy__field__input__font-size: $crispy__font-size !default;
 $crispy__field__input__padding: 0.4em 0.6em !default;
 $crispy__field__input__color: $crispy__color-text !default;
 
@@ -41,17 +40,22 @@ $crispy__field__select__border: $crispy__border !default;
         margin: $crispy__field__margin;
     }
 
+    .field__text, .field__select, .field__select, .field__label {
+        font-family: $crispy__font-family;
+        font-weight: $crispy__font-weight;
+
+        font-size: $crispy__font-size;
+        @include crispy__media__breakpoints('font-size', $crispy__font-size__breakpoints);
+    }
+
     // basic style for input elements, will be used to @extend
     .field__text, .field__select, .field__select {
         display: block;
         width: 100%;
-        line-height: $crispy__golden-ratio;
+
         padding: $crispy__field__input__padding;
         color: $crispy__field__input__color;
         appearance: none;
-
-        font-size: $crispy__field__input__font-size;
-        font-family: $crispy__font-family-primary;
     }
 
     /**

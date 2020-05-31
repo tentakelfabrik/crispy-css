@@ -15,12 +15,12 @@
 
 $crispy__progress__height: 30px !default;
 $crispy__progress__background-color: $crispy__color-primary !default;
-$crispy__progress__border__width: 1px !default;
-$crispy__progress__border__color: $crispy__color-border !default;
+$crispy__progress__border-width: 1px !default;
+$crispy__progress__border-color: $crispy__color-border !default;
 
 @mixin crispy__progress {
     .progress {
-        border: $crispy__progress__border__width solid $crispy__progress__border__color;
+        border: $crispy__progress__border-width solid $crispy__progress__border-color;
 
         &__inner {
             height: $crispy__progress__height;

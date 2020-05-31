@@ -1,5 +1,5 @@
 /**
- *  component: code
+ *  components: code
  *
  *  <pre class="code">
  *      <code>
@@ -14,6 +14,7 @@
  */
 
 $crispy__code__padding: $crispy__padding !default;
+$crispy__code__padding-breakpoints: $crispy__padding-breakpoints !default;
 $crispy__code__margin: $crispy__margin !default;
 $crispy__code__border: $crispy__border !default;
 $crispy__code__background-color: $crispy__color-grey-light !default;
@@ -25,10 +26,12 @@ $crispy__code__background-color: $crispy__color-grey-light !default;
 
         overflow-y: hidden;
         overflow-x: auto;
-        padding: $crispy__code__padding;
         border: $crispy__code__border;
         background-color: $crispy__code__background-color;
 
         margin: $crispy__code__margin;
+
+        padding: $crispy__code__padding;
+        @include crispy__media__breakpoints('padding', $crispy__code__padding-breakpoints);
     }
 }

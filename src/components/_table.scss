@@ -23,6 +23,7 @@
  */
 
 $crispy__table__padding: $crispy__padding !default;
+$crispy__table__padding-breakpoints: $crispy__padding-breakpoints !default;
 
 $crispy__table__td__border: 1px solid $crispy__color-border !default;
 $crispy__table__th__border-width: 2px !default;
@@ -52,9 +53,11 @@ $crispy__table__striped__background-color: $crispy__color-grey-light !default;
 
         td,
         th {
-            padding: $crispy__table__padding;
             text-align: left;
             border-bottom: $crispy__table__td__border;
+
+            padding: $crispy__table__padding;
+            @include crispy__media__breakpoints('padding', $crispy__table__padding-breakpoints);
         }
 
         th {

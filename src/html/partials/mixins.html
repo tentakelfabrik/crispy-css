@@ -1,0 +1,94 @@
+<!-- mixins / triangle -->
+<h3 class="h4 margin-top-1">
+    Triangle
+</h3>
+<h4 class="h6 margin-top-1">Sass:</h4>
+<pre class="code"><code>.triangle-left, .triangle-right, .triangle-top, .triangle-bottom {
+display: block;
+}
+
+.triangle-left {
+@include triangle('left', $crispy__color-primary);
+}
+
+.triangle-right {
+@include triangle('right', $crispy__color-primary);
+}
+
+.triangle-top {
+@include triangle('top', $crispy__color-primary);
+}
+
+.triangle-bottom {
+@include triangle('bottom', $crispy__color-primary);
+}
+</code></pre>
+<p>
+    <span class="triangle-right"></span>
+    <span class="triangle-left"></span>
+    <span class="triangle-top"></span>
+    <span class="triangle-bottom"></span>
+</p>
+
+<!-- mixins / media-queries -->
+<h3 class="h4 margin-top-1">
+    Media Queries
+</h3>
+<p>
+    These <strong>@mixins</strong> were used with the Breakpoints from <a target="_blank" href="http://reflexgrid.com/docs/">http://reflexgrid.com/docs/</a>.
+    Reflex-Grid is also used as grid for this Site.
+</p>
+<ul>
+    <li><strong>xs</strong> 576px</li>
+    <li><strong>sm</strong> 768px</li>
+    <li><strong>md</strong> 992px</li>
+    <li><strong>lg</strong> 1200px</li>
+    <li><strong>xlg</strong> 1600px</li>
+</ul>
+<h4 class="h6 margin-top-1">Html:</h4>
+<pre class="code"><code>&lt;div class=&quot;sm&quot;&gt;sm&lt;/div&gt;
+&lt;div class=&quot;md&quot;&gt;md&lt;/div&gt;
+&lt;div class=&quot;md-only&quot;&gt;md-only&lt;/div&gt;
+&lt;div class=&quot;lg-only&quot;&gt;lg-only&lt;/div&gt;</pre></code>
+<h4 class="h6 margin-top-1">Sass:</h4>
+<pre class="code"><code>.sm, .md, .md-only, .lg-only {
+display: none;
+}
+
+.sm {
+@include crispy__media-sm() {
+display: block;
+}
+}
+
+.md {
+@include crispy__media-md() {
+display: block;
+}
+}
+
+.md-only {
+@include crispy__media-md-only() {
+display: block;
+}
+}
+
+.lg-only {
+@include crispy__media-lg-only() {
+display: block;
+}
+}</code></pre>
+<div class="grid">
+    <div class="col-3">
+        <div class="panel panel__inner sm margin-bottom-1">sm</div>
+    </div>
+    <div class="col-3">
+        <div class="panel panel__inner md margin-bottom-1">md</div>
+    </div>
+    <div class="col-3">
+        <div class="panel panel__inner md-only margin-bottom-1">md-only</div>
+    </div>
+    <div class="col-3">
+        <div class="panel panel__inner lg-only margin-bottom-1">lg-only</div>
+    </div>
+</div>

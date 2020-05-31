@@ -1,5 +1,5 @@
 /**
- *  component: icon
+ *  components: icon
  *
  *  <svg class="icon">
  *      //
@@ -11,8 +11,7 @@
  *
  */
 
-$crispy__icon__size: 1.1em !default;
-$crispy__icon__offset: -0.2em !default;
+$crispy__icon__size: 1.15em !default;
 
 @mixin crispy__icon {
     .icon {
@@ -25,18 +24,7 @@ $crispy__icon__offset: -0.2em !default;
         vertical-align: middle;
         overflow: hidden;
 
-        line-height: $crispy__line-height-xxs;
-
-        @include crispy__media-md() {
-            line-height: $crispy__line-height-md;
-        }
-    }
-
-    // workaround for buttons
-    .button {
-        .icon {
-            margin: $crispy__icon__offset 0 0;
-        }
+        line-height: $crispy__line-height;
     }
 
     @each $name, $color in $crispy__colors {

@@ -124,6 +124,64 @@
     }
 }
 
+/**
+ *
+ *  @param  {[type]} $property    [description]
+ *  @param  {[type]} $breakpoints [description]
+ *
+ *  @return {[type]}              [description]
+ *
+ */
+@mixin crispy__media__breakpoints($property, $breakpoints) {
+    @each $breakpoint, $value in $breakpoints {
+        @media only screen and (min-width: $breakpoint) {
+            #{$property}: $value;
+        }
+    }
+}
+
+/**
+ *
+ *  @param  {[type]} $property    [description]
+ *  @param  {[type]} $factor      [description]
+ *  @param  {[type]} $breakpoints [description]
+ *
+ *  @return {[type]}              [description]
+ */
+@mixin crispy__media__breakpoints_calculate($property, $factor, $breakpoints) {
+    @each $breakpoint, $value in $breakpoints {
+        @media only screen and (min-width: $breakpoint) {
+            #{$property}: ($value * $factor) !important;
+        }
+    }
+}
+
+/**
+ *
+ *
+ *  @param  {[type]} $breakpoints [des
+ *  @param  {[type]} $font-sizes  [description]
+ *  @param  {[type]} $font-size   [description]
+ *
+ *  @return {[type]}              [description]
+ *
+ */
+@mixin crispy__media__breakpoints__diff($breakpoints, $font-size, $default) {
+
+    @each $breakpoint, $value in $breakpoints {
+
+        // getting diff
+        $factor: (stripUnit($font-size) - stripUnit($default)) + 1;
+
+        // ignore if factor is zero
+        @if $factor > 0 {
+            @media only screen and (min-width: $breakpoint) {
+                font-size: $value * $factor;
+            }
+        }
+    }
+}
+
 
 /**
  *  triangle

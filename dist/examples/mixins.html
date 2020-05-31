@@ -1,0 +1,49 @@
+<!doctype html><html lang="en_EN"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><title>Mixins | Crispy CSS</title><meta name="description" content=""><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="styles.css"></head><body><header id="header" class="header header--fixed background-color-info"><div class="container"><div class="grid"><div class="col-12 col-md-4"><a href="/" class="text-color-white text-bold"><svg class="icon text-size-mega" alt="Crispy CSS"><use xlink:href="symbol-defs.svg#icon-logo"/></svg> Crispy CSS</a></div><div class="col-12 col-md-8"><nav class="group text-right show"><ul class="group"><li class="group__item"><a href="getting-started.html" class="text-color-white">Getting started!</a></li><li class="group__item"><a href="core.html" class="text-color-white">Core</a></li><li class="group__item"><a href="components.html" class="text-color-white">Components</a></li><li class="group__item"><a href="helpers.html" class="text-color-white">Helpers</a></li><li class="group__item"><a href="mixins.html" class="text-color-white">Mixins</a></li><li class="group__item"><a href="functions.html" class="text-color-white">Functions</a></li></ul></nav></div></div></div></header><main class="container"><div class="grid"><div class="col-12"><header class="header"><h1 class="padding-top-4 padding-bottom-2 text-center">Mixins</h1></header><h3 class="h4 margin-top-1">Triangle</h3><h4 class="h6 margin-top-1">Sass:</h4><pre class="code"><code>.triangle-left, .triangle-right, .triangle-top, .triangle-bottom {
+display: block;
+}
+
+.triangle-left {
+@include triangle('left', $crispy__color-primary);
+}
+
+.triangle-right {
+@include triangle('right', $crispy__color-primary);
+}
+
+.triangle-top {
+@include triangle('top', $crispy__color-primary);
+}
+
+.triangle-bottom {
+@include triangle('bottom', $crispy__color-primary);
+}
+</code></pre><p><span class="triangle-right"></span> <span class="triangle-left"></span> <span class="triangle-top"></span> <span class="triangle-bottom"></span></p><h3 class="h4 margin-top-1">Media Queries</h3><p>These <strong>@mixins</strong> were used with the Breakpoints from <a target="_blank" href="http://reflexgrid.com/docs/">http://reflexgrid.com/docs/</a>. Reflex-Grid is also used as grid for this Site.</p><ul><li><strong>xs</strong> 576px</li><li><strong>sm</strong> 768px</li><li><strong>md</strong> 992px</li><li><strong>lg</strong> 1200px</li><li><strong>xlg</strong> 1600px</li></ul><h4 class="h6 margin-top-1">Html:</h4><pre class="code"><code>&lt;div class=&quot;sm&quot;&gt;sm&lt;/div&gt;
+&lt;div class=&quot;md&quot;&gt;md&lt;/div&gt;
+&lt;div class=&quot;md-only&quot;&gt;md-only&lt;/div&gt;
+&lt;div class=&quot;lg-only&quot;&gt;lg-only&lt;/div&gt;</code></pre><h4 class="h6 margin-top-1">Sass:</h4><pre class="code"><code>.sm, .md, .md-only, .lg-only {
+display: none;
+}
+
+.sm {
+@include crispy__media-sm() {
+display: block;
+}
+}
+
+.md {
+@include crispy__media-md() {
+display: block;
+}
+}
+
+.md-only {
+@include crispy__media-md-only() {
+display: block;
+}
+}
+
+.lg-only {
+@include crispy__media-lg-only() {
+display: block;
+}
+}</code></pre><div class="grid"><div class="col-3"><div class="panel panel__inner sm margin-bottom-1">sm</div></div><div class="col-3"><div class="panel panel__inner md margin-bottom-1">md</div></div><div class="col-3"><div class="panel panel__inner md-only margin-bottom-1">md-only</div></div><div class="col-3"><div class="panel panel__inner lg-only margin-bottom-1">lg-only</div></div></div></div></div></main><footer class="footer background-color-info margin-top-4 padding-top-3 padding-bottom-3"><div class="container"><div class="grid"><div class="col-12"><div class="text-center"><ul class="group group--hr"><li class="group__item"><a class="text-color-white" href="/imprint.html">Imprint</a></li><li class="group__item"><a class="text-color-white" href="/privacy-policy.html">Privacy Policy</a></li></ul><p class="margin-top-1 margin-bottom-0">Made with Euphorie by Björn Hase, <a class="text-color-white" href="https://tententakelfabrik.de" target="_blank">Tentakelfabrik</a></p></div></div></div></div></footer></body></html>

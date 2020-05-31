@@ -1,0 +1,35 @@
+/**
+ *  Heading
+ *
+ *
+ */
+
+@mixin crispy__core__heading()
+{
+    h1, .h1,
+    h2, .h2,
+    h3, .h3,
+    h4, .h4,
+    h5, .h5,
+    h6, .h6 {
+        font-family: $crispy__heading__font-family;
+        font-weight: $crispy__heading__font-weight;
+        line-height: 1.2;
+        margin: $crispy__heading__margin;
+    }
+
+    h5 {
+        line-height: 1.4;
+    }
+
+    h6 {
+        line-height: $crispy__line-height;
+    }
+
+    @each $h, $font-size in $crispy__heading__font-sizes {
+        #{$h}, .#{$h} {
+            font-size: $font-size;
+            @include crispy__media__breakpoints__diff($crispy__heading__font-sizes__breakpoints, $font-size, $crispy__font-size);
+        }
+    }
+}

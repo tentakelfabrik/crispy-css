@@ -1,7 +1,7 @@
 @import
     'crispy';
 
-@include crispy__modifiers();
+@include crispy__helpers();
 @include crispy__button();
 @include crispy__code();
 @include crispy__progress();

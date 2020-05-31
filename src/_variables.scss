@@ -14,24 +14,39 @@
 
 $crispy__golden-ratio: 1.618 !default;
 
-// fonts
-$crispy__xxs__multiplicator: 0.9;
-$crispy__xlg__multiplicator: 1.1;
 
-$crispy__font-size: 1rem !default;
-$crispy__font-size-xxs: $crispy__font-size * $crispy__xxs__multiplicator !default;
-$crispy__font-size-md: $crispy__font-size !default;
-$crispy__font-size-xlg: $crispy__font-size * $crispy__xlg__multiplicator !default;
+/**
+ *  Breakpoints
+ *
+ */
 
-$crispy__font-weight: normal !default;
+$crispy__xs : 576px !default;
+$crispy__sm : 768px !default;
+$crispy__md : 992px !default;
+$crispy__lg : 1200px !default;
+$crispy__xlg: 1600px !default;
 
-$crispy__line-height: $crispy__golden-ratio !default;
-$crispy__line-height-xxs: 1.4 !default;
-$crispy__line-height-md: $crispy__golden-ratio !default;
 
-$crispy__font-family-primary: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
-$crispy__font-family-monospace: "Lucida Console", Monaco, monospace !default;
+/**
+ *  Font Size
+ *
+ */
+
 $crispy__direction: ltr !default;
+
+$crispy__font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+$crispy__font-weight: normal !default;
+$crispy__font-size: 0.9rem !default;
+$crispy__font-size__breakpoints: (
+    $crispy__md: 1rem
+) !default;
+
+$crispy__font-family-monospace: "Lucida Console", Monaco, monospace !default;
+$crispy__font-weight-monospace: normal !default;
+$crispy__font-size-monospace: 1rem !default;
+$crispy__font-size-monospace__breakpoints: (
+    $crispy__md: 1.1rem
+) !default;
 
 $crispy__font-sizes: (
     'default' : $crispy__font-size,
@@ -42,7 +57,18 @@ $crispy__font-sizes: (
     'mega'    : $crispy__font-size * 2,
 ) !default;
 
-// colors
+$crispy__line-height: 1.4;
+$crispy__line-height__breakpoints: (
+    $crispy__md: $crispy__golden-ratio
+) !default;
+
+
+/**
+ *  colors
+ *
+ *
+ */
+
 $crispy__color-primary: #f18f01 !default;
 $crispy__color-secondary: #b3b2af !default;
 $crispy__color-success: #5cb85c !default;
@@ -81,12 +107,17 @@ $crispy__colors: (
     'white'      : $crispy__color-white
 ) !default;
 
+
 /**
  *  Padding & Margin
  *
  */
+
 $crispy__margin: 0 0 1rem !default;
-$crispy__padding: 0.8em 1.2em !default;
+$crispy__padding: 0.3em 0.45em !default;
+$crispy__padding-breakpoints: (
+    $crispy__md: .6em 0.9em
+) !default;
 
 
 /**
@@ -101,6 +132,10 @@ $crispy__heading__font-sizes: (
     'h4': $crispy__font-size * 1.5,
     'h5': $crispy__font-size * 1.25,
     'h6': $crispy__font-size
+) !default;
+
+$crispy__heading__font-sizes__breakpoints: (
+    $crispy__md: 1.2rem
 ) !default;
 
 $crispy__heading__font-weight: bold !default;
@@ -118,17 +153,10 @@ $crispy__border: 1px solid $crispy__color-border !default;
 
 
 /**
- *  Breakpoints
+ *
  *
  */
 
-$crispy__xs : 576px !default;
-$crispy__sm : 768px !default;
-$crispy__md : 992px !default;
-$crispy__lg : 1200px !default;
-$crispy__xlg: 1600px !default;
-
-// z-index
 $crispy__z-index: (
     'overlay': 90,
     'modal'  : 100

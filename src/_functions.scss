@@ -1,14 +1,13 @@
 /**
- * functions
+ *  functions
  *
  *
- *
- *
- * @author Björn Hase
- * @license http://opensource.org/licenses/MIT The MIT License
- * @link https://gitlab.tentakelfabrik.de/tentakelfabrik/crispy
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://github.com/tentakelfabrik/crispy-css
  *
  */
+
 
 /**
  * strip unit from value
@@ -20,12 +19,46 @@
     @return $value / ($value * 0 + 1);
 }
 
+
 /**
- * function: z-index
+ *  factor
  *
- * uses map $crispy__z-index to get value by key
+ *  
  *
- * @author Björn Hase
+ *  @param  {integer} $x
+ *  @return {float}
+ *
+ */
+@function factor($x) {
+    @return ($x * $x) / 2;
+}
+
+
+/**
+ *  get value of key "default" in map
+ *
+ *  @param  {map} $value
+ *  @return {boolean|unit}
+ *
+ */
+@function getDefault($values) {
+
+    $default: false;
+
+    @if map-has-key($values, 'default') {
+        $default: map-get($values, 'default');
+    }
+
+    @return $default;
+}
+
+/**
+ *  z-index
+ *
+ *  uses map $crispy__z-index to get value by key
+ *
+ *  @param  {string} $value
+ *  @return {null|unit}
  *
  */
 
