@@ -19,14 +19,14 @@ mix.webpackConfig({
     plugins: [
         new SvgSpritemapPlugin('assets/svg/*.svg', {
             output: {
-                filename: 'dist/examples/symbol-defs.svg'
+                filename: 'dist/example/symbol-defs.svg'
             },
             sprite: {
                 prefix: 'icon-'
             }
         }),
         new HtmlWebpackPlugin({
-            filename: 'dist/examples/index.html',
+            filename: 'dist/example/index.html',
             template: 'src/html/index.html.ejs',
             title: 'Crispy CSS | Lightweight CSS Framework for Building Apps and Websites',
             description: 'Lightweight Framework for building fast and clean Websites and Apps for Mobile, Tablet and Desktop. Minimal UI-Elements, Functions and Helpers',
@@ -34,7 +34,7 @@ mix.webpackConfig({
             inject: false
         }),
         new HtmlWebpackPlugin({
-            filename: 'dist/examples/getting-started.html',
+            filename: 'dist/example/getting-started.html',
             template: 'src/html/page.html.ejs',
             title: 'Getting started!',
             body: fs.readFileSync(__dirname + '/src/html/partials/getting-started.html'),
@@ -42,7 +42,7 @@ mix.webpackConfig({
             inject: false
         }),
         new HtmlWebpackPlugin({
-            filename: 'dist/examples/core.html',
+            filename: 'dist/example/core.html',
             template: 'src/html/page.html.ejs',
             title: 'Core',
             body: fs.readFileSync(__dirname + '/src/html/partials/core.html'),
@@ -50,7 +50,7 @@ mix.webpackConfig({
             inject: false
         }),
         new HtmlWebpackPlugin({
-            filename: 'dist/examples/components.html',
+            filename: 'dist/example/components.html',
             template: 'src/html/page.html.ejs',
             title: 'Components',
             body: fs.readFileSync(__dirname + '/src/html/partials/components.html'),
@@ -58,7 +58,7 @@ mix.webpackConfig({
             inject: false
         }),
         new HtmlWebpackPlugin({
-            filename: 'dist/examples/helpers.html',
+            filename: 'dist/example/helpers.html',
             template: 'src/html/page.html.ejs',
             title: 'Helpers',
             body: fs.readFileSync(__dirname + '/src/html/partials/helpers.html'),
@@ -66,7 +66,7 @@ mix.webpackConfig({
             inject: false
         }),
         new HtmlWebpackPlugin({
-            filename: 'dist/examples/mixins.html',
+            filename: 'dist/example/mixins.html',
             template: 'src/html/page.html.ejs',
             title: 'Mixins',
             body: fs.readFileSync(__dirname + '/src/html/partials/mixins.html'),
@@ -74,7 +74,7 @@ mix.webpackConfig({
             inject: false
         }),
         new HtmlWebpackPlugin({
-            filename: 'dist/examples/functions.html',
+            filename: 'dist/example/functions.html',
             template: 'src/html/page.html.ejs',
             title: 'Functions',
             body: fs.readFileSync(__dirname + '/src/html/partials/functions.html'),
@@ -82,7 +82,7 @@ mix.webpackConfig({
             inject: false
         }),
         new HtmlWebpackPlugin({
-            filename: 'dist/examples/imprint.html',
+            filename: 'dist/example/imprint.html',
             template: 'src/html/page.html.ejs',
             title: 'Imprint',
             body: fs.readFileSync(__dirname + '/src/html/partials/imprint.html'),
@@ -90,7 +90,7 @@ mix.webpackConfig({
             inject: false
         }),
         new HtmlWebpackPlugin({
-            filename: 'dist/examples/privacy-policy.html',
+            filename: 'dist/example/privacy-policy.html',
             template: 'src/html/page.html.ejs',
             title: 'Privacy Policy',
             body: fs.readFileSync(__dirname + '/src/html/partials/privacy-policy.html'),
@@ -102,7 +102,7 @@ mix.webpackConfig({
 
 mix.sass('src/crispy-all.scss', 'dist/crispy-all.css')
     .sass('src/crispy-minimal.scss', 'dist/crispy-minimal.css')
-    .sass('src/examples/styles.scss', 'dist/examples/styles.css', {
+    .sass('src/example/styles.scss', 'dist/example/styles.css', {
             sassOptions: {
                 includePaths: [
                     'node_modules/reflex-grid/scss'

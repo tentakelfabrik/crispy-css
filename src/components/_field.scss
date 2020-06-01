@@ -1,19 +1,25 @@
 /**
- * component: field
+ *  components: field
  *
- * <div class="field">
- *     <label class="field__label">
- *         text
- *         <input type="text" class="field__text" />
- *     <label>
- * </div>
+ *  <div class="field">
+ *      <label class="field__label">
+ *          text
+ *          <input type="text" class="field__text" />
+ *      <label>
+ *  </div>
  *
  *
- * @author Björn Hase
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://github.com/tentakelfabrik/crispy-css
  *
  */
 
-$crispy__field__margin: $crispy__margin !default;
+$crispy__field__font-family: $crispy__font-family !default;
+$crispy__field__font-weight: $crispy__font-weight !default;
+$crispy__field__font-size: $crispy__font-size !default;
+$crispy__field__font-size-breakpoints: $crispy__font-size-breakpoints !default;
+
 $crispy__field__border: $crispy__border !default;
 
 $crispy__field__color--valid: $crispy__color-success !default;
@@ -26,11 +32,20 @@ $crispy__field__border-color--error: $crispy__color-danger !default;
 $crispy__field__choice__checked__color: $crispy__color-success !default;
 $crispy__field__choice__unchecked__color: $crispy__color-danger !default;
 
-$crispy__field__input__padding: 0.4em 0.6em !default;
-$crispy__field__input__color: $crispy__color-text !default;
+$crispy__field__padding: 0.5em 0.6em !default;
+$crispy__field__padding-breakpoints: (
+    $crispy__md: 0.7em 0.8em
+) !default;
 
-$crispy__field__select__padding: 0.3em 0.5em !default;
-$crispy__field__panel__padding: 0.3em 0.6em !default;
+$crispy__field__select__padding: 0.5em 0.3em !default;
+$crispy__field__select__padding-breakpoints: (
+    $crispy__md: 0.7em 0.6em
+) !default;
+
+$crispy__field__margin: $crispy__margin !default;
+$crispy__field__margin-breakpoints: $crispy__margin-breakpoints !default;
+
+$crispy__field__input__color: $crispy__color-text !default;
 
 $crispy__field__select__background-color: white !default;
 $crispy__field__select__border: $crispy__border !default;
@@ -38,14 +53,15 @@ $crispy__field__select__border: $crispy__border !default;
 @mixin crispy__field() {
     .field {
         margin: $crispy__field__margin;
+        @include crispy__media__breakpoints('margin', $crispy__field__margin-breakpoints);
     }
 
     .field__text, .field__select, .field__select, .field__label {
-        font-family: $crispy__font-family;
-        font-weight: $crispy__font-weight;
+        font-family: $crispy__field__font-family;
+        font-weight: $crispy__field__font-weight;
 
-        font-size: $crispy__font-size;
-        @include crispy__media__breakpoints('font-size', $crispy__font-size__breakpoints);
+        font-size: $crispy__field__font-size;
+        @include crispy__media__breakpoints('font-size', $crispy__field__font-size-breakpoints);
     }
 
     // basic style for input elements, will be used to @extend
@@ -53,9 +69,11 @@ $crispy__field__select__border: $crispy__border !default;
         display: block;
         width: 100%;
 
-        padding: $crispy__field__input__padding;
         color: $crispy__field__input__color;
         appearance: none;
+
+        padding: $crispy__field__padding;
+        @include crispy__media__breakpoints('padding', $crispy__field__padding-breakpoints);
     }
 
     /**
@@ -118,6 +136,9 @@ $crispy__field__select__border: $crispy__border !default;
         padding: $crispy__field__select__padding;
         border: $crispy__field__select__border;
         background-color: $crispy__field__select__background-color;
+
+        padding: $crispy__field__select__padding;
+        @include crispy__media__breakpoints('padding', $crispy__field__select__padding-breakpoints);
 
         &:focus {
             outline: 0;
@@ -197,7 +218,8 @@ $crispy__field__select__border: $crispy__border !default;
      */
 
     .field__panel {
-        padding: $crispy__field__panel__padding;
+        padding: $crispy__field__padding;
+        @include crispy__media__breakpoints('padding', $crispy__field__padding-breakpoints);
     }
 
     .field--valid {

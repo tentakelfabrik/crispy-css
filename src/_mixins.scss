@@ -1,21 +1,21 @@
 /**
- * mixins
+ *  mixins
  *
  *
- *
- * @author Björn Hase
- * @license http://opensource.org/licenses/MIT The MIT License
- * @link https://gitlab.tentakelfabrik.de/tentakelfabrik/crispy
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://github.com/tentakelfabrik/crispy-css
  *
  */
 
 
 /**
- * clearfix to end floating
+ *  clearfix to end floating
  *
  *
  *
  */
+
 @mixin crispy__clearfix() {
     &::before,
     &::after {
@@ -30,10 +30,11 @@
 
 
 /**
- * clear styles from list
+ *  clear styles from list
  *
  *
  */
+
 @mixin crispy__clear_list() {
     list-style: none;
     margin: 0;
@@ -47,11 +48,12 @@
 
 
 /**
- * media-queries
+ *  media-queries
  *
  *
  *
  */
+
 @mixin crispy__media-xs() {
     @media only screen and (min-width:$crispy__xs) {
         @content;
@@ -124,6 +126,7 @@
     }
 }
 
+
 /**
  *
  *  @param  {[type]} $property    [description]
@@ -132,6 +135,7 @@
  *  @return {[type]}              [description]
  *
  */
+
 @mixin crispy__media__breakpoints($property, $breakpoints) {
     @each $breakpoint, $value in $breakpoints {
         @media only screen and (min-width: $breakpoint) {
@@ -139,6 +143,7 @@
         }
     }
 }
+
 
 /**
  *
@@ -148,6 +153,7 @@
  *
  *  @return {[type]}              [description]
  */
+
 @mixin crispy__media__breakpoints_calculate($property, $factor, $breakpoints) {
     @each $breakpoint, $value in $breakpoints {
         @media only screen and (min-width: $breakpoint) {
@@ -155,6 +161,7 @@
         }
     }
 }
+
 
 /**
  *
@@ -166,6 +173,7 @@
  *  @return {[type]}              [description]
  *
  */
+
 @mixin crispy__media__breakpoints__diff($breakpoints, $font-size, $default) {
 
     @each $breakpoint, $value in $breakpoints {
@@ -176,7 +184,7 @@
         // ignore if factor is zero
         @if $factor > 0 {
             @media only screen and (min-width: $breakpoint) {
-                font-size: $value * $factor;
+                font-size: ($value * $factor) !important;
             }
         }
     }
@@ -192,6 +200,7 @@
  *  @param {Length} $size [1em] - Triangle size
  *
  */
+
 @mixin triangle($direction, $color: currentcolor, $size: 1em) {
 
     @if not index(top right bottom left, $direction) {

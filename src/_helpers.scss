@@ -94,7 +94,7 @@ $crispy__helpers__width: (
     @each $name, $font-size in $crispy__font-sizes {
         .text-size-#{$name} {
             font-size: $font-size !important;
-            @include crispy__media__breakpoints__diff($crispy__font-size__breakpoints, $font-size, $defaultFontSize);
+            @include crispy__media__breakpoints__diff($crispy__font-size-breakpoints, $font-size, $defaultFontSize);
         }
     }
 

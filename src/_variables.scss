@@ -1,14 +1,11 @@
-@import
-    'functions';
-
 /**
- * Variables
+ *  variables
  *
  *
  *
- * @author Björn Hase
- * @license http://opensource.org/licenses/MIT The MIT License
- * @link https://gitlab.tentakelfabrik.de/tentakelfabrik/crispy
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://github.com/tentakelfabrik/crispy-css
  *
  */
 
@@ -16,7 +13,7 @@ $crispy__golden-ratio: 1.618 !default;
 
 
 /**
- *  Breakpoints
+ *  breakpoints
  *
  */
 
@@ -28,7 +25,7 @@ $crispy__xlg: 1600px !default;
 
 
 /**
- *  Font Size
+ *  fonts
  *
  */
 
@@ -37,8 +34,8 @@ $crispy__direction: ltr !default;
 $crispy__font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
 $crispy__font-weight: normal !default;
 $crispy__font-size: 0.9rem !default;
-$crispy__font-size__breakpoints: (
-    $crispy__md: 1rem
+$crispy__font-size-breakpoints: (
+    $crispy__md: 1.1rem
 ) !default;
 
 $crispy__font-family-monospace: "Lucida Console", Monaco, monospace !default;
@@ -109,19 +106,23 @@ $crispy__colors: (
 
 
 /**
- *  Padding & Margin
+ *  padding & nargin
  *
  */
 
-$crispy__margin: 0 0 1rem !default;
-$crispy__padding: 0.3em 0.45em !default;
+$crispy__margin: 0 0 15px !default;
+$crispy__margin-breakpoints: (
+    $crispy__md: 0 0 20px
+) !default;
+
+$crispy__padding: 0.4em 0.6em !default;
 $crispy__padding-breakpoints: (
-    $crispy__md: .6em 0.9em
+    $crispy__md: 0.8em 1.1em
 ) !default;
 
 
 /**
- *  Heading
+ *  heading
  *
  */
 
@@ -139,12 +140,13 @@ $crispy__heading__font-sizes__breakpoints: (
 ) !default;
 
 $crispy__heading__font-weight: bold !default;
-$crispy__heading__font-family: Arial, Helvetica, Neue Helvetica, sans-serif !default;
-$crispy__heading__margin: 0 0 0.3em !default;
+$crispy__heading__font-family: $crispy__font-family !default;
+$crispy__heading__margin: $crispy__margin !default;
+$crispy__heading__margin-breakpoints: $crispy__margin-breakpoints !default;
 
 
 /**
- *  Borders
+ *  borders
  *
  */
 
@@ -153,7 +155,7 @@ $crispy__border: 1px solid $crispy__color-border !default;
 
 
 /**
- *
+ *  z-index
  *
  */
 

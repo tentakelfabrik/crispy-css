@@ -53,6 +53,6 @@
         @include crispy__media__breakpoints('line-height', $crispy__line-height__breakpoints);
 
         line-height: $crispy__line-height;
-        @include crispy__media__breakpoints('font-size', $crispy__font-size__breakpoints);
+        @include crispy__media__breakpoints('font-size', $crispy__font-size-breakpoints);
     }
 }

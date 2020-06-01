@@ -2,6 +2,10 @@
  *  Heading
  *
  *
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://github.com/tentakelfabrik/crispy-css
+ *
  */
 
 @mixin crispy__core__heading()
@@ -15,7 +19,9 @@
         font-family: $crispy__heading__font-family;
         font-weight: $crispy__heading__font-weight;
         line-height: 1.2;
+        
         margin: $crispy__heading__margin;
+        @include crispy__media__breakpoints('margin', $crispy__heading__margin-breakpoints);
     }
 
     h5 {

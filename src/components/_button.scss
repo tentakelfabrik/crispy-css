@@ -14,14 +14,15 @@
 $crispy__button__font-family: $crispy__font-family !default;
 $crispy__button__font-weight: $crispy__font-weight !default;
 $crispy__button__font-size: $crispy__font-size !default;
-$crispy__button__font-size-breakpoints: $crispy__font-size__breakpoints !default;
+$crispy__button__font-size-breakpoints: $crispy__font-size-breakpoints !default;
 
-$crispy__button__padding: 0.3em 0.8em !default;
+$crispy__button__padding: 0.4em 0.8em !default;
 $crispy__button__padding-breakpoints: (
-    $crispy__md: 0.4em 1.2em
+    $crispy__md: 0.6em 1.2em
 ) !default;
 
 $crispy__button__margin: $crispy__margin !default;
+$crispy__button__margin-breakpoints: $crispy__margin-breakpoints !default;
 
 @mixin crispy__button() {
     .button {
@@ -37,6 +38,7 @@ $crispy__button__margin: $crispy__margin !default;
         @include crispy__media__breakpoints('font-size', $crispy__button__font-size-breakpoints);
 
         margin: $crispy__button__margin;
+        @include crispy__media__breakpoints('margin', $crispy__button__margin-breakpoints);
 
         padding: $crispy__button__padding;
         @include crispy__media__breakpoints('padding', $crispy__button__padding-breakpoints);

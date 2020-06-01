@@ -1,0 +1,15 @@
+@import
+
+    'reflex',
+    '../crispy-all',
+    'site/header',
+    'components/triangle',
+    'templates/home';
+
+@include component__triangle();
+@include site__header();
+@include template__home();
+
+.container {
+    max-width: $crispy__lg;
+}

@@ -1,0 +1,31 @@
+/**
+ * component: header
+ *
+ *
+ * @author Björn Hase
+ * @license http://opensource.org/licenses/MIT The MIT License
+ * @link https://gitlab.tentakelfabrik.de/tentakelfabrik/crispy
+ *
+ */
+
+@mixin component__triangle() {
+    .triangle-left, .triangle-right, .triangle-top, .triangle-bottom {
+        display: block;
+    }
+
+    .triangle-left {
+        @include triangle('left', $crispy__color-primary);
+    }
+
+    .triangle-right {
+        @include triangle('right', $crispy__color-primary);
+    }
+
+    .triangle-top {
+        @include triangle('top', $crispy__color-primary);
+    }
+
+    .triangle-bottom {
+        @include triangle('bottom', $crispy__color-primary);
+    }
+}

@@ -12,6 +12,7 @@
     // paragraphs
     p {
         margin: $crispy__margin;
+        @include crispy__media__breakpoints('margin', $crispy__margin-breakpoints);
     }
 
     // Semantic text elements
@@ -90,7 +91,9 @@
     ol,
     ul {
         padding: 0;
+        
         margin: $crispy__margin;
+        @include crispy__media__breakpoints('margin', $crispy__margin-breakpoints);
     }
 
     ol,

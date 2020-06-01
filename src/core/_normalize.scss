@@ -45,10 +45,11 @@
 
     figure {
         margin: $crispy__margin;
+        @include crispy__media__breakpoints('margin', $crispy__margin-breakpoints);
     }
 
     figcaption {
-        margin: 0.3em 0 0;
+        margin: 10px 0;
     }
 
 
@@ -65,22 +66,6 @@
     select,
     textarea {
         margin: 0;
-    }
-
-    button,
-    label,
-    input,
-    optgroup,
-    select,
-    textarea {
-        font-family: $crispy__font-family;
-        font-weight: $crispy__font-weight;
-
-        font-size: $crispy__font-size;
-        @include crispy__media__breakpoints('font-size', $crispy__font-size__breakpoints);
-
-        line-height: $crispy__line-height;
-        @include crispy__media__breakpoints('line-height', $crispy__line-height__breakpoints);
     }
 
     fieldset {
