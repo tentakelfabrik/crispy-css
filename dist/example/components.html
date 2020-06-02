@@ -159,9 +159,8 @@ $crispy__field__select__border: $crispy__border;</code></pre><h3 class="h4 margi
             error item 1
         &lt;/div&gt;
     &lt;/label&gt;
-&lt;/div&gt;</code></pre><div class="field"><label class="field__label">Select Item <select class="field__select"><option>select item 1</option><option>select item 2</option><option>select item 3</option></select></label></div><div class="field field--error"><label class="field__label">Select Item <select class="field__select"><option>select item 1</option><option>select item 2</option><option>select item 3</option></select><div class="field__panel">error item 1</div></label></div><h2 class="margin-top-3">Group</h2><h3 class="h4">SCSS:</h3><pre class="code"><code>$crispy__group__margin: 0.3em !default;
-$crispy__group__character: '/' !default;
-$crispy__group__character-margin: 0 $crispy__group__margin 0 !default;</code></pre><h3 class="h4">Html:</h3><pre class="code"><code>&lt;nav&gt;
+&lt;/div&gt;</code></pre><div class="field"><label class="field__label">Select Item <select class="field__select"><option>select item 1</option><option>select item 2</option><option>select item 3</option></select></label></div><div class="field field--error"><label class="field__label">Select Item <select class="field__select"><option>select item 1</option><option>select item 2</option><option>select item 3</option></select><div class="field__panel">error item 1</div></label></div><h2 class="margin-top-3">Group</h2><h3 class="h4">SCSS:</h3><pre class="code"><code>$crispy__group__margin: 0 0.5em 0 !default;
+$crispy__group__character: '/' !default;</code></pre><h3 class="h4">Html:</h3><pre class="code"><code>&lt;nav&gt;
     &lt;ul class=&quot;group group--hr&quot;&gt;
         &lt;li class=&quot;group__item&quot;&gt;first item&lt;/li&gt;
         &lt;li class=&quot;group__item&quot;&gt;second item&lt;/li&gt;
@@ -218,14 +217,14 @@ $crispy__modal__z-index: zIndex('modal');</code></pre><h3 class="h4">Html:</h3><
             Lorem Ipsum
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</code></pre><div style="position: relative; width: 100%; height: 200px; border: 1px dotted black;"><div class="modal modal--top-left"><div class="panel"><div class="panel__inner">.modal--top-left</div></div></div><div class="modal modal--top-right"><div class="panel"><div class="panel__inner">.modal--top-right</div></div></div><div class="modal"><div class="panel"><div class="panel__inner">.modal</div></div></div><div class="modal modal--bottom-left"><div class="panel"><div class="panel__inner">.modal--bottom-left</div></div></div><div class="modal modal--bottom-right"><div class="panel"><div class="panel__inner">.modal--bottom-right</div></div></div></div><h2 class="margin-top-3">Table</h2><h3 class="h4">SCSS:</h3><pre class="code"><code>$crispy__table__padding: $crispy__padding !default;
-$crispy__table__padding-breakpoints: $crispy__padding-breakpoints !default;
+&lt;/div&gt;</code></pre><div style="position: relative; width: 100%; height: 200px; border: 1px dotted black;"><div class="modal modal--top-left"><div class="panel"><div class="panel__inner">.modal--top-left</div></div></div><div class="modal modal--top-right"><div class="panel"><div class="panel__inner">.modal--top-right</div></div></div><div class="modal"><div class="panel"><div class="panel__inner">.modal</div></div></div><div class="modal modal--bottom-left"><div class="panel"><div class="panel__inner">.modal--bottom-left</div></div></div><div class="modal modal--bottom-right"><div class="panel"><div class="panel__inner">.modal--bottom-right</div></div></div></div><h2 class="margin-top-3">Table</h2><h3 class="h4">SCSS:</h3><pre class="code"><code>$crispy__table__padding: $crispy__padding;
+$crispy__table__padding-breakpoints: $crispy__padding-breakpoints;
 
-$crispy__table__td__border: 1px solid $crispy__color-border !default;
+$crispy__table__td__border: 1px solid $crispy__color-border;
 $crispy__table__th__border-width: 2px !default;
 
-$crispy__table__color: $crispy__color-text !default;
-$crispy__table__striped__background-color: $crispy__color-grey-light !default;</code></pre><h3 class="h4">Html:</h3><pre class="code"><code>&lt;table class=&quot;table table--striped margin-bottom-2&quot;&gt;
+$crispy__table__color: $crispy__color-text;
+$crispy__table__striped__background-color: $crispy__color-grey-light;</code></pre><h3 class="h4">Html:</h3><pre class="code"><code>&lt;table class=&quot;table table--striped margin-bottom-2&quot;&gt;
     &lt;thead&gt;
         &lt;tr&gt;
             &lt;th&gt;name&lt;/th&gt;
