@@ -1,17 +1,14 @@
 @import
-
     'reflex',
     '../crispy-all',
     'site/header',
+    'site/main',
     'components/button',
-    'components/main',
-    'components/triangle',
     'templates/home';
 
-@include component__main();
 @include component__button();
-@include component__triangle();
 @include site__header();
+@include site__main();
 @include template__home();
 
 .container {

@@ -35,13 +35,13 @@ $crispy__button__margin-breakpoints: $crispy__margin-breakpoints !default;
         font-weight: $crispy__button__font-weight;
 
         font-size: $crispy__button__font-size;
-        @include crispy__media__breakpoints('font-size', $crispy__button__font-size-breakpoints);
+        @include crispy__media-breakpoints('font-size', $crispy__button__font-size-breakpoints);
 
         margin: $crispy__button__margin;
-        @include crispy__media__breakpoints('margin', $crispy__button__margin-breakpoints);
+        @include crispy__media-breakpoints('margin', $crispy__button__margin-breakpoints);
 
         padding: $crispy__button__padding;
-        @include crispy__media__breakpoints('padding', $crispy__button__padding-breakpoints);
+        @include crispy__media-breakpoints('padding', $crispy__button__padding-breakpoints);
 
         &:hover {
             cursor: pointer;

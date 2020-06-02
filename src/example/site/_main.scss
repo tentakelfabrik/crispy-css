@@ -1,5 +1,5 @@
 /**
- *  components: header
+ *  site: header
  *
  *
  *  @author Björn Hase, Tentakelfabrik
@@ -8,7 +8,7 @@
  *
  */
 
-@mixin component__main() {
+@mixin site__main() {
     .main {
         &__title {
             margin-top: 80px;

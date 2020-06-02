@@ -53,7 +53,7 @@ $crispy__field__select__border: $crispy__border !default;
 @mixin crispy__field() {
     .field {
         margin: $crispy__field__margin;
-        @include crispy__media__breakpoints('margin', $crispy__field__margin-breakpoints);
+        @include crispy__media-breakpoints('margin', $crispy__field__margin-breakpoints);
     }
 
     .field__text, .field__select, .field__select, .field__label {
@@ -61,7 +61,7 @@ $crispy__field__select__border: $crispy__border !default;
         font-weight: $crispy__field__font-weight;
 
         font-size: $crispy__field__font-size;
-        @include crispy__media__breakpoints('font-size', $crispy__field__font-size-breakpoints);
+        @include crispy__media-breakpoints('font-size', $crispy__field__font-size-breakpoints);
     }
 
     // basic style for input elements, will be used to @extend
@@ -73,7 +73,7 @@ $crispy__field__select__border: $crispy__border !default;
         appearance: none;
 
         padding: $crispy__field__padding;
-        @include crispy__media__breakpoints('padding', $crispy__field__padding-breakpoints);
+        @include crispy__media-breakpoints('padding', $crispy__field__padding-breakpoints);
     }
 
     /**
@@ -138,7 +138,7 @@ $crispy__field__select__border: $crispy__border !default;
         background-color: $crispy__field__select__background-color;
 
         padding: $crispy__field__select__padding;
-        @include crispy__media__breakpoints('padding', $crispy__field__select__padding-breakpoints);
+        @include crispy__media-breakpoints('padding', $crispy__field__select__padding-breakpoints);
 
         &:focus {
             outline: 0;
@@ -219,7 +219,7 @@ $crispy__field__select__border: $crispy__border !default;
 
     .field__panel {
         padding: $crispy__field__padding;
-        @include crispy__media__breakpoints('padding', $crispy__field__padding-breakpoints);
+        @include crispy__media-breakpoints('padding', $crispy__field__padding-breakpoints);
     }
 
     .field--valid {

@@ -36,7 +36,7 @@ $crispy__modal__z-index: zIndex('modal') !default;
         transform: translate(-50%,-50%);
 
         // make sure that on smartphones modal uses full width
-        @include crispy__media__breakpoints('max-width', $crispy__modal__max-width-breakpoints);
+        @include crispy__media-breakpoints('max-width', $crispy__modal__max-width-breakpoints);
 
         &--fixed {
             position: fixed;
@@ -60,7 +60,7 @@ $crispy__modal__z-index: zIndex('modal') !default;
         &--center-right,
         &--center-left {
             transform: translate(0, 0);
-            @include crispy__media__breakpoints('margin', $crispy__modal__margin-breakpoints);
+            @include crispy__media-breakpoints('margin', $crispy__modal__margin-breakpoints);
         }
 
         &--bottom-left, &--bottom-right, &--bottom-center {

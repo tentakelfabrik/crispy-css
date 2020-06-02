@@ -50,9 +50,9 @@
         direction: $crispy__direction;
 
         font-size: $crispy__font-size;
-        @include crispy__media__breakpoints('line-height', $crispy__line-height__breakpoints);
+        @include crispy__media-breakpoints('line-height', $crispy__line-height__breakpoints);
 
         line-height: $crispy__line-height;
-        @include crispy__media__breakpoints('font-size', $crispy__font-size-breakpoints);
+        @include crispy__media-breakpoints('font-size', $crispy__font-size-breakpoints);
     }
 }

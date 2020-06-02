@@ -10,7 +10,7 @@
 
 
 /**
- *  clearfix to end floating
+ *  Clear Floats
  *
  *
  *
@@ -35,7 +35,7 @@
  *
  */
 
-@mixin crispy__clear_list() {
+@mixin crispy__clearlist() {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -48,7 +48,8 @@
 
 
 /**
- *  media-queries
+ *  media-queries as mixins
+ *  based on breakpoints from variables
  *
  *
  *
@@ -128,54 +129,72 @@
 
 
 /**
+ *  Set property and his value for each Breakpoint
  *
- *  @param  {[type]} $property    [description]
- *  @param  {[type]} $breakpoints [description]
+ *  (
+ *      $crispy__md: 10px
+ *  )
  *
- *  @return {[type]}              [description]
+ *
+ *  @param  {css} $property
+ *  @param  {map} $breakpoints
+ *  @param  {Boolean} $important   [false]
  *
  */
 
-@mixin crispy__media__breakpoints($property, $breakpoints) {
+@mixin crispy__media-breakpoints($property, $breakpoints, $important: false) {
     @each $breakpoint, $value in $breakpoints {
         @media only screen and (min-width: $breakpoint) {
-            #{$property}: $value;
+            @if $important == false {
+                #{$property}: $value;
+            } @else {
+                #{$property}: $value !important;
+            }
         }
     }
 }
 
 
 /**
+ *  Set property and his value with an factor for each Breakpoint
  *
- *  @param  {[type]} $property    [description]
- *  @param  {[type]} $factor      [description]
- *  @param  {[type]} $breakpoints [description]
+ *  (
+ *      $crispy__md: 10px
+ *  )
  *
- *  @return {[type]}              [description]
+ *  @param  {css} $property
+ *  @param  {number} $factor
+ *  @param  {map} $breakpoints
+ *  @param  {Boolean} $important   [false]
+ *
  */
 
-@mixin crispy__media__breakpoints_calculate($property, $factor, $breakpoints) {
+@mixin crispy__media-breakpoints-calculate($property, $factor, $breakpoints, $important: false) {
     @each $breakpoint, $value in $breakpoints {
         @media only screen and (min-width: $breakpoint) {
-            #{$property}: ($value * $factor) !important;
+            @if $important == false {
+                #{$property}: ($value * $factor);
+            } @else {
+                #{$property}: ($value * $factor) !important;
+            }
         }
     }
 }
 
-
 /**
+ *  Set font-size from Breakpoints, use for calculating difference from font-size and default font-size
  *
+ *  (
+ *      $crispy__md: 1rem
+ *  )
  *
- *  @param  {[type]} $breakpoints [des
- *  @param  {[type]} $font-sizes  [description]
- *  @param  {[type]} $font-size   [description]
- *
- *  @return {[type]}              [description]
+ *  @param  {map}  $breakpoints
+ *  @param  {unit}  $font-size
+ *  @param  {unit}  $default
+ *  @param  {Boolean} $important   [false]
  *
  */
-
-@mixin crispy__media__breakpoints__diff($breakpoints, $font-size, $default) {
-
+@mixin crispy__media-breakpoints-font-size($breakpoints, $font-size, $default, $important: false) {
     @each $breakpoint, $value in $breakpoints {
 
         // getting diff
@@ -184,55 +203,12 @@
         // ignore if factor is zero
         @if $factor > 0 {
             @media only screen and (min-width: $breakpoint) {
-                font-size: ($value * $factor) !important;
+                @if $important == false {
+                    font-size: ($value * $factor);
+                } @else {
+                    font-size: ($value * $factor) !important;
+                }
             }
         }
-    }
-}
-
-
-/**
- *  triangle
- *
- *
- *  @param {Direction} $direction - Triangle direction, either 'top', 'right', 'bottom' or 'left'
- *  @param {Color} $color [currentcolor] - Triangle color
- *  @param {Length} $size [1em] - Triangle size
- *
- */
-
-@mixin triangle($direction, $color: currentcolor, $size: 1em) {
-
-    @if not index(top right bottom left, $direction) {
-        @error "Direction must be either `top`, `right`, `bottom` or `left`.";
-    }
-
-    width: 0;
-    height: 0;
-    content: '';
-    z-index: 2;
-
-    // adding opposite postion for border
-    $opposite: oppositeDirection($direction);
-
-    // @TODO with #{opposite-position($direction)} it breaks in webpack
-    @if $opposite == top {
-        border-top: ($size * 1.5) solid $color;
-    } @else if $opposite == bottom {
-        border-bottom: ($size * 1.5) solid $color;
-    } @else if $opposite == left {
-        border-left: ($size * 1.5) solid $color;
-    } @else if $opposite == right {
-        border-right: ($size * 1.5) solid $color;
-    }
-
-    $perpendicular-borders: $size solid transparent;
-
-    @if $direction == top or $direction == bottom {
-        border-left: $perpendicular-borders;
-        border-right: $perpendicular-borders;
-    } @else if $direction == right or $direction == left {
-        border-bottom: $perpendicular-borders;
-        border-top: $perpendicular-borders;
     }
 }

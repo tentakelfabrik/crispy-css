@@ -18,7 +18,7 @@ $crispy__group__character: '/' !default;
 
 @mixin crispy__group() {
     .group {
-        @include crispy__clear_list();
+        @include crispy__clearlist();
         display: inline-block;
 
         .group__item {

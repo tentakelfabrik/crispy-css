@@ -21,7 +21,7 @@
         line-height: 1.2;
         
         margin: $crispy__heading__margin;
-        @include crispy__media__breakpoints('margin', $crispy__heading__margin-breakpoints);
+        @include crispy__media-breakpoints('margin', $crispy__heading__margin-breakpoints);
     }
 
     h5 {
@@ -35,7 +35,7 @@
     @each $h, $font-size in $crispy__heading__font-sizes {
         #{$h}, .#{$h} {
             font-size: $font-size;
-            @include crispy__media__breakpoints__diff($crispy__heading__font-sizes__breakpoints, $font-size, $crispy__font-size);
+            @include crispy__media-breakpoints-font-size($crispy__heading__font-sizes__breakpoints, $font-size, $crispy__font-size);
         }
     }
 }

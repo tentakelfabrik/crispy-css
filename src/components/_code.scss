@@ -33,9 +33,9 @@ $crispy__code__margin-breakpoints: $crispy__margin-breakpoints !default;
         background-color: $crispy__code__background-color;
 
         margin: $crispy__code__margin;
-        @include crispy__media__breakpoints('margin', $crispy__code__margin-breakpoints);
+        @include crispy__media-breakpoints('margin', $crispy__code__margin-breakpoints);
 
         padding: $crispy__code__padding;
-        @include crispy__media__breakpoints('padding', $crispy__code__padding-breakpoints);
+        @include crispy__media-breakpoints('padding', $crispy__code__padding-breakpoints);
     }
 }

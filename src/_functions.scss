@@ -10,27 +10,14 @@
 
 
 /**
- * strip unit from value
+ *  strip unit from value
  *
- * @param  {mixed} $value
- * @return {number}
+ *  @param  {mixed} $value
+ *  @return {number}
+ *
  */
 @function stripUnit($value) {
     @return $value / ($value * 0 + 1);
-}
-
-
-/**
- *  factor
- *
- *  
- *
- *  @param  {integer} $x
- *  @return {float}
- *
- */
-@function factor($x) {
-    @return ($x * $x) / 2;
 }
 
 
@@ -41,16 +28,17 @@
  *  @return {boolean|unit}
  *
  */
-@function getDefault($values) {
+@function getDefault($map) {
 
     $default: false;
 
-    @if map-has-key($values, 'default') {
-        $default: map-get($values, 'default');
+    @if map-has-key($map, 'default') {
+        $default: map-get($map, 'default');
     }
 
     @return $default;
 }
+
 
 /**
  *  z-index
@@ -71,35 +59,16 @@
     }
 }
 
+
 /**
+ *  factor
  *
  *
  *
- * @param  {[type]} $directions [description]
- * @return {[type]}             [description]
+ *  @param  {integer} $x
+ *  @return {float}
  *
  */
-@function oppositeDirection($direction)
-{
-    $opposite-direction: 0;
-
-    $direction-map: (
-        'top':    'bottom',
-        'right':  'left',
-        'bottom': 'top',
-        'left':   'right',
-        'center': 'center',
-        'ltr':    'rtl',
-        'rtl':    'ltr'
-    );
-
-    $direction: to-lower-case($direction);
-
-    @if map-has-key($direction-map, $direction) {
-        $opposite-direction: map-get($direction-map, $direction);
-    } @else {
-        @warn "No opposite direction can be found for `#{$direction}`. Direction omitted.";
-    }
-
-    @return $opposite-direction;
+@function factor($x) {
+    @return ($x * $x) / 2;
 }

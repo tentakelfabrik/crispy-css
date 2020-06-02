@@ -27,6 +27,33 @@ $crispy__helpers__width: (
 @mixin crispy__helpers() {
 
     /**
+     *  borders
+     *
+     *
+     */
+
+    .bordered {
+        border: $crispy__border !important;
+    }
+
+    .rounded {
+        border-radius: $crispy__border-radius !important;
+    }
+
+    .round {
+        border-radius: 50% !important;
+    }
+
+    .borderless {
+        border: 0 !important;
+    }
+
+    .radiusless {
+        border-radius: 0 !important;
+    }
+
+
+    /**
      * typography
      *
      *
@@ -94,9 +121,35 @@ $crispy__helpers__width: (
     @each $name, $font-size in $crispy__font-sizes {
         .text-size-#{$name} {
             font-size: $font-size !important;
-            @include crispy__media__breakpoints__diff($crispy__font-size-breakpoints, $font-size, $defaultFontSize);
+            @include crispy__media-breakpoints-font-size($crispy__font-size-breakpoints, $font-size, $defaultFontSize, true);
         }
     }
+
+
+    /**
+     *  colors
+     *
+     *
+     */
+
+    @each $name, $color in $crispy__colors {
+        .text-color-#{$name} {
+            color: $color !important;
+        }
+    }
+
+    @each $name, $color in $crispy__colors {
+        .border-color-#{$name} {
+            border-color: $color !important;
+        }
+    }
+
+    @each $name, $color in $crispy__colors {
+        .background-color-#{$name} {
+            background-color: $color !important;
+        }
+    }
+
 
     /**
      *  floating
@@ -125,29 +178,6 @@ $crispy__helpers__width: (
         @include crispy__clearfix();
     }
 
-    /**
-     *  colors
-     *
-     *
-     */
-
-    @each $name, $color in $crispy__colors {
-        .text-color-#{$name} {
-            color: $color !important;
-        }
-    }
-
-    @each $name, $color in $crispy__colors {
-        .border-color-#{$name} {
-            border-color: $color !important;
-        }
-    }
-
-    @each $name, $color in $crispy__colors {
-        .background-color-#{$name} {
-            background-color: $color !important;
-        }
-    }
 
     /**
      *  position
@@ -211,11 +241,11 @@ $crispy__helpers__width: (
     .show {
         display: block !important;
 
-        &--inline {
+        &-inline {
             display: inline !important;
         }
 
-        &--inline-block {
+        &-inline-block {
             display: inline-block !important;
         }
 
@@ -223,11 +253,11 @@ $crispy__helpers__width: (
             @include crispy__media-xs() {
                 display: block !important;
 
-                &--inline {
+                &-inline {
                     display: inline !important;
                 }
 
-                &--inline-block {
+                &-inline-block {
                     display: inline-block !important;
                 }
             }
@@ -237,11 +267,11 @@ $crispy__helpers__width: (
             @include crispy__media-sm() {
                 display: block !important;
 
-                &--inline {
+                &-inline {
                     display: inline !important;
                 }
 
-                &--inline-block {
+                &-inline-block {
                     display: inline-block !important;
                 }
             }
@@ -251,11 +281,11 @@ $crispy__helpers__width: (
             @include crispy__media-md() {
                 display: block !important;
 
-                &--inline {
+                &-inline {
                     display: inline !important;
                 }
 
-                &--inline-block {
+                &-inline-block {
                     display: inline-block !important;
                 }
             }
@@ -265,11 +295,11 @@ $crispy__helpers__width: (
             @include crispy__media-lg() {
                 display: block !important;
 
-                &--inline {
+                &-inline {
                     display: inline !important;
                 }
 
-                &--inline-block {
+                &-inline-block {
                     display: inline-block !important;
                 }
             }
@@ -278,41 +308,15 @@ $crispy__helpers__width: (
         &-xlg {
             @include crispy__media-xlg() {
                 display: block !important;
-                &--inline {
+                &-inline {
                     display: inline !important;
                 }
 
-                &--inline-block {
+                &-inline-block {
                     display: inline-block !important;
                 }
             }
         }
-    }
-
-    /**
-     *  borders
-     *
-     *
-     */
-
-    .bordered {
-        border: $crispy__border !important;
-    }
-
-    .rounded {
-        border-radius: $crispy__border-radius !important;
-    }
-
-    .round {
-        border-radius: 50% !important;
-    }
-
-    .borderless {
-        border: 0 !important;
-    }
-
-    .radiusless {
-        border-radius: 0 !important;
     }
 
     /**
@@ -347,7 +351,7 @@ $crispy__helpers__width: (
             margin-top: ($crispy__helpers__spacing-gap * factor($i)) !important;
 
             @if $i > 0 {
-                @include crispy__media__breakpoints_calculate('margin-top', factor($i), $crispy__helpers__spacing-breakpoints);
+                @include crispy__media-breakpoints-calculate('margin-top', factor($i), $crispy__helpers__spacing-breakpoints, true);
             }
         }
 
@@ -355,7 +359,7 @@ $crispy__helpers__width: (
             margin-bottom: ($crispy__helpers__spacing-gap * factor($i)) !important;
 
             @if $i > 0 {
-                @include crispy__media__breakpoints_calculate('margin-bottom', factor($i), $crispy__helpers__spacing-breakpoints);
+                @include crispy__media-breakpoints-calculate('margin-bottom', factor($i), $crispy__helpers__spacing-breakpoints, true);
             }
         }
 
@@ -363,7 +367,7 @@ $crispy__helpers__width: (
             padding-top: ($crispy__helpers__spacing-gap * $i) !important;
 
             @if $i > 0 {
-                @include crispy__media__breakpoints_calculate('padding-top', factor($i), $crispy__helpers__spacing-breakpoints);
+                @include crispy__media-breakpoints-calculate('padding-top', factor($i), $crispy__helpers__spacing-breakpoints, true);
             }
         }
 
@@ -371,7 +375,7 @@ $crispy__helpers__width: (
             padding-bottom: ($crispy__helpers__spacing-gap * $i) !important;
 
             @if $i > 0 {
-                @include crispy__media__breakpoints_calculate('padding-bottom', factor($i), $crispy__helpers__spacing-breakpoints);
+                @include crispy__media-breakpoints-calculate('padding-bottom', factor($i), $crispy__helpers__spacing-breakpoints, true);
             }
         }
 
@@ -381,7 +385,7 @@ $crispy__helpers__width: (
                 margin-left: ($crispy__helpers__spacing-gap * $i) !important;
 
                 @if $i > 0 {
-                    @include crispy__media__breakpoints_calculate('margin-left', factor($i), $crispy__helpers__spacing-breakpoints);
+                    @include crispy__media-breakpoints-calculate('margin-left', factor($i), $crispy__helpers__spacing-breakpoints, true);
                 }
             }
 
@@ -389,7 +393,7 @@ $crispy__helpers__width: (
                 margin-right: ($crispy__helpers__spacing-gap * $i) !important;
 
                 @if $i > 0 {
-                    @include crispy__media__breakpoints_calculate('margin-right', factor($i), $crispy__helpers__spacing-breakpoints);
+                    @include crispy__media-breakpoints-calculate('margin-right', factor($i), $crispy__helpers__spacing-breakpoints, true);
                 }
             }
 
@@ -397,7 +401,7 @@ $crispy__helpers__width: (
                 padding-left: ($crispy__helpers__spacing-gap * $i) !important;
 
                 @if $i > 0 {
-                    @include crispy__media__breakpoints_calculate('padding-left', factor($i), $crispy__helpers__spacing-breakpoints);
+                    @include crispy__media-breakpoints-calculate('padding-left', factor($i), $crispy__helpers__spacing-breakpoints, true);
                 }
             }
 
@@ -405,7 +409,7 @@ $crispy__helpers__width: (
                 padding-right: ($crispy__helpers__spacing-gap * $i) !important;
 
                 @if $i > 0 {
-                    @include crispy__media__breakpoints_calculate('padding-right', factor($i), $crispy__helpers__spacing-breakpoints);
+                    @include crispy__media-breakpoints-calculate('padding-right', factor($i), $crispy__helpers__spacing-breakpoints, true);
                 }
             }
         }

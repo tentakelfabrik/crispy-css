@@ -45,7 +45,7 @@
 
     figure {
         margin: $crispy__margin;
-        @include crispy__media__breakpoints('margin', $crispy__margin-breakpoints);
+        @include crispy__media-breakpoints('margin', $crispy__margin-breakpoints);
     }
 
     figcaption {
@@ -170,6 +170,6 @@
         font-family: $crispy__font-family-monospace;
         font-size: $crispy__font-size-monospace;
 
-        @include crispy__media__breakpoints('font-size', $crispy__font-size-monospace__breakpoints);
+        @include crispy__media-breakpoints('font-size', $crispy__font-size-monospace__breakpoints);
     }
 }
