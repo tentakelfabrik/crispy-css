@@ -13,18 +13,17 @@
  *
  */
 
-$crispy__group__margin: 0.5em !default;
+$crispy__group__margin: 0 0.5em 0 !default;
 $crispy__group__character: '/' !default;
-$crispy__group__character-margin: 0 $crispy__group__margin 0 !default;
 
 @mixin crispy__group() {
     .group {
         @include crispy__clear_list();
         display: inline-block;
 
-        &__item {
+        .group__item {
             display: inline-block;
-            margin: 0 $crispy__group__margin 0;
+            margin: $crispy__group__margin;
 
             &:first-child {
                 margin-left: 0;
@@ -40,7 +39,7 @@ $crispy__group__character-margin: 0 $crispy__group__margin 0 !default;
                 margin: 0;
 
                 &:after {
-                    margin: $crispy__group__character-margin;
+                    margin: $crispy__group__margin;
                     content: $crispy__group__character;
                 }
 
