@@ -3,9 +3,13 @@
     'reflex',
     '../crispy-all',
     'site/header',
+    'components/button',
+    'components/main',
     'components/triangle',
     'templates/home';
 
+@include component__main();
+@include component__button();
 @include component__triangle();
 @include site__header();
 @include template__home();

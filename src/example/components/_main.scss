@@ -1,0 +1,21 @@
+/**
+ *  components: header
+ *
+ *
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://github.com/tentakelfabrik/crispy-css
+ *
+ */
+
+@mixin component__main() {
+    .main {
+        &__title {
+            margin-top: 80px;
+
+            @include crispy__media-sm() {
+                margin-top: 100px;
+            }
+        }
+    }
+}

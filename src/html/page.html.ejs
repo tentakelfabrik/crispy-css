@@ -11,10 +11,10 @@
 </head>
 
 <body class="page">
-    <header id="header" class="header header--fixed background-color-info">
+    <header class="header header--fixed background-color-info">
 		<div class="container">
 			<div class="grid align-center">
-				<div class="col-12 col-md-4">
+				<div class="col-10 col-sm-3">
                     <a href="/" class="text-color-white text-bold">
                         <svg class="icon text-size-mega" alt="Crispy CSS">
                             <use xlink:href="symbol-defs.svg#icon-logo" />
@@ -22,36 +22,43 @@
                         Crispy CSS
                     </a>
                 </div>
-                <div class="col-12 col-md-8">
+                <div class="col-2 hide-sm text-right">
+                    <button id="nav-button" class="button button--transparent text-size-medium">
+                        <svg class="icon" alt="Hamburger">
+                            <use xlink:href="symbol-defs.svg#icon-hamburger" />
+                        </svg>
+                    </button>
+                </div>
+                <div id="nav" class="col-sm-9 hide show-sm">
                     <nav class="group text-right show">
                         <ul class="group">
                             <li class="group__item">
-                                <a href="getting-started.html" class="text-color-white">
+                                <a href="getting-started.html">
                                     Getting started!
                                 </a>
                             </li>
                             <li class="group__item">
-                                <a href="core.html" class="text-color-white">
+                                <a href="core.html">
                                     Core
                                 </a>
                             </li>
                             <li class="group__item">
-                                <a href="components.html" class="text-color-white">
+                                <a href="components.html">
                                     Components
                                 </a>
                             </li>
                             <li class="group__item">
-                                <a href="helpers.html" class="text-color-white">
+                                <a href="helpers.html">
                                     Helpers
                                 </a>
                             </li>
                             <li class="group__item">
-                                <a href="mixins.html" class="text-color-white">
+                                <a href="mixins.html">
                                     Mixins
                                 </a>
                             </li>
                             <li class="group__item">
-                                <a href="functions.html" class="text-color-white">
+                                <a href="functions.html">
                                     Functions
                                 </a>
                             </li>
@@ -62,11 +69,11 @@
 		</div>
 	</header>
 
-    <main class="container">
+    <main class="container main">
         <div class="grid">
             <div class="col-12">
-                <header class="header">
-                    <h1 class="padding-top-4 padding-bottom-2 text-center">
+                <header class="main__header">
+                    <h1 class="main__title padding-bottom-2 text-center">
                         <%= htmlWebpackPlugin.options.title %>
                     </h1>
                 </header>
@@ -77,5 +84,7 @@
     </main>
 
     <%= htmlWebpackPlugin.options.footer %>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -109,6 +109,7 @@ mix.sass('src/crispy-all.scss', 'dist/crispy-all.css')
                 ]
             }
     })
+    .js('src/example/js/script.js', 'dist/example/script.js')
     .options({
         postCss: [
             require('postcss-css-variables')()
