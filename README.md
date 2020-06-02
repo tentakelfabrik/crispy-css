@@ -6,4 +6,4 @@
 npm install crispy-css
 ```
 
-For Documentation visit [https://crispy-css/](https://crispy-css/)
+For Documentation visit [https://crispy-css.com](https://crispy-css.com)
