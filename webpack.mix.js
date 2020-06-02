@@ -37,6 +37,7 @@ mix.webpackConfig({
             filename: 'dist/example/getting-started.html',
             template: 'src/html/page.html.ejs',
             title: 'Getting started!',
+            description: 'Start with Crispy CSS, here you find Variables to configure all values. There is also a short overview for the examples.',
             body: fs.readFileSync(__dirname + '/src/html/partials/getting-started.html'),
             footer: fs.readFileSync(__dirname + '/src/html/partials/footer.html'),
             inject: false
@@ -45,6 +46,7 @@ mix.webpackConfig({
             filename: 'dist/example/core.html',
             template: 'src/html/page.html.ejs',
             title: 'Core',
+            description: 'The Core have the basic Styles for Typography, Heading and also Normalize.',
             body: fs.readFileSync(__dirname + '/src/html/partials/core.html'),
             footer: fs.readFileSync(__dirname + '/src/html/partials/footer.html'),
             inject: false
@@ -53,6 +55,7 @@ mix.webpackConfig({
             filename: 'dist/example/components.html',
             template: 'src/html/page.html.ejs',
             title: 'Components',
+            description: 'Components are optional, the have a basic build and should be extended.',
             body: fs.readFileSync(__dirname + '/src/html/partials/components.html'),
             footer: fs.readFileSync(__dirname + '/src/html/partials/footer.html'),
             inject: false
@@ -61,6 +64,7 @@ mix.webpackConfig({
             filename: 'dist/example/helpers.html',
             template: 'src/html/page.html.ejs',
             title: 'Helpers',
+            description: 'CSS-Classes that can be use to override other Styles, also used if there is no need to style the element.',
             body: fs.readFileSync(__dirname + '/src/html/partials/helpers.html'),
             footer: fs.readFileSync(__dirname + '/src/html/partials/footer.html'),
             inject: false
@@ -69,6 +73,7 @@ mix.webpackConfig({
             filename: 'dist/example/mixins.html',
             template: 'src/html/page.html.ejs',
             title: 'Mixins',
+            description: 'Most Mixins will be used to handle Breakpoints and add Styles.',
             body: fs.readFileSync(__dirname + '/src/html/partials/mixins.html'),
             footer: fs.readFileSync(__dirname + '/src/html/partials/footer.html'),
             inject: false
@@ -77,6 +82,7 @@ mix.webpackConfig({
             filename: 'dist/example/functions.html',
             template: 'src/html/page.html.ejs',
             title: 'Functions',
+            description: 'Functions helps to handle variables.',
             body: fs.readFileSync(__dirname + '/src/html/partials/functions.html'),
             footer: fs.readFileSync(__dirname + '/src/html/partials/footer.html'),
             inject: false
